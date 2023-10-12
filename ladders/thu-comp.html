@@ -5,6 +5,9 @@
 tr:nth-child(odd) {background: #fff}
 tr:nth-child(even) {background: #eee}
 th,td {padding-left: 5px; padding-right: 5px}
+#trend-up {color: green}
+#trend-dn {color: red}
+}
 </style>
 </head>
 <body>
@@ -14,43 +17,43 @@ th,td {padding-left: 5px; padding-right: 5px}
 <h2>Thursday Competitive League (7:15pm) Ladder Standings</h2>
 
 <p>
-Last updated October 4, 2023.
+Last updated October 11, 2023.
 
 <hr>
 
 <table>
-<tr><th></th><th></th><th>Points<br>Diff.<sup>*</sup></th><th colspan="2">Shootout<br>Wins<sup>**</sup></th></tr>
-<tr><td>1</td><td>Evan</td><td>300.0</td><td>10.5 / 14</td><td>75.0%</td></tr>
-<tr><td>2</td><td>Beau</td><td>294.0</td><td>9.5 / 15</td><td>63.3%</td></tr>
-<tr><td>3</td><td>Andrei</td><td>285.8</td><td>12.5 / 15</td><td>83.3%</td></tr>
-<tr><td>4</td><td>Colin D</td><td>285.7</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>5</td><td>Sunvy</td><td>282.6</td><td>7.5 / 15</td><td>50.0%</td></tr>
-<tr><td>6</td><td>Justin K</td><td>281.4</td><td>15.0 / 29</td><td>51.7%</td></tr>
-<tr><td>7</td><td>Ben</td><td>281.2</td><td>9.5 / 21</td><td>45.2%</td></tr>
-<tr><td>8</td><td>Salvador</td><td>278.7</td><td>11.5 / 16</td><td>71.9%</td></tr>
-<tr><td>9</td><td>Jacob</td><td>275.7</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>10</td><td>Shawn</td><td>274.3</td><td>10.5 / 24</td><td>43.8%</td></tr>
-<tr><td>11</td><td>Cam</td><td>272.4</td><td>4.5 / 7</td><td>64.3%</td></tr>
-<tr><td>12</td><td>Pervaze</td><td>272.4</td><td>8.5 / 16</td><td>53.1%</td></tr>
-<tr><td>13</td><td>Steven</td><td>263.0</td><td>15.0 / 24</td><td>62.5%</td></tr>
-<tr><td>14</td><td>Cade</td><td>252.4</td><td>4.0 / 7</td><td>57.1%</td></tr>
-<tr><td>15</td><td>Margie</td><td>247.4</td><td>8.0 / 13</td><td>61.5%</td></tr>
-<tr><td>16</td><td>Sam A</td><td>245.4</td><td>3.0 / 6</td><td>50.0%</td></tr>
-<tr><td>17</td><td>Marsh</td><td>243.2</td><td>2.0 / 7</td><td>28.6%</td></tr>
-<tr><td>18</td><td>Chenny</td><td>242.2</td><td>4.0 / 6</td><td>66.7%</td></tr>
-<tr><td>19</td><td>Ned</td><td>238.2</td><td>5.0 / 6</td><td>83.3%</td></tr>
-<tr><td>20</td><td>Isabella</td><td>235.2</td><td>10.0 / 13</td><td>76.9%</td></tr>
-<tr><td>21</td><td>Jon</td><td>220.2</td><td>6.5 / 15</td><td>43.3%</td></tr>
-<tr><td>22</td><td>Kristin</td><td>219.6</td><td>6.0 / 15</td><td>40.0%</td></tr>
-<tr><td>23</td><td>Suzanne</td><td>216.1</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>24</td><td>Julia</td><td>212.6</td><td>1.0 / 6</td><td>16.7%</td></tr>
-<tr><td>25</td><td>Xuying</td><td>212.6</td><td>6.0 / 12</td><td>50.0%</td></tr>
-<tr><td>26</td><td>Brooke</td><td>211.6</td><td>4.0 / 12</td><td>33.3%</td></tr>
-<tr><td>27</td><td>Meaghan</td><td>202.6</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>28</td><td>Mara</td><td>198.6</td><td>2.0 / 6</td><td>33.3%</td></tr>
-<tr><td>29</td><td>Michael</td><td>196.6</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>30</td><td>Ian</td><td>194.6</td><td>2.0 / 12</td><td>16.7%</td></tr>
-<tr><td>31</td><td>Dawn</td><td>187.6</td><td>0.0 / 20</td><td>0.0%</td></tr>
+<tr><th></th><th></th><th></th><th>Points<br>Diff.<sup>*</sup></th><th colspan="2">Shootout<br>Wins<sup>**</sup></th></tr>
+<tr><td>1</td><td>Andrei</td><td id="trend-up">▲ 2</td><td>300.0</td><td>16.5 / 21</td><td>78.6%</td></tr>
+<tr><td>2</td><td>Evan</td><td id="trend-dn">▼ 1</td><td>299.5</td><td>18.0 / 26</td><td>69.2%</td></tr>
+<tr><td>3</td><td>Colin D</td><td id="trend-up">▲ 1</td><td>-----</td><td>0.0 / 0</td><td>0.0%</td></tr>
+<tr><td>4</td><td>Justin K</td><td id="trend-up">▲ 2</td><td>290.5</td><td>26.0 / 49</td><td>53.1%</td></tr>
+<tr><td>5</td><td>Ben</td><td id="trend-up">▲ 2</td><td>285.5</td><td>16.0 / 33</td><td>48.5%</td></tr>
+<tr><td>6</td><td>Salvador</td><td id="trend-up">▲ 2</td><td>283.3</td><td>15.0 / 22</td><td>68.2%</td></tr>
+<tr><td>7</td><td>Jacob</td><td id="trend-up">▲ 2</td><td>280.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
+<tr><td>8</td><td>Steven</td><td id="trend-up">▲ 5</td><td>277.7</td><td>20.0 / 31</td><td>64.5%</td></tr>
+<tr><td>9</td><td>Beau</td><td id="trend-dn">▼ 7</td><td>272.7</td><td>12.5 / 27</td><td>46.3%</td></tr>
+<tr><td>10</td><td>Cade</td><td id="trend-up">▲ 4</td><td>265.2</td><td>7.0 / 11</td><td>63.6%</td></tr>
+<tr><td>11</td><td>Cam</td><td></td><td>264.6</td><td>9.5 / 14</td><td>67.9%</td></tr>
+<tr><td>12</td><td>Sunvy</td><td id="trend-dn">▼ 7</td><td>261.6</td><td>8.5 / 21</td><td>40.5%</td></tr>
+<tr><td>13</td><td>Shawn</td><td id="trend-dn">▼ 3</td><td>253.9</td><td>11.5 / 28</td><td>41.1%</td></tr>
+<tr><td>14</td><td>Pervaze</td><td id="trend-dn">▼ 2</td><td>248.6</td><td>8.5 / 16</td><td>53.1%</td></tr>
+<tr><td>15</td><td>Marsh</td><td id="trend-up">▲ 2</td><td>-----</td><td>2.0 / 7</td><td>28.6%</td></tr>
+<tr><td>16</td><td>Margie</td><td id="trend-dn">▼ 1</td><td>245.8</td><td>11.0 / 20</td><td>55.0%</td></tr>
+<tr><td>17</td><td>Sam A</td><td id="trend-dn">▼ 1</td><td>243.8</td><td>3.0 / 6</td><td>50.0%</td></tr>
+<tr><td>18</td><td>Isabella</td><td id="trend-up">▲ 2</td><td>238.3</td><td>10.0 / 13</td><td>76.9%</td></tr>
+<tr><td>19</td><td>Jon</td><td id="trend-up">▲ 2</td><td>223.3</td><td>11.5 / 22</td><td>52.3%</td></tr>
+<tr><td>20</td><td>Kristin</td><td id="trend-up">▲ 2</td><td>220.8</td><td>10.0 / 22</td><td>45.5%</td></tr>
+<tr><td>21</td><td>Chenny</td><td id="trend-dn">▼ 3</td><td>210.2</td><td>7.0 / 13</td><td>53.8%</td></tr>
+<tr><td>22</td><td>Ned</td><td id="trend-dn">▼ 3</td><td>208.2</td><td>7.0 / 13</td><td>53.8%</td></tr>
+<tr><td>23</td><td>Suzanne</td><td></td><td>-----</td><td>2.0 / 6</td><td>33.3%</td></tr>
+<tr><td>24</td><td>Brooke</td><td id="trend-up">▲ 2</td><td>206.2</td><td>8.0 / 18</td><td>44.4%</td></tr>
+<tr><td>25</td><td>Julia</td><td id="trend-dn">▼ 1</td><td>206.2</td><td>8.0 / 21</td><td>38.1%</td></tr>
+<tr><td>26</td><td>Meaghan</td><td id="trend-up">▲ 1</td><td>202.2</td><td>4.0 / 6</td><td>66.7%</td></tr>
+<tr><td>27</td><td>Xuying</td><td id="trend-dn">▼ 2</td><td>194.2</td><td>8.0 / 18</td><td>44.4%</td></tr>
+<tr><td>28</td><td>Mara</td><td></td><td>189.2</td><td>2.0 / 12</td><td>16.7%</td></tr>
+<tr><td>29</td><td>Michael</td><td></td><td>-----</td><td>0.0 / 0</td><td>0.0%</td></tr>
+<tr><td>30</td><td>Ian</td><td></td><td>185.2</td><td>2.0 / 12</td><td>16.7%</td></tr>
+<tr><td>31</td><td>Dawn</td><td></td><td>178.2</td><td>0.0 / 20</td><td>0.0%</td></tr>
 </table>
 
 <p>
