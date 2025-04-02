@@ -1,1070 +1,14 @@
-[White "Sunvy"]
-[Black "David K"]
-[Result "0-1"]
-0-1
-
-[White "Sunvy"]
-[Black "Kyle C"]
-[Result "0-1"]
-0-1
-
-[White "Sunvy"]
-[Black "Scott D"]
-[Result "0-1"]
-0-1
-
-[White "David K"]
-[Black "Kyle C"]
-[Result "1-0"]
-1-0
-
-[White "David K"]
-[Black "Scott D"]
-[Result "1-0"]
-1-0
-
-[White "Kyle C"]
-[Black "Scott D"]
-[Result "0-1"]
-0-1
-
-[White "Vidusha"]
-[Black "Bill W"]
-[Result "1/2-1/2"]
-1/2-1/2
-
-[White "Vidusha"]
-[Black "Kyle P"]
-[Result "1-0"]
-1-0
-
-[White "Vidusha"]
-[Black "Michael B"]
-[Result "1-0"]
-1-0
-
-[White "Vidusha"]
-[Black "Sai B"]
-[Result "1-0"]
-1-0
-
-[White "Bill W"]
-[Black "Kyle P"]
-[Result "1-0"]
-1-0
-
-[White "Bill W"]
-[Black "Michael B"]
-[Result "1-0"]
-1-0
-
-[White "Bill W"]
-[Black "Sai B"]
-[Result "1-0"]
-1-0
-
-[White "Kyle P"]
-[Black "Michael B"]
-[Result "0-1"]
-0-1
-
-[White "Kyle P"]
-[Black "Sai B"]
-[Result "1-0"]
-1-0
-
-[White "Michael B"]
-[Black "Sai B"]
-[Result "1-0"]
-1-0
-
-[White "Spencer"]
-[Black "Mark W"]
-[Result "1/2-1/2"]
-1/2-1/2
-
-[White "Spencer"]
-[Black "Austen E"]
-[Result "0-1"]
-0-1
-
-[White "Spencer"]
-[Black "Blake H"]
-[Result "0-1"]
-0-1
-
-[White "Mark W"]
-[Black "Austen E"]
-[Result "0-1"]
-0-1
-
-[White "Mark W"]
-[Black "Blake H"]
-[Result "0-1"]
-0-1
-
-[White "Austen E"]
-[Black "Blake H"]
-[Result "0-1"]
-0-1
-
-[White "Ben L"]
-[Black "Steve Jo"]
-[Result "1-0"]
-1-0
-
-[White "Ben L"]
-[Black "Paul K"]
-[Result "1-0"]
-1-0
-
-[White "Ben L"]
-[Black "Rick W"]
-[Result "1/2-1/2"]
-1/2-1/2
-
-[White "Ben L"]
-[Black "Chris V"]
-[Result "1-0"]
-1-0
-
-[White "Steve Jo"]
-[Black "Paul K"]
-[Result "1/2-1/2"]
-1/2-1/2
-
-[White "Steve Jo"]
-[Black "Rick W"]
-[Result "0-1"]
-0-1
-
-[White "Steve Jo"]
-[Black "Chris V"]
-[Result "0-1"]
-0-1
-
-[White "Paul K"]
-[Black "Rick W"]
-[Result "0-1"]
-0-1
-
-[White "Paul K"]
-[Black "Chris V"]
-[Result "0-1"]
-0-1
-
-[White "Rick W"]
-[Black "Chris V"]
-[Result "1-0"]
-1-0
-
-[White "Jonathan W"]
-[Black "Evan W"]
-[Result "0-1"]
-0-1
-
-[White "Jonathan W"]
-[Black "Beau"]
-[Result "0-1"]
-0-1
-
-[White "Jonathan W"]
-[Black "Parag"]
-[Result "0-1"]
-0-1
-
-[White "Evan W"]
-[Black "Beau"]
-[Result "1-0"]
-1-0
-
-[White "Evan W"]
-[Black "Parag"]
-[Result "1-0"]
-1-0
-
-[White "Beau"]
-[Black "Parag"]
-[Result "0-1"]
-0-1
-
-[White "Alessandro"]
-[Black "Todd P"]
-[Result "1-0"]
-1-0
-
-[White "Alessandro"]
-[Black "Jason S"]
-[Result "1-0"]
-1-0
-
-[White "Alessandro"]
-[Black "Ryan K"]
-[Result "1-0"]
-1-0
-
-[White "Todd P"]
-[Black "Jason S"]
-[Result "0-1"]
-0-1
-
-[White "Todd P"]
-[Black "Ryan K"]
-[Result "0-1"]
-0-1
-
-[White "Jason S"]
-[Black "Ryan K"]
-[Result "0-1"]
-0-1
-
-[White "Noah J"]
-[Black "Anagh"]
-[Result "1-0"]
-1-0
-
-[White "Noah J"]
-[Black "Michael J"]
-[Result "1-0"]
-1-0
-
-[White "Noah J"]
-[Black "Marissa D"]
-[Result "0-1"]
-0-1
-
-[White "Noah J"]
-[Black "Carolyn G"]
-[Result "1-0"]
-1-0
-
-[White "Anagh"]
-[Black "Michael J"]
-[Result "1-0"]
-1-0
-
-[White "Anagh"]
-[Black "Marissa D"]
-[Result "0-1"]
-0-1
-
-[White "Anagh"]
-[Black "Carolyn G"]
-[Result "1-0"]
-1-0
-
-[White "Michael J"]
-[Black "Marissa D"]
-[Result "0-1"]
-0-1
-
-[White "Michael J"]
-[Black "Carolyn G"]
-[Result "1-0"]
-1-0
-
-[White "Marissa D"]
-[Black "Carolyn G"]
-[Result "1-0"]
-1-0
-
-[White "Clark F"]
-[Black "Will L"]
-[Result "1-0"]
-1-0
-
-[White "Clark F"]
-[Black "Brandon H"]
-[Result "1-0"]
-1-0
-
-[White "Clark F"]
-[Black "Azadeh"]
-[Result "1-0"]
-1-0
-
-[White "Clark F"]
-[Black "Mrin"]
-[Result "1-0"]
-1-0
-
-[White "Will L"]
-[Black "Brandon H"]
-[Result "1-0"]
-1-0
-
-[White "Will L"]
-[Black "Azadeh"]
-[Result "1-0"]
-1-0
-
-[White "Will L"]
-[Black "Mrin"]
-[Result "1-0"]
-1-0
-
-[White "Brandon H"]
-[Black "Azadeh"]
-[Result "1-0"]
-1-0
-
-[White "Brandon H"]
-[Black "Mrin"]
-[Result "0-1"]
-0-1
-
-[White "Azadeh"]
-[Black "Mrin"]
-[Result "0-1"]
-0-1
-
-[White "Simon A"]
-[Black "Mark G"]
-[Result "1-0"]
-1-0
-
-[White "Simon A"]
-[Black "Adam K"]
-[Result "1-0"]
-1-0
-
-[White "Simon A"]
-[Black "Ryan MK"]
-[Result "1-0"]
-1-0
-
-[White "Mark G"]
-[Black "Adam K"]
-[Result "1-0"]
-1-0
-
-[White "Mark G"]
-[Black "Ryan MK"]
-[Result "1-0"]
-1-0
-
-[White "Adam K"]
-[Black "Ryan MK"]
-[Result "0-1"]
-0-1
-
-[White "Colin B"]
-[Black "Ralph A"]
-[Result "0-1"]
-0-1
-
-[White "Colin B"]
-[Black "Patrick Mc"]
-[Result "0-1"]
-0-1
-
-[White "Colin B"]
-[Black "Melissa J"]
-[Result "0-1"]
-0-1
-
-[White "Colin B"]
-[Black "Alejandro T"]
-[Result "0-1"]
-0-1
-
-[White "Ralph A"]
-[Black "Patrick Mc"]
-[Result "0-1"]
-0-1
-
-[White "Ralph A"]
-[Black "Melissa J"]
-[Result "0-1"]
-0-1
-
-[White "Ralph A"]
-[Black "Alejandro T"]
-[Result "1-0"]
-1-0
-
-[White "Patrick Mc"]
-[Black "Melissa J"]
-[Result "1-0"]
-1-0
-
-[White "Patrick Mc"]
-[Black "Alejandro T"]
-[Result "1-0"]
-1-0
-
-[White "Melissa J"]
-[Black "Alejandro T"]
-[Result "1-0"]
-1-0
-
-[White "Dan L"]
-[Black "William C"]
-[Result "0-1"]
-0-1
-
-[White "Dan L"]
-[Black "Eric B"]
-[Result "0-1"]
-0-1
-
-[White "Dan L"]
-[Black "Stacy N"]
-[Result "1-0"]
-1-0
-
-[White "William C"]
-[Black "Eric B"]
-[Result "0-1"]
-0-1
-
-[White "William C"]
-[Black "Stacy N"]
-[Result "1-0"]
-1-0
-
-[White "Eric B"]
-[Black "Stacy N"]
-[Result "1-0"]
-1-0
-
-[White "Eli"]
-[Black "Deb M"]
-[Result "1-0"]
-1-0
-
-[White "Eli"]
-[Black "Bill B"]
-[Result "0-1"]
-0-1
-
-[White "Eli"]
-[Black "Hamed"]
-[Result "1/2-1/2"]
-1/2-1/2
-
-[White "Deb M"]
-[Black "Bill B"]
-[Result "0-1"]
-0-1
-
-[White "Deb M"]
-[Black "Hamed"]
-[Result "0-1"]
-0-1
-
-[White "Bill B"]
-[Black "Hamed"]
-[Result "1-0"]
-1-0
-
-[White "Maria N"]
-[Black "Kate L"]
-[Result "1-0"]
-1-0
-
-[White "Maria N"]
-[Black "Wei"]
-[Result "1-0"]
-1-0
-
-[White "Maria N"]
-[Black "Samantha F"]
-[Result "1-0"]
-1-0
-
-[White "Kate L"]
-[Black "Wei"]
-[Result "0-1"]
-0-1
-
-[White "Kate L"]
-[Black "Samantha F"]
-[Result "1-0"]
-1-0
-
-[White "Wei"]
-[Black "Samantha F"]
-[Result "1-0"]
-1-0
-
-[White "Namrata"]
-[Black "Asawari"]
-[Result "0-1"]
-0-1
-
-[White "Namrata"]
-[Black "Ridhi"]
-[Result "0-1"]
-0-1
-
-[White "Namrata"]
-[Black "Vika"]
-[Result "0-1"]
-0-1
-
-[White "Namrata"]
-[Black "Ruth M"]
-[Result "1-0"]
-1-0
-
-[White "Asawari"]
-[Black "Ridhi"]
-[Result "0-1"]
-0-1
-
-[White "Asawari"]
-[Black "Vika"]
-[Result "0-1"]
-0-1
-
-[White "Asawari"]
-[Black "Ruth M"]
-[Result "1-0"]
-1-0
-
-[White "Ridhi"]
-[Black "Vika"]
-[Result "1-0"]
-1-0
-
-[White "Ridhi"]
-[Black "Ruth M"]
-[Result "1-0"]
-1-0
-
-[White "Vika"]
-[Black "Ruth M"]
-[Result "1-0"]
-1-0
-
-[White "David K"]
-[Black "Kyle C"]
-[Result "1-0"]
-1-0
-
-[White "David K"]
-[Black "Scott D"]
-[Result "1-0"]
-1-0
-
-[White "David K"]
-[Black "Bill W"]
-[Result "1-0"]
-1-0
-
-[White "David K"]
-[Black "Michael B"]
-[Result "1-0"]
-1-0
-
-[White "Kyle C"]
-[Black "Scott D"]
-[Result "1-0"]
-1-0
-
-[White "Kyle C"]
-[Black "Bill W"]
-[Result "1-0"]
-1-0
-
-[White "Kyle C"]
-[Black "Michael B"]
-[Result "1-0"]
-1-0
-
-[White "Scott D"]
-[Black "Bill W"]
-[Result "0-1"]
-0-1
-
-[White "Scott D"]
-[Black "Michael B"]
-[Result "0-1"]
-0-1
-
-[White "Bill W"]
-[Black "Michael B"]
-[Result "0-1"]
-0-1
-
-[White "Sunvy"]
-[Black "Blake H"]
-[Result "0-1"]
-0-1
-
-[White "Sunvy"]
-[Black "Vidusha"]
-[Result "1-0"]
-1-0
-
-[White "Sunvy"]
-[Black "Kyle P"]
-[Result "1-0"]
-1-0
-
-[White "Blake H"]
-[Black "Vidusha"]
-[Result "1-0"]
-1-0
-
-[White "Blake H"]
-[Black "Kyle P"]
-[Result "1-0"]
-1-0
-
-[White "Vidusha"]
-[Black "Kyle P"]
-[Result "1-0"]
-1-0
-
-[White "Austen E"]
-[Black "Sai B"]
-[Result "1-0"]
-1-0
-
-[White "Austen E"]
-[Black "Ben L"]
-[Result "1-0"]
-1-0
-
-[White "Austen E"]
-[Black "Rick W"]
-[Result "1-0"]
-1-0
-
-[White "Sai B"]
-[Black "Ben L"]
-[Result "0-1"]
-0-1
-
-[White "Sai B"]
-[Black "Rick W"]
-[Result "0-1"]
-0-1
-
-[White "Ben L"]
-[Black "Rick W"]
-[Result "1-0"]
-1-0
-
-[White "Spencer"]
-[Black "Mark W"]
-[Result "1-0"]
-1-0
-
-[White "Spencer"]
-[Black "Chris V"]
-[Result "1-0"]
-1-0
-
-[White "Spencer"]
-[Black "Evan W"]
-[Result "1-0"]
-1-0
-
-[White "Mark W"]
-[Black "Chris V"]
-[Result "0-1"]
-0-1
-
-[White "Mark W"]
-[Black "Evan W"]
-[Result "0-1"]
-0-1
-
-[White "Chris V"]
-[Black "Evan W"]
-[Result "0-1"]
-0-1
-
-[White "Steve Jo"]
-[Black "Paul K"]
-[Result "1-0"]
-1-0
-
-[White "Steve Jo"]
-[Black "Beau"]
-[Result "1-0"]
-1-0
-
-[White "Steve Jo"]
-[Black "Parag"]
-[Result "1-0"]
-1-0
-
-[White "Steve Jo"]
-[Black "Alessandro"]
-[Result "1-0"]
-1-0
-
-[White "Paul K"]
-[Black "Beau"]
-[Result "0-1"]
-0-1
-
-[White "Paul K"]
-[Black "Parag"]
-[Result "0-1"]
-0-1
-
-[White "Paul K"]
-[Black "Alessandro"]
-[Result "1-0"]
-1-0
-
-[White "Beau"]
-[Black "Parag"]
-[Result "1-0"]
-1-0
-
-[White "Beau"]
-[Black "Alessandro"]
-[Result "1-0"]
-1-0
-
-[White "Parag"]
-[Black "Alessandro"]
-[Result "1-0"]
-1-0
-
-[White "Jason S"]
-[Black "Ryan K"]
-[Result "0-1"]
-0-1
-
-[White "Jason S"]
-[Black "Noah J"]
-[Result "1-0"]
-1-0
-
-[White "Jason S"]
-[Black "Marissa D"]
-[Result "1-0"]
-1-0
-
-[White "Ryan K"]
-[Black "Noah J"]
-[Result "1-0"]
-1-0
-
-[White "Ryan K"]
-[Black "Marissa D"]
-[Result "1-0"]
-1-0
-
-[White "Noah J"]
-[Black "Marissa D"]
-[Result "0-1"]
-0-1
-
-[White "Anagh"]
-[Black "Michael J"]
-[Result "1-0"]
-1-0
-
-[White "Anagh"]
-[Black "Clark F"]
-[Result "0-1"]
-0-1
-
-[White "Anagh"]
-[Black "Will L"]
-[Result "1-0"]
-1-0
-
-[White "Michael J"]
-[Black "Clark F"]
-[Result "0-1"]
-0-1
-
-[White "Michael J"]
-[Black "Will L"]
-[Result "0-1"]
-0-1
-
-[White "Clark F"]
-[Black "Will L"]
-[Result "1-0"]
-1-0
-
-[White "Todd P"]
-[Black "Carolyn G"]
-[Result "1-0"]
-1-0
-
-[White "Todd P"]
-[Black "Brandon H"]
-[Result "0-1"]
-0-1
-
-[White "Todd P"]
-[Black "Mrin"]
-[Result "0-1"]
-0-1
-
-[White "Todd P"]
-[Black "Simon A"]
-[Result "0-1"]
-0-1
-
-[White "Carolyn G"]
-[Black "Brandon H"]
-[Result "0-1"]
-0-1
-
-[White "Carolyn G"]
-[Black "Mrin"]
-[Result "0-1"]
-0-1
-
-[White "Carolyn G"]
-[Black "Simon A"]
-[Result "0-1"]
-0-1
-
-[White "Brandon H"]
-[Black "Mrin"]
-[Result "1-0"]
-1-0
-
-[White "Brandon H"]
-[Black "Simon A"]
-[Result "1-0"]
-1-0
-
-[White "Mrin"]
-[Black "Simon A"]
-[Result "0-1"]
-0-1
-
-[White "Azadeh"]
-[Black "Mark G"]
-[Result "0-1"]
-0-1
-
-[White "Azadeh"]
-[Black "Ryan MK"]
-[Result "0-1"]
-0-1
-
-[White "Azadeh"]
-[Black "Patrick Mc"]
-[Result "0-1"]
-0-1
-
-[White "Azadeh"]
-[Black "Melissa J"]
-[Result "0-1"]
-0-1
-
-[White "Mark G"]
-[Black "Ryan MK"]
-[Result "0-1"]
-0-1
-
-[White "Mark G"]
-[Black "Patrick Mc"]
-[Result "0-1"]
-0-1
-
-[White "Mark G"]
-[Black "Melissa J"]
-[Result "0-1"]
-0-1
-
-[White "Ryan MK"]
-[Black "Patrick Mc"]
-[Result "1/2-1/2"]
-1/2-1/2
-
-[White "Ryan MK"]
-[Black "Melissa J"]
-[Result "0-1"]
-0-1
-
-[White "Patrick Mc"]
-[Black "Melissa J"]
-[Result "0-1"]
-0-1
-
-[White "Adam K"]
-[Black "Eric B"]
-[Result "0-1"]
-0-1
-
-[White "Colin B"]
-[Black "Alejandro T"]
-[Result "0-1"]
-0-1
-
-[White "Adam K"]
-[Black "Colin B"]
-[Result "1-0"]
-1-0
-
-[White "Adam K"]
-[Black "Alejandro T"]
-[Result "0-1"]
-0-1
-
-[White "Colin B"]
-[Black "Eric B"]
-[Result "0-1"]
-0-1
-
-[White "Alejandro T"]
-[Black "Eric B"]
-[Result "1/2-1/2"]
-1/2-1/2
-
-[White "Dan L"]
-[Black "William C"]
-[Result "1-0"]
-1-0
-
-[White "Dan L"]
-[Black "Ralph A"]
-[Result "0-1"]
-0-1
-
-[White "Dan L"]
-[Black "Bill B"]
-[Result "1-0"]
-1-0
-
-[White "William C"]
-[Black "Ralph A"]
-[Result "0-1"]
-0-1
-
-[White "William C"]
-[Black "Bill B"]
-[Result "1-0"]
-1-0
-
-[White "Ralph A"]
-[Black "Bill B"]
-[Result "1-0"]
-1-0
-
-[White "Stacy N"]
-[Black "Eli"]
-[Result "0-1"]
-0-1
-
-[White "Stacy N"]
-[Black "Hamed"]
-[Result "1-0"]
-1-0
-
-[White "Stacy N"]
-[Black "Maria N"]
-[Result "0-1"]
-0-1
-
-[White "Eli"]
-[Black "Hamed"]
-[Result "1-0"]
-1-0
-
-[White "Eli"]
-[Black "Maria N"]
-[Result "1-0"]
-1-0
-
-[White "Hamed"]
-[Black "Maria N"]
-[Result "0-1"]
-0-1
-
-[White "Deb M"]
-[Black "Kate L"]
-[Result "0-1"]
-0-1
-
-[White "Deb M"]
-[Black "Wei"]
-[Result "1-0"]
-1-0
-
-[White "Deb M"]
-[Black "Ridhi"]
-[Result "0-1"]
-0-1
-
-[White "Deb M"]
-[Black "Vika"]
-[Result "0-1"]
-0-1
-
-[White "Kate L"]
-[Black "Wei"]
-[Result "1-0"]
-1-0
-
-[White "Kate L"]
-[Black "Ridhi"]
-[Result "1-0"]
-1-0
-
-[White "Kate L"]
-[Black "Vika"]
-[Result "0-1"]
-0-1
-
-[White "Wei"]
-[Black "Ridhi"]
-[Result "0-1"]
-0-1
-
-[White "Wei"]
-[Black "Vika"]
-[Result "0-1"]
-0-1
-
-[White "Ridhi"]
-[Black "Vika"]
-[Result "0-1"]
-0-1
-
-[White "Samantha F"]
-[Black "Namrata"]
-[Result "1-0"]
-1-0
-
-[White "Samantha F"]
-[Black "Asawari"]
-[Result "1-0"]
-1-0
-
-[White "Samantha F"]
-[Black "Ruth M"]
-[Result "1-0"]
-1-0
-
-[White "Namrata"]
-[Black "Asawari"]
-[Result "0-1"]
-0-1
-
-[White "Namrata"]
-[Black "Ruth M"]
-[Result "0-1"]
-0-1
-
-[White "Asawari"]
-[Black "Ruth M"]
-[Result "1-0"]
-1-0
-
 Sunvy
    David K:  -18.0   -18.0   (30)
    Kyle C:  -9.0   -9.0   (30)
    Scott D:  -17.0   -17.0   (30)
    Blake H:  -9.0   -9.0   (30)
-   Vidusha:  +6.0   +6.0   (30)
-   Kyle P:  +7.0   +7.0   (30)
+   Vidusha:  +5.5   +2.9   (57)
+   Kyle P:  +12.0   +6.3   (57)
+   Warren:  +13.5   +15.0   (27)
+   Dave E:  +4.5   +2.4   (57)
+   Bill W:  +1.0   +1.0   (30)
+   Rick W:  +8.0   +8.0   (30)
 David K
    Sunvy:  +18.0   +18.0   (30)
    Kyle C:  +17.5   +8.3   (63)
@@ -1077,50 +21,76 @@ Kyle C
    Scott D:  +1.0   +0.5   (63)
    Bill W:  +8.5   +7.7   (33)
    Michael B:  +3.5   +3.2   (33)
+   Remco:  +6.0   +3.0   (60)
+   Shashank:  +13.0   +13.0   (30)
+   Blake H:  +9.0   +4.5   (60)
+   Austen E:  -2.0   -2.0   (30)
 Scott D
    Sunvy:  +17.0   +17.0   (30)
    David K:  -18.5   -8.8   (63)
    Kyle C:  -1.0   -0.5   (63)
-   Bill W:  -0.5   -0.5   (33)
-   Michael B:  -5.5   -5.0   (33)
+   Bill W:  +10.5   +5.0   (63)
+   Michael B:  -24.5   -7.9   (93)
+   Austen E:  -3.0   -3.0   (30)
+   Shashank:  -11.0   -11.0   (30)
+   Vidusha:  -12.0   -12.0   (30)
 Vidusha
    Bill W:  +0.0   +0.0   (27)
-   Kyle P:  +9.5   +5.0   (57)
-   Michael B:  +0.5   +0.6   (27)
+   Kyle P:  +15.0   +5.4   (84)
+   Michael B:  -8.5   -4.5   (57)
    Sai B:  +13.5   +15.0   (27)
-   Sunvy:  -6.0   -6.0   (30)
+   Sunvy:  -5.5   -2.9   (57)
    Blake H:  -15.0   -15.0   (30)
+   Warren:  +14.0   +15.6   (27)
+   Dave E:  +0.0   +0.0   (27)
+   Shashank:  +1.0   +1.0   (30)
+   Scott D:  +12.0   +12.0   (30)
 Bill W
    Vidusha:  +0.0   +0.0   (27)
    Kyle P:  +8.5   +9.4   (27)
-   Michael B:  -4.5   -2.2   (60)
+   Michael B:  -13.5   -4.5   (90)
    Sai B:  +13.5   +15.0   (27)
    David K:  -17.0   -15.5   (33)
    Kyle C:  -8.5   -7.7   (33)
-   Scott D:  +0.5   +0.5   (33)
+   Scott D:  -10.5   -5.0   (63)
+   Austen E:  -14.0   -14.0   (30)
+   Sunvy:  -1.0   -1.0   (30)
+   Dave E:  +4.0   +4.0   (30)
+   Rick W:  +7.0   +7.0   (30)
 Kyle P
-   Vidusha:  -9.5   -5.0   (57)
+   Vidusha:  -15.0   -5.4   (84)
    Bill W:  -8.5   -9.4   (27)
    Michael B:  -8.0   -8.9   (27)
-   Sai B:  +5.0   +5.6   (27)
-   Sunvy:  -7.0   -7.0   (30)
+   Sai B:  +6.5   +3.6   (54)
+   Sunvy:  -12.0   -6.3   (57)
    Blake H:  -16.0   -16.0   (30)
+   Warren:  +14.5   +8.1   (54)
+   Dave E:  -5.5   -6.1   (27)
+   Chris V:  +4.5   +5.0   (27)
+   Beau:  +5.5   +6.1   (27)
 Michael B
-   Vidusha:  -0.5   -0.6   (27)
-   Bill W:  +4.5   +2.2   (60)
+   Vidusha:  +8.5   +4.5   (57)
+   Bill W:  +13.5   +4.5   (90)
    Kyle P:  +8.0   +8.9   (27)
    Sai B:  +13.0   +14.4   (27)
    David K:  -12.0   -10.9   (33)
    Kyle C:  -3.5   -3.2   (33)
-   Scott D:  +5.5   +5.0   (33)
+   Scott D:  +24.5   +7.9   (93)
+   Austen E:  -5.0   -5.0   (30)
+   Shashank:  +10.0   +10.0   (30)
 Sai B
    Vidusha:  -13.5   -15.0   (27)
    Bill W:  -13.5   -15.0   (27)
-   Kyle P:  -5.0   -5.6   (27)
+   Kyle P:  -6.5   -3.6   (54)
    Michael B:  -13.0   -14.4   (27)
    Austen E:  -20.0   -20.0   (30)
    Ben L:  -7.0   -7.0   (30)
-   Rick W:  -1.0   -1.0   (30)
+   Rick W:  -2.0   -1.1   (57)
+   Evan W:  +5.5   +6.1   (27)
+   Vishwas:  +5.5   +6.1   (27)
+   Chris V:  +3.0   +1.7   (54)
+   Warren:  +4.5   +5.0   (27)
+   Beau:  +4.0   +4.4   (27)
 Spencer
    Mark W:  +22.0   +11.0   (60)
    Austen E:  -6.0   -6.0   (30)
@@ -1136,17 +106,25 @@ Mark W
 Austen E
    Spencer:  +6.0   +6.0   (30)
    Mark W:  +6.0   +6.0   (30)
-   Blake H:  -6.0   -6.0   (30)
+   Blake H:  +3.0   +1.5   (60)
    Sai B:  +20.0   +20.0   (30)
    Ben L:  +13.0   +13.0   (30)
    Rick W:  +19.0   +19.0   (30)
+   Michael B:  +5.0   +5.0   (30)
+   Bill W:  +14.0   +14.0   (30)
+   Scott D:  +3.0   +3.0   (30)
+   Remco:  +13.0   +13.0   (30)
+   Kyle C:  +2.0   +2.0   (30)
 Blake H
    Spencer:  +12.0   +12.0   (30)
    Mark W:  +12.0   +12.0   (30)
-   Austen E:  +6.0   +6.0   (30)
+   Austen E:  -3.0   -1.5   (60)
    Sunvy:  +9.0   +9.0   (30)
    Vidusha:  +15.0   +15.0   (30)
    Kyle P:  +16.0   +16.0   (30)
+   Remco:  -3.0   -1.5   (60)
+   Kyle C:  -9.0   -4.5   (60)
+   Shashank:  +11.0   +11.0   (30)
 Ben L
    Steve Jo:  +12.0   +13.3   (27)
    Paul K:  +12.0   +13.3   (27)
@@ -1174,17 +152,27 @@ Rick W
    Ben L:  -6.0   -3.2   (57)
    Steve Jo:  +12.0   +13.3   (27)
    Paul K:  +12.0   +13.3   (27)
-   Chris V:  +11.0   +12.2   (27)
+   Chris V:  +12.0   +6.7   (54)
    Austen E:  -19.0   -19.0   (30)
-   Sai B:  +1.0   +1.0   (30)
+   Sai B:  +2.0   +1.1   (57)
+   Evan W:  +6.5   +7.2   (27)
+   Vishwas:  +6.5   +7.2   (27)
+   Sunvy:  -8.0   -8.0   (30)
+   Bill W:  -7.0   -7.0   (30)
+   Dave E:  -3.0   -3.0   (30)
 Chris V
    Ben L:  -11.0   -12.2   (27)
    Steve Jo:  +1.0   +1.1   (27)
    Paul K:  +1.0   +1.1   (27)
-   Rick W:  -11.0   -12.2   (27)
+   Rick W:  -12.0   -6.7   (54)
    Spencer:  -17.0   -17.0   (30)
    Mark W:  +5.0   +5.0   (30)
-   Evan W:  -4.0   -4.0   (30)
+   Evan W:  +1.5   +0.8   (57)
+   Sai B:  -3.0   -1.7   (54)
+   Vishwas:  +5.5   +6.1   (27)
+   Warren:  +1.5   +1.7   (27)
+   Beau:  +1.0   +1.1   (27)
+   Kyle P:  -4.5   -5.0   (27)
 Jonathan W
    Evan W:  -17.0   -17.0   (30)
    Beau:  -14.0   -14.0   (30)
@@ -1192,32 +180,49 @@ Jonathan W
 Evan W
    Jonathan W:  +17.0   +17.0   (30)
    Beau:  +3.0   +3.0   (30)
-   Parag:  +2.0   +2.0   (30)
+   Parag:  +9.5   +5.0   (57)
    Spencer:  -13.0   -13.0   (30)
    Mark W:  +9.0   +9.0   (30)
-   Chris V:  +4.0   +4.0   (30)
+   Chris V:  -1.5   -0.8   (57)
+   Rick W:  -6.5   -7.2   (27)
+   Sai B:  -5.5   -6.1   (27)
+   Vishwas:  +7.5   +4.2   (54)
+   Alessandro:  +15.0   +16.7   (27)
+   Marissa D:  +0.0   +0.0   (27)
 Beau
    Jonathan W:  +14.0   +14.0   (30)
    Evan W:  -3.0   -3.0   (30)
-   Parag:  +0.5   +0.3   (57)
+   Parag:  +4.5   +1.6   (87)
    Steve Jo:  -5.5   -6.1   (27)
    Paul K:  +11.0   +12.2   (27)
-   Alessandro:  +13.0   +14.4   (27)
+   Alessandro:  +24.0   +12.6   (57)
+   Emma F:  +17.0   +17.0   (30)
+   Warren:  +0.5   +0.6   (27)
+   Chris V:  -1.0   -1.1   (27)
+   Sai B:  -4.0   -4.4   (27)
+   Kyle P:  -5.5   -6.1   (27)
 Parag
    Jonathan W:  +15.0   +15.0   (30)
-   Evan W:  -2.0   -2.0   (30)
-   Beau:  -0.5   -0.3   (57)
+   Evan W:  -9.5   -5.0   (57)
+   Beau:  -4.5   -1.6   (87)
    Steve Jo:  -7.0   -7.8   (27)
    Paul K:  +9.5   +10.6   (27)
-   Alessandro:  +11.5   +12.8   (27)
+   Alessandro:  +26.0   +9.3   (84)
+   Emma F:  +13.0   +13.0   (30)
+   Vishwas:  +0.0   +0.0   (27)
+   Marissa D:  -7.5   -8.3   (27)
 Alessandro
    Todd P:  +17.0   +17.0   (30)
    Jason S:  +9.0   +9.0   (30)
    Ryan K:  +2.0   +2.0   (30)
    Steve Jo:  -18.5   -20.6   (27)
    Paul K:  -2.0   -2.2   (27)
-   Beau:  -13.0   -14.4   (27)
-   Parag:  -11.5   -12.8   (27)
+   Beau:  -24.0   -12.6   (57)
+   Parag:  -26.0   -9.3   (84)
+   Emma F:  +6.0   +6.0   (30)
+   Evan W:  -15.0   -16.7   (27)
+   Vishwas:  -7.5   -8.3   (27)
+   Marissa D:  -15.0   -16.7   (27)
 Todd P
    Alessandro:  -17.0   -17.0   (30)
    Jason S:  -8.0   -8.0   (30)
@@ -1226,12 +231,19 @@ Todd P
    Brandon H:  -14.0   -15.6   (27)
    Mrin:  -3.5   -3.9   (27)
    Simon A:  -10.5   -11.7   (27)
+   Alejandro:  -16.0   -16.0   (30)
+   Azadeh:  -22.0   -22.0   (30)
+   Adam K:  -12.0   -12.0   (30)
 Jason S
    Alessandro:  -9.0   -9.0   (30)
    Todd P:  +8.0   +8.0   (30)
    Ryan K:  -13.0   -6.5   (60)
    Noah J:  +3.0   +3.0   (30)
-   Marissa D:  +1.0   +1.0   (30)
+   Marissa D:  -6.0   -3.0   (60)
+   Evan Sh:  +15.0   +15.0   (30)
+   Clark F:  +1.0   +0.5   (60)
+   Emma F:  +20.0   +20.0   (30)
+   Melissa J:  +7.0   +7.0   (30)
 Ryan K
    Alessandro:  -2.0   -2.0   (30)
    Todd P:  +15.0   +15.0   (30)
@@ -1239,19 +251,28 @@ Ryan K
    Noah J:  +9.0   +9.0   (30)
    Marissa D:  +7.0   +7.0   (30)
 Noah J
-   Anagh:  +4.0   +4.4   (27)
+   Anagh:  +8.5   +3.0   (84)
    Michael J:  +6.5   +7.2   (27)
    Marissa D:  -9.5   -5.0   (57)
    Carolyn G:  +12.0   +13.3   (27)
    Jason S:  -3.0   -3.0   (30)
    Ryan K:  -9.0   -9.0   (30)
+   Melissa J:  -7.5   -8.3   (27)
+   Will L:  -0.5   -0.6   (27)
+   Craig L:  +7.0   +7.8   (27)
+   Simon A:  +17.0   +17.0   (30)
+   Mrin:  -1.0   -1.0   (30)
 Anagh
-   Noah J:  -4.0   -4.4   (27)
+   Noah J:  -8.5   -3.0   (84)
    Michael J:  +18.5   +9.7   (57)
    Marissa D:  -11.5   -12.8   (27)
    Carolyn G:  +8.0   +8.9   (27)
    Clark F:  -6.0   -6.0   (30)
-   Will L:  +4.0   +4.0   (30)
+   Will L:  +5.0   +2.6   (57)
+   Melissa J:  -6.0   -6.7   (27)
+   Craig L:  +8.5   +9.4   (27)
+   Simon A:  +11.0   +11.0   (30)
+   Mrin:  -7.0   -7.0   (30)
 Michael J
    Noah J:  -6.5   -7.2   (27)
    Anagh:  -18.5   -9.7   (57)
@@ -1264,8 +285,14 @@ Marissa D
    Anagh:  +11.5   +12.8   (27)
    Michael J:  +14.0   +15.6   (27)
    Carolyn G:  +19.5   +21.7   (27)
-   Jason S:  -1.0   -1.0   (30)
+   Jason S:  +6.0   +3.0   (60)
    Ryan K:  -7.0   -7.0   (30)
+   Evan Sh:  +22.0   +22.0   (30)
+   Clark F:  +5.0   +5.0   (30)
+   Evan W:  +0.0   +0.0   (27)
+   Parag:  +7.5   +8.3   (27)
+   Alessandro:  +15.0   +16.7   (27)
+   Vishwas:  +7.5   +8.3   (27)
 Carolyn G
    Noah J:  -12.0   -13.3   (27)
    Anagh:  -8.0   -8.9   (27)
@@ -1282,111 +309,164 @@ Clark F
    Mrin:  +7.5   +8.3   (27)
    Anagh:  +6.0   +6.0   (30)
    Michael J:  +22.0   +22.0   (30)
+   Evan Sh:  +17.0   +17.0   (30)
+   Jason S:  -1.0   -0.5   (60)
+   Marissa D:  -5.0   -5.0   (30)
+   Emma F:  +17.0   +17.0   (30)
+   Melissa J:  +4.0   +4.0   (30)
 Will L
    Clark F:  -15.0   -7.9   (57)
    Brandon H:  +7.5   +8.3   (27)
    Azadeh:  +10.0   +11.1   (27)
    Mrin:  +2.5   +2.8   (27)
-   Anagh:  -4.0   -4.0   (30)
+   Anagh:  -5.0   -2.6   (57)
    Michael J:  +12.0   +12.0   (30)
+   Noah J:  +0.5   +0.6   (27)
+   Melissa J:  -7.0   -7.8   (27)
+   Craig L:  +7.5   +8.3   (27)
 Brandon H
    Clark F:  -12.5   -13.9   (27)
    Will L:  -7.5   -8.3   (27)
    Azadeh:  +2.5   +2.8   (27)
-   Mrin:  +5.5   +3.1   (54)
+   Mrin:  -3.5   -1.2   (84)
    Todd P:  +14.0   +15.6   (27)
    Carolyn G:  +14.5   +16.1   (27)
-   Simon A:  +3.5   +3.9   (27)
+   Simon A:  -8.5   -4.5   (57)
+   Patrick Mc:  +9.0   +4.5   (60)
+   Craig L:  -3.0   -3.0   (30)
+   Ryan MK:  +1.0   +1.0   (30)
 Azadeh
    Clark F:  -15.0   -16.7   (27)
    Will L:  -10.0   -11.1   (27)
    Brandon H:  -2.5   -2.8   (27)
    Mrin:  -7.5   -8.3   (27)
-   Mark G:  -2.5   -2.8   (27)
+   Mark G:  -16.5   -8.7   (57)
    Ryan MK:  -5.0   -5.6   (27)
    Patrick Mc:  -5.0   -5.6   (27)
    Melissa J:  -12.5   -13.9   (27)
+   Alejandro:  -1.0   -0.5   (60)
+   Todd P:  +22.0   +22.0   (30)
+   Adam K:  +10.0   +10.0   (30)
+   Ralph A:  -1.0   -1.0   (30)
 Mrin
    Clark F:  -7.5   -8.3   (27)
    Will L:  -2.5   -2.8   (27)
-   Brandon H:  -5.5   -3.1   (54)
+   Brandon H:  +3.5   +1.2   (84)
    Azadeh:  +7.5   +8.3   (27)
    Todd P:  +3.5   +3.9   (27)
    Carolyn G:  +4.0   +4.4   (27)
-   Simon A:  -7.0   -7.8   (27)
+   Simon A:  +8.0   +2.8   (87)
+   Patrick Mc:  +2.0   +2.0   (30)
+   Noah J:  +1.0   +1.0   (30)
+   Anagh:  +7.0   +7.0   (30)
 Simon A
    Mark G:  +4.0   +4.0   (30)
    Adam K:  +13.0   +13.0   (30)
    Ryan MK:  +7.0   +7.0   (30)
    Todd P:  +10.5   +11.7   (27)
    Carolyn G:  +11.0   +12.2   (27)
-   Brandon H:  -3.5   -3.9   (27)
-   Mrin:  +7.0   +7.8   (27)
+   Brandon H:  +8.5   +4.5   (57)
+   Mrin:  -8.0   -2.8   (87)
+   Patrick Mc:  +5.0   +5.0   (30)
+   Noah J:  -17.0   -17.0   (30)
+   Anagh:  -11.0   -11.0   (30)
 Mark G
    Simon A:  -4.0   -4.0   (30)
    Adam K:  +9.0   +9.0   (30)
-   Ryan MK:  +0.5   +0.3   (57)
-   Azadeh:  +2.5   +2.8   (27)
+   Ryan MK:  -4.5   -1.6   (87)
+   Azadeh:  +16.5   +8.7   (57)
    Patrick Mc:  -2.5   -2.8   (27)
    Melissa J:  -10.0   -11.1   (27)
+   Eric B:  +18.0   +18.0   (30)
+   Ralph A:  +16.0   +8.0   (60)
+   Alejandro:  +7.0   +7.0   (30)
 Adam K
    Simon A:  -13.0   -13.0   (30)
    Mark G:  -9.0   -9.0   (30)
    Ryan MK:  -6.0   -6.0   (30)
-   Eric B:  -3.0   -3.0   (30)
+   Eric B:  +6.0   +3.5   (52)
    Colin B:  +10.0   +11.5   (26)
-   Alejandro T:  -3.0   -3.5   (26)
+   Alejandro:  -7.0   -3.8   (56)
+   Azadeh:  -10.0   -10.0   (30)
+   Todd P:  +12.0   +12.0   (30)
+   Dan L:  +2.0   +2.0   (30)
+   Bill B:  +12.0   +16.4   (22)
 Ryan MK
    Simon A:  -7.0   -7.0   (30)
-   Mark G:  -0.5   -0.3   (57)
+   Mark G:  +4.5   +1.6   (87)
    Adam K:  +6.0   +6.0   (30)
    Azadeh:  +5.0   +5.6   (27)
-   Patrick Mc:  +0.0   +0.0   (27)
+   Patrick Mc:  +15.0   +7.9   (57)
    Melissa J:  -7.5   -8.3   (27)
+   Eric B:  +23.0   +23.0   (30)
+   Ralph A:  +8.0   +8.0   (30)
+   Craig L:  -4.0   -4.0   (30)
+   Brandon H:  -1.0   -1.0   (30)
 Colin B
    Ralph A:  -1.5   -1.7   (27)
    Patrick Mc:  -8.0   -8.9   (27)
    Melissa J:  -7.0   -7.8   (27)
-   Alejandro T:  -16.0   -8.4   (57)
+   Alejandro:  -16.0   -8.4   (57)
    Adam K:  -10.0   -11.5   (26)
    Eric B:  -13.0   -15.0   (26)
 Ralph A
    Colin B:  +1.5   +1.7   (27)
    Patrick Mc:  -6.5   -7.2   (27)
    Melissa J:  -5.5   -6.1   (27)
-   Alejandro T:  +0.5   +0.6   (27)
+   Alejandro:  -5.5   -2.9   (57)
    Dan L:  +9.0   +9.0   (30)
    William C:  +14.0   +14.0   (30)
    Bill B:  +21.0   +21.0   (30)
+   Mark G:  -16.0   -8.0   (60)
+   Ryan MK:  -8.0   -8.0   (30)
+   Eric B:  +15.0   +15.0   (30)
+   Azadeh:  +1.0   +1.0   (30)
 Patrick Mc
    Colin B:  +8.0   +8.9   (27)
    Ralph A:  +6.5   +7.2   (27)
    Melissa J:  -6.5   -3.6   (54)
-   Alejandro T:  +7.0   +7.8   (27)
+   Alejandro:  +7.0   +7.8   (27)
    Azadeh:  +5.0   +5.6   (27)
    Mark G:  +2.5   +2.8   (27)
-   Ryan MK:  +0.0   +0.0   (27)
+   Ryan MK:  -15.0   -7.9   (57)
+   Brandon H:  -9.0   -4.5   (60)
+   Simon A:  -5.0   -5.0   (30)
+   Mrin:  -2.0   -2.0   (30)
+   Craig L:  -19.0   -19.0   (30)
 Melissa J
    Colin B:  +7.0   +7.8   (27)
    Ralph A:  +5.5   +6.1   (27)
    Patrick Mc:  +6.5   +3.6   (54)
-   Alejandro T:  +6.0   +6.7   (27)
+   Alejandro:  +6.0   +6.7   (27)
    Azadeh:  +12.5   +13.9   (27)
    Mark G:  +10.0   +11.1   (27)
    Ryan MK:  +7.5   +8.3   (27)
-Alejandro T
+   Noah J:  +7.5   +8.3   (27)
+   Anagh:  +6.0   +6.7   (27)
+   Will L:  +7.0   +7.8   (27)
+   Craig L:  +14.5   +16.1   (27)
+   Emma F:  +13.0   +13.0   (30)
+   Jason S:  -7.0   -7.0   (30)
+   Clark F:  -4.0   -4.0   (30)
+Alejandro
    Colin B:  +16.0   +8.4   (57)
-   Ralph A:  -0.5   -0.6   (27)
+   Ralph A:  +5.5   +2.9   (57)
    Patrick Mc:  -7.0   -7.8   (27)
    Melissa J:  -6.0   -6.7   (27)
-   Adam K:  +3.0   +3.5   (26)
+   Adam K:  +7.0   +3.8   (56)
    Eric B:  +0.0   +0.0   (26)
+   Azadeh:  +1.0   +0.5   (60)
+   Todd P:  +16.0   +16.0   (30)
+   Mark G:  -7.0   -7.0   (30)
 Dan L
    William C:  +1.0   +0.5   (60)
-   Eric B:  -9.0   -9.0   (30)
+   Eric B:  -1.0   -0.6   (52)
    Stacy N:  +1.0   +1.0   (30)
    Ralph A:  -9.0   -9.0   (30)
-   Bill B:  +12.0   +12.0   (30)
+   Bill B:  +36.0   +13.2   (82)
+   Steve F:  +14.0   +14.0   (30)
+   Maria N:  +23.0   +23.0   (30)
+   Adam K:  -2.0   -2.0   (30)
 William C
    Dan L:  -1.0   -0.5   (60)
    Eric B:  -5.0   -5.0   (30)
@@ -1394,19 +474,28 @@ William C
    Ralph A:  -14.0   -14.0   (30)
    Bill B:  +7.0   +7.0   (30)
 Eric B
-   Dan L:  +9.0   +9.0   (30)
+   Dan L:  +1.0   +0.6   (52)
    William C:  +5.0   +5.0   (30)
    Stacy N:  +10.0   +10.0   (30)
-   Adam K:  +3.0   +3.0   (30)
+   Adam K:  -6.0   -3.5   (52)
    Colin B:  +13.0   +15.0   (26)
-   Alejandro T:  +0.0   +0.0   (26)
+   Alejandro:  +0.0   +0.0   (26)
+   Mark G:  -18.0   -18.0   (30)
+   Ryan MK:  -23.0   -23.0   (30)
+   Ralph A:  -15.0   -15.0   (30)
+   Bill B:  +4.0   +4.0   (30)
 Stacy N
    Dan L:  -1.0   -1.0   (30)
    William C:  -5.0   -5.0   (30)
    Eric B:  -10.0   -10.0   (30)
    Eli:  -11.0   -11.0   (30)
-   Hamed:  +8.0   +8.0   (30)
+   Hamed:  +9.0   +4.5   (60)
    Maria N:  -1.0   -1.0   (30)
+   Kate L:  +9.0   +9.0   (30)
+   Ridhi:  -6.0   -3.2   (57)
+   Steve F:  -12.5   -13.9   (27)
+   Deb M:  -8.5   -9.4   (27)
+   Namrata:  +5.5   +6.1   (27)
 Eli
    Deb M:  +9.0   +9.0   (30)
    Bill B:  -17.0   -17.0   (30)
@@ -1419,35 +508,57 @@ Deb M
    Hamed:  -9.0   -9.0   (30)
    Kate L:  -7.5   -8.3   (27)
    Wei:  +9.5   +10.6   (27)
-   Ridhi:  -6.5   -7.2   (27)
+   Ridhi:  +0.0   +0.0   (54)
    Vika:  -8.0   -8.9   (27)
+   Asawari:  +8.0   +8.0   (30)
+   Namrata:  +18.0   +9.5   (57)
+   Ruth M:  +20.0   +20.0   (30)
+   Steve F:  -4.0   -4.4   (27)
+   Stacy N:  +8.5   +9.4   (27)
 Bill B
    Eli:  +17.0   +17.0   (30)
    Deb M:  +26.0   +26.0   (30)
    Hamed:  +17.0   +17.0   (30)
-   Dan L:  -12.0   -12.0   (30)
+   Dan L:  -36.0   -13.2   (82)
    William C:  -7.0   -7.0   (30)
    Ralph A:  -21.0   -21.0   (30)
+   Steve F:  +1.0   +1.0   (30)
+   Maria N:  +10.0   +10.0   (30)
+   Eric B:  -4.0   -4.0   (30)
+   Adam K:  -12.0   -16.4   (22)
 Hamed
    Eli:  -19.0   -9.5   (60)
    Deb M:  +9.0   +9.0   (30)
    Bill B:  -17.0   -17.0   (30)
-   Stacy N:  -8.0   -8.0   (30)
-   Maria N:  -9.0   -9.0   (30)
+   Stacy N:  -9.0   -4.5   (60)
+   Maria N:  -8.0   -4.2   (57)
+   Kate L:  +0.5   +0.3   (57)
+   Ridhi:  -5.0   -5.0   (30)
+   Asawari:  +9.5   +10.6   (27)
+   Ruth M:  +9.5   +10.6   (27)
 Maria N
-   Kate L:  +9.0   +9.0   (30)
+   Kate L:  +0.5   +0.3   (57)
    Wei:  +8.0   +8.0   (30)
    Samantha F:  +19.0   +19.0   (30)
    Stacy N:  +1.0   +1.0   (30)
    Eli:  -10.0   -10.0   (30)
-   Hamed:  +9.0   +9.0   (30)
+   Hamed:  +8.0   +4.2   (57)
+   Dan L:  -23.0   -23.0   (30)
+   Bill B:  -10.0   -10.0   (30)
+   Steve F:  -9.0   -9.0   (30)
+   Asawari:  +8.5   +9.4   (27)
+   Ruth M:  +8.5   +9.4   (27)
 Kate L
-   Maria N:  -9.0   -9.0   (30)
+   Maria N:  -0.5   -0.3   (57)
    Wei:  +16.0   +8.4   (57)
    Samantha F:  +10.0   +10.0   (30)
    Deb M:  +7.5   +8.3   (27)
-   Ridhi:  +1.0   +1.1   (27)
+   Ridhi:  -12.0   -6.3   (57)
    Vika:  -0.5   -0.6   (27)
+   Stacy N:  -9.0   -9.0   (30)
+   Hamed:  -0.5   -0.3   (57)
+   Asawari:  +17.0   +18.9   (27)
+   Ruth M:  +17.0   +18.9   (27)
 Wei
    Maria N:  -8.0   -8.0   (30)
    Kate L:  -16.0   -8.4   (57)
@@ -1463,25 +574,35 @@ Samantha F
    Asawari:  +24.0   +24.0   (30)
    Ruth M:  +26.0   +26.0   (30)
 Namrata
-   Asawari:  -11.5   -6.1   (57)
-   Ridhi:  -14.5   -16.1   (27)
+   Asawari:  -7.5   -2.6   (87)
+   Ridhi:  -22.0   -12.2   (54)
    Vika:  -8.5   -9.4   (27)
-   Ruth M:  +1.0   +0.5   (57)
+   Ruth M:  +17.0   +5.9   (87)
    Samantha F:  -28.0   -28.0   (30)
+   Deb M:  -18.0   -9.5   (57)
+   Steve F:  -18.0   -20.0   (27)
+   Stacy N:  -5.5   -6.1   (27)
 Asawari
-   Namrata:  +11.5   +6.1   (57)
+   Namrata:  +7.5   +2.6   (87)
    Ridhi:  -7.0   -7.8   (27)
    Vika:  -1.0   -1.1   (27)
-   Ruth M:  +12.5   +6.6   (57)
+   Ruth M:  +24.5   +6.4   (114)
    Samantha F:  -24.0   -24.0   (30)
+   Deb M:  -8.0   -8.0   (30)
+   Hamed:  -9.5   -10.6   (27)
+   Maria N:  -8.5   -9.4   (27)
+   Kate L:  -17.0   -18.9   (27)
 Ridhi
-   Namrata:  +14.5   +16.1   (27)
+   Namrata:  +22.0   +12.2   (54)
    Asawari:  +7.0   +7.8   (27)
    Vika:  +4.5   +2.5   (54)
    Ruth M:  +17.5   +19.4   (27)
-   Deb M:  +6.5   +7.2   (27)
-   Kate L:  -1.0   -1.1   (27)
+   Deb M:  +0.0   +0.0   (54)
+   Kate L:  +12.0   +6.3   (57)
    Wei:  +16.0   +17.8   (27)
+   Stacy N:  +6.0   +3.2   (57)
+   Hamed:  +5.0   +5.0   (30)
+   Steve F:  -10.5   -11.7   (27)
 Vika
    Namrata:  +8.5   +9.4   (27)
    Asawari:  +1.0   +1.1   (27)
@@ -1491,8 +612,74 @@ Vika
    Kate L:  +0.5   +0.6   (27)
    Wei:  +17.5   +19.4   (27)
 Ruth M
-   Namrata:  -1.0   -0.5   (57)
-   Asawari:  -12.5   -6.6   (57)
+   Namrata:  -17.0   -5.9   (87)
+   Asawari:  -24.5   -6.4   (114)
    Ridhi:  -17.5   -19.4   (27)
    Vika:  -11.5   -12.8   (27)
    Samantha F:  -26.0   -26.0   (30)
+   Deb M:  -20.0   -20.0   (30)
+   Hamed:  -9.5   -10.6   (27)
+   Maria N:  -8.5   -9.4   (27)
+   Kate L:  -17.0   -18.9   (27)
+Remco
+   Kyle C:  -6.0   -3.0   (60)
+   Shashank:  +18.0   +18.0   (30)
+   Blake H:  +3.0   +1.5   (60)
+   Austen E:  -13.0   -13.0   (30)
+Shashank
+   Remco:  -18.0   -18.0   (30)
+   Kyle C:  -13.0   -13.0   (30)
+   Blake H:  -11.0   -11.0   (30)
+   Michael B:  -10.0   -10.0   (30)
+   Scott D:  +11.0   +11.0   (30)
+   Vidusha:  -1.0   -1.0   (30)
+Warren
+   Sunvy:  -13.5   -15.0   (27)
+   Vidusha:  -14.0   -15.6   (27)
+   Dave E:  -14.0   -15.6   (27)
+   Kyle P:  -14.5   -8.1   (54)
+   Chris V:  -1.5   -1.7   (27)
+   Beau:  -0.5   -0.6   (27)
+   Sai B:  -4.5   -5.0   (27)
+Dave E
+   Warren:  +14.0   +15.6   (27)
+   Sunvy:  -4.5   -2.4   (57)
+   Vidusha:  +0.0   +0.0   (27)
+   Kyle P:  +5.5   +6.1   (27)
+   Bill W:  -4.0   -4.0   (30)
+   Rick W:  +3.0   +3.0   (30)
+Vishwas
+   Rick W:  -6.5   -7.2   (27)
+   Sai B:  -5.5   -6.1   (27)
+   Evan W:  -7.5   -4.2   (54)
+   Chris V:  -5.5   -6.1   (27)
+   Parag:  +0.0   +0.0   (27)
+   Alessandro:  +7.5   +8.3   (27)
+   Marissa D:  -7.5   -8.3   (27)
+Emma F
+   Beau:  -17.0   -17.0   (30)
+   Parag:  -13.0   -13.0   (30)
+   Alessandro:  -6.0   -6.0   (30)
+   Jason S:  -20.0   -20.0   (30)
+   Clark F:  -17.0   -17.0   (30)
+   Melissa J:  -13.0   -13.0   (30)
+Evan Sh
+   Jason S:  -15.0   -15.0   (30)
+   Marissa D:  -22.0   -22.0   (30)
+   Clark F:  -17.0   -17.0   (30)
+Craig L
+   Noah J:  -7.0   -7.8   (27)
+   Anagh:  -8.5   -9.4   (27)
+   Melissa J:  -14.5   -16.1   (27)
+   Will L:  -7.5   -8.3   (27)
+   Brandon H:  +3.0   +3.0   (30)
+   Patrick Mc:  +19.0   +19.0   (30)
+   Ryan MK:  +4.0   +4.0   (30)
+Steve F
+   Dan L:  -14.0   -14.0   (30)
+   Bill B:  -1.0   -1.0   (30)
+   Maria N:  +9.0   +9.0   (30)
+   Stacy N:  +12.5   +13.9   (27)
+   Ridhi:  +10.5   +11.7   (27)
+   Deb M:  +4.0   +4.4   (27)
+   Namrata:  +18.0   +20.0   (27)
