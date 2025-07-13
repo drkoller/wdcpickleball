@@ -9,12 +9,11 @@
 
 .logos {
   overflow: hidden;
-  padding: 60px 0;
+  padding: 10px 0;
   background: white;
   white-space: nowrap;
   position: relative;
 }
-
 
 .logos:hover .logos-slide {
   animation-play-state: paused;
@@ -22,7 +21,7 @@
 
 .logos-slide {
   display: inline-block;
-  animation: 35s slide infinite linear;
+  animation: 85s slide infinite linear;
 }
 
 .logos-slide img {
