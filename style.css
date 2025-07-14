@@ -15,10 +15,6 @@
   position: relative;
 }
 
-.logos:hover .logos-slide {
-  animation-play-state: paused;
-}
-
 .logos-slide {
   display: inline-block;
   animation: 85s slide infinite linear;
