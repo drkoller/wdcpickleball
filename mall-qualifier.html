@@ -77,7 +77,6 @@
 
     .playoff-table {
       margin-top: 20px;
-      width: 100%;
       border-collapse: collapse;
       background-color: #fff;
       border-radius: 8px;
@@ -92,8 +91,14 @@
     }
 
     .playoff-table td {
-      padding: 5px;
-      border-bottom: 1px solid #eee;
+      padding: 5px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Add a subtle divider between the score columns */
+    .playoff-table td:not(:first-child) {
+      border-left: 1px solid #ddd;
+      text-align: center;
     }
 </style>
 </head>
@@ -109,7 +114,7 @@
 <hr style="clear:both">
 
 Join us on Saturday, September 13 at the Anacostia Park Outdoor Courts 
-for the DC Pickleball League’s (DCPL) summer tournament in collaboration
+for the DC Pickleball League’s (DCPL) late summer tournament in collaboration
  with <a href="https://www.washingtondcpickleball.org/">Washington DC Pickleball Club</a>.
  This is a team-entry doubles event — bring your own partner. Mixed or 
 same-gender teams welcome. All players are guaranteed a minimum of 4 
@@ -123,7 +128,7 @@ teams in each round-robin pool will advance to a playoff round to
 determine the overall winners in each division.
 Teams in round-robin pools will be ranked according to standard USAP 
 round-robin criteria: number of overall wins, head-to-head wins, overall
- point differential, then head-to-head point differential). 
+ point differential, then head-to-head point differential.
 </p><p>
   
 <b>Prizes:</b>
@@ -140,9 +145,9 @@ Free pizza will be provided for all participants courtesy of <a href="https://wi
 <br>
   Anacostia Recreation Center Tennis Courts<br>
   1800 Anacostia Dr, Washington, DC 20020<br>
-</p><p>
-
-</p><hr>
+<p>
+<hr>
+<p>
 
 <h2>Advanced Division (8:00am) Results</h2>
 
@@ -270,7 +275,7 @@ Free pizza will be provided for all participants courtesy of <a href="https://wi
 <p>
 
 <div class="standings-container">
-  <h2 class="standings-title">Playoffs</h2>
+  <h2 class="standings-title">Advanced Division Playoffs</h2>
 
   <table class="playoff-table">
     <thead><tr><th colspan="2">Semifinal A</th></tr></thead>
@@ -302,35 +307,94 @@ Free pizza will be provided for all participants courtesy of <a href="https://wi
       <tr><td>David K & Simba</td><td>11</td><td>6</td><td>2</td></tr>
     </tbody>
   </table>
+</div>
+
+<p>
+<hr>
+<p>
+
+<h2>Low Intermediate Division (8:00am) Results</h2>
+
+<div class="standings-container">
+  <h2 class="standings-title">Low Intermediate Division, Pool A</h2>
+
+  <table class="standings-table">
+    <thead>
+      <tr><th>Rank</th><th>Team</th><th>W</th><th>L</th><th>PD</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Mike B & Rhonda M</td><td>6</td><td>0</td><td></td></tr>
+      <tr><td>2</td><td>Rick L & Jessica J</td><td>4</td><td>2</td><td></td></tr>
+      <tr><td>3</td><td>Gavin R & Anna B</td><td>4</td><td>2</td><td></td></tr>
+      <tr><td>4</td><td>Andrey B & Rachel C</td><td>3</td><td>3</td><td></td></tr>
+      <tr><td>5</td><td>Sam N & Alicia R</td><td>3</td><td>3</td><td></td></tr>
+      <tr><td>6</td><td>Sarita & Jean L</td><td>1</td><td>5</td><td></td></tr>
+      <tr><td>7</td><td>Mary Kay & Cheryl H</td><td>0</td><td>6</td><td></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+
+<div class="standings-container">
+  <h2 class="standings-title">Low Intermediate Division, Pool B</h2>
+
+  <table class="standings-table">
+    <thead>
+      <tr><th>Rank</th><th>Team</th><th>W</th><th>L</th><th>PD</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Ajola & Ricardo</td><td>5</td><td>0</td><td>+30</td></tr>
+      <tr><td>2</td><td>Belkie & James U</td><td>3</td><td>2</td><td>+7</td></tr>
+      <tr><td>3</td><td>Jenny M & Austin H</td><td>2</td><td>3</td><td>-6</td></tr>
+      <tr><td>4</td><td>Lauren A & Lauren St</td><td>2</td><td>3</td><td>-7</td></tr>
+      <tr><td>5</td><td>Frances & Clark J</td><td>2</td><td>3</td><td>-12</td></tr>
+      <tr><td>6</td><td>Stephen B & Amanda B</td><td>1</td><td>4</td><td>-12</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+
+<div class="standings-container">
+  <h2 class="standings-title">Low Intermediate Division Playoffs</h2>
+
+  <table class="playoff-table">
+    <thead><tr><th colspan="2">Semifinal A</th></tr></thead>
+    <tbody>
+      <tr><td>Mike B & Rhonda M</td><td>15</td></tr>
+      <tr><td>Belkie & James U</td><td>12</td></tr>
+    </tbody>
+  </table>
   <p>
-</div">
+  <table class="playoff-table">
+    <thead><tr><th colspan="2">Semifinal B</th></tr></thead>
+    <tbody>
+      <tr><td>Ajola & Ricardo</td><td>15</td></tr>
+      <tr><td>Rick L & Jessica J</td><td>6</td></tr>
+    </tbody>
+  </table>
+  <p>
+  <table class="playoff-table">
+    <thead><tr><th colspan="2">3rd Place</th></tr></thead>
+    <tbody>
+      <tr><td>Belkie & James U</td><td>15</td></tr>
+      <tr><td>Rick L & Jessica J</td><td>5</td></tr>
+    </tbody>
+  </table>
+  <p>
+  <table class="playoff-table">
+    <thead><tr><th colspan="3">Finals</th></tr></thead>
+    <tbody>
+      <tr><td>Mike B & Rhonda M</td><td>6</td><td>10</td></tr>
+      <tr><td>Ajola & Ricardo</td><td>11</td><td>12</td></tr>
+    </tbody>
+  </table>
+</div>
 
+<p>
 <hr>
-
-<h2>Low Intermediate Division (8:00am)</h2>
-
-Teams will be seeded into two pools of 6-7 teams each. The top two teams
- in each pool will advance to a playoff round to determine the top 
-overall finishers.<p>
-
-Registered teams (in alphabetical order):
-</p><p>
-</p><ol>
-<li>Aiola &amp; Ricardo
-</li><li>Audrey B &amp; Rachel C
-</li><li>Belkie &amp; James U
-</li><li>Gavin R &amp; Anna B
-</li><li>Jenny M &amp; Austin H
-</li><li>Lauren A &amp; Lauren S
-</li><li>Mary Kay &amp; Cheryl H
-</li><li>Mike B &amp; Rhonda M
-</li><li>Stephen B &amp; Amanda B
-</li><li>Rick L &amp; Jessica J
-</li><li>Sam N &amp; Alicia R
-</li><li>Skip &amp; Sarita
-</li></ol>
-
-<hr>
+<p>
 
 <h2>Intermediate Division (10:45am)</h2>
 
