@@ -74,6 +74,27 @@
     .standings-table td {
       padding: 5px;
     }
+
+    .playoff-table {
+      margin-top: 20px;
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .playoff-table thead th {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .playoff-table td {
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+    }
 </style>
 </head>
   
@@ -246,27 +267,43 @@ Free pizza will be provided for all participants courtesy of <a href="https://wi
     </tbody>
   </table>
 </div>
+<p>
 
 <div class="standings-container">
-  <h2 class="standings-title">Advanced Division, Pool B</h2>
+  <h2 class="standings-title">Playoffs</h2>
 
-  <table class="standings-table">
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Team</th>
-        <th>W</th>
-        <th>L</th>
-        <th>PD</th>
-      </tr>
-    </thead>
+  <table class="playoff-table">
+    <thead><tr><th colspan="2">Semifinal A</th></tr></thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>David K & Simba</td>
-        <td>5</td>
-        <td>0</td>
-        <td>+29</td>
+      <tr><td>Ben F & Mike C</td><td>15</td></tr>
+      <tr><td>Karl M & Matt H</td><td>13</td></tr>
+    </tbody>
+  </table>
+  <p>
+  <table class="playoff-table">
+    <thead><tr><th colspan="2">Semifinal B</th></tr></thead>
+    <tbody>
+      <tr><td>David K & Simba</td><td>15</td></tr>
+      <tr><td>Spencer S & Nate Win</td><td>2</td></tr>
+    </tbody>
+  </table>
+  <p>
+  <table class="playoff-table">
+    <thead><tr><th colspan="2">3rd Place</th></tr></thead>
+    <tbody>
+      <tr><td>Karl M & Matt H</td><td>15</td></tr>
+      <tr><td>Spencer S & Nate Win</td><td>8</td></tr>
+    </tbody>
+  </table>
+  <table class="playoff-table">
+    <thead><tr><th colspan="4">Finals</th></tr></thead>
+    <tbody>
+      <tr><td>Ben F & Mike C</td><td>2</td><td>11</td><td>11</td></tr>
+      <tr><td>David K & Simba</td><td>11</td><td>6</td><td>2</td></tr>
+    </tbody>
+  </table>
+  <p>
+</div">
 
 <hr>
 
