@@ -1230,7 +1230,7 @@ Jean L
    Benjamin J:  -5.0   -5.8   (26)
    Rocco A:  +10.0   +11.1   (27)
    Nihar:  +3.0   +3.3   (27)
-   Richard H:  +38.5   +7.6   (151)
+   Richard H:  +40.5   +6.7   (181)
    Joshua O:  +14.0   +15.6   (27)
    Cece:  +0.5   +0.1   (111)
    Barbara D:  -9.0   -10.0   (27)
@@ -1253,6 +1253,8 @@ Jean L
    Erica W:  -2.5   -2.8   (27)
    Andrew Q:  +19.5   +21.7   (27)
    Rebeca R:  +15.5   +17.2   (27)
+   Perrin K:  -9.0   -9.0   (30)
+   Akash:  +5.0   +5.0   (30)
 Kamile
    Elizabeth H:  +7.0   +1.9   (113)
    Samantha F:  +2.5   +1.4   (54)
@@ -1318,7 +1320,7 @@ Richard H
    Nihar:  -5.5   -2.1   (79)
    Elizabeth H:  +3.5   +1.3   (80)
    Heather S:  +1.0   +1.1   (27)
-   Jean L:  -38.5   -7.6   (151)
+   Jean L:  -40.5   -6.7   (181)
    Jessica J:  -9.5   -4.1   (70)
    Dianne B:  +0.5   +0.2   (70)
    Patrick B:  +18.0   +7.7   (70)
@@ -1327,6 +1329,8 @@ Richard H
    Erica W:  -1.0   -1.1   (27)
    Andrew Q:  +0.0   +0.0   (27)
    Rebeca R:  -4.0   -4.4   (27)
+   Perrin K:  -11.0   -11.0   (30)
+   Akash:  +3.0   +3.0   (30)
 Chris R
    Richard H:  -20.0   -20.0   (30)
    Rhonda M:  -8.0   -8.0   (30)
@@ -5100,6 +5104,9 @@ Perrin K
    Simone M:  -16.0   -16.0   (30)
    Ralph A:  -5.0   -5.0   (30)
    Emily B:  -7.0   -7.0   (30)
+   Jean L:  +9.0   +9.0   (30)
+   Akash:  +14.0   +14.0   (30)
+   Richard H:  +11.0   +11.0   (30)
 Bill B
    Taylor J:  -15.0   -16.7   (27)
    Simone M:  -12.0   -13.3   (27)
@@ -5174,3 +5181,7 @@ Michelle B
    Sarah Me:  +9.5   +10.6   (27)
    Sarita:  -18.0   -18.0   (30)
    Evan C:  -12.0   -12.0   (30)
+Akash
+   Perrin K:  -14.0   -14.0   (30)
+   Jean L:  -5.0   -5.0   (30)
+   Richard H:  -3.0   -3.0   (30)
