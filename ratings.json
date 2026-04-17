@@ -1,0 +1,3629 @@
+[
+  {
+    "rank": "1",
+    "name": "Mykel",
+    "elo": "3477",
+    "opponent-elo": "3049",
+    "wins": "7.0 / 7",
+    "percentage": "100.0%",
+    "rating": "4.60"
+  },
+  {
+    "rank": "2",
+    "name": "Tim N",
+    "elo": "3465",
+    "opponent-elo": "3253",
+    "wins": "29.0 / 39",
+    "percentage": "74.4%",
+    "rating": "4.58"
+  },
+  {
+    "rank": "3",
+    "name": "Steve Jo",
+    "elo": "3412",
+    "opponent-elo": "3175",
+    "wins": "53.0 / 71",
+    "percentage": "74.6%",
+    "rating": "4.52"
+  },
+  {
+    "rank": "4",
+    "name": "Ethan B",
+    "elo": "3392",
+    "opponent-elo": "3201",
+    "wins": "12.5 / 18",
+    "percentage": "69.4%",
+    "rating": "4.49"
+  },
+  {
+    "rank": "5",
+    "name": "John T",
+    "elo": "3365",
+    "opponent-elo": "3281",
+    "wins": "19.5 / 33",
+    "percentage": "59.1%",
+    "rating": "4.46"
+  },
+  {
+    "rank": "6",
+    "name": "Scott D",
+    "elo": "3354",
+    "opponent-elo": "2992",
+    "wins": "14.0 / 15",
+    "percentage": "93.3%",
+    "rating": "4.44"
+  },
+  {
+    "rank": "7",
+    "name": "Justin K",
+    "elo": "3324",
+    "opponent-elo": "3024",
+    "wins": "17.0 / 21",
+    "percentage": "81.0%",
+    "rating": "4.40"
+  },
+  {
+    "rank": "8",
+    "name": "Elliot T",
+    "elo": "3322",
+    "opponent-elo": "3129",
+    "wins": "20.5 / 27",
+    "percentage": "75.9%",
+    "rating": "4.40"
+  },
+  {
+    "rank": "9",
+    "name": "Sean K",
+    "elo": "3316",
+    "opponent-elo": "3179",
+    "wins": "18.0 / 26",
+    "percentage": "69.2%",
+    "rating": "4.39"
+  },
+  {
+    "rank": "10",
+    "name": "Mark S",
+    "elo": "3306",
+    "opponent-elo": "2950",
+    "wins": "6.0 / 6",
+    "percentage": "100.0%",
+    "rating": "4.38"
+  },
+  {
+    "rank": "11",
+    "name": "Andrew M",
+    "elo": "3293",
+    "opponent-elo": "3223",
+    "wins": "38.5 / 69",
+    "percentage": "55.8%",
+    "rating": "4.36"
+  },
+  {
+    "rank": "12",
+    "name": "Alexander P",
+    "elo": "3279",
+    "opponent-elo": "2999",
+    "wins": "32.0 / 41",
+    "percentage": "78.0%",
+    "rating": "4.35"
+  },
+  {
+    "rank": "13",
+    "name": "Sam A",
+    "elo": "3271",
+    "opponent-elo": "2877",
+    "wins": "6.0 / 6",
+    "percentage": "100.0%",
+    "rating": "4.34"
+  },
+  {
+    "rank": "14",
+    "name": "Zach B",
+    "elo": "3233",
+    "opponent-elo": "3013",
+    "wins": "19.5 / 25",
+    "percentage": "78.0%",
+    "rating": "4.29"
+  },
+  {
+    "rank": "15",
+    "name": "Cesar Lon",
+    "elo": "3211",
+    "opponent-elo": "3245",
+    "wins": "2.5 / 6",
+    "percentage": "41.7%",
+    "rating": "4.26"
+  },
+  {
+    "rank": "16",
+    "name": "Evan W",
+    "elo": "3210",
+    "opponent-elo": "3100",
+    "wins": "9.0 / 14",
+    "percentage": "64.3%",
+    "rating": "4.26"
+  },
+  {
+    "rank": "17",
+    "name": "Drew H",
+    "elo": "3204",
+    "opponent-elo": "3086",
+    "wins": "4.0 / 6",
+    "percentage": "66.7%",
+    "rating": "4.25"
+  },
+  {
+    "rank": "18",
+    "name": "Steve C",
+    "elo": "3183",
+    "opponent-elo": "3099",
+    "wins": "21.5 / 36",
+    "percentage": "59.7%",
+    "rating": "4.22"
+  },
+  {
+    "rank": "19",
+    "name": "Chris D",
+    "elo": "3176",
+    "opponent-elo": "3172",
+    "wins": "3.0 / 6",
+    "percentage": "50.0%",
+    "rating": "4.21"
+  },
+  {
+    "rank": "20",
+    "name": "Raghu D",
+    "elo": "3161",
+    "opponent-elo": "3100",
+    "wins": "12.5 / 22",
+    "percentage": "56.8%",
+    "rating": "4.19"
+  },
+  {
+    "rank": "21",
+    "name": "Chris P",
+    "elo": "3136",
+    "opponent-elo": "3059",
+    "wins": "11.0 / 19",
+    "percentage": "57.9%",
+    "rating": "4.16"
+  },
+  {
+    "rank": "22",
+    "name": "Bob A",
+    "elo": "3113",
+    "opponent-elo": "3171",
+    "wins": "14.5 / 34",
+    "percentage": "42.6%",
+    "rating": "4.13"
+  },
+  {
+    "rank": "23",
+    "name": "Andrew B",
+    "elo": "3110",
+    "opponent-elo": "2905",
+    "wins": "16.0 / 21",
+    "percentage": "76.2%",
+    "rating": "4.13"
+  },
+  {
+    "rank": "24",
+    "name": "David Bu",
+    "elo": "3097",
+    "opponent-elo": "2845",
+    "wins": "23.5 / 31",
+    "percentage": "75.8%",
+    "rating": "4.11"
+  },
+  {
+    "rank": "25",
+    "name": "Max Z",
+    "elo": "3079",
+    "opponent-elo": "3099",
+    "wins": "12.5 / 27",
+    "percentage": "46.3%",
+    "rating": "4.09"
+  },
+  {
+    "rank": "26",
+    "name": "Geoff M",
+    "elo": "3079",
+    "opponent-elo": "2902",
+    "wins": "19.0 / 28",
+    "percentage": "67.9%",
+    "rating": "4.09"
+  },
+  {
+    "rank": "27",
+    "name": "Lauren T",
+    "elo": "3060",
+    "opponent-elo": "2879",
+    "wins": "19.5 / 28",
+    "percentage": "69.6%",
+    "rating": "4.07"
+  },
+  {
+    "rank": "28",
+    "name": "Ryan W",
+    "elo": "3030",
+    "opponent-elo": "3036",
+    "wins": "10.5 / 21",
+    "percentage": "50.0%",
+    "rating": "4.03"
+  },
+  {
+    "rank": "29",
+    "name": "Caleb R",
+    "elo": "3017",
+    "opponent-elo": "2917",
+    "wins": "18.0 / 29",
+    "percentage": "62.1%",
+    "rating": "4.01"
+  },
+  {
+    "rank": "30",
+    "name": "Josh L",
+    "elo": "3014",
+    "opponent-elo": "2931",
+    "wins": "5.0 / 8",
+    "percentage": "62.5%",
+    "rating": "4.01"
+  },
+  {
+    "rank": "31",
+    "name": "Max Sm",
+    "elo": "2991",
+    "opponent-elo": "2905",
+    "wins": "13.0 / 21",
+    "percentage": "61.9%",
+    "rating": "3.99"
+  },
+  {
+    "rank": "32",
+    "name": "Rob T",
+    "elo": "2991",
+    "opponent-elo": "2957",
+    "wins": "15.0 / 28",
+    "percentage": "53.6%",
+    "rating": "3.99"
+  },
+  {
+    "rank": "33",
+    "name": "Tim Ha",
+    "elo": "2987",
+    "opponent-elo": "2857",
+    "wins": "5.0 / 7",
+    "percentage": "71.4%",
+    "rating": "3.99"
+  },
+  {
+    "rank": "34",
+    "name": "Dave P",
+    "elo": "2979",
+    "opponent-elo": "3004",
+    "wins": "31.5 / 65",
+    "percentage": "48.5%",
+    "rating": "3.98"
+  },
+  {
+    "rank": "35",
+    "name": "Dave E",
+    "elo": "2962",
+    "opponent-elo": "3027",
+    "wins": "12.0 / 28",
+    "percentage": "42.9%",
+    "rating": "3.96"
+  },
+  {
+    "rank": "36",
+    "name": "Rick W",
+    "elo": "2948",
+    "opponent-elo": "2970",
+    "wins": "67.0 / 141",
+    "percentage": "47.5%",
+    "rating": "3.95"
+  },
+  {
+    "rank": "37",
+    "name": "Ethan W",
+    "elo": "2938",
+    "opponent-elo": "2935",
+    "wins": "7.5 / 15",
+    "percentage": "50.0%",
+    "rating": "3.94"
+  },
+  {
+    "rank": "38",
+    "name": "Beau",
+    "elo": "2930",
+    "opponent-elo": "3029",
+    "wins": "52.0 / 135",
+    "percentage": "38.5%",
+    "rating": "3.94"
+  },
+  {
+    "rank": "39",
+    "name": "Josh Kr",
+    "elo": "2905",
+    "opponent-elo": "2949",
+    "wins": "18.5 / 42",
+    "percentage": "44.0%",
+    "rating": "3.92"
+  },
+  {
+    "rank": "40",
+    "name": "Anders T",
+    "elo": "2905",
+    "opponent-elo": "2880",
+    "wins": "46.5 / 87",
+    "percentage": "53.4%",
+    "rating": "3.92"
+  },
+  {
+    "rank": "41",
+    "name": "Brandon H",
+    "elo": "2898",
+    "opponent-elo": "2900",
+    "wins": "71.5 / 142",
+    "percentage": "50.4%",
+    "rating": "3.91"
+  },
+  {
+    "rank": "42",
+    "name": "Zack F",
+    "elo": "2892",
+    "opponent-elo": "2857",
+    "wins": "3.5 / 6",
+    "percentage": "58.3%",
+    "rating": "3.91"
+  },
+  {
+    "rank": "43",
+    "name": "Noah J",
+    "elo": "2888",
+    "opponent-elo": "2990",
+    "wins": "8.5 / 22",
+    "percentage": "38.6%",
+    "rating": "3.90"
+  },
+  {
+    "rank": "44",
+    "name": "Kunal",
+    "elo": "2877",
+    "opponent-elo": "2654",
+    "wins": "5.0 / 6",
+    "percentage": "83.3%",
+    "rating": "3.89"
+  },
+  {
+    "rank": "45",
+    "name": "Jon P",
+    "elo": "2865",
+    "opponent-elo": "2790",
+    "wins": "17.0 / 30",
+    "percentage": "56.7%",
+    "rating": "3.88"
+  },
+  {
+    "rank": "46",
+    "name": "Victoria T",
+    "elo": "2861",
+    "opponent-elo": "2862",
+    "wins": "3.5 / 7",
+    "percentage": "50.0%",
+    "rating": "3.88"
+  },
+  {
+    "rank": "47",
+    "name": "Kevin Hu",
+    "elo": "2856",
+    "opponent-elo": "2516",
+    "wins": "27.5 / 35",
+    "percentage": "78.6%",
+    "rating": "3.88"
+  },
+  {
+    "rank": "48",
+    "name": "Vishwas",
+    "elo": "2844",
+    "opponent-elo": "2876",
+    "wins": "14.5 / 32",
+    "percentage": "45.3%",
+    "rating": "3.87"
+  },
+  {
+    "rank": "49",
+    "name": "Coley",
+    "elo": "2843",
+    "opponent-elo": "2844",
+    "wins": "9.5 / 18",
+    "percentage": "52.8%",
+    "rating": "3.87"
+  },
+  {
+    "rank": "50",
+    "name": "Drew L",
+    "elo": "2834",
+    "opponent-elo": "2922",
+    "wins": "24.5 / 59",
+    "percentage": "41.5%",
+    "rating": "3.86"
+  },
+  {
+    "rank": "51",
+    "name": "David FS",
+    "elo": "2816",
+    "opponent-elo": "2656",
+    "wins": "15.0 / 21",
+    "percentage": "71.4%",
+    "rating": "3.84"
+  },
+  {
+    "rank": "52",
+    "name": "Scott T",
+    "elo": "2811",
+    "opponent-elo": "2845",
+    "wins": "9.0 / 20",
+    "percentage": "45.0%",
+    "rating": "3.84"
+  },
+  {
+    "rank": "53",
+    "name": "Nora B",
+    "elo": "2798",
+    "opponent-elo": "2967",
+    "wins": "4.0 / 13",
+    "percentage": "30.8%",
+    "rating": "3.83"
+  },
+  {
+    "rank": "54",
+    "name": "Matt T",
+    "elo": "2796",
+    "opponent-elo": "2762",
+    "wins": "17.0 / 31",
+    "percentage": "54.8%",
+    "rating": "3.83"
+  },
+  {
+    "rank": "55",
+    "name": "Jeremy K",
+    "elo": "2795",
+    "opponent-elo": "3069",
+    "wins": "5.5 / 26",
+    "percentage": "21.2%",
+    "rating": "3.83"
+  },
+  {
+    "rank": "56",
+    "name": "Yumi",
+    "elo": "2778",
+    "opponent-elo": "2682",
+    "wins": "4.0 / 6",
+    "percentage": "66.7%",
+    "rating": "3.81"
+  },
+  {
+    "rank": "57",
+    "name": "Paul K",
+    "elo": "2760",
+    "opponent-elo": "2828",
+    "wins": "22.0 / 54",
+    "percentage": "40.7%",
+    "rating": "3.80"
+  },
+  {
+    "rank": "58",
+    "name": "Simon B",
+    "elo": "2757",
+    "opponent-elo": "2474",
+    "wins": "7.0 / 8",
+    "percentage": "87.5%",
+    "rating": "3.79"
+  },
+  {
+    "rank": "59",
+    "name": "Ben T",
+    "elo": "2757",
+    "opponent-elo": "2701",
+    "wins": "16.5 / 28",
+    "percentage": "58.9%",
+    "rating": "3.79"
+  },
+  {
+    "rank": "60",
+    "name": "Albert T",
+    "elo": "2748",
+    "opponent-elo": "2606",
+    "wins": "41.5 / 61",
+    "percentage": "68.0%",
+    "rating": "3.79"
+  },
+  {
+    "rank": "61",
+    "name": "Noah M",
+    "elo": "2747",
+    "opponent-elo": "2793",
+    "wins": "11.0 / 25",
+    "percentage": "44.0%",
+    "rating": "3.79"
+  },
+  {
+    "rank": "62",
+    "name": "Mihir",
+    "elo": "2743",
+    "opponent-elo": "2830",
+    "wins": "15.5 / 39",
+    "percentage": "39.7%",
+    "rating": "3.78"
+  },
+  {
+    "rank": "63",
+    "name": "Theo T",
+    "elo": "2735",
+    "opponent-elo": "2998",
+    "wins": "0.5 / 7",
+    "percentage": "7.1%",
+    "rating": "3.78"
+  },
+  {
+    "rank": "64",
+    "name": "Carolyn G",
+    "elo": "2734",
+    "opponent-elo": "2595",
+    "wins": "27.0 / 40",
+    "percentage": "67.5%",
+    "rating": "3.78"
+  },
+  {
+    "rank": "65",
+    "name": "Jeff G",
+    "elo": "2721",
+    "opponent-elo": "2624",
+    "wins": "22.0 / 36",
+    "percentage": "61.1%",
+    "rating": "3.76"
+  },
+  {
+    "rank": "66",
+    "name": "Justin S",
+    "elo": "2716",
+    "opponent-elo": "2899",
+    "wins": "5.0 / 19",
+    "percentage": "26.3%",
+    "rating": "3.76"
+  },
+  {
+    "rank": "67",
+    "name": "Tom Roe",
+    "elo": "2708",
+    "opponent-elo": "2568",
+    "wins": "7.0 / 10",
+    "percentage": "70.0%",
+    "rating": "3.75"
+  },
+  {
+    "rank": "68",
+    "name": "Scott Ma",
+    "elo": "2708",
+    "opponent-elo": "2542",
+    "wins": "44.5 / 63",
+    "percentage": "70.6%",
+    "rating": "3.75"
+  },
+  {
+    "rank": "69",
+    "name": "Anagh",
+    "elo": "2707",
+    "opponent-elo": "2944",
+    "wins": "6.0 / 27",
+    "percentage": "22.2%",
+    "rating": "3.75"
+  },
+  {
+    "rank": "70",
+    "name": "Patrick Mu",
+    "elo": "2681",
+    "opponent-elo": "2614",
+    "wins": "38.0 / 64",
+    "percentage": "59.4%",
+    "rating": "3.73"
+  },
+  {
+    "rank": "71",
+    "name": "Mustafa",
+    "elo": "2668",
+    "opponent-elo": "2488",
+    "wins": "9.5 / 13",
+    "percentage": "73.1%",
+    "rating": "3.72"
+  },
+  {
+    "rank": "72",
+    "name": "Chris B",
+    "elo": "2667",
+    "opponent-elo": "2542",
+    "wins": "45.0 / 71",
+    "percentage": "63.4%",
+    "rating": "3.72"
+  },
+  {
+    "rank": "73",
+    "name": "Valentina",
+    "elo": "2667",
+    "opponent-elo": "2717",
+    "wins": "7.5 / 18",
+    "percentage": "41.7%",
+    "rating": "3.72"
+  },
+  {
+    "rank": "74",
+    "name": "Chaz F",
+    "elo": "2665",
+    "opponent-elo": "2649",
+    "wins": "29.0 / 55",
+    "percentage": "52.7%",
+    "rating": "3.72"
+  },
+  {
+    "rank": "75",
+    "name": "Dan L",
+    "elo": "2651",
+    "opponent-elo": "2475",
+    "wins": "34.0 / 48",
+    "percentage": "70.8%",
+    "rating": "3.71"
+  },
+  {
+    "rank": "76",
+    "name": "Dan K",
+    "elo": "2646",
+    "opponent-elo": "2421",
+    "wins": "11.5 / 15",
+    "percentage": "76.7%",
+    "rating": "3.70"
+  },
+  {
+    "rank": "77",
+    "name": "Joe M",
+    "elo": "2646",
+    "opponent-elo": "2489",
+    "wins": "5.5 / 8",
+    "percentage": "68.8%",
+    "rating": "3.70"
+  },
+  {
+    "rank": "78",
+    "name": "Jamal C",
+    "elo": "2644",
+    "opponent-elo": "2635",
+    "wins": "28.5 / 54",
+    "percentage": "52.8%",
+    "rating": "3.70"
+  },
+  {
+    "rank": "79",
+    "name": "Eyad",
+    "elo": "2640",
+    "opponent-elo": "2589",
+    "wins": "13.0 / 23",
+    "percentage": "56.5%",
+    "rating": "3.70"
+  },
+  {
+    "rank": "80",
+    "name": "Benjamin J",
+    "elo": "2639",
+    "opponent-elo": "2472",
+    "wins": "87.5 / 131",
+    "percentage": "66.8%",
+    "rating": "3.70"
+  },
+  {
+    "rank": "81",
+    "name": "Ben Bo",
+    "elo": "2637",
+    "opponent-elo": "2721",
+    "wins": "12.0 / 31",
+    "percentage": "38.7%",
+    "rating": "3.70"
+  },
+  {
+    "rank": "82",
+    "name": "Ally F",
+    "elo": "2634",
+    "opponent-elo": "2755",
+    "wins": "4.0 / 12",
+    "percentage": "33.3%",
+    "rating": "3.69"
+  },
+  {
+    "rank": "83",
+    "name": "Rami B",
+    "elo": "2623",
+    "opponent-elo": "2836",
+    "wins": "4.0 / 17",
+    "percentage": "23.5%",
+    "rating": "3.68"
+  },
+  {
+    "rank": "84",
+    "name": "Dave R",
+    "elo": "2619",
+    "opponent-elo": "2587",
+    "wins": "57.5 / 106",
+    "percentage": "54.2%",
+    "rating": "3.68"
+  },
+  {
+    "rank": "85",
+    "name": "Natan E",
+    "elo": "2613",
+    "opponent-elo": "2793",
+    "wins": "4.5 / 17",
+    "percentage": "26.5%",
+    "rating": "3.68"
+  },
+  {
+    "rank": "86",
+    "name": "Jack T",
+    "elo": "2613",
+    "opponent-elo": "2727",
+    "wins": "6.0 / 17",
+    "percentage": "35.3%",
+    "rating": "3.68"
+  },
+  {
+    "rank": "87",
+    "name": "Emma F",
+    "elo": "2607",
+    "opponent-elo": "2579",
+    "wins": "20.0 / 38",
+    "percentage": "52.6%",
+    "rating": "3.67"
+  },
+  {
+    "rank": "88",
+    "name": "Nick Mo",
+    "elo": "2589",
+    "opponent-elo": "2566",
+    "wins": "30.0 / 56",
+    "percentage": "53.6%",
+    "rating": "3.66"
+  },
+  {
+    "rank": "89",
+    "name": "David F",
+    "elo": "2589",
+    "opponent-elo": "2662",
+    "wins": "7.5 / 19",
+    "percentage": "39.5%",
+    "rating": "3.66"
+  },
+  {
+    "rank": "90",
+    "name": "Eric B",
+    "elo": "2577",
+    "opponent-elo": "2529",
+    "wins": "4.0 / 7",
+    "percentage": "57.1%",
+    "rating": "3.65"
+  },
+  {
+    "rank": "91",
+    "name": "Marc B",
+    "elo": "2574",
+    "opponent-elo": "2542",
+    "wins": "42.5 / 81",
+    "percentage": "52.5%",
+    "rating": "3.64"
+  },
+  {
+    "rank": "92",
+    "name": "Tyler U",
+    "elo": "2567",
+    "opponent-elo": "2729",
+    "wins": "2.5 / 10",
+    "percentage": "25.0%",
+    "rating": "3.64"
+  },
+  {
+    "rank": "93",
+    "name": "Chioke",
+    "elo": "2555",
+    "opponent-elo": "2495",
+    "wins": "9.0 / 15",
+    "percentage": "60.0%",
+    "rating": "3.63"
+  },
+  {
+    "rank": "94",
+    "name": "Patrick Mc",
+    "elo": "2551",
+    "opponent-elo": "2647",
+    "wins": "11.5 / 30",
+    "percentage": "38.3%",
+    "rating": "3.62"
+  },
+  {
+    "rank": "95",
+    "name": "Adam K",
+    "elo": "2546",
+    "opponent-elo": "2542",
+    "wins": "31.0 / 60",
+    "percentage": "51.7%",
+    "rating": "3.62"
+  },
+  {
+    "rank": "96",
+    "name": "Christi H",
+    "elo": "2539",
+    "opponent-elo": "2156",
+    "wins": "14.0 / 16",
+    "percentage": "87.5%",
+    "rating": "3.61"
+  },
+  {
+    "rank": "97",
+    "name": "Chris C",
+    "elo": "2537",
+    "opponent-elo": "2466",
+    "wins": "37.0 / 65",
+    "percentage": "56.9%",
+    "rating": "3.61"
+  },
+  {
+    "rank": "98",
+    "name": "Tammy B",
+    "elo": "2536",
+    "opponent-elo": "2728",
+    "wins": "9.5 / 33",
+    "percentage": "28.8%",
+    "rating": "3.61"
+  },
+  {
+    "rank": "99",
+    "name": "Ayeshka",
+    "elo": "2524",
+    "opponent-elo": "2655",
+    "wins": "2.0 / 7",
+    "percentage": "28.6%",
+    "rating": "3.60"
+  },
+  {
+    "rank": "100",
+    "name": "Steve L",
+    "elo": "2522",
+    "opponent-elo": "2633",
+    "wins": "10.0 / 28",
+    "percentage": "35.7%",
+    "rating": "3.60"
+  },
+  {
+    "rank": "101",
+    "name": "Peer",
+    "elo": "2517",
+    "opponent-elo": "2443",
+    "wins": "24.0 / 42",
+    "percentage": "57.1%",
+    "rating": "3.60"
+  },
+  {
+    "rank": "102",
+    "name": "Tom B",
+    "elo": "2510",
+    "opponent-elo": "2607",
+    "wins": "21.0 / 56",
+    "percentage": "37.5%",
+    "rating": "3.59"
+  },
+  {
+    "rank": "103",
+    "name": "Andrew C",
+    "elo": "2508",
+    "opponent-elo": "2539",
+    "wins": "30.0 / 67",
+    "percentage": "44.8%",
+    "rating": "3.59"
+  },
+  {
+    "rank": "104",
+    "name": "Brooke C",
+    "elo": "2493",
+    "opponent-elo": "2439",
+    "wins": "55.0 / 97",
+    "percentage": "56.7%",
+    "rating": "3.58"
+  },
+  {
+    "rank": "105",
+    "name": "Ty B",
+    "elo": "2476",
+    "opponent-elo": "2513",
+    "wins": "32.5 / 72",
+    "percentage": "45.1%",
+    "rating": "3.56"
+  },
+  {
+    "rank": "106",
+    "name": "Justin D",
+    "elo": "2474",
+    "opponent-elo": "2433",
+    "wins": "18.5 / 34",
+    "percentage": "54.4%",
+    "rating": "3.56"
+  },
+  {
+    "rank": "107",
+    "name": "Justen B",
+    "elo": "2469",
+    "opponent-elo": "2528",
+    "wins": "11.0 / 26",
+    "percentage": "42.3%",
+    "rating": "3.56"
+  },
+  {
+    "rank": "108",
+    "name": "Thomas deC",
+    "elo": "2468",
+    "opponent-elo": "2384",
+    "wins": "7.5 / 12",
+    "percentage": "62.5%",
+    "rating": "3.56"
+  },
+  {
+    "rank": "109",
+    "name": "Steve F",
+    "elo": "2466",
+    "opponent-elo": "2458",
+    "wins": "77.0 / 155",
+    "percentage": "49.7%",
+    "rating": "3.55"
+  },
+  {
+    "rank": "110",
+    "name": "Ewelina",
+    "elo": "2465",
+    "opponent-elo": "2425",
+    "wins": "26.0 / 47",
+    "percentage": "55.3%",
+    "rating": "3.55"
+  },
+  {
+    "rank": "111",
+    "name": "Nicholas M",
+    "elo": "2460",
+    "opponent-elo": "2420",
+    "wins": "4.0 / 7",
+    "percentage": "57.1%",
+    "rating": "3.55"
+  },
+  {
+    "rank": "112",
+    "name": "Quinn F",
+    "elo": "2457",
+    "opponent-elo": "2474",
+    "wins": "11.0 / 23",
+    "percentage": "47.8%",
+    "rating": "3.55"
+  },
+  {
+    "rank": "113",
+    "name": "Jacob R",
+    "elo": "2452",
+    "opponent-elo": "2621",
+    "wins": "1.5 / 6",
+    "percentage": "25.0%",
+    "rating": "3.54"
+  },
+  {
+    "rank": "114",
+    "name": "Melissa J",
+    "elo": "2450",
+    "opponent-elo": "2529",
+    "wins": "14.0 / 35",
+    "percentage": "40.0%",
+    "rating": "3.54"
+  },
+  {
+    "rank": "115",
+    "name": "Julie M",
+    "elo": "2441",
+    "opponent-elo": "2575",
+    "wins": "8.5 / 27",
+    "percentage": "31.5%",
+    "rating": "3.53"
+  },
+  {
+    "rank": "116",
+    "name": "Brandon K",
+    "elo": "2438",
+    "opponent-elo": "2485",
+    "wins": "9.5 / 21",
+    "percentage": "45.2%",
+    "rating": "3.53"
+  },
+  {
+    "rank": "117",
+    "name": "Federico",
+    "elo": "2420",
+    "opponent-elo": "2521",
+    "wins": "2.0 / 6",
+    "percentage": "33.3%",
+    "rating": "3.52"
+  },
+  {
+    "rank": "118",
+    "name": "Anthony P",
+    "elo": "2411",
+    "opponent-elo": "2409",
+    "wins": "34.0 / 69",
+    "percentage": "49.3%",
+    "rating": "3.51"
+  },
+  {
+    "rank": "119",
+    "name": "Zain",
+    "elo": "2408",
+    "opponent-elo": "2457",
+    "wins": "1.5 / 4",
+    "percentage": "37.5%",
+    "rating": "3.51"
+  },
+  {
+    "rank": "120",
+    "name": "Taylor J",
+    "elo": "2401",
+    "opponent-elo": "2351",
+    "wins": "56.0 / 98",
+    "percentage": "57.1%",
+    "rating": "3.50"
+  },
+  {
+    "rank": "121",
+    "name": "Patrick L",
+    "elo": "2395",
+    "opponent-elo": "2526",
+    "wins": "5.0 / 15",
+    "percentage": "33.3%",
+    "rating": "3.49"
+  },
+  {
+    "rank": "122",
+    "name": "Simone M",
+    "elo": "2377",
+    "opponent-elo": "2372",
+    "wins": "30.0 / 59",
+    "percentage": "50.8%",
+    "rating": "3.47"
+  },
+  {
+    "rank": "123",
+    "name": "Ben Ba",
+    "elo": "2370",
+    "opponent-elo": "2485",
+    "wins": "5.0 / 14",
+    "percentage": "35.7%",
+    "rating": "3.46"
+  },
+  {
+    "rank": "124",
+    "name": "Michael J",
+    "elo": "2366",
+    "opponent-elo": "2370",
+    "wins": "13.5 / 28",
+    "percentage": "48.2%",
+    "rating": "3.46"
+  },
+  {
+    "rank": "125",
+    "name": "Michael Z",
+    "elo": "2362",
+    "opponent-elo": "2224",
+    "wins": "28.5 / 43",
+    "percentage": "66.3%",
+    "rating": "3.45"
+  },
+  {
+    "rank": "126",
+    "name": "Emily B",
+    "elo": "2362",
+    "opponent-elo": "2353",
+    "wins": "38.0 / 73",
+    "percentage": "52.1%",
+    "rating": "3.45"
+  },
+  {
+    "rank": "127",
+    "name": "Chrys T",
+    "elo": "2353",
+    "opponent-elo": "2397",
+    "wins": "3.0 / 7",
+    "percentage": "42.9%",
+    "rating": "3.44"
+  },
+  {
+    "rank": "128",
+    "name": "Ryan Z",
+    "elo": "2352",
+    "opponent-elo": "2314",
+    "wins": "4.0 / 7",
+    "percentage": "57.1%",
+    "rating": "3.44"
+  },
+  {
+    "rank": "129",
+    "name": "Ruba",
+    "elo": "2333",
+    "opponent-elo": "2349",
+    "wins": "28.0 / 57",
+    "percentage": "49.1%",
+    "rating": "3.42"
+  },
+  {
+    "rank": "130",
+    "name": "Sahana",
+    "elo": "2333",
+    "opponent-elo": "2015",
+    "wins": "15.5 / 19",
+    "percentage": "81.6%",
+    "rating": "3.42"
+  },
+  {
+    "rank": "131",
+    "name": "Collier H",
+    "elo": "2328",
+    "opponent-elo": "2318",
+    "wins": "17.0 / 33",
+    "percentage": "51.5%",
+    "rating": "3.41"
+  },
+  {
+    "rank": "132",
+    "name": "Eric F",
+    "elo": "2328",
+    "opponent-elo": "2398",
+    "wins": "10.0 / 25",
+    "percentage": "40.0%",
+    "rating": "3.41"
+  },
+  {
+    "rank": "133",
+    "name": "Kirk C",
+    "elo": "2326",
+    "opponent-elo": "2744",
+    "wins": "0.0 / 5",
+    "percentage": "0.0%",
+    "rating": "3.41"
+  },
+  {
+    "rank": "134",
+    "name": "Ralph A",
+    "elo": "2314",
+    "opponent-elo": "2407",
+    "wins": "18.0 / 47",
+    "percentage": "38.3%",
+    "rating": "3.39"
+  },
+  {
+    "rank": "135",
+    "name": "Rachel Hl",
+    "elo": "2313",
+    "opponent-elo": "2157",
+    "wins": "10.0 / 14",
+    "percentage": "71.4%",
+    "rating": "3.39"
+  },
+  {
+    "rank": "136",
+    "name": "Kendra R",
+    "elo": "2313",
+    "opponent-elo": "2280",
+    "wins": "8.0 / 15",
+    "percentage": "53.3%",
+    "rating": "3.39"
+  },
+  {
+    "rank": "137",
+    "name": "Jason Sh",
+    "elo": "2305",
+    "opponent-elo": "2164",
+    "wins": "15.5 / 22",
+    "percentage": "70.5%",
+    "rating": "3.38"
+  },
+  {
+    "rank": "138",
+    "name": "Allison P",
+    "elo": "2296",
+    "opponent-elo": "2311",
+    "wins": "2.0 / 4",
+    "percentage": "50.0%",
+    "rating": "3.37"
+  },
+  {
+    "rank": "139",
+    "name": "Nate G",
+    "elo": "2287",
+    "opponent-elo": "2275",
+    "wins": "37.0 / 72",
+    "percentage": "51.4%",
+    "rating": "3.36"
+  },
+  {
+    "rank": "140",
+    "name": "Walker",
+    "elo": "2279",
+    "opponent-elo": "2291",
+    "wins": "20.5 / 42",
+    "percentage": "48.8%",
+    "rating": "3.35"
+  },
+  {
+    "rank": "141",
+    "name": "Colin B",
+    "elo": "2263",
+    "opponent-elo": "2196",
+    "wins": "17.0 / 29",
+    "percentage": "58.6%",
+    "rating": "3.33"
+  },
+  {
+    "rank": "142",
+    "name": "Zachary O",
+    "elo": "2254",
+    "opponent-elo": "2207",
+    "wins": "4.0 / 7",
+    "percentage": "57.1%",
+    "rating": "3.32"
+  },
+  {
+    "rank": "143",
+    "name": "Dan M",
+    "elo": "2254",
+    "opponent-elo": "1746",
+    "wins": "14.0 / 14",
+    "percentage": "100.0%",
+    "rating": "3.32"
+  },
+  {
+    "rank": "144",
+    "name": "Dante K",
+    "elo": "2246",
+    "opponent-elo": "2255",
+    "wins": "6.0 / 12",
+    "percentage": "50.0%",
+    "rating": "3.31"
+  },
+  {
+    "rank": "145",
+    "name": "Beth R",
+    "elo": "2241",
+    "opponent-elo": "2179",
+    "wins": "36.0 / 62",
+    "percentage": "58.1%",
+    "rating": "3.30"
+  },
+  {
+    "rank": "146",
+    "name": "Velicia",
+    "elo": "2228",
+    "opponent-elo": "2261",
+    "wins": "13.5 / 29",
+    "percentage": "46.6%",
+    "rating": "3.29"
+  },
+  {
+    "rank": "147",
+    "name": "Perrin",
+    "elo": "2222",
+    "opponent-elo": "2214",
+    "wins": "17.0 / 33",
+    "percentage": "51.5%",
+    "rating": "3.28"
+  },
+  {
+    "rank": "148",
+    "name": "Leo E",
+    "elo": "2205",
+    "opponent-elo": "2251",
+    "wins": "13.0 / 29",
+    "percentage": "44.8%",
+    "rating": "3.26"
+  },
+  {
+    "rank": "149",
+    "name": "Dan A",
+    "elo": "2203",
+    "opponent-elo": "2398",
+    "wins": "6.5 / 23",
+    "percentage": "28.3%",
+    "rating": "3.26"
+  },
+  {
+    "rank": "150",
+    "name": "Christina P",
+    "elo": "2201",
+    "opponent-elo": "2269",
+    "wins": "5.0 / 12",
+    "percentage": "41.7%",
+    "rating": "3.26"
+  },
+  {
+    "rank": "151",
+    "name": "Jeff S",
+    "elo": "2198",
+    "opponent-elo": "2084",
+    "wins": "8.0 / 12",
+    "percentage": "66.7%",
+    "rating": "3.25"
+  },
+  {
+    "rank": "152",
+    "name": "Tim W",
+    "elo": "2198",
+    "opponent-elo": "2276",
+    "wins": "9.0 / 22",
+    "percentage": "40.9%",
+    "rating": "3.25"
+  },
+  {
+    "rank": "153",
+    "name": "Daniela W",
+    "elo": "2193",
+    "opponent-elo": "2229",
+    "wins": "19.5 / 42",
+    "percentage": "46.4%",
+    "rating": "3.25"
+  },
+  {
+    "rank": "154",
+    "name": "Grace G",
+    "elo": "2186",
+    "opponent-elo": "2169",
+    "wins": "10.0 / 19",
+    "percentage": "52.6%",
+    "rating": "3.24"
+  },
+  {
+    "rank": "155",
+    "name": "Mario C",
+    "elo": "2183",
+    "opponent-elo": "2051",
+    "wins": "5.0 / 7",
+    "percentage": "71.4%",
+    "rating": "3.23"
+  },
+  {
+    "rank": "156",
+    "name": "Akash",
+    "elo": "2180",
+    "opponent-elo": "2046",
+    "wins": "26.0 / 41",
+    "percentage": "63.4%",
+    "rating": "3.23"
+  },
+  {
+    "rank": "157",
+    "name": "Francis B",
+    "elo": "2177",
+    "opponent-elo": "2154",
+    "wins": "37.5 / 71",
+    "percentage": "52.8%",
+    "rating": "3.23"
+  },
+  {
+    "rank": "158",
+    "name": "Ellen D",
+    "elo": "2176",
+    "opponent-elo": "2246",
+    "wins": "2.5 / 7",
+    "percentage": "35.7%",
+    "rating": "3.23"
+  },
+  {
+    "rank": "159",
+    "name": "Gerry S",
+    "elo": "2173",
+    "opponent-elo": "1962",
+    "wins": "19.5 / 26",
+    "percentage": "75.0%",
+    "rating": "3.22"
+  },
+  {
+    "rank": "160",
+    "name": "Alejandro",
+    "elo": "2172",
+    "opponent-elo": "2441",
+    "wins": "2.0 / 8",
+    "percentage": "25.0%",
+    "rating": "3.22"
+  },
+  {
+    "rank": "161",
+    "name": "Alyssa P",
+    "elo": "2165",
+    "opponent-elo": "2171",
+    "wins": "12.5 / 24",
+    "percentage": "52.1%",
+    "rating": "3.21"
+  },
+  {
+    "rank": "162",
+    "name": "Tom R",
+    "elo": "2163",
+    "opponent-elo": "2031",
+    "wins": "5.0 / 7",
+    "percentage": "71.4%",
+    "rating": "3.21"
+  },
+  {
+    "rank": "163",
+    "name": "Kim H",
+    "elo": "2161",
+    "opponent-elo": "2214",
+    "wins": "35.5 / 82",
+    "percentage": "43.3%",
+    "rating": "3.21"
+  },
+  {
+    "rank": "164",
+    "name": "Juan S",
+    "elo": "2160",
+    "opponent-elo": "2196",
+    "wins": "11.0 / 24",
+    "percentage": "45.8%",
+    "rating": "3.21"
+  },
+  {
+    "rank": "165",
+    "name": "Beth B",
+    "elo": "2156",
+    "opponent-elo": "2203",
+    "wins": "25.0 / 57",
+    "percentage": "43.9%",
+    "rating": "3.20"
+  },
+  {
+    "rank": "166",
+    "name": "Kathleen O",
+    "elo": "2146",
+    "opponent-elo": "2275",
+    "wins": "5.0 / 15",
+    "percentage": "33.3%",
+    "rating": "3.19"
+  },
+  {
+    "rank": "167",
+    "name": "Coleman A",
+    "elo": "2144",
+    "opponent-elo": "2516",
+    "wins": "0.0 / 7",
+    "percentage": "0.0%",
+    "rating": "3.19"
+  },
+  {
+    "rank": "168",
+    "name": "Oscar J",
+    "elo": "2141",
+    "opponent-elo": "2113",
+    "wins": "17.5 / 33",
+    "percentage": "53.0%",
+    "rating": "3.18"
+  },
+  {
+    "rank": "169",
+    "name": "Spencer B",
+    "elo": "2141",
+    "opponent-elo": "2094",
+    "wins": "4.0 / 7",
+    "percentage": "57.1%",
+    "rating": "3.18"
+  },
+  {
+    "rank": "170",
+    "name": "Mathi",
+    "elo": "2135",
+    "opponent-elo": "2258",
+    "wins": "2.0 / 7",
+    "percentage": "28.6%",
+    "rating": "3.18"
+  },
+  {
+    "rank": "171",
+    "name": "Suzanne",
+    "elo": "2131",
+    "opponent-elo": "2201",
+    "wins": "23.0 / 54",
+    "percentage": "42.6%",
+    "rating": "3.17"
+  },
+  {
+    "rank": "172",
+    "name": "Deondre",
+    "elo": "2127",
+    "opponent-elo": "2150",
+    "wins": "18.0 / 38",
+    "percentage": "47.4%",
+    "rating": "3.17"
+  },
+  {
+    "rank": "173",
+    "name": "Rachel C",
+    "elo": "2124",
+    "opponent-elo": "2024",
+    "wins": "60.0 / 99",
+    "percentage": "60.6%",
+    "rating": "3.16"
+  },
+  {
+    "rank": "174",
+    "name": "Andrew Do",
+    "elo": "2124",
+    "opponent-elo": "2004",
+    "wins": "13.5 / 21",
+    "percentage": "64.3%",
+    "rating": "3.16"
+  },
+  {
+    "rank": "175",
+    "name": "Dita",
+    "elo": "2120",
+    "opponent-elo": "2119",
+    "wins": "2.0 / 4",
+    "percentage": "50.0%",
+    "rating": "3.16"
+  },
+  {
+    "rank": "176",
+    "name": "Carmella",
+    "elo": "2120",
+    "opponent-elo": "2119",
+    "wins": "2.0 / 4",
+    "percentage": "50.0%",
+    "rating": "3.16"
+  },
+  {
+    "rank": "177",
+    "name": "Belkie",
+    "elo": "2114",
+    "opponent-elo": "2187",
+    "wins": "56.0 / 129",
+    "percentage": "43.4%",
+    "rating": "3.15"
+  },
+  {
+    "rank": "178",
+    "name": "Derek T",
+    "elo": "2106",
+    "opponent-elo": "2227",
+    "wins": "13.0 / 36",
+    "percentage": "36.1%",
+    "rating": "3.14"
+  },
+  {
+    "rank": "179",
+    "name": "Michael O",
+    "elo": "2097",
+    "opponent-elo": "2090",
+    "wins": "44.0 / 87",
+    "percentage": "50.6%",
+    "rating": "3.14"
+  },
+  {
+    "rank": "180",
+    "name": "Bill B",
+    "elo": "2096",
+    "opponent-elo": "2154",
+    "wins": "14.5 / 34",
+    "percentage": "42.6%",
+    "rating": "3.14"
+  },
+  {
+    "rank": "181",
+    "name": "Daphne",
+    "elo": "2086",
+    "opponent-elo": "2089",
+    "wins": "32.5 / 65",
+    "percentage": "50.0%",
+    "rating": "3.13"
+  },
+  {
+    "rank": "182",
+    "name": "Marc G",
+    "elo": "2084",
+    "opponent-elo": "2038",
+    "wins": "32.5 / 58",
+    "percentage": "56.0%",
+    "rating": "3.13"
+  },
+  {
+    "rank": "183",
+    "name": "Michael C",
+    "elo": "2082",
+    "opponent-elo": "1800",
+    "wins": "21.0 / 27",
+    "percentage": "77.8%",
+    "rating": "3.13"
+  },
+  {
+    "rank": "184",
+    "name": "Buzz",
+    "elo": "2075",
+    "opponent-elo": "1965",
+    "wins": "8.0 / 12",
+    "percentage": "66.7%",
+    "rating": "3.12"
+  },
+  {
+    "rank": "185",
+    "name": "Corinne O",
+    "elo": "2073",
+    "opponent-elo": "2122",
+    "wins": "3.0 / 7",
+    "percentage": "42.9%",
+    "rating": "3.12"
+  },
+  {
+    "rank": "186",
+    "name": "Jared F",
+    "elo": "2060",
+    "opponent-elo": "2238",
+    "wins": "6.0 / 21",
+    "percentage": "28.6%",
+    "rating": "3.11"
+  },
+  {
+    "rank": "187",
+    "name": "Andy P",
+    "elo": "2060",
+    "opponent-elo": "2012",
+    "wins": "16.5 / 29",
+    "percentage": "56.9%",
+    "rating": "3.11"
+  },
+  {
+    "rank": "188",
+    "name": "Katie McC",
+    "elo": "2059",
+    "opponent-elo": "1841",
+    "wins": "37.0 / 50",
+    "percentage": "74.0%",
+    "rating": "3.11"
+  },
+  {
+    "rank": "189",
+    "name": "Jessica J",
+    "elo": "2046",
+    "opponent-elo": "2038",
+    "wins": "74.0 / 144",
+    "percentage": "51.4%",
+    "rating": "3.10"
+  },
+  {
+    "rank": "190",
+    "name": "Addie Z",
+    "elo": "2036",
+    "opponent-elo": "2228",
+    "wins": "6.0 / 21",
+    "percentage": "28.6%",
+    "rating": "3.09"
+  },
+  {
+    "rank": "191",
+    "name": "Jules B",
+    "elo": "2035",
+    "opponent-elo": "2047",
+    "wins": "11.0 / 23",
+    "percentage": "47.8%",
+    "rating": "3.09"
+  },
+  {
+    "rank": "192",
+    "name": "James U",
+    "elo": "2030",
+    "opponent-elo": "2085",
+    "wins": "13.5 / 30",
+    "percentage": "45.0%",
+    "rating": "3.08"
+  },
+  {
+    "rank": "193",
+    "name": "Rick L",
+    "elo": "2029",
+    "opponent-elo": "2074",
+    "wins": "13.0 / 29",
+    "percentage": "44.8%",
+    "rating": "3.08"
+  },
+  {
+    "rank": "194",
+    "name": "Lori L",
+    "elo": "2025",
+    "opponent-elo": "1992",
+    "wins": "19.5 / 37",
+    "percentage": "52.7%",
+    "rating": "3.07"
+  },
+  {
+    "rank": "195",
+    "name": "Barbara D",
+    "elo": "2013",
+    "opponent-elo": "2083",
+    "wins": "17.5 / 43",
+    "percentage": "40.7%",
+    "rating": "3.06"
+  },
+  {
+    "rank": "196",
+    "name": "Gus M",
+    "elo": "2006",
+    "opponent-elo": "2028",
+    "wins": "37.5 / 78",
+    "percentage": "48.1%",
+    "rating": "3.05"
+  },
+  {
+    "rank": "197",
+    "name": "Paul Do",
+    "elo": "2005",
+    "opponent-elo": "2234",
+    "wins": "2.5 / 13",
+    "percentage": "19.2%",
+    "rating": "3.05"
+  },
+  {
+    "rank": "198",
+    "name": "Cece",
+    "elo": "1999",
+    "opponent-elo": "1896",
+    "wins": "15.0 / 23",
+    "percentage": "65.2%",
+    "rating": "3.04"
+  },
+  {
+    "rank": "199",
+    "name": "Deb M",
+    "elo": "1995",
+    "opponent-elo": "1953",
+    "wins": "49.0 / 89",
+    "percentage": "55.1%",
+    "rating": "3.04"
+  },
+  {
+    "rank": "200",
+    "name": "Corina L",
+    "elo": "1991",
+    "opponent-elo": "1969",
+    "wins": "19.0 / 37",
+    "percentage": "51.4%",
+    "rating": "3.03"
+  },
+  {
+    "rank": "201",
+    "name": "Malcolm M",
+    "elo": "1991",
+    "opponent-elo": "2014",
+    "wins": "12.0 / 25",
+    "percentage": "48.0%",
+    "rating": "3.03"
+  },
+  {
+    "rank": "202",
+    "name": "Andrew Q",
+    "elo": "1975",
+    "opponent-elo": "1979",
+    "wins": "20.5 / 40",
+    "percentage": "51.2%",
+    "rating": "3.01"
+  },
+  {
+    "rank": "203",
+    "name": "Jean L",
+    "elo": "1947",
+    "opponent-elo": "1949",
+    "wins": "72.5 / 146",
+    "percentage": "49.7%",
+    "rating": "2.98"
+  },
+  {
+    "rank": "204",
+    "name": "Aki",
+    "elo": "1942",
+    "opponent-elo": "2068",
+    "wins": "6.0 / 18",
+    "percentage": "33.3%",
+    "rating": "2.98"
+  },
+  {
+    "rank": "205",
+    "name": "Ian G",
+    "elo": "1938",
+    "opponent-elo": "1811",
+    "wins": "5.0 / 7",
+    "percentage": "71.4%",
+    "rating": "2.97"
+  },
+  {
+    "rank": "206",
+    "name": "Filip Z",
+    "elo": "1931",
+    "opponent-elo": "1966",
+    "wins": "26.0 / 57",
+    "percentage": "45.6%",
+    "rating": "2.96"
+  },
+  {
+    "rank": "207",
+    "name": "Max R",
+    "elo": "1923",
+    "opponent-elo": "1747",
+    "wins": "19.0 / 27",
+    "percentage": "70.4%",
+    "rating": "2.95"
+  },
+  {
+    "rank": "208",
+    "name": "Samantha F",
+    "elo": "1921",
+    "opponent-elo": "1957",
+    "wins": "34.0 / 75",
+    "percentage": "45.3%",
+    "rating": "2.95"
+  },
+  {
+    "rank": "209",
+    "name": "Elizabeth H",
+    "elo": "1920",
+    "opponent-elo": "1829",
+    "wins": "43.5 / 72",
+    "percentage": "60.4%",
+    "rating": "2.95"
+  },
+  {
+    "rank": "210",
+    "name": "Brendan G",
+    "elo": "1917",
+    "opponent-elo": "1956",
+    "wins": "3.0 / 7",
+    "percentage": "42.9%",
+    "rating": "2.95"
+  },
+  {
+    "rank": "211",
+    "name": "Valerie P",
+    "elo": "1916",
+    "opponent-elo": "2120",
+    "wins": "3.5 / 14",
+    "percentage": "25.0%",
+    "rating": "2.94"
+  },
+  {
+    "rank": "212",
+    "name": "Erika P",
+    "elo": "1912",
+    "opponent-elo": "1896",
+    "wins": "11.0 / 21",
+    "percentage": "52.4%",
+    "rating": "2.94"
+  },
+  {
+    "rank": "213",
+    "name": "Radley E",
+    "elo": "1911",
+    "opponent-elo": "1566",
+    "wins": "14.0 / 15",
+    "percentage": "93.3%",
+    "rating": "2.94"
+  },
+  {
+    "rank": "214",
+    "name": "Eli",
+    "elo": "1907",
+    "opponent-elo": "1942",
+    "wins": "24.5 / 54",
+    "percentage": "45.4%",
+    "rating": "2.93"
+  },
+  {
+    "rank": "215",
+    "name": "Paula Sa",
+    "elo": "1907",
+    "opponent-elo": "1693",
+    "wins": "3.5 / 4",
+    "percentage": "87.5%",
+    "rating": "2.93"
+  },
+  {
+    "rank": "216",
+    "name": "Dianne B",
+    "elo": "1898",
+    "opponent-elo": "1893",
+    "wins": "4.0 / 8",
+    "percentage": "50.0%",
+    "rating": "2.92"
+  },
+  {
+    "rank": "217",
+    "name": "Cassidy C",
+    "elo": "1894",
+    "opponent-elo": "1908",
+    "wins": "15.5 / 32",
+    "percentage": "48.4%",
+    "rating": "2.92"
+  },
+  {
+    "rank": "218",
+    "name": "Shobhik",
+    "elo": "1892",
+    "opponent-elo": "1913",
+    "wins": "17.5 / 36",
+    "percentage": "48.6%",
+    "rating": "2.92"
+  },
+  {
+    "rank": "219",
+    "name": "Sam Ky",
+    "elo": "1878",
+    "opponent-elo": "2025",
+    "wins": "8.5 / 25",
+    "percentage": "34.0%",
+    "rating": "2.90"
+  },
+  {
+    "rank": "220",
+    "name": "Jill C",
+    "elo": "1877",
+    "opponent-elo": "1862",
+    "wins": "12.0 / 24",
+    "percentage": "50.0%",
+    "rating": "2.90"
+  },
+  {
+    "rank": "221",
+    "name": "Erica W",
+    "elo": "1876",
+    "opponent-elo": "1976",
+    "wins": "11.0 / 28",
+    "percentage": "39.3%",
+    "rating": "2.90"
+  },
+  {
+    "rank": "222",
+    "name": "Immanuel",
+    "elo": "1873",
+    "opponent-elo": "1803",
+    "wins": "2.0 / 3",
+    "percentage": "66.7%",
+    "rating": "2.89"
+  },
+  {
+    "rank": "223",
+    "name": "Davide Mag",
+    "elo": "1870",
+    "opponent-elo": "2101",
+    "wins": "1.0 / 6",
+    "percentage": "16.7%",
+    "rating": "2.89"
+  },
+  {
+    "rank": "224",
+    "name": "Nicole L",
+    "elo": "1870",
+    "opponent-elo": "1968",
+    "wins": "7.5 / 21",
+    "percentage": "35.7%",
+    "rating": "2.89"
+  },
+  {
+    "rank": "225",
+    "name": "Melinda P",
+    "elo": "1866",
+    "opponent-elo": "1932",
+    "wins": "6.5 / 16",
+    "percentage": "40.6%",
+    "rating": "2.88"
+  },
+  {
+    "rank": "226",
+    "name": "Dhanya",
+    "elo": "1863",
+    "opponent-elo": "1968",
+    "wins": "17.5 / 43",
+    "percentage": "40.7%",
+    "rating": "2.88"
+  },
+  {
+    "rank": "227",
+    "name": "Richard H",
+    "elo": "1860",
+    "opponent-elo": "1883",
+    "wins": "26.5 / 57",
+    "percentage": "46.5%",
+    "rating": "2.88"
+  },
+  {
+    "rank": "228",
+    "name": "Marian W",
+    "elo": "1857",
+    "opponent-elo": "1797",
+    "wins": "13.0 / 22",
+    "percentage": "59.1%",
+    "rating": "2.87"
+  },
+  {
+    "rank": "229",
+    "name": "Rebeca R",
+    "elo": "1856",
+    "opponent-elo": "1819",
+    "wins": "49.0 / 89",
+    "percentage": "55.1%",
+    "rating": "2.87"
+  },
+  {
+    "rank": "230",
+    "name": "Megan Lu",
+    "elo": "1852",
+    "opponent-elo": "1797",
+    "wins": "21.0 / 37",
+    "percentage": "56.8%",
+    "rating": "2.87"
+  },
+  {
+    "rank": "231",
+    "name": "Brent I",
+    "elo": "1839",
+    "opponent-elo": "1695",
+    "wins": "5.5 / 8",
+    "percentage": "68.8%",
+    "rating": "2.85"
+  },
+  {
+    "rank": "232",
+    "name": "Jessica L",
+    "elo": "1835",
+    "opponent-elo": "1744",
+    "wins": "11.0 / 19",
+    "percentage": "57.9%",
+    "rating": "2.85"
+  },
+  {
+    "rank": "233",
+    "name": "Ian J",
+    "elo": "1834",
+    "opponent-elo": "1814",
+    "wins": "18.0 / 35",
+    "percentage": "51.4%",
+    "rating": "2.85"
+  },
+  {
+    "rank": "234",
+    "name": "Heather S",
+    "elo": "1826",
+    "opponent-elo": "1911",
+    "wins": "6.0 / 14",
+    "percentage": "42.9%",
+    "rating": "2.84"
+  },
+  {
+    "rank": "235",
+    "name": "Kamile",
+    "elo": "1823",
+    "opponent-elo": "1836",
+    "wins": "35.5 / 73",
+    "percentage": "48.6%",
+    "rating": "2.83"
+  },
+  {
+    "rank": "236",
+    "name": "Amanda B",
+    "elo": "1817",
+    "opponent-elo": "1865",
+    "wins": "5.5 / 13",
+    "percentage": "42.3%",
+    "rating": "2.83"
+  },
+  {
+    "rank": "237",
+    "name": "Colleen O",
+    "elo": "1816",
+    "opponent-elo": "1636",
+    "wins": "18.5 / 26",
+    "percentage": "71.2%",
+    "rating": "2.82"
+  },
+  {
+    "rank": "238",
+    "name": "Angie O",
+    "elo": "1803",
+    "opponent-elo": "1810",
+    "wins": "72.0 / 147",
+    "percentage": "49.0%",
+    "rating": "2.81"
+  },
+  {
+    "rank": "239",
+    "name": "Andrew P",
+    "elo": "1797",
+    "opponent-elo": "1894",
+    "wins": "10.5 / 25",
+    "percentage": "42.0%",
+    "rating": "2.80"
+  },
+  {
+    "rank": "240",
+    "name": "Julie A",
+    "elo": "1796",
+    "opponent-elo": "1771",
+    "wins": "20.0 / 39",
+    "percentage": "51.3%",
+    "rating": "2.80"
+  },
+  {
+    "rank": "241",
+    "name": "Amy W",
+    "elo": "1788",
+    "opponent-elo": "1691",
+    "wins": "9.0 / 14",
+    "percentage": "64.3%",
+    "rating": "2.80"
+  },
+  {
+    "rank": "242",
+    "name": "Landon F",
+    "elo": "1784",
+    "opponent-elo": "2201",
+    "wins": "1.0 / 13",
+    "percentage": "7.7%",
+    "rating": "2.80"
+  },
+  {
+    "rank": "243",
+    "name": "Mark L",
+    "elo": "1778",
+    "opponent-elo": "1720",
+    "wins": "27.5 / 49",
+    "percentage": "56.1%",
+    "rating": "2.79"
+  },
+  {
+    "rank": "244",
+    "name": "Tatiana M",
+    "elo": "1775",
+    "opponent-elo": "1990",
+    "wins": "1.0 / 6",
+    "percentage": "16.7%",
+    "rating": "2.79"
+  },
+  {
+    "rank": "245",
+    "name": "David G",
+    "elo": "1771",
+    "opponent-elo": "1725",
+    "wins": "14.0 / 25",
+    "percentage": "56.0%",
+    "rating": "2.79"
+  },
+  {
+    "rank": "246",
+    "name": "William C",
+    "elo": "1771",
+    "opponent-elo": "1780",
+    "wins": "2.0 / 4",
+    "percentage": "50.0%",
+    "rating": "2.79"
+  },
+  {
+    "rank": "247",
+    "name": "Nihar",
+    "elo": "1770",
+    "opponent-elo": "1956",
+    "wins": "3.5 / 14",
+    "percentage": "25.0%",
+    "rating": "2.79"
+  },
+  {
+    "rank": "248",
+    "name": "Wei",
+    "elo": "1769",
+    "opponent-elo": "1867",
+    "wins": "20.0 / 52",
+    "percentage": "38.5%",
+    "rating": "2.79"
+  },
+  {
+    "rank": "249",
+    "name": "David Ki",
+    "elo": "1766",
+    "opponent-elo": "1511",
+    "wins": "12.5 / 15",
+    "percentage": "83.3%",
+    "rating": "2.79"
+  },
+  {
+    "rank": "250",
+    "name": "Nicole F",
+    "elo": "1757",
+    "opponent-elo": "1858",
+    "wins": "6.5 / 18",
+    "percentage": "36.1%",
+    "rating": "2.79"
+  },
+  {
+    "rank": "251",
+    "name": "Cyndie C",
+    "elo": "1747",
+    "opponent-elo": "1985",
+    "wins": "2.0 / 12",
+    "percentage": "16.7%",
+    "rating": "2.78"
+  },
+  {
+    "rank": "252",
+    "name": "Bob Z",
+    "elo": "1742",
+    "opponent-elo": "1707",
+    "wins": "7.0 / 13",
+    "percentage": "53.8%",
+    "rating": "2.78"
+  },
+  {
+    "rank": "253",
+    "name": "Jen S",
+    "elo": "1724",
+    "opponent-elo": "1928",
+    "wins": "12.5 / 47",
+    "percentage": "26.6%",
+    "rating": "2.78"
+  },
+  {
+    "rank": "254",
+    "name": "Jacqueline S",
+    "elo": "1704",
+    "opponent-elo": "1779",
+    "wins": "3.0 / 7",
+    "percentage": "42.9%",
+    "rating": "2.77"
+  },
+  {
+    "rank": "255",
+    "name": "Callie W",
+    "elo": "1697",
+    "opponent-elo": "1706",
+    "wins": "2.0 / 4",
+    "percentage": "50.0%",
+    "rating": "2.77"
+  },
+  {
+    "rank": "256",
+    "name": "Brandy M",
+    "elo": "1688",
+    "opponent-elo": "1964",
+    "wins": "1.0 / 8",
+    "percentage": "12.5%",
+    "rating": "2.76"
+  },
+  {
+    "rank": "257",
+    "name": "Lauren B",
+    "elo": "1685",
+    "opponent-elo": "1464",
+    "wins": "12.0 / 15",
+    "percentage": "80.0%",
+    "rating": "2.76"
+  },
+  {
+    "rank": "258",
+    "name": "Jerry S",
+    "elo": "1683",
+    "opponent-elo": "1779",
+    "wins": "2.0 / 6",
+    "percentage": "33.3%",
+    "rating": "2.76"
+  },
+  {
+    "rank": "259",
+    "name": "Rina A",
+    "elo": "1673",
+    "opponent-elo": "2079",
+    "wins": "0.0 / 7",
+    "percentage": "0.0%",
+    "rating": "2.76"
+  },
+  {
+    "rank": "260",
+    "name": "Michael S",
+    "elo": "1673",
+    "opponent-elo": "1726",
+    "wins": "2.5 / 6",
+    "percentage": "41.7%",
+    "rating": "2.76"
+  },
+  {
+    "rank": "261",
+    "name": "Tina M",
+    "elo": "1669",
+    "opponent-elo": "1703",
+    "wins": "11.0 / 24",
+    "percentage": "45.8%",
+    "rating": "2.76"
+  },
+  {
+    "rank": "262",
+    "name": "Megan B",
+    "elo": "1669",
+    "opponent-elo": "1806",
+    "wins": "1.0 / 4",
+    "percentage": "25.0%",
+    "rating": "2.76"
+  },
+  {
+    "rank": "263",
+    "name": "Seth L",
+    "elo": "1666",
+    "opponent-elo": "1524",
+    "wins": "5.0 / 7",
+    "percentage": "71.4%",
+    "rating": "2.76"
+  },
+  {
+    "rank": "264",
+    "name": "Lacy B",
+    "elo": "1664",
+    "opponent-elo": "1593",
+    "wins": "13.0 / 22",
+    "percentage": "59.1%",
+    "rating": "2.76"
+  },
+  {
+    "rank": "265",
+    "name": "Colleen B",
+    "elo": "1647",
+    "opponent-elo": "1708",
+    "wins": "2.0 / 5",
+    "percentage": "40.0%",
+    "rating": "2.75"
+  },
+  {
+    "rank": "266",
+    "name": "Gavin McI",
+    "elo": "1633",
+    "opponent-elo": "1432",
+    "wins": "12.0 / 16",
+    "percentage": "75.0%",
+    "rating": "2.75"
+  },
+  {
+    "rank": "267",
+    "name": "Rebecca D",
+    "elo": "1630",
+    "opponent-elo": "1645",
+    "wins": "16.0 / 34",
+    "percentage": "47.1%",
+    "rating": "2.75"
+  },
+  {
+    "rank": "268",
+    "name": "Susie S",
+    "elo": "1627",
+    "opponent-elo": "1813",
+    "wins": "2.0 / 9",
+    "percentage": "22.2%",
+    "rating": "2.74"
+  },
+  {
+    "rank": "269",
+    "name": "Joan F",
+    "elo": "1625",
+    "opponent-elo": "1653",
+    "wins": "8.0 / 17",
+    "percentage": "47.1%",
+    "rating": "2.74"
+  },
+  {
+    "rank": "270",
+    "name": "Mark M",
+    "elo": "1618",
+    "opponent-elo": "1535",
+    "wins": "5.0 / 8",
+    "percentage": "62.5%",
+    "rating": "2.74"
+  },
+  {
+    "rank": "271",
+    "name": "Mimmy",
+    "elo": "1611",
+    "opponent-elo": "1680",
+    "wins": "3.5 / 8",
+    "percentage": "43.8%",
+    "rating": "2.74"
+  },
+  {
+    "rank": "272",
+    "name": "Derek H",
+    "elo": "1608",
+    "opponent-elo": "1606",
+    "wins": "2.0 / 4",
+    "percentage": "50.0%",
+    "rating": "2.74"
+  },
+  {
+    "rank": "273",
+    "name": "Cara F",
+    "elo": "1604",
+    "opponent-elo": "1702",
+    "wins": "2.0 / 6",
+    "percentage": "33.3%",
+    "rating": "2.74"
+  },
+  {
+    "rank": "274",
+    "name": "Daniel Lev",
+    "elo": "1600",
+    "opponent-elo": "1731",
+    "wins": "12.5 / 35",
+    "percentage": "35.7%",
+    "rating": "2.74"
+  },
+  {
+    "rank": "275",
+    "name": "Sam Si",
+    "elo": "1586",
+    "opponent-elo": "1531",
+    "wins": "4.0 / 7",
+    "percentage": "57.1%",
+    "rating": "2.73"
+  },
+  {
+    "rank": "276",
+    "name": "Ilter",
+    "elo": "1584",
+    "opponent-elo": "1465",
+    "wins": "25.0 / 38",
+    "percentage": "65.8%",
+    "rating": "2.73"
+  },
+  {
+    "rank": "277",
+    "name": "Loretta P",
+    "elo": "1584",
+    "opponent-elo": "1645",
+    "wins": "5.0 / 12",
+    "percentage": "41.7%",
+    "rating": "2.73"
+  },
+  {
+    "rank": "278",
+    "name": "Elizabeth K",
+    "elo": "1574",
+    "opponent-elo": "1660",
+    "wins": "13.0 / 34",
+    "percentage": "38.2%",
+    "rating": "2.73"
+  },
+  {
+    "rank": "279",
+    "name": "Teresa M",
+    "elo": "1569",
+    "opponent-elo": "1883",
+    "wins": "0.0 / 4",
+    "percentage": "0.0%",
+    "rating": "2.73"
+  },
+  {
+    "rank": "280",
+    "name": "Prasidh",
+    "elo": "1561",
+    "opponent-elo": "1508",
+    "wins": "18.0 / 32",
+    "percentage": "56.2%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "281",
+    "name": "Jeff C",
+    "elo": "1561",
+    "opponent-elo": "1696",
+    "wins": "5.0 / 16",
+    "percentage": "31.2%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "282",
+    "name": "Rhonda M",
+    "elo": "1560",
+    "opponent-elo": "1617",
+    "wins": "32.5 / 71",
+    "percentage": "45.8%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "283",
+    "name": "Rebecca Rh",
+    "elo": "1560",
+    "opponent-elo": "1685",
+    "wins": "3.0 / 10",
+    "percentage": "30.0%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "284",
+    "name": "Dure",
+    "elo": "1552",
+    "opponent-elo": "2014",
+    "wins": "3.0 / 19",
+    "percentage": "15.8%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "285",
+    "name": "Deb H",
+    "elo": "1550",
+    "opponent-elo": "1657",
+    "wins": "7.0 / 18",
+    "percentage": "38.9%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "286",
+    "name": "Maria N",
+    "elo": "1550",
+    "opponent-elo": "1695",
+    "wins": "2.5 / 8",
+    "percentage": "31.2%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "287",
+    "name": "Sarabh",
+    "elo": "1547",
+    "opponent-elo": "1133",
+    "wins": "6.0 / 6",
+    "percentage": "100.0%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "288",
+    "name": "Patrick B",
+    "elo": "1544",
+    "opponent-elo": "1521",
+    "wins": "43.5 / 81",
+    "percentage": "53.7%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "289",
+    "name": "Sean He",
+    "elo": "1540",
+    "opponent-elo": "1416",
+    "wins": "67.0 / 106",
+    "percentage": "63.2%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "290",
+    "name": "Nicholas C",
+    "elo": "1539",
+    "opponent-elo": "1670",
+    "wins": "9.5 / 27",
+    "percentage": "35.2%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "291",
+    "name": "Ann MarieM",
+    "elo": "1536",
+    "opponent-elo": "1492",
+    "wins": "16.0 / 29",
+    "percentage": "55.2%",
+    "rating": "2.72"
+  },
+  {
+    "rank": "292",
+    "name": "Kim M",
+    "elo": "1531",
+    "opponent-elo": "1416",
+    "wins": "6.0 / 9",
+    "percentage": "66.7%",
+    "rating": "2.71"
+  },
+  {
+    "rank": "293",
+    "name": "Rob C",
+    "elo": "1530",
+    "opponent-elo": "1528",
+    "wins": "3.0 / 6",
+    "percentage": "50.0%",
+    "rating": "2.71"
+  },
+  {
+    "rank": "294",
+    "name": "Maggie D",
+    "elo": "1526",
+    "opponent-elo": "1482",
+    "wins": "13.5 / 24",
+    "percentage": "56.2%",
+    "rating": "2.71"
+  },
+  {
+    "rank": "295",
+    "name": "Ledia",
+    "elo": "1515",
+    "opponent-elo": "1552",
+    "wins": "1.5 / 4",
+    "percentage": "37.5%",
+    "rating": "2.71"
+  },
+  {
+    "rank": "296",
+    "name": "Antony M",
+    "elo": "1514",
+    "opponent-elo": "1627",
+    "wins": "24.0 / 65",
+    "percentage": "36.9%",
+    "rating": "2.71"
+  },
+  {
+    "rank": "297",
+    "name": "Audrey K",
+    "elo": "1511",
+    "opponent-elo": "1545",
+    "wins": "3.5 / 8",
+    "percentage": "43.8%",
+    "rating": "2.71"
+  },
+  {
+    "rank": "298",
+    "name": "Rachel L",
+    "elo": "1510",
+    "opponent-elo": "1750",
+    "wins": "0.0 / 3",
+    "percentage": "0.0%",
+    "rating": "2.71"
+  },
+  {
+    "rank": "299",
+    "name": "Michael Can",
+    "elo": "1501",
+    "opponent-elo": "1512",
+    "wins": "9.0 / 18",
+    "percentage": "50.0%",
+    "rating": "2.70"
+  },
+  {
+    "rank": "300",
+    "name": "Megan Ti",
+    "elo": "1501",
+    "opponent-elo": "1434",
+    "wins": "20.5 / 35",
+    "percentage": "58.6%",
+    "rating": "2.70"
+  },
+  {
+    "rank": "301",
+    "name": "Alexandra S",
+    "elo": "1496",
+    "opponent-elo": "1308",
+    "wins": "7.0 / 10",
+    "percentage": "70.0%",
+    "rating": "2.70"
+  },
+  {
+    "rank": "302",
+    "name": "Robyn M",
+    "elo": "1489",
+    "opponent-elo": "1449",
+    "wins": "24.5 / 44",
+    "percentage": "55.7%",
+    "rating": "2.70"
+  },
+  {
+    "rank": "303",
+    "name": "Russell L",
+    "elo": "1474",
+    "opponent-elo": "1511",
+    "wins": "24.5 / 51",
+    "percentage": "48.0%",
+    "rating": "2.69"
+  },
+  {
+    "rank": "304",
+    "name": "Rae L",
+    "elo": "1469",
+    "opponent-elo": "1170",
+    "wins": "13.5 / 15",
+    "percentage": "90.0%",
+    "rating": "2.69"
+  },
+  {
+    "rank": "305",
+    "name": "Corey S",
+    "elo": "1466",
+    "opponent-elo": "1619",
+    "wins": "2.0 / 7",
+    "percentage": "28.6%",
+    "rating": "2.68"
+  },
+  {
+    "rank": "306",
+    "name": "Mark C",
+    "elo": "1460",
+    "opponent-elo": "1358",
+    "wins": "9.0 / 14",
+    "percentage": "64.3%",
+    "rating": "2.68"
+  },
+  {
+    "rank": "307",
+    "name": "Kyle S",
+    "elo": "1451",
+    "opponent-elo": "1127",
+    "wins": "6.5 / 7",
+    "percentage": "92.9%",
+    "rating": "2.67"
+  },
+  {
+    "rank": "308",
+    "name": "Emilee S",
+    "elo": "1449",
+    "opponent-elo": "1730",
+    "wins": "2.0 / 16",
+    "percentage": "12.5%",
+    "rating": "2.67"
+  },
+  {
+    "rank": "309",
+    "name": "Skip",
+    "elo": "1447",
+    "opponent-elo": "1448",
+    "wins": "71.5 / 143",
+    "percentage": "50.0%",
+    "rating": "2.67"
+  },
+  {
+    "rank": "310",
+    "name": "Rachel Ce",
+    "elo": "1436",
+    "opponent-elo": "1414",
+    "wins": "18.0 / 35",
+    "percentage": "51.4%",
+    "rating": "2.66"
+  },
+  {
+    "rank": "311",
+    "name": "Rocco A",
+    "elo": "1435",
+    "opponent-elo": "1892",
+    "wins": "0.0 / 7",
+    "percentage": "0.0%",
+    "rating": "2.66"
+  },
+  {
+    "rank": "312",
+    "name": "James G",
+    "elo": "1425",
+    "opponent-elo": "1403",
+    "wins": "17.0 / 32",
+    "percentage": "53.1%",
+    "rating": "2.66"
+  },
+  {
+    "rank": "313",
+    "name": "Monica M",
+    "elo": "1423",
+    "opponent-elo": "1532",
+    "wins": "32.0 / 83",
+    "percentage": "38.6%",
+    "rating": "2.65"
+  },
+  {
+    "rank": "314",
+    "name": "Teneen",
+    "elo": "1421",
+    "opponent-elo": "1396",
+    "wins": "11.0 / 20",
+    "percentage": "55.0%",
+    "rating": "2.65"
+  },
+  {
+    "rank": "315",
+    "name": "Rich C",
+    "elo": "1411",
+    "opponent-elo": "1384",
+    "wins": "23.5 / 44",
+    "percentage": "53.4%",
+    "rating": "2.65"
+  },
+  {
+    "rank": "316",
+    "name": "Amanda R",
+    "elo": "1410",
+    "opponent-elo": "1381",
+    "wins": "22.0 / 41",
+    "percentage": "53.7%",
+    "rating": "2.65"
+  },
+  {
+    "rank": "317",
+    "name": "Susan G",
+    "elo": "1410",
+    "opponent-elo": "1564",
+    "wins": "7.0 / 23",
+    "percentage": "30.4%",
+    "rating": "2.65"
+  },
+  {
+    "rank": "318",
+    "name": "Evan C",
+    "elo": "1396",
+    "opponent-elo": "1449",
+    "wins": "14.5 / 34",
+    "percentage": "42.6%",
+    "rating": "2.64"
+  },
+  {
+    "rank": "319",
+    "name": "Cheryl L",
+    "elo": "1369",
+    "opponent-elo": "1434",
+    "wins": "15.5 / 35",
+    "percentage": "44.3%",
+    "rating": "2.62"
+  },
+  {
+    "rank": "320",
+    "name": "Emily Sc",
+    "elo": "1355",
+    "opponent-elo": "1250",
+    "wins": "5.0 / 8",
+    "percentage": "62.5%",
+    "rating": "2.61"
+  },
+  {
+    "rank": "321",
+    "name": "Meaghan M",
+    "elo": "1344",
+    "opponent-elo": "1331",
+    "wins": "25.5 / 51",
+    "percentage": "50.0%",
+    "rating": "2.60"
+  },
+  {
+    "rank": "322",
+    "name": "Andrea L",
+    "elo": "1343",
+    "opponent-elo": "1747",
+    "wins": "0.0 / 8",
+    "percentage": "0.0%",
+    "rating": "2.60"
+  },
+  {
+    "rank": "323",
+    "name": "Joshua O",
+    "elo": "1339",
+    "opponent-elo": "1634",
+    "wins": "2.5 / 10",
+    "percentage": "25.0%",
+    "rating": "2.60"
+  },
+  {
+    "rank": "324",
+    "name": "Andrew T",
+    "elo": "1334",
+    "opponent-elo": "1370",
+    "wins": "7.0 / 15",
+    "percentage": "46.7%",
+    "rating": "2.59"
+  },
+  {
+    "rank": "325",
+    "name": "Frances",
+    "elo": "1331",
+    "opponent-elo": "1503",
+    "wins": "2.0 / 8",
+    "percentage": "25.0%",
+    "rating": "2.59"
+  },
+  {
+    "rank": "326",
+    "name": "Bobby B",
+    "elo": "1325",
+    "opponent-elo": "1327",
+    "wins": "14.0 / 28",
+    "percentage": "50.0%",
+    "rating": "2.59"
+  },
+  {
+    "rank": "327",
+    "name": "Sarita",
+    "elo": "1323",
+    "opponent-elo": "1309",
+    "wins": "38.0 / 72",
+    "percentage": "52.8%",
+    "rating": "2.59"
+  },
+  {
+    "rank": "328",
+    "name": "Anthony K",
+    "elo": "1319",
+    "opponent-elo": "1277",
+    "wins": "9.0 / 17",
+    "percentage": "52.9%",
+    "rating": "2.58"
+  },
+  {
+    "rank": "329",
+    "name": "Mollie D",
+    "elo": "1304",
+    "opponent-elo": "1280",
+    "wins": "6.0 / 11",
+    "percentage": "54.5%",
+    "rating": "2.57"
+  },
+  {
+    "rank": "330",
+    "name": "Colleen G",
+    "elo": "1287",
+    "opponent-elo": "1447",
+    "wins": "2.0 / 8",
+    "percentage": "25.0%",
+    "rating": "2.56"
+  },
+  {
+    "rank": "331",
+    "name": "Betzy",
+    "elo": "1277",
+    "opponent-elo": "1279",
+    "wins": "24.0 / 49",
+    "percentage": "49.0%",
+    "rating": "2.55"
+  },
+  {
+    "rank": "332",
+    "name": "Emily T",
+    "elo": "1270",
+    "opponent-elo": "1417",
+    "wins": "1.0 / 4",
+    "percentage": "25.0%",
+    "rating": "2.55"
+  },
+  {
+    "rank": "333",
+    "name": "Sonya S",
+    "elo": "1266",
+    "opponent-elo": "1271",
+    "wins": "14.5 / 28",
+    "percentage": "51.8%",
+    "rating": "2.55"
+  },
+  {
+    "rank": "334",
+    "name": "Mikki C",
+    "elo": "1263",
+    "opponent-elo": "1364",
+    "wins": "5.5 / 15",
+    "percentage": "36.7%",
+    "rating": "2.55"
+  },
+  {
+    "rank": "335",
+    "name": "Karen K",
+    "elo": "1262",
+    "opponent-elo": "1372",
+    "wins": "13.5 / 35",
+    "percentage": "38.6%",
+    "rating": "2.54"
+  },
+  {
+    "rank": "336",
+    "name": "Megan H",
+    "elo": "1245",
+    "opponent-elo": "1286",
+    "wins": "6.5 / 14",
+    "percentage": "46.4%",
+    "rating": "2.53"
+  },
+  {
+    "rank": "337",
+    "name": "DCPLstaff",
+    "elo": "1232",
+    "opponent-elo": "1129",
+    "wins": "2.0 / 3",
+    "percentage": "66.7%",
+    "rating": "2.52"
+  },
+  {
+    "rank": "338",
+    "name": "Ragan A",
+    "elo": "1230",
+    "opponent-elo": "1174",
+    "wins": "6.5 / 11",
+    "percentage": "59.1%",
+    "rating": "2.52"
+  },
+  {
+    "rank": "339",
+    "name": "Jo B",
+    "elo": "1223",
+    "opponent-elo": "1216",
+    "wins": "13.0 / 27",
+    "percentage": "48.1%",
+    "rating": "2.52"
+  },
+  {
+    "rank": "340",
+    "name": "Todd D",
+    "elo": "1218",
+    "opponent-elo": "935",
+    "wins": "7.0 / 8",
+    "percentage": "87.5%",
+    "rating": "2.51"
+  },
+  {
+    "rank": "341",
+    "name": "Cathy Du",
+    "elo": "1202",
+    "opponent-elo": "1167",
+    "wins": "24.5 / 46",
+    "percentage": "53.3%",
+    "rating": "2.50"
+  },
+  {
+    "rank": "342",
+    "name": "Nicki W",
+    "elo": "1200",
+    "opponent-elo": "1205",
+    "wins": "1.5 / 3",
+    "percentage": "50.0%",
+    "rating": "2.50"
+  },
+  {
+    "rank": "343",
+    "name": "Kasea",
+    "elo": "1197",
+    "opponent-elo": "1258",
+    "wins": "13.0 / 29",
+    "percentage": "44.8%",
+    "rating": "2.50"
+  },
+  {
+    "rank": "344",
+    "name": "Rob S",
+    "elo": "1190",
+    "opponent-elo": "1150",
+    "wins": "14.5 / 26",
+    "percentage": "55.8%",
+    "rating": "2.49"
+  },
+  {
+    "rank": "345",
+    "name": "Barbara S",
+    "elo": "1188",
+    "opponent-elo": "1202",
+    "wins": "21.5 / 43",
+    "percentage": "50.0%",
+    "rating": "2.49"
+  },
+  {
+    "rank": "346",
+    "name": "Sam S",
+    "elo": "1187",
+    "opponent-elo": "1326",
+    "wins": "12.0 / 37",
+    "percentage": "32.4%",
+    "rating": "2.49"
+  },
+  {
+    "rank": "347",
+    "name": "Chris H",
+    "elo": "1176",
+    "opponent-elo": "1153",
+    "wins": "10.5 / 20",
+    "percentage": "52.5%",
+    "rating": "2.48"
+  },
+  {
+    "rank": "348",
+    "name": "Peter Ma",
+    "elo": "1167",
+    "opponent-elo": "1435",
+    "wins": "1.5 / 7",
+    "percentage": "21.4%",
+    "rating": "2.48"
+  },
+  {
+    "rank": "349",
+    "name": "Chris R",
+    "elo": "1166",
+    "opponent-elo": "1554",
+    "wins": "0.0 / 6",
+    "percentage": "0.0%",
+    "rating": "2.48"
+  },
+  {
+    "rank": "350",
+    "name": "Angela Mag",
+    "elo": "1164",
+    "opponent-elo": "1237",
+    "wins": "8.5 / 22",
+    "percentage": "38.6%",
+    "rating": "2.48"
+  },
+  {
+    "rank": "351",
+    "name": "Austin Q",
+    "elo": "1162",
+    "opponent-elo": "1284",
+    "wins": "20.0 / 47",
+    "percentage": "42.6%",
+    "rating": "2.47"
+  },
+  {
+    "rank": "352",
+    "name": "Cindy Ma",
+    "elo": "1160",
+    "opponent-elo": "1221",
+    "wins": "2.5 / 6",
+    "percentage": "41.7%",
+    "rating": "2.47"
+  },
+  {
+    "rank": "353",
+    "name": "Stephanie C",
+    "elo": "1142",
+    "opponent-elo": "1201",
+    "wins": "9.0 / 22",
+    "percentage": "40.9%",
+    "rating": "2.46"
+  },
+  {
+    "rank": "354",
+    "name": "Jeffrey M",
+    "elo": "1135",
+    "opponent-elo": "1145",
+    "wins": "23.5 / 47",
+    "percentage": "50.0%",
+    "rating": "2.45"
+  },
+  {
+    "rank": "355",
+    "name": "Gordon L",
+    "elo": "1127",
+    "opponent-elo": "1087",
+    "wins": "20.0 / 37",
+    "percentage": "54.1%",
+    "rating": "2.45"
+  },
+  {
+    "rank": "356",
+    "name": "Daniel S",
+    "elo": "1123",
+    "opponent-elo": "1140",
+    "wins": "17.0 / 35",
+    "percentage": "48.6%",
+    "rating": "2.45"
+  },
+  {
+    "rank": "357",
+    "name": "Phyllis K",
+    "elo": "1123",
+    "opponent-elo": "1122",
+    "wins": "13.5 / 27",
+    "percentage": "50.0%",
+    "rating": "2.45"
+  },
+  {
+    "rank": "358",
+    "name": "Cathy D",
+    "elo": "1122",
+    "opponent-elo": "1127",
+    "wins": "42.5 / 86",
+    "percentage": "49.4%",
+    "rating": "2.45"
+  },
+  {
+    "rank": "359",
+    "name": "Susan K",
+    "elo": "1116",
+    "opponent-elo": "1283",
+    "wins": "7.5 / 22",
+    "percentage": "34.1%",
+    "rating": "2.44"
+  },
+  {
+    "rank": "360",
+    "name": "Eileen D",
+    "elo": "1111",
+    "opponent-elo": "1370",
+    "wins": "0.0 / 3",
+    "percentage": "0.0%",
+    "rating": "2.44"
+  },
+  {
+    "rank": "361",
+    "name": "Hala H",
+    "elo": "1092",
+    "opponent-elo": "1263",
+    "wins": "1.0 / 4",
+    "percentage": "25.0%",
+    "rating": "2.42"
+  },
+  {
+    "rank": "362",
+    "name": "Jessica Z",
+    "elo": "1091",
+    "opponent-elo": "1148",
+    "wins": "11.5 / 26",
+    "percentage": "44.2%",
+    "rating": "2.42"
+  },
+  {
+    "rank": "363",
+    "name": "Leslie D",
+    "elo": "1081",
+    "opponent-elo": "1240",
+    "wins": "7.0 / 22",
+    "percentage": "31.8%",
+    "rating": "2.41"
+  },
+  {
+    "rank": "364",
+    "name": "Edward T",
+    "elo": "1072",
+    "opponent-elo": "1100",
+    "wins": "5.0 / 11",
+    "percentage": "45.5%",
+    "rating": "2.41"
+  },
+  {
+    "rank": "365",
+    "name": "Courtney M",
+    "elo": "1072",
+    "opponent-elo": "1093",
+    "wins": "6.5 / 14",
+    "percentage": "46.4%",
+    "rating": "2.41"
+  },
+  {
+    "rank": "366",
+    "name": "Michelle B",
+    "elo": "1066",
+    "opponent-elo": "984",
+    "wins": "13.0 / 22",
+    "percentage": "59.1%",
+    "rating": "2.40"
+  },
+  {
+    "rank": "367",
+    "name": "Jen St",
+    "elo": "1061",
+    "opponent-elo": "1180",
+    "wins": "7.5 / 21",
+    "percentage": "35.7%",
+    "rating": "2.40"
+  },
+  {
+    "rank": "368",
+    "name": "Shellie B",
+    "elo": "1023",
+    "opponent-elo": "1396",
+    "wins": "0.0 / 6",
+    "percentage": "0.0%",
+    "rating": "2.37"
+  },
+  {
+    "rank": "369",
+    "name": "Kim D",
+    "elo": "1023",
+    "opponent-elo": "1033",
+    "wins": "7.0 / 14",
+    "percentage": "50.0%",
+    "rating": "2.37"
+  },
+  {
+    "rank": "370",
+    "name": "Danielle G",
+    "elo": "1007",
+    "opponent-elo": "1220",
+    "wins": "2.0 / 10",
+    "percentage": "20.0%",
+    "rating": "2.36"
+  },
+  {
+    "rank": "371",
+    "name": "Lauren Al",
+    "elo": "984",
+    "opponent-elo": "1325",
+    "wins": "0.0 / 4",
+    "percentage": "0.0%",
+    "rating": "2.34"
+  },
+  {
+    "rank": "372",
+    "name": "Shane J",
+    "elo": "981",
+    "opponent-elo": "762",
+    "wins": "5.0 / 6",
+    "percentage": "83.3%",
+    "rating": "2.34"
+  },
+  {
+    "rank": "373",
+    "name": "Shruti",
+    "elo": "973",
+    "opponent-elo": "1140",
+    "wins": "3.5 / 13",
+    "percentage": "26.9%",
+    "rating": "2.34"
+  },
+  {
+    "rank": "374",
+    "name": "Jessie B",
+    "elo": "972",
+    "opponent-elo": "756",
+    "wins": "11.0 / 14",
+    "percentage": "78.6%",
+    "rating": "2.34"
+  },
+  {
+    "rank": "375",
+    "name": "Sarah D",
+    "elo": "969",
+    "opponent-elo": "1057",
+    "wins": "5.0 / 13",
+    "percentage": "38.5%",
+    "rating": "2.33"
+  },
+  {
+    "rank": "376",
+    "name": "Rachel Mad",
+    "elo": "966",
+    "opponent-elo": "982",
+    "wins": "20.5 / 41",
+    "percentage": "50.0%",
+    "rating": "2.33"
+  },
+  {
+    "rank": "377",
+    "name": "Dana M",
+    "elo": "956",
+    "opponent-elo": "870",
+    "wins": "6.0 / 10",
+    "percentage": "60.0%",
+    "rating": "2.32"
+  },
+  {
+    "rank": "378",
+    "name": "Susie McC",
+    "elo": "955",
+    "opponent-elo": "938",
+    "wins": "12.0 / 23",
+    "percentage": "52.2%",
+    "rating": "2.32"
+  },
+  {
+    "rank": "379",
+    "name": "Liz J",
+    "elo": "924",
+    "opponent-elo": "850",
+    "wins": "2.0 / 3",
+    "percentage": "66.7%",
+    "rating": "2.30"
+  },
+  {
+    "rank": "380",
+    "name": "Lea B",
+    "elo": "900",
+    "opponent-elo": "1339",
+    "wins": "0.0 / 11",
+    "percentage": "0.0%",
+    "rating": "2.28"
+  },
+  {
+    "rank": "381",
+    "name": "Michele F",
+    "elo": "898",
+    "opponent-elo": "625",
+    "wins": "3.0 / 3",
+    "percentage": "100.0%",
+    "rating": "2.28"
+  },
+  {
+    "rank": "382",
+    "name": "Maria T",
+    "elo": "893",
+    "opponent-elo": "963",
+    "wins": "4.5 / 12",
+    "percentage": "37.5%",
+    "rating": "2.28"
+  },
+  {
+    "rank": "383",
+    "name": "Amanda A",
+    "elo": "888",
+    "opponent-elo": "780",
+    "wins": "9.0 / 14",
+    "percentage": "64.3%",
+    "rating": "2.27"
+  },
+  {
+    "rank": "384",
+    "name": "Mary Hal",
+    "elo": "870",
+    "opponent-elo": "927",
+    "wins": "19.0 / 42",
+    "percentage": "45.2%",
+    "rating": "2.26"
+  },
+  {
+    "rank": "385",
+    "name": "Leigh Catherine",
+    "elo": "854",
+    "opponent-elo": "997",
+    "wins": "23.0 / 71",
+    "percentage": "32.4%",
+    "rating": "2.25"
+  },
+  {
+    "rank": "386",
+    "name": "Katherine B",
+    "elo": "843",
+    "opponent-elo": "885",
+    "wins": "16.0 / 33",
+    "percentage": "48.5%",
+    "rating": "2.24"
+  },
+  {
+    "rank": "387",
+    "name": "Rebecca A",
+    "elo": "842",
+    "opponent-elo": "834",
+    "wins": "10.5 / 21",
+    "percentage": "50.0%",
+    "rating": "2.24"
+  },
+  {
+    "rank": "388",
+    "name": "Genna G",
+    "elo": "834",
+    "opponent-elo": "868",
+    "wins": "1.5 / 3",
+    "percentage": "50.0%",
+    "rating": "2.23"
+  },
+  {
+    "rank": "389",
+    "name": "Doug A",
+    "elo": "830",
+    "opponent-elo": "873",
+    "wins": "3.0 / 7",
+    "percentage": "42.9%",
+    "rating": "2.23"
+  },
+  {
+    "rank": "390",
+    "name": "Colleen M",
+    "elo": "827",
+    "opponent-elo": "836",
+    "wins": "5.0 / 10",
+    "percentage": "50.0%",
+    "rating": "2.23"
+  },
+  {
+    "rank": "391",
+    "name": "Mark A",
+    "elo": "814",
+    "opponent-elo": "1094",
+    "wins": "13.5 / 61",
+    "percentage": "22.1%",
+    "rating": "2.22"
+  },
+  {
+    "rank": "392",
+    "name": "Angela M",
+    "elo": "775",
+    "opponent-elo": "884",
+    "wins": "6.0 / 16",
+    "percentage": "37.5%",
+    "rating": "2.19"
+  },
+  {
+    "rank": "393",
+    "name": "Lucy C",
+    "elo": "773",
+    "opponent-elo": "855",
+    "wins": "5.0 / 13",
+    "percentage": "38.5%",
+    "rating": "2.19"
+  },
+  {
+    "rank": "394",
+    "name": "Kathleen M",
+    "elo": "766",
+    "opponent-elo": "1005",
+    "wins": "2.0 / 10",
+    "percentage": "20.0%",
+    "rating": "2.18"
+  },
+  {
+    "rank": "395",
+    "name": "Sandra D",
+    "elo": "690",
+    "opponent-elo": "913",
+    "wins": "1.0 / 7",
+    "percentage": "14.3%",
+    "rating": "2.13"
+  },
+  {
+    "rank": "396",
+    "name": "Marissa C",
+    "elo": "668",
+    "opponent-elo": "956",
+    "wins": "0.0 / 3",
+    "percentage": "0.0%",
+    "rating": "2.11"
+  },
+  {
+    "rank": "397",
+    "name": "Lauren S",
+    "elo": "666",
+    "opponent-elo": "924",
+    "wins": "0.0 / 3",
+    "percentage": "0.0%",
+    "rating": "2.11"
+  },
+  {
+    "rank": "398",
+    "name": "Julie F",
+    "elo": "594",
+    "opponent-elo": "775",
+    "wins": "3.5 / 16",
+    "percentage": "21.9%",
+    "rating": "2.06"
+  },
+  {
+    "rank": "399",
+    "name": "Anna P",
+    "elo": "592",
+    "opponent-elo": "908",
+    "wins": "1.0 / 10",
+    "percentage": "10.0%",
+    "rating": "2.06"
+  },
+  {
+    "rank": "400",
+    "name": "Sarah Me",
+    "elo": "584",
+    "opponent-elo": "929",
+    "wins": "7.5 / 60",
+    "percentage": "12.5%",
+    "rating": "2.05"
+  },
+  {
+    "rank": "401",
+    "name": "Lynn McI",
+    "elo": "528",
+    "opponent-elo": "833",
+    "wins": "1.5 / 14",
+    "percentage": "10.7%",
+    "rating": "2.01"
+  },
+  {
+    "rank": "402",
+    "name": "Marta D",
+    "elo": "519",
+    "opponent-elo": "880",
+    "wins": "2.0 / 24",
+    "percentage": "8.3%",
+    "rating": "2.00"
+  },
+  {
+    "rank": "403",
+    "name": "Paul Da",
+    "elo": "515",
+    "opponent-elo": "926",
+    "wins": "0.5 / 11",
+    "percentage": "4.5%",
+    "rating": "2.00"
+  }
+]

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rating Lookup</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+    }
+
+    input {
+      font-size: 1em;
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    button {
+      font-size: 1em;
+      padding: 8px 14px;
+      margin-left: 6px;
+      cursor: pointer;
+    }
+
+    #results {
+      margin-top: 24px;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+
+    .field {
+      margin: 6px 0;
+    }
+
+    .field-name {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  Use this tool to look up an estimate of your performance-based
+  skill level rating, based on your DCPL results since the beginning
+  of 2026. Note that this rating estimate is based only on your wins and
+  losses in your round-robin matches, not the point margin of victory.
+  The weekly league ladder rankings use point differentials, and are
+  based on your most recent results, and so they are generally more
+  accurate than the rating estimates presented here.
+  <p>
+
+
+  <label for="nameInput">Enter your DCPL name here (e.g. "Mary D"):</label>
+
+  <input id="nameInput" type="text" placeholder="Enter name">
+  <button id="searchButton">Search</button>
+
+  <div id="results"></div>
+
+  <script>
+    let ratingsData = [];
+
+    async function loadRatings() {
+      const response = await fetch("ratings.json");
+
+      if (!response.ok) {
+        throw new Error("Could not load ratings.json");
+      }
+
+      ratingsData = await response.json();
+    }
+
+    function formatFieldName(fieldName) {
+      return fieldName
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, char => char.toUpperCase());
+    }
+
+    function searchByName(name) {
+      const target = name.trim().toLowerCase();
+
+      return ratingsData.filter(row =>
+        String(row.name || "").trim().toLowerCase() === target
+      );
+    }
+
+
+  function addField(parent, labelText, valueText) {
+    const div = document.createElement("div");
+    div.className = "field";
+
+    const label = document.createElement("span");
+    label.className = "field-name";
+    label.textContent = labelText;
+
+    div.appendChild(label);
+    div.appendChild(document.createTextNode(valueText));
+
+    parent.appendChild(div);
+  }
+
+    function displayResults(matches) {
+       const resultsDiv = document.getElementById("results");
+       resultsDiv.innerHTML = "";
+
+       if (matches.length === 0) {
+         resultsDiv.textContent = "No matching name found.";
+         return;
+       }
+
+       const totalRows = ratingsData.length;
+
+       matches.forEach((row, index) => {
+         if (matches.length > 1) {
+           const heading = document.createElement("h3");
+           heading.textContent = `Match ${index + 1}`;
+           resultsDiv.appendChild(heading);
+         }
+
+         addField(resultsDiv, "Name: ", row["name"] || "");
+         addField(resultsDiv, "Rating: ", row["rating"] || "");
+         addField(resultsDiv, "Rank: ", `${row["rank"] || ""} out of ${totalRows}`);
+         addField(
+           resultsDiv,
+           "Wins: ",
+           `${row["wins"] || ""}\u00A0\u00A0(${row["percentage"] || ""})`
+         );
+         addField(resultsDiv, "Elo: ", row["elo"] || "");
+         addField(resultsDiv, "Opponent Elo: ", row["opponent-elo"] || "");
+       });
+    }
+
+    function runSearch() {
+      const name = document.getElementById("nameInput").value;
+      const matches = searchByName(name);
+      displayResults(matches);
+    }
+
+    document.getElementById("searchButton").addEventListener("click", runSearch);
+
+    document.getElementById("nameInput").addEventListener("keydown", event => {
+      if (event.key === "Enter") {
+        runSearch();
+      }
+    });
+
+    loadRatings().catch(error => {
+      document.getElementById("results").textContent =
+        "Error loading ratings.json: " + error.message;
+    });
+  </script>
+
+</body>
+</html>
