@@ -130,15 +130,15 @@
          }
 
          addField(resultsDiv, "Name: ", row["name"] || "");
-         addField(resultsDiv, "Rating: ", row["rating"] || "");
-         addField(resultsDiv, "Rank: ", `${row["rank"] || ""} out of ${totalRows}`);
+         addField(resultsDiv, "DCPL Rating: ", row["rating"] || "");
+         addField(resultsDiv, "DCPL Rank: ", `${row["rank"] || ""} out of ${totalRows}`);
          addField(
            resultsDiv,
            "Wins: ",
            `${row["wins"] || ""}\u00A0\u00A0(${row["percentage"] || ""})`
          );
          addField(resultsDiv, "Elo: ", row["elo"] || "");
-         addField(resultsDiv, "Opponent Elo: ", row["opponent-elo"] || "");
+         addField(resultsDiv, "Avg. Opponent Elo: ", row["opponent-elo"] || "");
        });
     }
 
