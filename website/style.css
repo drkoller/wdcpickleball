@@ -881,18 +881,34 @@ p {
 @media (max-width: 940px) {
 
  :root {
-   --header-height: 72px;
- }
+  --header-height: 72px;
+  }
+
+  .header-inner {
+    width: 100%;
+    min-height: 72px;
+    padding: 0 20px;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+  }
+
+  .brand-logo {
+    height: 44px;
+  }
 
  .section {
    padding: 82px 0;
  }
 
  .menu-button {
-   position: relative;
-   z-index: 1002;
-   display: block;
- }
+  position: relative;
+  z-index: 1002;
+  display: block;
+  margin-left: auto;
+  flex: 0 0 auto;
+}
 
  .menu-button.active span:nth-child(1) {
    transform: translateY(8px) rotate(45deg);
