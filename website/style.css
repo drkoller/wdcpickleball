@@ -240,6 +240,25 @@ p {
 .brand:hover .brand-logo {
   transform: scale(1.04);
 }
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  line-height: 1.1;
+}
+
+.brand-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.brand-location {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 
 /* Hide old text logo if any remains */
 .brand-circle {
