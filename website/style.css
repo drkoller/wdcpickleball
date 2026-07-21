@@ -516,6 +516,25 @@ p {
  color: var(--muted);
 }
 
+.pillar-icon {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 20px;
+ color: var(--green-700);
+}
+
+.pillar-icon svg {
+ width: 52px;
+ height: 52px;
+ display: block;
+ transition: transform 0.25s ease;
+}
+
+.pillar-card:hover .pillar-icon svg {
+ transform: scale(1.08);
+}
+
 /* Story */
 
 .story-section {
