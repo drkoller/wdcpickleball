@@ -33,82 +33,86 @@
  );
 
  /*
-  * Mobile navigation
-  */
+ * Mobile navigation
+ */
 
- function openMenu() {
-   menuButton.classList.add("active");
-   navigation.classList.add("open");
-   body.classList.add("menu-open");
+function openMenu() {
+  menuButton.classList.add("active");
+  navigation.classList.add("is-open");
+  body.classList.add("menu-open");
 
-   menuButton.setAttribute("aria-expanded", "true");
-   menuButton.setAttribute("aria-label", "Close navigation");
- }
+  menuButton.setAttribute("aria-expanded", "true");
+  menuButton.setAttribute("aria-label", "Close navigation");
+}
 
- function closeMenu() {
-   menuButton.classList.remove("active");
-   navigation.classList.remove("open");
-   body.classList.remove("menu-open");
+function closeMenu() {
+  menuButton.classList.remove("active");
+  navigation.classList.remove("is-open");
+  body.classList.remove("menu-open");
 
-   menuButton.setAttribute("aria-expanded", "false");
-   menuButton.setAttribute("aria-label", "Open navigation");
- }
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-label", "Open navigation");
+}
 
- function toggleMenu() {
-   const menuIsOpen = navigation.classList.contains("open");
+function toggleMenu() {
+  const menuIsOpen = navigation.classList.contains("is-open");
 
-   if (menuIsOpen) {
-     closeMenu();
-   } else {
-     openMenu();
-   }
- }
+  if (menuIsOpen) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+}
 
- if (menuButton && navigation) {
+if (menuButton && navigation) {
 
-   menuButton.addEventListener(
-     "click",
-     toggleMenu
-   );
+  menuButton.addEventListener(
+    "click",
+    toggleMenu
+  );
 
-   navigation
-     .querySelectorAll("a")
-     .forEach((link) => {
+  navigation
+    .querySelectorAll("a")
+    .forEach((link) => {
 
-       link.addEventListener(
-         "click",
-         closeMenu
-       );
+      link.addEventListener(
+        "click",
+        closeMenu
+      );
 
-     });
+    });
 
- }
+}
 
- document.addEventListener(
-   "keydown",
-   (event) => {
+document.addEventListener(
+  "keydown",
+  (event) => {
 
-     if (event.key === "Escape") {
-       closeMenu();
-     }
+    if (
+      event.key === "Escape" &&
+      menuButton &&
+      navigation
+    ) {
+      closeMenu();
+    }
 
-   }
- );
+  }
+);
 
- window.addEventListener(
-   "resize",
-   () => {
+window.addEventListener(
+  "resize",
+  () => {
 
-     if (window.innerWidth > 940) {
-       closeMenu();
-     }
+    if (
+      window.innerWidth > 940 &&
+      menuButton &&
+      navigation
+    ) {
+      closeMenu();
+    }
 
-   }
- );
-
- /*
-  * Expandable story
-  */
+  }
+);
 
  if (storyButton && fullStory) {
 
