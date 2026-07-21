@@ -1271,3 +1271,50 @@ p {
   }
 
 }
+/* =========================================================
+   OUR STORY PAGE
+   ========================================================= */
+
+.story-page-hero {
+  padding: 150px 0 100px;
+  background: linear-gradient(135deg, #123b30 0%, #1f5d4d 100%);
+  color: #fff;
+}
+
+.story-page-hero-inner {
+  max-width: 850px;
+}
+
+.story-page-hero .section-label {
+  color: rgba(255,255,255,.75);
+}
+
+.story-page-hero h1 {
+  margin: 12px 0 24px;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.story-page-intro {
+  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,.9);
+}
+
+@media (max-width: 768px) {
+
+  .story-page-hero {
+    padding: 110px 0 70px;
+  }
+
+  .story-page-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .story-page-intro {
+    font-size: 1rem;
+  }
+
+}
