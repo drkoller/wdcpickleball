@@ -1329,3 +1329,25 @@ p {
   }
 
 }
+.pillar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: rgba(18, 59, 48, 0.08);
+  color: #123b30;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.pillar-card:hover .pillar-icon {
+  transform: translateY(-3px);
+}
+
+.pillar-icon {
+  transition: transform 0.2s ease;
+}
