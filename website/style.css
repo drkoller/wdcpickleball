@@ -242,8 +242,7 @@ p {
 }
 
 /* Hide old text logo if any remains */
-.brand-circle,
-.brand-text {
+.brand-circle {
   display: none;
 }
 
