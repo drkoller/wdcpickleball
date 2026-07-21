@@ -909,8 +909,10 @@ p {
   }
 
   .brand {
-    flex: 0 0 auto;
-  }
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: calc(100% - 56px);
+}
 
   .brand-logo {
     height: 44px;
