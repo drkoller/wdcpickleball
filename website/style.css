@@ -229,7 +229,7 @@ p {
 
 .brand-logo {
   display: block;
-  height: 64px;
+  height: 40px;
   width: auto;
   transition: transform 0.25s ease;
 }
@@ -245,7 +245,7 @@ p {
 
 @media (max-width: 768px) {
   .brand-logo {
-    height: 52px;
+    height: 34px;
   }
 }
 
