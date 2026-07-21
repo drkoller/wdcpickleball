@@ -420,7 +420,7 @@ p {
  position: absolute;
  inset: 0;
  background:
-   url("images/hero.jpg")
+  url("images/hero-home.jpg")
    center 42% / cover no-repeat;
  transform: scale(1.025);
 }
