@@ -5,7 +5,7 @@
  const body = document.body;
  const header = document.getElementById("site-header");
  const menuButton = document.getElementById("menu-button");
- const navigation = document.getElementById("main-navigation");
+ const navigation = document.getElementById("site-nav");
 
  const storyButton = document.getElementById("story-toggle");
  const fullStory = document.getElementById("full-story");
