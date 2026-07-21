@@ -196,41 +196,44 @@ p {
 /* Header */
 
 .site-header {
- position: fixed;
- z-index: 1000;
- top: 0;
- right: 0;
- left: 0;
- color: var(--white);
- transition:
-   color 200ms ease,
-   background 200ms ease,
-   box-shadow 200ms ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  color: var(--white);
+  transition:
+    color 200ms ease,
+    background 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .site-header.scrolled {
- color: var(--ink);
- background: rgba(255, 255, 255, 0.95);
- box-shadow: var(--shadow-small);
- backdrop-filter: blur(14px);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-small);
 }
 
 .header-inner {
- min-height: var(--header-height);
- display: flex;
- align-items: center;
- justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: var(--header-height);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .brand-logo {
   display: block;
-  height: 40px;
   width: auto;
+  height: 46px;
+  object-fit: contain;
   transition: transform 0.25s ease;
 }
 
@@ -238,46 +241,42 @@ p {
   transform: scale(1.04);
 }
 
+/* Hide old text logo if any remains */
 .brand-circle,
 .brand-text {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .brand-logo {
-    height: 34px;
-  }
-}
-
 .main-navigation {
- display: flex;
- align-items: center;
- gap: 27px;
- font-size: 0.91rem;
- font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  margin-left: auto;
+  font-size: 0.91rem;
+  font-weight: 700;
 }
 
 .main-navigation > a:not(.nav-button) {
- position: relative;
- padding: 7px 0;
+  position: relative;
+  padding: 7px 0;
 }
 
 .main-navigation > a:not(.nav-button)::after {
- content: "";
- position: absolute;
- right: 0;
- bottom: 0;
- left: 0;
- height: 2px;
- transform: scaleX(0);
- background: var(--lime);
- transform-origin: left;
- transition: transform 170ms ease;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--lime);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 170ms ease;
 }
 
 .main-navigation > a:not(.nav-button):hover::after,
 .main-navigation > a:not(.nav-button):focus-visible::after {
- transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .nav-button {
