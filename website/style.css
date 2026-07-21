@@ -223,42 +223,30 @@ p {
 }
 
 .brand {
- display: inline-flex;
- align-items: center;
- gap: 12px;
+  display: inline-flex;
+  align-items: center;
 }
 
-.brand-circle {
- width: 47px;
- height: 47px;
- display: grid;
- flex: 0 0 auto;
- place-items: center;
- color: var(--green-950);
- background: var(--lime);
- border-radius: 50%;
- font-size: 0.95rem;
- font-weight: 900;
- letter-spacing: -0.05em;
+.brand-logo {
+  display: block;
+  height: 64px;
+  width: auto;
+  transition: transform 0.25s ease;
 }
 
+.brand:hover .brand-logo {
+  transform: scale(1.04);
+}
+
+.brand-circle,
 .brand-text {
- display: grid;
- line-height: 1.1;
+  display: none;
 }
 
-.brand-text strong {
- font-size: 1.08rem;
- font-weight: 800;
-}
-
-.brand-text small {
- margin-top: 5px;
- font-size: 0.65rem;
- font-weight: 700;
- letter-spacing: 0.09em;
- text-transform: uppercase;
- opacity: 0.78;
+@media (max-width: 768px) {
+  .brand-logo {
+    height: 52px;
+  }
 }
 
 .main-navigation {
