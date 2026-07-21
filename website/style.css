@@ -658,14 +658,14 @@ p {
 
 .story-columns {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px 60px;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 .story-columns p {
   color: var(--muted);
   line-height: 1.75;
-  margin-bottom: 1.25rem;
+  margin: 0 0 1.25rem;
 }
 
 /* Program cards */
