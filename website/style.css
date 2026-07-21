@@ -576,31 +576,6 @@ p {
  font-weight: 800;
 }
 
-.story-copy p {
-  color: var(--muted);
-  margin-bottom: 1.35rem;
-  line-height: 1.8;
-}
-
-.story-toggle {
- display: inline-flex;
- align-items: center;
- gap: 9px;
- padding: 0;
- color: var(--green-700);
- background: transparent;
- border: 0;
- font-weight: 800;
- cursor: pointer;
-}
-
-.story-toggle span {
- transition: transform 170ms ease;
-}
-
-.story-toggle:hover span {
- transform: translateX(4px);
-}
 
 .story-copy p {
   color: var(--muted);
