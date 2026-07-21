@@ -917,6 +917,15 @@ p {
   .brand-logo {
     height: 44px;
   }
+ 
+ .brand-text {
+  margin-left: 8px;
+}
+
+.brand-title {
+  font-size: 1rem;
+  white-space: nowrap;
+}
 
  .section {
    padding: 82px 0;
