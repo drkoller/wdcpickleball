@@ -602,20 +602,6 @@ p {
  transform: translateX(4px);
 }
 
-.full-story {
- margin-top: 55px;
-}
-
-.full-story[hidden] {
- display: none;
-}
-
-.full-story-inner {
- padding: clamp(32px, 6vw, 70px);
- background: var(--cream);
- border-radius: var(--radius-large);
-}
-
 .story-copy p {
   color: var(--muted);
   line-height: 1.8;
@@ -654,6 +640,13 @@ p {
   padding: clamp(32px, 6vw, 70px);
   background: var(--cream);
   border-radius: var(--radius-large);
+}
+
+.full-story-inner h2 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  max-width: 900px;
+  margin-bottom: 2rem;
 }
 
 .story-columns {
