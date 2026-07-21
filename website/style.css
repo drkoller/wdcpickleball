@@ -1277,8 +1277,19 @@ p {
 
 .story-page-hero {
   padding: 150px 0 100px;
-  background: linear-gradient(135deg, #123b30 0%, #1f5d4d 100%);
+  position: relative;
+  overflow: hidden;
   color: #fff;
+
+  background:
+    linear-gradient(
+      rgba(10,32,58,.72),
+      rgba(10,32,58,.72)
+    ),
+    url("images/our-story-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
 }
 
 .story-page-hero-inner {
