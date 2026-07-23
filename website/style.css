@@ -755,11 +755,10 @@ p {
 
 .ladder-statistics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
   gap: 14px;
   width: 100%;
 }
-
 .stat-card {
   display: flex;
   flex-direction: column;
