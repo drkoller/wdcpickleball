@@ -740,8 +740,9 @@ p {
 }
 
 .ladder-statistics {
- display: grid;
- gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
 }
 
 .stat-card {
