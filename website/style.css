@@ -778,7 +778,9 @@ p {
   letter-spacing: -0.045em;
   white-space: nowrap;
 }
-
+.stat-card.region strong {
+    font-size: 2rem;
+}
 .stat-card span {
   margin-top: 24px;
   color: rgba(255, 255, 255, 0.82);
