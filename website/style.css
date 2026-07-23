@@ -732,9 +732,9 @@ p {
 
 .ladder-layout {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: 0.82fr 1.18fr;
   align-items: center;
-  gap: clamp(45px, 6vw, 80px);
+  gap: clamp(35px, 4vw, 60px);
 }
 
 .ladder-content h2 {
