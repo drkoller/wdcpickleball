@@ -730,44 +730,135 @@ p {
   padding: clamp(80px, 10vw, 140px) 0;
 }
 
+/* ==========================================
+   LADDER
+========================================== */
+
+.ladder-section {
+  color: var(--white);
+  background: var(--green-950);
+  padding: clamp(80px, 10vw, 140px) 0;
+}
+
 .ladder-layout {
   display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
+  grid-template-columns: 0.78fr 1.22fr;
   align-items: center;
-  gap: clamp(35px, 4vw, 60px);
+  gap: clamp(40px, 5vw, 70px);
 }
 
 .ladder-content h2 {
   max-width: 620px;
   margin: 18px 0 24px;
   font-size: clamp(3.4rem, 5vw, 6rem);
-  line-height: 0.96;
-  letter-spacing: -0.055em;
+  line-height: .96;
+  letter-spacing: -.055em;
 }
 
 .ladder-content > p:not(.section-eyebrow) {
   max-width: 560px;
-  margin-bottom: 28px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
-  line-height: 1.55;
+  margin-bottom: 32px;
+  color: rgba(255,255,255,.78);
+  font-size: clamp(1.05rem,1.3vw,1.25rem);
+  line-height: 1.6;
 }
+
+/* ---------- Statistics ---------- */
 
 .ladder-statistics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(240px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
   width: 100%;
 }
+
 .stat-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-width: 0;
-  min-height: 320px;
-  padding: 28px 28px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 32px;
+  min-height: 250px;
+
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--radius-medium);
+
+  transition: transform .25s ease,
+              border-color .25s ease,
+              background .25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,.05);
+  border-color: rgba(191,255,79,.35);
+}
+
+.stat-card strong {
+  display: block;
+  margin-bottom: 14px;
+
+  color: var(--lime);
+
+  font-size: clamp(2rem,2.8vw,3.8rem);
+  line-height: .95;
+  letter-spacing: -.05em;
+
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.stat-card.region strong {
+  font-size: clamp(1.8rem,2.3vw,2.8rem);
+}
+
+.stat-card span {
+  color: rgba(255,255,255,.78);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:1100px){
+
+  .ladder-layout{
+    grid-template-columns:1fr;
+  }
+
+  .ladder-content{
+    max-width:700px;
+  }
+
+  .ladder-statistics{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:760px){
+
+  .ladder-statistics{
+    grid-template-columns:1fr;
+  }
+
+  .stat-card{
+    min-height:180px;
+    padding:28px;
+  }
+
+  .stat-card strong{
+    font-size:2.5rem;
+  }
+
+  .stat-card.region strong{
+    font-size:2rem;
+  }
+
 }
 
 .stat-card strong {
