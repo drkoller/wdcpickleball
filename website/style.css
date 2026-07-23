@@ -722,46 +722,111 @@ p {
 
 /* Ladder */
 
+/* Ladder */
+
 .ladder-section {
- color: var(--white);
- background: var(--green-950);
+  color: var(--white);
+  background: var(--green-950);
+  padding: clamp(80px, 10vw, 140px) 0;
 }
 
 .ladder-layout {
- display: grid;
- grid-template-columns: 1.08fr 0.92fr;
- align-items: center;
- gap: clamp(50px, 8vw, 110px);
+  display: grid;
+  grid-template-columns: 0.9fr 1.35fr;
+  align-items: center;
+  gap: clamp(45px, 6vw, 90px);
 }
 
-.ladder-copy p:not(.eyebrow) {
- max-width: 600px;
- color: rgba(255, 255, 255, 0.74);
+.ladder-content h2 {
+  max-width: 620px;
+  margin: 18px 0 24px;
+  font-size: clamp(3.4rem, 5vw, 6rem);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+
+.ladder-content > p:not(.section-eyebrow) {
+  max-width: 560px;
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  line-height: 1.55;
 }
 
 .ladder-statistics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
 }
 
 .stat-card {
- display: grid;
- padding: 25px 28px;
- border: 1px solid rgba(255, 255, 255, 0.14);
- border-radius: var(--radius-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 360px;
+  padding: 30px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-medium);
 }
 
 .stat-card strong {
- color: var(--lime);
- font-size: clamp(2.2rem, 5vw, 4.7rem);
- line-height: 1;
- letter-spacing: -0.05em;
+  color: var(--lime);
+  font-size: clamp(3rem, 4.5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
 }
 
 .stat-card span {
- margin-top: 9px;
- color: rgba(255, 255, 255, 0.7);
+  margin-top: 28px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(1.05rem, 1.25vw, 1.25rem);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.stat-card.region strong {
+  font-size: clamp(1.7rem, 2.2vw, 2.7rem);
+  letter-spacing: -0.035em;
+}
+
+@media (max-width: 1200px) {
+  .ladder-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ladder-content {
+    max-width: 760px;
+  }
+
+  .ladder-statistics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .stat-card {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 760px) {
+  .ladder-section {
+    padding: 70px 0;
+  }
+
+  .ladder-statistics {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    min-height: 220px;
+  }
+
+  .stat-card strong,
+  .stat-card.region strong {
+    white-space: normal;
+  }
 }
 
 /* Gallery */
