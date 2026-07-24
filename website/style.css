@@ -726,9 +726,6 @@ p {
    LADDER
 ========================================== */
 
-/* ==========================================
-   LADDER
-========================================== */
 
 .ladder-section {
   color: var(--white);
@@ -738,13 +735,17 @@ p {
 
 .ladder-layout {
   display: grid;
-  grid-template-columns: 0.78fr 1.22fr;
+  grid-template-columns: minmax(380px, 0.72fr) minmax(0, 1.28fr);
   align-items: center;
-  gap: clamp(40px, 5vw, 70px);
+  gap: clamp(36px, 4vw, 56px);
+}
+
+.ladder-content {
+  min-width: 0;
 }
 
 .ladder-content h2 {
-  max-width: 620px;
+  max-width: 560px;
   margin: 18px 0 24px;
   font-size: clamp(3.4rem, 5vw, 6rem);
   line-height: 0.96;
@@ -752,7 +753,7 @@ p {
 }
 
 .ladder-content > p:not(.section-eyebrow) {
-  max-width: 560px;
+  max-width: 540px;
   margin-bottom: 32px;
   color: rgba(255, 255, 255, 0.78);
   font-size: clamp(1.05rem, 1.3vw, 1.25rem);
@@ -762,8 +763,9 @@ p {
 .ladder-statistics {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
   width: 100%;
+  min-width: 0;
 }
 
 .stat-card {
@@ -773,7 +775,7 @@ p {
   align-items: flex-start;
   min-width: 0;
   min-height: 250px;
-  padding: 32px;
+  padding: 26px 24px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -792,29 +794,30 @@ p {
 
 .stat-card strong {
   display: block;
-  max-width: 100%;
-  margin-bottom: 18px;
+  width: 100%;
+  margin-bottom: 20px;
   color: var(--lime);
-  font-size: clamp(2rem, 2.8vw, 3.8rem);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
+  font-size: clamp(2.1rem, 2.25vw, 3.15rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
   white-space: nowrap;
 }
 
 .stat-card.region strong {
-  font-size: clamp(2rem, 2.4vw, 3rem);
+  font-size: clamp(1.72rem, 1.85vw, 2.5rem);
+  letter-spacing: -0.04em;
 }
 
 .stat-card span {
   color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1.1rem, 1.1vw, 1.2rem);
-  line-height: 1.5;
+  font-size: clamp(1.08rem, 1.05vw, 1.18rem);
+  line-height: 1.48;
   font-weight: 500;
 }
 
-/* ---------- Tablet ---------- */
+/* Tablet */
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
   .ladder-layout {
     grid-template-columns: 1fr;
   }
@@ -826,9 +829,17 @@ p {
   .ladder-statistics {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .stat-card strong {
+    font-size: clamp(2.5rem, 5vw, 3.6rem);
+  }
+
+  .stat-card.region strong {
+    font-size: clamp(2.1rem, 4vw, 3rem);
+  }
 }
 
-/* ---------- Mobile ---------- */
+/* Mobile */
 
 @media (max-width: 760px) {
   .ladder-statistics {
@@ -841,11 +852,11 @@ p {
   }
 
   .stat-card strong {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
   }
 
   .stat-card.region strong {
-    font-size: 2.15rem;
+    font-size: clamp(2rem, 9vw, 2.8rem);
   }
 
   .stat-card span {
