@@ -120,7 +120,7 @@
     "resize",
     () => {
 
-      if (window.innerWidth > 940) {
+     if (window.innerWidth > 1080) {
         closeMenu();
       }
 
