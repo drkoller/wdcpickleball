@@ -18,55 +18,53 @@ td:nth-child(7) {text-align: end;}
 <h2>Friday League Ladder Standings</h2>
 
 <p>
-Last updated July 10, 2026. Preliminary seedings for new league.
+Last updated July 22, 2026. Standings based on DCPL results since May 18, with more weight on more recent results.
 
 <hr>
 
 <table>
-<tr><th></th><th></th><th>Points<br>Diff.<sup>*</sup></th><th colspan="2">Shootout<br>Wins<sup>**</sup></th></tr>
-<tr><td>1</td><td>Chris C</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>2</td><td>Nate G</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>3</td><td>Belkie</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>4</td><td>Gus M</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>5</td><td>Paul Do</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>6</td><td>James U</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>7</td><td>Jean L</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>8</td><td>Anthony K</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>9</td><td>v-Deborah R</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>10</td><td>Angie O</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>11</td><td>Elizabeth H</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>12</td><td>Sean He</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>13</td><td>Kim M</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>14</td><td>v-Todd R</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>15</td><td>Julie A</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>16</td><td>Eli B</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>17</td><td>Rachel G</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>18</td><td>Mark Sh</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>19</td><td>Patrick B</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>20</td><td>Rhonda M</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>21</td><td>Skip</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>22</td><td>Dan H</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>23</td><td>Heidi K</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>24</td><td>v-Eileen D</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>25</td><td>Rhonda S</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>26</td><td>v-Ceren</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>27</td><td>Emily Ha</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
-<tr><td>28</td><td>Katherine B</td><td>0.0</td><td>0.0 / 0</td><td>0.0%</td></tr>
+<tr><th></th><th></th><th></th><th>Points<br>Diff.<sup>*</sup></th><th colspan="2">Shootout<br>Wins<sup>**</sup></th><th>Avg.<br>Opp.<br>Rank</th></tr>
+<tr><td>1</td><td>Nate G</td><td id="trend-up">▲ 1</td><td>300.0</td><td>3.0 / 3</td><td>100.0%</td><td>----</td></tr>
+<tr><td>2</td><td>Chris C</td><td id="trend-dn">▼ 1</td><td>298.6</td><td>2.0 / 3</td><td>66.7%</td><td>----</td></tr>
+<tr><td>3</td><td>Derek T</td><td></td><td>291.6</td><td>10.5 / 13</td><td>80.8%</td><td>6.0</td></tr>
+<tr><td>4</td><td>Gus M</td><td id="trend-up">▲ 1</td><td>278.6</td><td>17.5 / 31</td><td>56.5%</td><td>5.9</td></tr>
+<tr><td>5</td><td>Jean L</td><td id="trend-up">▲ 3</td><td>271.9</td><td>37.5 / 79</td><td>47.5%</td><td>10.3</td></tr>
+<tr><td>6</td><td>Anthony K</td><td id="trend-up">▲ 3</td><td>259.7</td><td>62.0 / 112</td><td>55.4%</td><td>7.9</td></tr>
+<tr><td>7</td><td>Angie O</td><td id="trend-up">▲ 3</td><td>259.2</td><td>35.5 / 72</td><td>49.3%</td><td>9.6</td></tr>
+<tr><td>8</td><td>Belkie</td><td id="trend-dn">▼ 4</td><td>256.8</td><td>25.0 / 67</td><td>37.3%</td><td>4.9</td></tr>
+<tr><td>9</td><td>Paul Do</td><td id="trend-dn">▼ 3</td><td>252.7</td><td>0.0 / 3</td><td>0.0%</td><td>----</td></tr>
+<tr><td>10</td><td>James U</td><td id="trend-dn">▼ 3</td><td>247.5</td><td>0.0 / 4</td><td>0.0%</td><td>----</td></tr>
+<tr><td>11</td><td>Elizabeth H</td><td></td><td>244.8</td><td>12.0 / 21</td><td>57.1%</td><td>11.2</td></tr>
+<tr><td>12</td><td>Sean He</td><td></td><td>243.9</td><td>51.0 / 103</td><td>49.5%</td><td>9.6</td></tr>
+<tr><td>13</td><td>Kim M</td><td></td><td>242.4</td><td>0.0 / 1</td><td>0.0%</td><td>----</td></tr>
+<tr><td>14</td><td>Julie A</td><td></td><td>240.1</td><td>11.5 / 25</td><td>46.0%</td><td>10.4</td></tr>
+<tr><td>15</td><td>Rachel G</td><td id="trend-up">▲ 1</td><td>231.8</td><td>3.0 / 3</td><td>100.0%</td><td>18.3</td></tr>
+<tr><td>16</td><td>Eli B</td><td id="trend-dn">▼ 1</td><td>227.8</td><td>2.0 / 3</td><td>66.7%</td><td>18.0</td></tr>
+<tr><td>17</td><td>Will D</td><td></td><td>-----</td><td>4.0 / 4</td><td>100.0%</td><td>26.2</td></tr>
+<tr><td>18</td><td>Mark Sh</td><td></td><td>220.8</td><td>26.0 / 68</td><td>38.2%</td><td>14.9</td></tr>
+<tr><td>19</td><td>Patrick B</td><td></td><td>-----</td><td>0.0 / 0</td><td>0.0%</td><td>----</td></tr>
+<tr><td>20</td><td>Dan H</td><td id="trend-up">▲ 2</td><td>215.7</td><td>19.0 / 26</td><td>73.1%</td><td>19.9</td></tr>
+<tr><td>21</td><td>Rhonda M</td><td id="trend-dn">▼ 1</td><td>214.8</td><td>7.5 / 28</td><td>26.8%</td><td>16.3</td></tr>
+<tr><td>22</td><td>Skip</td><td id="trend-dn">▼ 1</td><td>209.7</td><td>10.5 / 27</td><td>38.9%</td><td>22.0</td></tr>
+<tr><td>23</td><td>Rhonda S</td><td id="trend-up">▲ 1</td><td>204.7</td><td>3.0 / 4</td><td>75.0%</td><td>24.8</td></tr>
+<tr><td>24</td><td>Juan R</td><td></td><td>203.7</td><td>0.0 / 3</td><td>0.0%</td><td>21.0</td></tr>
+<tr><td>25</td><td>Andrei A</td><td></td><td>201.9</td><td>2.0 / 4</td><td>50.0%</td><td>24.2</td></tr>
+<tr><td>26</td><td>Heidi K</td><td id="trend-dn">▼ 1</td><td>199.7</td><td>1.0 / 4</td><td>25.0%</td><td>24.0</td></tr>
+<tr><td>27</td><td>v-Kaavya</td><td></td><td>-----</td><td>10.0 / 14</td><td>71.4%</td><td>29.0</td></tr>
+<tr><td>28</td><td>Dominique P</td><td></td><td>-----</td><td>3.0 / 3</td><td>100.0%</td><td>----</td></tr>
+<tr><td>29</td><td>Katherine B</td><td id="trend-up">▲ 1</td><td>198.6</td><td>14.5 / 30</td><td>48.3%</td><td>27.0</td></tr>
+<tr><td>30</td><td>Emily Ha</td><td id="trend-dn">▼ 1</td><td>196.5</td><td>2.0 / 3</td><td>66.7%</td><td>----</td></tr>
+<tr><td>31</td><td>Erlan</td><td></td><td>191.4</td><td>0.0 / 4</td><td>0.0%</td><td>22.8</td></tr>
+<tr><td>32</td><td>Ryan Ri</td><td></td><td>189.5</td><td>1.0 / 3</td><td>33.3%</td><td>----</td></tr>
+<tr><td>33</td><td>Megan V</td><td></td><td>180.7</td><td>0.0 / 3</td><td>0.0%</td><td>----</td></tr>
 </table>
 
 <p>
 New/unknown/absent:<br>
 <ul>
-<li>nc-Dominique P (I, few months, HS tennis)
-<li>ns-Juan R (I, couple times, college tennis)
-<li>ns-Erlan B  (EB-AB, 3 months, HS tennis)
-<li>ns-Andrei A (EB-AB, few months, natl rower)
-<li>ns-Ryan Ri
-<li>ns-William D
-<li>ns-Megan V
-<li>a-Dhanya
-<li>a-Baker
-<li>a-Derek T
+<li>n-Arnav (AB, tennis)
+<li>n-Leslie M
+<li>n-Valerie W
 </ul>
 
 <p>
