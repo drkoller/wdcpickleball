@@ -807,8 +807,10 @@ p {
 }
 
 .stat-card.region strong {
-  font-size: clamp(1.9rem, 2vw, 2.6rem);
-  letter-spacing: -0.04em;
+  font-size: clamp(1.55rem, 1.6vw, 2.05rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
 }
 
 .stat-card span {
@@ -844,9 +846,8 @@ p {
     font-size: clamp(2.4rem, 5vw, 3.5rem);
   }
 
-  .stat-card.region strong {
-    font-size: clamp(2rem, 4vw, 2.9rem);
-  }
+ .stat-card.region strong {
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
 }
 
 /* Mobile */
