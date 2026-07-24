@@ -951,14 +951,14 @@ p {
 .ladder-content > p:not(.section-eyebrow) {
   max-width: 540px;
   margin-bottom: 32px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  color: rgba(255,255,255,.78);
+  font-size: clamp(1.05rem,1.3vw,1.25rem);
   line-height: 1.6;
 }
 
 .ladder-statistics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3,minmax(0,1fr));
   gap: 18px;
   width: 100%;
   min-width: 0;
@@ -973,20 +973,20 @@ p {
   min-height: 250px;
   padding: 28px 24px;
 
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--radius-medium);
 
   transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
+    transform .25s ease,
+    border-color .25s ease,
+    background .25s ease;
 }
 
 .stat-card:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(191, 255, 79, 0.35);
+  background: rgba(255,255,255,.05);
+  border-color: rgba(191,255,79,.35);
 }
 
 .stat-card strong {
@@ -996,31 +996,31 @@ p {
   margin: 0;
 
   color: var(--lime);
-  font-size: clamp(2rem, 2.2vw, 3rem);
+  font-size: clamp(2rem,2.2vw,3rem);
   line-height: 1;
-  letter-spacing: -0.045em;
+  letter-spacing: -.045em;
   white-space: nowrap;
 }
 
 .stat-card.region strong {
-  font-size: clamp(1.55rem, 1.6vw, 2.05rem);
+  font-size: clamp(1.55rem,1.6vw,2.05rem);
   line-height: 1;
-  letter-spacing: -0.025em;
+  letter-spacing: -.025em;
   white-space: nowrap;
 }
 
 .stat-card span {
   align-self: start;
 
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1.12rem, 1.1vw, 1.24rem);
+  color: rgba(255,255,255,.9);
+  font-size: clamp(1.12rem,1.1vw,1.24rem);
   line-height: 1.5;
   font-weight: 500;
 }
 
 /* Tablet */
 
-@media (max-width: 1150px) {
+@media (max-width:1150px) {
 
   .ladder-layout {
     grid-template-columns: 1fr;
@@ -1031,7 +1031,7 @@ p {
   }
 
   .ladder-statistics {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3,minmax(0,1fr));
   }
 
   .stat-card {
@@ -1039,16 +1039,18 @@ p {
   }
 
   .stat-card strong {
-    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    font-size: clamp(2.4rem,5vw,3.5rem);
   }
 
- .stat-card.region strong {
-  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
-}
+  .stat-card.region strong {
+    font-size: clamp(1.8rem,3.2vw,2.4rem);
+  }
+
+}   /* <-- THIS BRACE WAS MISSING */
 
 /* Mobile */
 
-@media (max-width: 760px) {
+@media (max-width:760px) {
 
   .ladder-statistics {
     grid-template-columns: 1fr;
@@ -1061,17 +1063,18 @@ p {
   }
 
   .stat-card strong {
-    font-size: clamp(2.5rem, 11vw, 3.4rem);
+    font-size: clamp(2.5rem,11vw,3.4rem);
     margin-bottom: 14px;
   }
 
   .stat-card.region strong {
-    font-size: clamp(2rem, 9vw, 2.8rem);
+    font-size: clamp(2rem,9vw,2.8rem);
   }
 
   .stat-card span {
     font-size: 1.1rem;
   }
+
 }
 
 /* Gallery */
