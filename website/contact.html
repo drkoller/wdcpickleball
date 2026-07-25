@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Contact DC Pickleball League with questions about leagues, clinics, tournaments, events, and getting involved.">
+  <meta name="theme-color" content="#123b30">
+  <link rel="icon" href="images/dcpl-logo.png">
+  <title>Contact | DC Pickleball League</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#home" aria-label="DC Pickleball League home">
+        <img class="brand-logo" src="images/dcpl-logo.png" alt="">
+        <div class="brand-text"><span class="brand-title">DC Pickleball League</span></div>
+      </a>
+      <button class="menu-button" id="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="our-story.html">Story</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="clinics.html">Clinics</a>
+        <a href="leagues.html">Ladder Leagues</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="contact-intro">
+      <div class="contact-wide">
+        <h1>Contact</h1>
+        <p>
+          Have a question or want to get involved?<br>
+          We'd love to hear from you.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-main">
+      <div class="contact-wide">
+        <div class="contact-card-grid">
+          <article class="contact-card">
+            <h2>General Questions</h2>
+            <p>Questions about DCPL, leagues, clinics, tournaments, or events.</p>
+            <a class="contact-card-link" href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
+          </article>
+
+          <article class="contact-card">
+            <h2>Instagram</h2>
+            <p>See recent events, photos, and announcements.</p>
+            <a class="contact-card-link" href="https://www.instagram.com/dcpickleballleague/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <h2>Response Time</h2>
+            <p>We typically respond within 1–2 business days.</p>
+          </article>
+        </div>
+
+        <section class="contact-form-section" aria-labelledby="contact-form-heading">
+          <h2 id="contact-form-heading">Send a Message</h2>
+          <form class="contact-form" data-contact-form>
+            <div class="contact-field">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="contact-field">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="contact-field contact-field-full">
+              <label for="contact-subject">Subject</label>
+              <input id="contact-subject" name="subject" type="text" required>
+            </div>
+            <div class="contact-field contact-field-full">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" required></textarea>
+            </div>
+            <div class="contact-form-actions">
+              <button class="button button-outline" type="submit">Send Message</button>
+              <p class="contact-form-status" data-contact-status tabindex="-1" aria-live="polite"></p>
+            </div>
+          </form>
+        </section>
+
+        <section class="contact-faq" aria-labelledby="contact-faq-heading">
+          <h2 id="contact-faq-heading">Frequently Asked Questions</h2>
+          <div class="contact-accordion" data-contact-accordion>
+            <details>
+              <summary>How do I join DCPL?</summary>
+              <div class="contact-answer">
+                <p>Join the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRiVsVX85DO_yTwheHuQO-e1xFfUirJvOMqaxP5TvdeGVUVA/viewform">DCPL mailing list</a> for programming updates and registration announcements.</p>
+              </div>
+            </details>
+            <details>
+              <summary>I'm new to pickleball. Where should I start?</summary>
+              <div class="contact-answer">
+                <p>Visit the <a href="clinics.html">Clinics page</a> for beginner instruction and the current schedule.</p>
+              </div>
+            </details>
+            <details>
+              <summary>How do ladder leagues work?</summary>
+              <div class="contact-answer">
+                <p>Players register individually and play multiple games with similarly skilled players. Visit <a href="leagues.html">Ladder Leagues</a> for current registration and standings.</p>
+              </div>
+            </details>
+            <details>
+              <summary>How do I register for clinics?</summary>
+              <div class="contact-answer">
+                <p>Current clinic dates and registration links are listed on the <a href="schedule.html">Weekly Schedule</a>.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Where are events held?</summary>
+              <div class="contact-answer">
+                <p>Locations vary by program. Check the <a href="schedule.html">Weekly Schedule</a> before attending for current locations and times.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="contact-photo" aria-label="DCPL community">
+      <img src="images/gallery/IMG_0105.jpeg" alt="DCPL community members gathered together at a pickleball event." loading="lazy" decoding="async" width="3828" height="2631">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-intro">
+        <strong class="footer-title">DC Pickleball League</strong>
+        <p>Organized pickleball leagues, clinics, tournaments, and events in Washington, DC.</p>
+      </div>
+      <div class="footer-connect">
+        <a href="https://www.instagram.com/dcpickleballleague/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:wdcpickleball@gmail.com">wdcpickleball@gmail.com</a>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year"></span> DC Pickleball League</span></div>
+  </footer>
+
+  <script src="contact.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
