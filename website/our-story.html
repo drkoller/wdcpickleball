@@ -106,6 +106,28 @@
         font-size: clamp(2rem, 10vw, 2.8rem);
       }
     }
+
+    @media (max-width: 768px) {
+      .story-page-story {
+        padding-top: calc(var(--header-height) + 28px);
+      }
+
+      .story-page-lead-copy {
+        right: 18px;
+        bottom: 18px;
+        left: 18px;
+      }
+
+      .story-page-lead-copy .section-label {
+        margin-bottom: 8px;
+      }
+
+      .story-page-lead-copy h1 {
+        max-width: 22ch;
+        font-size: clamp(1.75rem, 6vw, 2.1rem);
+        line-height: 1.02;
+      }
+    }
   </style>
 </head>
 
