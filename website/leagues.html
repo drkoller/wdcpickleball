@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta
+    name="description"
+    content="Learn about DC Pickleball League ladder leagues, current registration, weekly standings, and past results."
+  >
+  <meta name="theme-color" content="#123b30">
+  <title>Ladder Leagues | DC Pickleball League</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .leagues-intro {
+      --league-accent: #c9473d;
+      padding: 102px 0 26px;
+      background: var(--cream);
+    }
+
+    .leagues-intro-layout {
+      width: min(92%, 1560px);
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 13fr);
+      align-items: center;
+      gap: clamp(30px, 3vw, 46px);
+    }
+
+    .leagues-intro-copy {
+      min-width: 0;
+    }
+
+    .leagues-intro-label {
+      margin: 0 0 8px;
+      color: #c9473d;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .leagues-intro h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.55rem, 4.4vw, 3.85rem);
+      line-height: 1;
+    }
+
+    .leagues-intro-text {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+      line-height: 1.65;
+    }
+
+    .leagues-photo {
+      min-width: 0;
+      overflow: hidden;
+      background: var(--green-800);
+      border-radius: var(--radius-medium);
+      box-shadow: var(--shadow-small);
+    }
+
+    .leagues-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(210px, 18vw, 240px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .league-dashboard {
+      --league-accent: #c9473d;
+      --league-card-height: 64px;
+      --league-card-radius: 15px;
+      --league-card-border: rgba(11, 41, 33, 0.11);
+      --league-card-background: var(--cream);
+      --league-card-gap: 10px;
+      --league-card-padding: 14px;
+      --league-card-icon-size: 30px;
+      padding: 28px 0 58px;
+      background: var(--white);
+    }
+
+    .league-dashboard-grid {
+      width: min(92%, 1560px);
+      display: grid;
+      grid-template-columns: minmax(0, 13fr) minmax(420px, 12fr);
+      align-items: start;
+      gap: clamp(28px, 2.25vw, 36px);
+    }
+
+    .dashboard-heading {
+      margin-bottom: 16px;
+    }
+
+    .dashboard-heading h2 {
+      margin: 0;
+      font-size: clamp(1.85rem, 2.6vw, 2.55rem);
+      line-height: 1.1;
+    }
+
+    .league-list {
+      display: grid;
+      gap: var(--league-card-gap);
+    }
+
+    .league-row {
+      display: grid;
+      grid-template-columns: var(--league-card-icon-size) minmax(120px, 1.1fr) minmax(165px, 1.45fr) minmax(120px, 1.05fr) auto;
+      align-items: center;
+      gap: 10px;
+      height: var(--league-card-height);
+      padding: 0 var(--league-card-padding);
+      border: 1px solid var(--league-card-border);
+      border-radius: var(--league-card-radius);
+      background: var(--league-card-background);
+    }
+
+    .league-icon,
+    .standings-icon {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: var(--league-accent);
+    }
+
+    .league-icon {
+      width: var(--league-card-icon-size);
+      height: var(--league-card-icon-size);
+      border-radius: 9px;
+      background: rgba(201, 71, 61, 0.09);
+    }
+
+    .league-icon svg,
+    .standings-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+    }
+
+    .league-row h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 0.98rem;
+      line-height: 1.25;
+    }
+
+    .league-row p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.25;
+    }
+
+    .league-row .button {
+      min-height: 43px;
+      justify-self: end;
+      padding: 0 17px;
+      border-color: var(--green-700);
+      font-size: 0.84rem;
+      white-space: nowrap;
+    }
+
+    .league-row .button:hover,
+    .league-row .button:focus-visible {
+      color: var(--white);
+      background: var(--green-800);
+      border-color: var(--green-800);
+      box-shadow: 0 8px 18px rgba(11, 41, 33, 0.12);
+    }
+
+    .standings-links {
+      display: grid;
+      gap: var(--league-card-gap);
+    }
+
+    .standings-links a {
+      display: grid;
+      grid-template-columns: var(--league-card-icon-size) minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 16px;
+      height: var(--league-card-height);
+      padding: 0 var(--league-card-padding);
+      color: var(--ink);
+      border: 1px solid var(--league-card-border);
+      border-radius: var(--league-card-radius);
+      background: var(--league-card-background);
+      font-weight: 800;
+      transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+    }
+
+    .standings-icon {
+      width: var(--league-card-icon-size);
+      height: var(--league-card-icon-size);
+      border-radius: 9px;
+      background: rgba(201, 71, 61, 0.09);
+    }
+
+    .standings-arrow {
+      color: var(--league-accent);
+      transition: transform 160ms ease;
+    }
+
+    .standings-links a:hover,
+    .standings-links a:focus-visible {
+      border-color: rgba(201, 71, 61, 0.45);
+      box-shadow: 0 7px 18px rgba(11, 41, 33, 0.07);
+      transform: translateY(-1px);
+    }
+
+    .standings-links a:hover .standings-arrow,
+    .standings-links a:focus-visible .standings-arrow {
+      transform: translateX(4px);
+    }
+
+    .archive-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .archive-note a {
+      color: var(--green-700);
+      font-weight: 800;
+    }
+
+    @media (max-width: 1100px) {
+      .league-row {
+        grid-template-columns: var(--league-card-icon-size) minmax(0, 1fr) auto;
+        gap: 5px 12px;
+      }
+
+      .league-icon {
+        grid-column: 1;
+        grid-row: 1 / 4;
+      }
+
+      .league-row h3,
+      .league-row p {
+        grid-column: 2;
+      }
+
+      .league-row .button {
+        grid-column: 3;
+        grid-row: 1 / 4;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .leagues-intro {
+        padding: 94px 0 30px;
+      }
+
+      .leagues-intro-layout,
+      .league-dashboard-grid {
+        width: min(calc(100% - 48px), var(--container-width));
+        grid-template-columns: 1fr;
+      }
+
+      .leagues-intro-layout {
+        gap: 24px;
+      }
+
+      .leagues-intro-text {
+        max-width: 720px;
+      }
+
+      .leagues-photo img {
+        height: clamp(210px, 31vw, 240px);
+      }
+
+      .league-dashboard {
+        padding: 32px 0 52px;
+      }
+
+      .league-dashboard-grid {
+        gap: 38px;
+      }
+
+      .standings-column {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .leagues-intro {
+        padding: 84px 0 26px;
+      }
+
+      .leagues-intro h1 {
+        font-size: clamp(2.35rem, 11vw, 3rem);
+      }
+
+      .leagues-photo img {
+        height: 210px;
+      }
+
+      .league-dashboard {
+        padding: 28px 0 44px;
+      }
+
+      .dashboard-heading h2 {
+        font-size: clamp(1.75rem, 8vw, 2.15rem);
+      }
+
+      .league-row {
+        grid-template-columns: var(--league-card-icon-size) minmax(0, 1fr);
+        height: auto;
+        min-height: var(--league-card-height);
+        padding: var(--league-card-padding);
+      }
+
+      .league-icon {
+        grid-row: 1;
+      }
+
+      .league-row h3,
+      .league-row p {
+        grid-column: 2;
+      }
+
+      .league-row .button {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        width: 100%;
+        margin-top: 7px;
+      }
+
+      .standings-links a {
+        height: auto;
+        min-height: var(--league-card-height);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html#home" aria-label="DC Pickleball League home">
+        <img class="brand-logo" src="images/dcpl-logo.png" alt="">
+        <div class="brand-text">
+          <span class="brand-title">DC Pickleball League</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menu-button"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        class="site-nav"
+        id="site-nav"
+        aria-label="Main navigation"
+      >
+        <a href="index.html#home">Home</a>
+        <a href="our-story.html">Story</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="clinics.html">Clinics</a>
+        <a href="leagues.html" aria-current="page">Ladder Leagues</a>
+        <a href="index.html#community-events">Tournaments</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="leagues-intro">
+      <div class="container leagues-intro-layout">
+
+        <div class="leagues-intro-copy">
+          <p class="leagues-intro-label">
+            Play With DCPL
+          </p>
+
+          <h1>
+            Ladder Leagues
+          </h1>
+
+          <p class="leagues-intro-text">
+            DC Pickleball League offers multi-week ladder leagues throughout
+            the year at multiple locations in the Washington, DC area. Our
+            shootout ladder leagues are designed to let you play multiple games
+            against players of similar skill level in a fun and competitive
+            environment while climbing the ladder throughout the season.
+          </p>
+        </div>
+
+        <div class="leagues-photo">
+          <img
+            src="images/gallery/0P3A8418.jpg"
+            alt="DCPL players competing across multiple courts during an evening ladder league session."
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <section class="league-dashboard" id="current-leagues">
+      <div class="container league-dashboard-grid">
+
+        <div class="current-leagues-column">
+          <div class="dashboard-heading">
+            <h2>
+              Current Ladder Leagues
+            </h2>
+          </div>
+
+        <div class="league-list">
+          <article class="league-row">
+            <span class="league-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                <path d="M16 3v4M8 3v4M3 10h18"></path>
+              </svg>
+            </span>
+            <h3>Monday Outdoor League</h3>
+            <p>June 29–July 27 · Mondays, 5:30–8:30 PM</p>
+            <p>Catholic University</p>
+            <a
+              class="button button-outline"
+              href="https://dcpickleballleague.ticketspice.com/dcpl-summer-monday-outdoor-leagues-at-catholic-university"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Registration Details
+            </a>
+          </article>
+
+          <article class="league-row">
+            <span class="league-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                <path d="M16 3v4M8 3v4M3 10h18"></path>
+              </svg>
+            </span>
+            <h3>Wednesday Outdoor League</h3>
+            <p>July 8–July 29 · Wednesdays, 5:30–8:30 PM</p>
+            <p>Catholic University</p>
+            <a
+              class="button button-outline"
+              href="https://dcpickleballleague.ticketspice.com/dcpl-summer-wednesday-league-at-catholic-university"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Registration Details
+            </a>
+          </article>
+
+          <article class="league-row">
+            <span class="league-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                <path d="M16 3v4M8 3v4M3 10h18"></path>
+              </svg>
+            </span>
+            <h3>Thursday Outdoor League</h3>
+            <p>July 16–August 20 · Thursdays, 6:00–9:30 PM</p>
+            <p>Alexandria City High School</p>
+            <a
+              class="button button-outline"
+              href="https://dcpickleballleague.ticketspice.com/dcpl-summer-thursday-league-at-alexandria-city-high-school"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Registration Details
+            </a>
+          </article>
+
+          <article class="league-row">
+            <span class="league-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                <path d="M16 3v4M8 3v4M3 10h18"></path>
+              </svg>
+            </span>
+            <h3>Friday Outdoor League</h3>
+            <p>July 10–August 21 · Fridays, 5:30–8:15 PM</p>
+            <p>Anacostia Outdoor Tennis Courts</p>
+            <a
+              class="button button-outline"
+              href="https://dcpickleballleague.ticketspice.com/dcpl-summer-friday-outdoor-league-at-anacostia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Registration Details
+            </a>
+          </article>
+        </div>
+        </div>
+
+        <div class="standings-column">
+          <div class="dashboard-heading">
+            <h2>
+              Current Ladder Standings
+            </h2>
+          </div>
+
+            <div class="standings-links">
+              <a href="https://wdcpickleball.com/ladders/moncua2.html">
+                <span class="standings-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path>
+                  </svg>
+                </span>
+                Monday League
+                <span class="standings-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a href="https://wdcpickleball.com/ladders/wedcua2.html">
+                <span class="standings-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path>
+                  </svg>
+                </span>
+                Wednesday League
+                <span class="standings-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a href="https://wdcpickleball.com/ladders/thu2.html">
+                <span class="standings-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path>
+                  </svg>
+                </span>
+                Thursday League
+                <span class="standings-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a href="https://wdcpickleball.com/ladders/anac.html">
+                <span class="standings-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path>
+                  </svg>
+                </span>
+                Friday League
+                <span class="standings-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+          <p class="archive-note">
+            Looking for previous seasons?
+            <a href="https://wdcpickleball.com/ladders/">Browse our League &amp; Tournament Archive.</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-intro">
+        <a class="brand footer-brand" href="index.html#home">
+          <span class="brand-circle" aria-hidden="true">DC</span>
+          <span class="brand-text">
+            <strong>DCPL</strong>
+            <small>DC Pickleball League</small>
+          </span>
+        </a>
+
+        <p>
+          Community-driven pickleball across the DC region.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>
+          Explore
+        </h3>
+
+        <a href="our-story.html">Our Story</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="clinics.html">Clinics</a>
+        <a href="leagues.html">Ladder Leagues</a>
+        <a href="index.html#gallery">Gallery</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>
+          Connect
+        </h3>
+
+        <a
+          href="https://www.instagram.com/dcpickleballleague/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a href="mailto:play@wdcpickleball.com">
+          Email DCPL
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>
+        © <span id="current-year"></span> DC Pickleball League
+      </span>
+
+      <a href="#main-content">
+        Back to top
+        <span aria-hidden="true">↑</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
