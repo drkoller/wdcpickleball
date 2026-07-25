@@ -1126,6 +1126,10 @@ p {
  transform: scale(1.04);
 }
 
+.gallery-card-large img {
+ object-position: 45% center;
+}
+
 .gallery-card > span {
  position: absolute;
  z-index: 2;
