@@ -1086,7 +1086,7 @@ p {
 .gallery-grid {
  display: grid;
  grid-template-columns: 1.22fr 0.78fr;
- grid-template-rows: repeat(2, 270px);
+ grid-template-rows: repeat(2, 300px);
  gap: 18px;
 }
 
