@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Explore beginner and skills clinics offered by DC Pickleball League.">
+  <meta name="theme-color" content="#123b30">
+  <title>Lessons &amp; Clinics | DC Pickleball League</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .clinics-intro {
+      padding: 150px 0 82px;
+      background: var(--cream);
+    }
+
+    .clinics-intro-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      align-items: center;
+      gap: clamp(48px, 7vw, 96px);
+    }
+
+    .clinics-intro-copy {
+      max-width: 570px;
+    }
+
+    .clinics-intro h1 {
+      max-width: 620px;
+      margin-bottom: 24px;
+      font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+    }
+
+    .clinics-intro-text {
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+      line-height: 1.75;
+    }
+
+    .clinics-schedule-text {
+      margin-bottom: 24px;
+      color: var(--ink);
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .clinics-photo {
+      overflow: hidden;
+      background: var(--green-800);
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow-large);
+    }
+
+    .clinics-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .clinics-details {
+      padding: 82px 0 96px;
+      background: var(--white);
+    }
+
+    .clinics-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .clinics-card {
+      display: flex;
+      flex-direction: column;
+      padding: clamp(30px, 4vw, 48px);
+      background: var(--cream);
+      border: 1px solid rgba(11, 41, 33, 0.07);
+      border-radius: var(--radius-medium);
+    }
+
+    .clinics-card h2 {
+      margin-bottom: 18px;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      letter-spacing: -0.035em;
+    }
+
+    .clinics-card p {
+      max-width: 520px;
+      margin-bottom: 24px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .clinics-card .button {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+
+    .clinics-contact {
+      padding: 68px 0;
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .clinics-contact h2 {
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+    }
+
+    .clinics-contact p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .clinics-contact a {
+      color: var(--green-700);
+      font-weight: 800;
+    }
+
+    @media (max-width: 820px) {
+      .clinics-intro {
+        padding: 118px 0 68px;
+      }
+
+      .clinics-intro-layout {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .clinics-intro-copy {
+        max-width: 650px;
+      }
+
+      .clinics-photo img {
+        aspect-ratio: 16 / 10;
+      }
+
+      .clinics-details {
+        padding: 64px 0 72px;
+      }
+
+      .clinics-card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .clinics-intro h1 {
+        font-size: 2.75rem;
+      }
+
+      .clinics-photo img {
+        aspect-ratio: 4 / 3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html#home" aria-label="DC Pickleball League home">
+        <img class="brand-logo" src="images/dcpl-logo.png" alt="">
+        <div class="brand-text">
+          <span class="brand-title">DC Pickleball League</span>
+        </div>
+      </a>
+
+      <button class="menu-button" id="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html#story">Our Story</a>
+        <a href="index.html#play">Leagues</a>
+        <a href="clinics.html">Clinics</a>
+        <a href="index.html#community-events">Community Events</a>
+        <a href="index.html#ladder">Ladders</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="clinics-intro">
+      <div class="container clinics-intro-layout">
+
+        <div class="clinics-intro-copy">
+          <p class="section-label">
+            Learn With DCPL
+          </p>
+
+          <h1>
+            Lessons &amp; Clinics
+          </h1>
+
+          <p class="clinics-intro-text">
+            Whether you're new to pickleball or looking to improve your game,
+            DCPL offers lessons and clinics for players of all skill levels.
+            Lessons are led by PPR Certified Coaches Steve Valiant and Maya
+            Ben-David. Steve brings more than 18 years of competitive
+            pickleball experience, including tournament play and medal-winning
+            performances across the United States. Together, Steve and Maya
+            have helped hundreds of players of all ages and skill levels build
+            confidence, improve their skills, and enjoy the game.
+          </p>
+
+          <p class="clinics-schedule-text">
+            See this week’s schedule for current clinic dates, locations, and
+            registration.
+          </p>
+
+          <a class="button button-primary" href="https://wdcpickleball.com/">
+            View Weekly Schedule
+          </a>
+        </div>
+
+        <div class="clinics-photo">
+          <img
+            src="images/gallery/IMG_7655.jpg"
+            alt="PPR Certified Coach leading a DCPL pickleball clinic."
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <section class="clinics-details">
+      <div class="container clinics-card-grid">
+
+        <article class="clinics-card">
+          <h2>
+            Beginner &amp; Advanced Beginner Clinics
+          </h2>
+
+          <p>
+            Perfect for players who are new to pickleball or building
+            confidence with the fundamentals. Advance registration is required.
+          </p>
+
+          <a class="button button-outline" href="https://wdcpickleball.com/">
+            View Schedule &amp; Register
+          </a>
+        </article>
+
+        <article class="clinics-card">
+          <h2>
+            Intermediate Clinics &amp; Bootcamps
+          </h2>
+
+          <p>
+            Designed for players looking to improve consistency, technique,
+            strategy, and doubles play. We also offer intensive bootcamps
+            throughout the year.
+          </p>
+
+          <a class="button button-outline" href="https://wdcpickleball.com/">
+            View Schedule &amp; Register
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="clinics-contact">
+      <div class="container narrow">
+
+        <h2>
+          Private &amp; Group Lessons
+        </h2>
+
+        <p>
+          Looking for private lessons, small group instruction, or a customized
+          clinic or event?
+          Contact us at
+          <strong>
+            <a href="mailto:wdcpickleball@gmail.com">wdcpickleball@gmail.com</a>
+          </strong>
+          to discuss availability and scheduling.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-intro">
+        <a class="brand footer-brand" href="index.html#home">
+          <span class="brand-circle" aria-hidden="true">DC</span>
+          <span class="brand-text">
+            <strong>DCPL</strong>
+            <small>DC Pickleball League</small>
+          </span>
+        </a>
+
+        <p>
+          Community-driven pickleball across the DC region.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>
+          Explore
+        </h3>
+
+        <a href="index.html#story">Our Story</a>
+        <a href="index.html#play">Play</a>
+        <a href="clinics.html">Clinics</a>
+        <a href="index.html#ladder">Ladders</a>
+        <a href="index.html#gallery">Gallery</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>
+          Connect
+        </h3>
+
+        <a href="https://www.instagram.com/dcpickleballleague/" target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+
+        <a href="mailto:play@wdcpickleball.com">
+          Email DCPL
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>
+        © <span id="current-year"></span> DC Pickleball League
+      </span>
+
+      <a href="#main-content">
+        Back to top
+        <span aria-hidden="true">↑</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
