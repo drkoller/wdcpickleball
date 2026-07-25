@@ -842,44 +842,20 @@ p {
  }
 }
 
-/* Shared section heading */
-
-.section-heading {
- display: flex;
- align-items: end;
- justify-content: space-between;
- gap: 30px;
- margin-bottom: 40px;
-}
-
-.section-heading h2 {
- margin-bottom: 0;
-}
-
-.section-link {
- display: inline-flex;
- align-items: center;
- gap: 8px;
- color: var(--green-700);
- font-weight: 800;
-}
-
-.section-link span {
- transition: transform 160ms ease;
-}
-
-.section-link:hover span {
- transform: translateX(4px);
-}
-
-.mobile-instagram-link {
- display: none;
-}
-
 /* Gallery */
 
 .gallery-section {
  background: var(--white);
+}
+
+.gallery-heading {
+ margin-bottom: 32px;
+}
+
+.gallery-heading h2 {
+ margin: 0;
+ font-size: clamp(2.2rem, 3.8vw, 3.8rem);
+ line-height: 1.05;
 }
 
 .gallery-grid {
@@ -909,18 +885,6 @@ p {
    filter 300ms ease;
 }
 
-.gallery-card::after {
- content: "";
- position: absolute;
- inset: 0;
- background:
-   linear-gradient(
-     180deg,
-     transparent 50%,
-     rgba(6, 24, 18, 0.72) 100%
-   );
-}
-
 .gallery-card:hover img {
  transform: scale(1.04);
 }
@@ -929,17 +893,26 @@ p {
  object-position: 45% center;
 }
 
-.gallery-card > span {
- position: absolute;
- z-index: 2;
- bottom: 18px;
- left: 18px;
- padding: 8px 13px;
- color: var(--white);
- background: rgba(11, 41, 33, 0.8);
- border-radius: 999px;
- font-size: 0.76rem;
+.gallery-page-link {
+ margin-top: 26px;
+ text-align: center;
+}
+
+.gallery-page-link a {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ color: var(--green-700);
  font-weight: 800;
+}
+
+.gallery-page-link a span {
+ transition: transform 160ms ease;
+}
+
+.gallery-page-link a:hover span,
+.gallery-page-link a:focus-visible span {
+ transform: translateX(3px);
 }
 
 .join-section {
@@ -1236,23 +1209,6 @@ p {
  }
 
 
- .section-heading {
-   display: block;
- }
-
- .desktop-link {
-   display: none;
- }
-
- .mobile-instagram-link {
-   display: block;
-   margin-top: 28px;
-   text-align: center;
- }
-
- .mobile-instagram-link .button {
-   width: 100%;
- }
 
  .story-photo,
  .story-photo img {
