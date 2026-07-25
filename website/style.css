@@ -1675,7 +1675,8 @@ p {
 }
 
 .site-nav a:hover::after,
-.site-nav a:focus-visible::after {
+.site-nav a:focus-visible::after,
+.site-nav a[aria-current="page"]::after {
   transform: scaleX(1);
 }
 
