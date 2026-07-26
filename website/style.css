@@ -984,24 +984,24 @@ p {
   font-size: 0.82rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .site-footer {
-    padding: 24px 0 12px;
+    padding: 14px 0 6px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 8px;
   }
 
   .footer-connect {
-    gap: 8px;
+    gap: 4px;
     min-width: 0;
   }
 
   .footer-bottom {
-    margin-top: 18px;
-    padding-top: 12px;
+    margin-top: 8px;
+    padding-top: 6px;
   }
 }
 
@@ -1765,7 +1765,11 @@ body {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
+  .site-footer {
+    background: var(--dcpl-green-hover);
+  }
+
   .footer-brand-lockup {
     align-items: center;
   }
