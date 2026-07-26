@@ -1462,6 +1462,22 @@ p {
   --dcpl-shadow: 0 12px 34px rgba(16, 54, 43, 0.1);
   --dcpl-stars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 22'%3E%3Cg fill='%23AF0D38'%3E%3Cpath d='m11 1.5 2.5 5.1 5.6.8-4 4 1 5.6-5.1-2.7L6 17l1-5.6-4-4 5.6-.8z'/%3E%3Cpath d='m42 1.5 2.5 5.1 5.6.8-4 4 1 5.6-5.1-2.7-5.1 2.7 1-5.6-4-4 5.6-.8z'/%3E%3Cpath d='m73 1.5 2.5 5.1 5.6.8-4 4 1 5.6-5.1-2.7-5.1 2.7 1-5.6-4-4 5.6-.8z'/%3E%3C/g%3E%3C/svg%3E");
 
+
+  /* Stage 1 semantic roles. Legacy palette and aliases remain unchanged. */
+  --color-brand-primary: #163D73;
+  --color-brand-primary-hover: var(--dcpl-blue-dark);
+  --color-brand-deep: var(--dcpl-blue-deep);
+  --color-action-primary: var(--dcpl-yellow);
+  --color-action-primary-text: var(--dcpl-blue-deep);
+  --color-surface-header: var(--dcpl-white);
+  --color-border-subtle: var(--dcpl-gray);
+  --color-text-on-dark: var(--dcpl-white);
+  --color-focus-ring: var(--color-brand-primary);
+  --color-nav-hover-surface: rgba(22, 61, 115, 0.07);
+  --color-hero-overlay-start: rgba(12, 35, 69, 0.06);
+  --color-hero-overlay-middle: rgba(12, 35, 69, 0.14);
+  --color-hero-overlay-end: rgba(12, 35, 69, 0.78);
+
   --green-950: #0f332a;
   --green-900: #174a3c;
   --green-850: #1b5343;
@@ -1818,6 +1834,272 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .explore-destination,
   .gallery-card {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   STAGE 1 — BRAND HEADER, NAVIGATION, HERO, AND HERO ACTIONS
+   ========================================================= */
+
+.site-header {
+  color: var(--color-brand-deep);
+  background: var(--color-surface-header);
+  border-bottom-color: var(--color-border-subtle);
+}
+
+.site-header.scrolled {
+  background: var(--color-surface-header);
+  border-color: var(--color-border-subtle);
+  box-shadow: 0 8px 24px rgba(12, 35, 69, 0.08);
+}
+
+.header-inner {
+  gap: clamp(28px, 4vw, 58px);
+}
+
+.brand,
+.brand-title {
+  color: var(--color-brand-primary);
+}
+
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  transition: transform 180ms ease;
+}
+
+.brand:hover .brand-logo {
+  transform: scale(1.025);
+}
+
+.brand-text {
+  margin-left: 14px;
+}
+
+.brand-title {
+  font-size: clamp(1.15rem, 1.35vw, 1.4rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.site-nav {
+  gap: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.site-nav a {
+  color: var(--color-brand-deep);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: color 160ms ease;
+}
+
+.site-nav a::after {
+  height: 3px;
+  background: var(--color-brand-primary);
+  opacity: 0.18;
+  transition: transform 160ms ease, opacity 160ms ease, background-color 160ms ease;
+}
+
+.site-nav a:hover {
+  color: var(--color-brand-primary-hover);
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  opacity: 0.38;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--color-brand-deep);
+  font-weight: 750;
+}
+
+.site-nav a[aria-current="page"]::after {
+  background: var(--color-action-primary);
+  opacity: 1;
+}
+
+.menu-button,
+.site-header .menu-button.active,
+.site-header.scrolled .menu-button.active {
+  color: var(--color-brand-primary);
+}
+
+.menu-button:hover {
+  background: var(--color-nav-hover-surface);
+}
+
+.brand:focus-visible,
+.site-nav a:focus-visible,
+.menu-button:focus-visible {
+  outline-color: var(--color-focus-ring);
+}
+
+.hero {
+  color: var(--color-text-on-dark);
+  background: var(--color-brand-deep);
+}
+
+.hero-shade {
+  background:
+    linear-gradient(
+      180deg,
+      var(--color-hero-overlay-start) 0%,
+      var(--color-hero-overlay-middle) 38%,
+      var(--color-hero-overlay-end) 100%
+    );
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero .button {
+  min-height: 52px;
+  border-radius: 10px;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+.hero .button-primary {
+  color: var(--color-action-primary-text);
+  background: var(--color-action-primary);
+  border-color: var(--color-action-primary);
+  box-shadow: 0 6px 18px rgba(12, 35, 69, 0.18);
+}
+
+.hero .button-primary:hover {
+  color: var(--color-action-primary-text);
+  background: var(--color-action-primary);
+  border-color: var(--color-action-primary-text);
+  box-shadow: 0 8px 20px rgba(12, 35, 69, 0.22);
+}
+
+.hero .button-secondary {
+  color: var(--color-text-on-dark);
+  background: rgba(12, 35, 69, 0.22);
+  border-color: rgba(255, 255, 255, 0.68);
+  box-shadow: none;
+}
+
+.hero .button-secondary:hover {
+  color: var(--color-text-on-dark);
+  background: rgba(12, 35, 69, 0.38);
+  border-color: var(--color-text-on-dark);
+  box-shadow: none;
+}
+
+.hero .button:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.hero .button:focus-visible {
+  outline: 3px solid var(--color-text-on-dark);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--color-brand-primary);
+}
+
+.hero .button[aria-disabled="true"],
+.hero .button:disabled {
+  opacity: 0.55;
+  transform: none;
+  pointer-events: none;
+}
+
+@media (max-width: 1220px) and (min-width: 1081px) {
+  .header-inner {
+    gap: 20px;
+  }
+
+  .brand-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-text {
+    margin-left: 10px;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .site-nav {
+    gap: 0.85rem;
+  }
+
+  .site-nav a {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .brand-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-text {
+    margin-left: 10px;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .site-nav {
+    color: var(--color-brand-deep);
+    background: var(--color-surface-header);
+    border-top-color: var(--color-border-subtle);
+    box-shadow: 0 20px 35px rgba(12, 35, 69, 0.12);
+  }
+
+  .site-nav a {
+    color: var(--color-brand-deep);
+    border-bottom-color: var(--color-border-subtle);
+    font-size: 1rem;
+  }
+
+  .site-nav a::after {
+    width: 48px;
+  }
+}
+
+@media (max-width: 650px) {
+  .brand-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand-title {
+    max-width: 210px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-title {
+    max-width: 190px;
+    font-size: 0.94rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo,
+  .site-nav a,
+  .site-nav a::after,
+  .hero .button {
     transition: none;
   }
 }
