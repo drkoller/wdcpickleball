@@ -114,16 +114,21 @@
       }
 
       .story-page-lead-copy {
+        top: 18px;
         right: 18px;
         bottom: 18px;
         left: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       .story-page-lead-copy .section-label {
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: 6px;
-        width: 100%;
-        margin-bottom: 8px;
+        width: auto;
+        margin-bottom: 0;
+        font-size: 0.65rem;
       }
 
       .story-page-lead-copy .section-label::after {
@@ -133,6 +138,7 @@
 
       .story-page-lead-copy h1 {
         max-width: 22ch;
+        margin-top: auto;
         font-size: clamp(1.75rem, 6vw, 2.1rem);
         line-height: 1.02;
       }
