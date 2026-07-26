@@ -1,5 +1,13 @@
 
 :root {
+ --dcpl-blue: #163D73;
+ --dcpl-blue-dark: #12325E;
+ --dcpl-blue-deep: #0C2345;
+ --dcpl-red: #BE1E4A;
+ --dcpl-yellow: #F7F400;
+ --dcpl-white: #FFFFFF;
+ --dcpl-gray: #E8EDF3;
+
  --green-950: #0b2921;
  --green-900: #123b30;
  --green-850: #184839;
