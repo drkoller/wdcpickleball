@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta
+    name="description"
+    content="View upcoming DC Pickleball League tournaments and results from past tournaments."
+  >
+  <meta name="theme-color" content="#123b30">
+  <link rel="icon" href="images/dcpl-logo.png">
+  <title>Tournaments | DC Pickleball League</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .tournaments-intro {
+      --tournament-accent: var(--dcpl-red);
+      padding: 102px 0 26px;
+      background: var(--cream);
+    }
+
+    .tournaments-wide-container {
+      width: min(92%, 1560px);
+      margin-inline: auto;
+    }
+
+    .tournaments-intro-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      align-items: center;
+      gap: clamp(30px, 3vw, 46px);
+    }
+
+    .tournaments-intro-copy {
+      min-width: 0;
+    }
+
+    .tournaments-intro-label {
+      margin: 0 0 8px;
+      color: var(--tournament-accent);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .tournaments-intro h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.55rem, 4.4vw, 3.85rem);
+      line-height: 1;
+    }
+
+    .tournaments-intro-text {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+      line-height: 1.65;
+    }
+
+    .tournaments-hero-photo {
+      min-width: 0;
+      overflow: hidden;
+      background: var(--green-800);
+      border-radius: var(--radius-medium);
+      box-shadow: var(--shadow-small);
+    }
+
+    .tournaments-hero-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(210px, 18vw, 240px);
+      object-fit: cover;
+      object-position: center 58%;
+    }
+
+    .tournament-dashboard {
+      --tournament-accent: var(--dcpl-red);
+      --tournament-card-radius: 15px;
+      --tournament-card-border: rgba(11, 41, 33, 0.11);
+      --tournament-card-background: var(--cream);
+      --tournament-card-gap: 10px;
+      --tournament-card-padding: 14px;
+      --tournament-icon-size: 30px;
+      padding: 28px 0 58px;
+      background: var(--white);
+    }
+
+    .tournament-dashboard-grid {
+      display: grid;
+      grid-template-columns: minmax(330px, 2fr) minmax(0, 3fr);
+      align-items: start;
+      gap: clamp(28px, 2.25vw, 36px);
+    }
+
+    .tournament-column-heading {
+      margin-bottom: 16px;
+    }
+
+    .tournament-column-heading h2 {
+      margin: 0;
+      font-size: clamp(1.85rem, 2.6vw, 2.55rem);
+      line-height: 1.1;
+    }
+
+    .upcoming-card,
+    .past-tournament-card {
+      border: 1px solid var(--tournament-card-border);
+      border-radius: var(--tournament-card-radius);
+      background: var(--tournament-card-background);
+    }
+
+    .upcoming-card {
+      display: grid;
+      grid-template-columns: var(--tournament-icon-size) minmax(0, 1fr);
+      gap: 12px;
+      padding: 16px var(--tournament-card-padding);
+    }
+
+    .tournament-icon {
+      display: grid;
+      place-items: center;
+      width: var(--tournament-icon-size);
+      height: var(--tournament-icon-size);
+      color: var(--tournament-accent);
+      background: rgba(201, 71, 61, 0.09);
+      border-radius: 9px;
+    }
+
+    .tournament-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+    }
+
+    .upcoming-card p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 0.94rem;
+      line-height: 1.55;
+    }
+
+    .upcoming-card .upcoming-contact {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .upcoming-card a,
+    .tournament-card-details a {
+      color: var(--green-700);
+      font-weight: 800;
+    }
+
+    .tournament-secondary-photo {
+      margin-top: 14px;
+      overflow: hidden;
+      background: var(--cream);
+      border-radius: var(--radius-medium);
+      box-shadow: var(--shadow-small);
+    }
+
+    .tournament-secondary-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(330px, 31vw, 460px);
+      object-fit: cover;
+      object-position: center 38%;
+    }
+
+    .past-tournament-list {
+      display: grid;
+      gap: var(--tournament-card-gap);
+    }
+
+    .past-tournament-card {
+      display: grid;
+      grid-template-columns: var(--tournament-icon-size) minmax(155px, 1.2fr) minmax(155px, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      min-height: 76px;
+      padding: 10px var(--tournament-card-padding);
+    }
+
+    .past-tournament-card h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 0.98rem;
+      line-height: 1.25;
+    }
+
+    .tournament-card-details {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.35;
+    }
+
+    .past-tournament-card .button {
+      min-height: 43px;
+      justify-self: end;
+      padding: 0 17px;
+      border-color: var(--green-700);
+      color: var(--green-950);
+      font-size: 0.84rem;
+      white-space: nowrap;
+    }
+
+    .past-tournament-card .button:hover,
+    .past-tournament-card .button:focus-visible {
+      color: var(--white);
+      background: var(--green-800);
+      border-color: var(--green-800);
+      box-shadow: 0 8px 18px rgba(11, 41, 33, 0.12);
+    }
+
+    @media (max-width: 1100px) {
+      .past-tournament-card {
+        grid-template-columns: var(--tournament-icon-size) minmax(0, 1fr) auto;
+        gap: 5px 12px;
+      }
+
+      .past-tournament-card .tournament-icon {
+        grid-column: 1;
+        grid-row: 1 / 3;
+      }
+
+      .past-tournament-card h3,
+      .tournament-card-details {
+        grid-column: 2;
+      }
+
+      .past-tournament-card .button {
+        grid-column: 3;
+        grid-row: 1 / 3;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .tournaments-intro {
+        padding: 94px 0 30px;
+      }
+
+      .tournaments-wide-container {
+        width: min(calc(100% - 48px), var(--container-width));
+      }
+
+      .tournaments-intro-layout,
+      .tournament-dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tournaments-intro-layout {
+        gap: 24px;
+      }
+
+      .tournaments-intro-text {
+        max-width: 720px;
+      }
+
+      .tournaments-hero-photo img {
+        height: clamp(210px, 31vw, 240px);
+      }
+
+      .tournament-dashboard {
+        padding: 32px 0 52px;
+      }
+
+      .tournament-dashboard-grid {
+        gap: 38px;
+      }
+
+      .tournament-secondary-photo img {
+        height: min(64vw, 480px);
+        object-position: center 38%;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .tournaments-intro {
+        padding: 84px 0 26px;
+      }
+
+      .tournaments-intro h1 {
+        font-size: clamp(2.35rem, 11vw, 3rem);
+      }
+
+      .tournaments-hero-photo img {
+        height: 210px;
+      }
+
+      .tournament-dashboard {
+        padding: 28px 0 44px;
+      }
+
+      .tournament-column-heading h2 {
+        font-size: clamp(1.75rem, 8vw, 2.15rem);
+      }
+
+      .tournament-secondary-photo img {
+        height: min(92vw, 440px);
+      }
+
+      .past-tournament-card {
+        grid-template-columns: var(--tournament-icon-size) minmax(0, 1fr);
+        padding: var(--tournament-card-padding);
+      }
+
+      .past-tournament-card .tournament-icon {
+        grid-row: 1;
+      }
+
+      .past-tournament-card h3,
+      .tournament-card-details {
+        grid-column: 2;
+      }
+
+      .past-tournament-card .button {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        width: 100%;
+        margin-top: 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html#home" aria-label="DC Pickleball League home">
+        <img class="brand-logo" src="images/dcpl-logo.png" alt="">
+        <div class="brand-text">
+          <span class="brand-title">DC Pickleball League</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menu-button"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        class="site-nav"
+        id="site-nav"
+        aria-label="Main navigation"
+      >
+        <a href="index.html#home">Home</a>
+        <a href="our-story.html">Story</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="clinics.html">Clinics</a>
+        <a href="leagues.html">Ladder Leagues</a>
+        <a href="tournaments.html" aria-current="page">Tournaments</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="tournaments-intro">
+      <div class="tournaments-wide-container tournaments-intro-layout">
+
+        <div class="tournaments-intro-copy">
+          <p class="tournaments-intro-label dc-star-label">
+            Compete With DCPL
+          </p>
+
+          <h1>
+            Tournaments
+          </h1>
+
+          <p class="tournaments-intro-text">
+            DC Pickleball League hosts community tournaments throughout the
+            year, bringing players together for competitive play across a range
+            of skill levels. Check this page for upcoming events and results
+            from past tournaments.
+          </p>
+        </div>
+
+        <div class="tournaments-hero-photo">
+          <img
+            src="images/gallery/IMG_2861.jpg"
+            alt="DCPL tournament participants gathered on the courts"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <section class="tournament-dashboard">
+      <div class="tournaments-wide-container tournament-dashboard-grid">
+
+        <div class="upcoming-tournaments-column">
+          <div class="tournament-column-heading">
+            <h2>
+              Upcoming Tournaments
+            </h2>
+          </div>
+
+          <div class="upcoming-card">
+            <span class="tournament-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                <path d="M16 3v4M8 3v4M3 10h18"></path>
+              </svg>
+            </span>
+
+            <div>
+              <p>
+                No tournament is currently open for registration. Check back
+                for the next DCPL tournament announcement.
+              </p>
+              <p class="upcoming-contact">
+                Questions? Contact
+                <a href="mailto:dcpickleballleague@gmail.com">dcpickleballleague@gmail.com</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="tournament-secondary-photo">
+            <img
+              src="images/gallery/IMG_3023.jpg"
+              alt="DCPL tournament medal winners on the National Mall courts"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+        <div class="past-tournaments-column">
+          <div class="tournament-column-heading">
+            <h2>
+              Past Tournaments
+            </h2>
+          </div>
+
+          <div class="past-tournament-list">
+            <article class="past-tournament-card">
+              <span class="tournament-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"></path>
+                  <path d="M8 6H5v1a4 4 0 0 0 4 4M16 6h3v1a4 4 0 0 1-4 4M12 12v4M8 20h8M9 16h6"></path>
+                </svg>
+              </span>
+              <h3>Juneteenth Partner Tournament</h3>
+              <p class="tournament-card-details">
+                June 19, 2026<br>
+                Anacostia Park Outdoor Courts
+              </p>
+              <a
+                class="button button-outline"
+                href="https://wdcpickleball.com/ladders/jun2026/juneteenth.html"
+              >
+                View Results
+              </a>
+            </article>
+
+            <article class="past-tournament-card">
+              <span class="tournament-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"></path>
+                  <path d="M8 6H5v1a4 4 0 0 0 4 4M16 6h3v1a4 4 0 0 1-4 4M12 12v4M8 20h8M9 16h6"></path>
+                </svg>
+              </span>
+              <h3>National Mall Qualifier Challenge</h3>
+              <p class="tournament-card-details">
+                September 13, 2025<br>
+                Anacostia Park Outdoor Courts
+              </p>
+              <a
+                class="button button-outline"
+                href="https://wdcpickleball.com/mall-qualifier.html"
+              >
+                View Results
+              </a>
+            </article>
+
+            <article class="past-tournament-card">
+              <span class="tournament-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"></path>
+                  <path d="M8 6H5v1a4 4 0 0 0 4 4M16 6h3v1a4 4 0 0 1-4 4M12 12v4M8 20h8M9 16h6"></path>
+                </svg>
+              </span>
+              <h3>Juneteenth Tournament</h3>
+              <p class="tournament-card-details">
+                June 2025
+              </p>
+              <a
+                class="button button-outline"
+                href="https://wdcpickleball.com/ladders/juneteenth.html"
+              >
+                View Results
+              </a>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-intro footer-brand-lockup">
+        <img
+          class="footer-brand-logo"
+          src="images/dcpl-logo.png"
+          alt=""
+          width="500"
+          height="500"
+        >
+        <div class="footer-brand-copy">
+          <strong class="footer-title">DC Pickleball League</strong>
+        </div>
+      </div>
+
+      <div class="footer-connect">
+        <a
+          href="https://www.instagram.com/dcpickleballleague/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="current-year"></span> DC Pickleball League</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

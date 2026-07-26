@@ -1,0 +1,246 @@
+.contact-intro {
+  padding: 126px 0 52px;
+  background: var(--cream);
+}
+
+.contact-wide {
+  width: min(92%, 1440px);
+  margin-inline: auto;
+}
+
+.contact-intro h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+}
+
+.contact-intro p {
+  max-width: 660px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.08rem, 1.7vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.contact-main {
+  padding: 44px 0 76px;
+}
+
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.contact-card {
+  min-width: 0;
+  padding: clamp(24px, 3vw, 34px);
+  background: var(--cream);
+  border: 1px solid rgba(11, 41, 33, 0.1);
+  border-radius: var(--radius-medium);
+}
+
+.contact-card h2 {
+  margin-bottom: 12px;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+}
+
+.contact-card p {
+  margin-bottom: 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-card p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--green-700);
+  font-weight: 800;
+}
+
+.contact-card-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.contact-form-section,
+.contact-faq {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.contact-form-section {
+  padding-top: 68px;
+}
+
+.contact-form-section h2,
+.contact-faq h2 {
+  margin-bottom: 24px;
+  font-size: clamp(2rem, 3.7vw, 3rem);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.contact-field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.contact-field-full {
+  grid-column: 1 / -1;
+}
+
+.contact-field label {
+  font-weight: 750;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  padding: 13px 15px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid #cbd4ce;
+  border-radius: 11px;
+}
+
+.contact-field textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.contact-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  grid-column: 1 / -1;
+}
+
+.contact-form-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.contact-faq {
+  padding-top: 72px;
+}
+
+.contact-accordion {
+  border-top: 1px solid var(--line);
+}
+
+.contact-accordion details {
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-accordion summary {
+  position: relative;
+  padding: 20px 44px 20px 0;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 750;
+}
+
+.contact-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.contact-accordion summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  color: var(--green-700);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.contact-accordion details[open] summary::after {
+  content: "−";
+}
+
+.contact-answer {
+  max-width: 760px;
+  padding: 0 44px 20px 0;
+  color: var(--muted);
+}
+
+.contact-answer p {
+  margin: 0;
+}
+
+.contact-answer a {
+  color: var(--green-700);
+  font-weight: 750;
+}
+
+.contact-photo {
+  overflow: hidden;
+  background: var(--green-800);
+}
+
+.contact-photo img {
+  width: 100%;
+  height: clamp(300px, 38vw, 560px);
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .contact-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact-wide {
+    width: min(calc(100% - 28px), 1440px);
+  }
+
+  .contact-intro {
+    padding: 104px 0 38px;
+  }
+
+  .contact-main {
+    padding: 28px 0 54px;
+  }
+
+  .contact-form-section,
+  .contact-faq {
+    padding-top: 52px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-field-full,
+  .contact-form-actions {
+    grid-column: auto;
+  }
+
+  .contact-form-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact-form-actions .button {
+    width: 100%;
+  }
+
+  .contact-photo img {
+    height: 320px;
+  }
+}

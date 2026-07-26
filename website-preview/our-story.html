@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    content="DC Pickleball League brings players together across Washington, DC, Maryland, and Virginia through leagues, clinics, open play, and community events."
+  >
+
+  <meta name="theme-color" content="#123b30">
+  <link rel="icon" href="images/dcpl-logo.png">
+
+  <title>Our Story | DC Pickleball League</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .story-page-story {
+      padding-top: calc(var(--header-height) + 64px);
+    }
+
+    .story-page-story .full-story {
+      margin-top: 0;
+    }
+
+    .story-page-lead {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3 / 2;
+      margin-bottom: 0;
+      background: var(--green-800);
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow-large);
+    }
+
+    .story-page-lead::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(11, 41, 33, 0.08) 28%, rgba(11, 41, 33, 0.86) 100%);
+    }
+
+    .story-page-lead img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-mobile-eyebrow {
+      display: none;
+    }
+
+    .story-photo-caption {
+      margin: 10px 0 40px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-style: italic;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .story-page-lead-copy {
+      position: absolute;
+      z-index: 1;
+      right: clamp(24px, 5vw, 56px);
+      bottom: clamp(24px, 5vw, 52px);
+      left: clamp(24px, 5vw, 56px);
+      color: var(--white);
+    }
+
+    .story-page-lead-copy .section-label {
+      color: var(--dcpl-red);
+    }
+
+    .story-page-lead-copy h1 {
+      max-width: 850px;
+      margin-bottom: 0;
+      color: var(--white);
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+    }
+
+    @media (max-width: 650px) {
+      .story-page-story {
+        padding-top: 112px;
+      }
+
+      .story-page-lead {
+        border-radius: var(--radius-medium);
+      }
+
+      .story-photo-caption {
+        margin: 8px 0 24px;
+      }
+
+      .story-page-lead-copy h1 {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .story-page-story {
+        padding-top: calc(var(--header-height) + 28px);
+      }
+
+      .story-mobile-eyebrow {
+        display: flex;
+        gap: 6px;
+        width: fit-content;
+        margin: 0 0 10px;
+        font-size: 0.68rem;
+      }
+
+      .story-page-lead-copy {
+        right: 18px;
+        bottom: 18px;
+        left: 18px;
+      }
+
+      .story-page-lead-copy .section-label {
+        display: none;
+      }
+
+      .story-page-lead-copy h1 {
+        max-width: 22ch;
+        font-size: clamp(1.75rem, 6vw, 2.1rem);
+        line-height: 1.02;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header class="site-header" id="site-header">
+
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html">
+        <img
+          class="brand-logo"
+          src="images/dcpl-logo.png"
+          alt="DC Pickleball League"
+        >
+
+        <div class="brand-text">
+          <span class="brand-title">DC Pickleball League</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menu-button"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        class="site-nav"
+        id="site-nav"
+        aria-label="Main navigation"
+      >
+        <a href="index.html#home">Home</a>
+        <a href="our-story.html" aria-current="page">Story</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="clinics.html">Clinics</a>
+        <a href="leagues.html">Ladder Leagues</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main id="main-content">
+
+    <section class="section story-section story-page-story" id="story">
+
+      <div class="container full-story" id="full-story">
+
+        <p class="section-label dc-star-label story-mobile-eyebrow">
+          Our Story
+        </p>
+
+        <div class="story-page-lead reveal">
+          <img
+            src="images/gallery/IMG_1334.jpeg"
+            alt="DCPL members gathering at a community movie night."
+          >
+
+          <div class="story-page-lead-copy">
+            <p class="section-label dc-star-label">
+              Our Story
+            </p>
+
+            <h1>
+              A community created through resilience and volunteer effort.
+            </h1>
+          </div>
+        </div>
+
+        <p class="story-photo-caption">
+          The three founders on the final day at East Potomac Tennis Center (2024).
+        </p>
+
+        <div class="full-story-inner">
+
+          <div class="story-columns">
+
+            <div>
+
+              <p>
+                DCPL was born from a simple problem: there were not enough places to play pickleball in Washington, DC.
+              </p>
+
+              <p>
+                In 2022, pickleball options in DC were limited—a few recreation centers with restricted hours, very few outdoor courts, and only a handful of places where players could regularly gather.
+              </p>
+
+              <p>
+                Steve, one of DC’s original pickleball players, had spent nearly two decades playing, competing in tournaments, and helping grow the sport. Maya joined those efforts as a volunteer, and together they began building a community around the game.
+              </p>
+
+              <p>
+                One day in spring 2022, Maya was looking for a wall to hit against near her neighborhood. That brought her to East Potomac Tennis Center, where a conversation about pickleball revealed an opportunity: using underused tennis space to create more places for the growing pickleball community.
+              </p>
+
+              <p>
+                By Fall that year, Steve and Maya began hosting volunteer open play at the EPTC bubble three nights a week without dedicated pickleball courts. They taped courts for each session, organized players, and created a hub where groups from DC, Virginia, and Maryland could come together to play, improve, and connect.
+              </p>
+
+              <p>
+                For nearly three years, EPTC became the first home of the DC pickleball community, built through Steve and Maya’s volunteer effort.
+              </p>
+
+              <p>
+                As the community grew, the need for a better way to match players by skill level became clear. David joined the effort, bringing his background as a computer scientist and problem solver. David created DCPL’s ladder and algorithm, helping players find competitive, well-matched games.
+              </p>
+
+              <p>
+                Together, Steve, Maya, and David founded DC Pickleball League in April 2023.
+              </p>
+
+              <p>
+                Since then, DCPL has grown into a community with leagues, tournaments, clinics, open plays, and community events. When EPTC closed in 2024, DCPL adapted and continued at new locations, including Rock Creek Tennis Center and other facilities across the region. Today, the DCPL community includes nearly 5,000 subscribers and continues to grow.
+              </p>
+
+              <p>
+                What makes DCPL different is not just our leagues or our robust ladder. It is the people behind it—a community built through passion, resilience, and the belief that pickleball is about connection.
+              </p>
+
+              <p>
+                From those first taped courts to thousands of players across the region, DCPL continues to create opportunities for people to play, improve, and build friendships through the game we love.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-intro footer-brand-lockup">
+        <img
+          class="footer-brand-logo"
+          src="images/dcpl-logo.png"
+          alt=""
+          width="500"
+          height="500"
+        >
+        <div class="footer-brand-copy">
+          <strong class="footer-title">DC Pickleball League</strong>
+        </div>
+      </div>
+
+      <div class="footer-connect">
+        <a
+          href="https://www.instagram.com/dcpickleballleague/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="current-year"></span> DC Pickleball League</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
