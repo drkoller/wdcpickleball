@@ -496,10 +496,6 @@ p {
  padding-bottom: 118px;
 }
 
-.hero h1 span {
-  color: var(--color-action-primary);
-}
-
 .hero-description {
  max-width: 660px;
  margin-bottom: 31px;
@@ -1478,9 +1474,9 @@ p {
   --color-text-on-dark: var(--dcpl-white);
   --color-focus-ring: var(--color-brand-primary);
   --color-nav-hover-surface: rgba(22, 61, 115, 0.07);
-  --color-hero-overlay-start: rgba(12, 35, 69, 0.03);
-  --color-hero-overlay-middle: rgba(12, 35, 69, 0.09);
-  --color-hero-overlay-end: rgba(12, 35, 69, 0.70);
+  --color-hero-overlay-start: rgba(12, 35, 69, 0.06);
+  --color-hero-overlay-middle: rgba(12, 35, 69, 0.13);
+  --color-hero-overlay-end: rgba(12, 35, 69, 0.76);
 
   --green-950: #0f332a;
   --green-900: #174a3c;
@@ -1859,7 +1855,7 @@ body {
 }
 
 .header-inner {
-  gap: clamp(36px, 5vw, 72px);
+  gap: clamp(40px, 5.5vw, 78px);
 }
 
 .brand,
@@ -1868,8 +1864,8 @@ body {
 }
 
 .brand-logo {
-  width: 65px;
-  height: 65px;
+  width: 70px;
+  height: 70px;
   transition: transform 180ms ease;
 }
 
@@ -1882,9 +1878,9 @@ body {
 }
 
 .brand-title {
-  font-size: clamp(1.28rem, 1.5vw, 1.56rem);
+  font-size: clamp(1.46rem, 1.75vw, 1.82rem);
   font-weight: 800;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.01em;
 }
 
 .site-nav {
@@ -1893,14 +1889,14 @@ body {
 
 .site-nav a {
   color: var(--color-brand-deep);
-  font-size: 0.8rem;
-  font-weight: 550;
+  font-size: 0.88rem;
+  font-weight: 600;
   letter-spacing: 0.01em;
   transition: color 160ms ease;
 }
 
 .site-nav a::after {
-  height: 3px;
+  height: 2px;
   background: var(--color-brand-primary);
   opacity: 0.18;
   transition: transform 160ms ease, opacity 160ms ease, background-color 160ms ease;
@@ -1921,7 +1917,7 @@ body {
 }
 
 .site-nav a[aria-current="page"]::after {
-  background: var(--color-action-primary);
+  background: var(--dcpl-red);
   opacity: 1;
 }
 
@@ -1951,7 +1947,7 @@ body {
     radial-gradient(
       circle at 66% 42%,
       rgba(22, 61, 115, 0) 0%,
-      rgba(12, 35, 69, 0.08) 100%
+      rgba(12, 35, 69, 0.06) 100%
     ),
     linear-gradient(
       180deg,
@@ -2023,12 +2019,12 @@ body {
 
 @media (max-width: 1220px) and (min-width: 1081px) {
   .header-inner {
-    gap: 28px;
+    gap: 32px;
   }
 
   .brand-logo {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
   }
 
   .brand-text {
@@ -2036,7 +2032,8 @@ body {
   }
 
   .brand-title {
-    font-size: 1.16rem;
+    font-size: 1.34rem;
+    letter-spacing: -0.012em;
   }
 
   .site-nav {
@@ -2044,14 +2041,14 @@ body {
   }
 
   .site-nav a {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
   }
 }
 
 @media (max-width: 1080px) {
   .brand-logo {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
   }
 
   .brand-text {
@@ -2059,7 +2056,8 @@ body {
   }
 
   .brand-title {
-    font-size: 1.16rem;
+    font-size: 1.28rem;
+    letter-spacing: -0.015em;
   }
 
   .site-nav {
@@ -2082,25 +2080,26 @@ body {
 
 @media (max-width: 650px) {
   .brand-logo {
-    width: 51px;
-    height: 51px;
+    width: 55px;
+    height: 55px;
   }
 
   .brand-title {
     max-width: 210px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    letter-spacing: -0.025em;
   }
 }
 
 @media (max-width: 390px) {
   .brand-logo {
-    width: 49px;
-    height: 49px;
+    width: 53px;
+    height: 53px;
   }
 
   .brand-title {
     max-width: 190px;
-    font-size: 1.04rem;
+    font-size: 1.14rem;
   }
 }
 
