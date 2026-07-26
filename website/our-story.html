@@ -61,6 +61,10 @@
       object-fit: cover;
     }
 
+    .story-mobile-eyebrow {
+      display: none;
+    }
+
     .story-photo-caption {
       margin: 10px 0 40px;
       color: var(--muted);
@@ -113,32 +117,26 @@
         padding-top: calc(var(--header-height) + 28px);
       }
 
+      .story-mobile-eyebrow {
+        display: flex;
+        gap: 6px;
+        width: fit-content;
+        margin: 0 0 10px;
+        font-size: 0.68rem;
+      }
+
       .story-page-lead-copy {
-        top: 18px;
         right: 18px;
         bottom: 18px;
         left: 18px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
       }
 
       .story-page-lead-copy .section-label {
-        justify-content: flex-start;
-        gap: 6px;
-        width: auto;
-        margin-bottom: 0;
-        font-size: 0.65rem;
-      }
-
-      .story-page-lead-copy .section-label::after {
-        width: 51px;
-        height: 14px;
+        display: none;
       }
 
       .story-page-lead-copy h1 {
         max-width: 22ch;
-        margin-top: auto;
         font-size: clamp(1.75rem, 6vw, 2.1rem);
         line-height: 1.02;
       }
@@ -205,6 +203,10 @@
     <section class="section story-section story-page-story" id="story">
 
       <div class="container full-story" id="full-story">
+
+        <p class="section-label dc-star-label story-mobile-eyebrow">
+          Our Story
+        </p>
 
         <div class="story-page-lead reveal">
           <img

@@ -231,7 +231,10 @@
     @media (max-width: 580px) {
       .schedule-wide-container { width: min(calc(100% - 32px), var(--container-width)); }
       .schedule-intro { padding: 86px 0 20px; }
-      .schedule-intro h1 { font-size: clamp(2.25rem, 12vw, 3rem); }
+      .schedule-intro h1 {
+        font-size: 2.25rem;
+        white-space: nowrap;
+      }
       .weekly-day { grid-template-columns: 1fr; }
       .weekly-date { display: block; padding: 11px 16px; border-right: 0; border-bottom: 1px solid rgba(201, 71, 61, 0.12); }
       .weekly-date strong, .weekly-date span { display: inline; }
