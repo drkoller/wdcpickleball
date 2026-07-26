@@ -985,17 +985,23 @@ p {
 }
 
 @media (max-width: 760px) {
+  .site-footer {
+    padding: 24px 0 12px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
   }
 
   .footer-connect {
+    gap: 8px;
     min-width: 0;
   }
 
   .footer-bottom {
-    margin-top: 26px;
+    margin-top: 18px;
+    padding-top: 12px;
   }
 }
 
