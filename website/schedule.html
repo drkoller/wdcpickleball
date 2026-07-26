@@ -22,7 +22,7 @@
     .schedule-intro,
     .schedule-week,
     .schedule-seasons {
-      --schedule-accent: #c9473d;
+      --schedule-accent: var(--dcpl-red);
       --schedule-border: rgba(11, 41, 33, 0.11);
       --schedule-card: var(--cream);
     }
@@ -295,8 +295,8 @@
     <section class="schedule-intro">
       <div class="schedule-wide-container schedule-intro-layout">
         <div>
-          <p class="schedule-eyebrow">Weekly Programming</p>
-          <h1>Weekly Schedule</h1>
+          <p class="schedule-eyebrow dc-star-label">Programming</p>
+          <h1>This Week at DCPL</h1>
         </div>
         <p class="schedule-intro-text">Schedule updated weekly. Please check times and locations before attending.</p>
       </div>
@@ -305,7 +305,6 @@
     <section class="schedule-week">
       <div class="schedule-wide-container">
         <div class="schedule-heading">
-          <h2>This Week at DCPL</h2>
           <p class="weekly-drop-in">For league drop-ins, email <a href="mailto:wdcpickleball@gmail.com">wdcpickleball@gmail.com</a>.</p>
         </div>
 
@@ -476,12 +475,20 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-
-      <div class="footer-intro">
-        <strong class="footer-title">DC Pickleball League</strong>
-        <p>
-          Organized pickleball leagues, clinics, tournaments, and events in Washington, DC.
-        </p>
+      <div class="footer-intro footer-brand-lockup">
+        <img
+          class="footer-brand-logo"
+          src="images/dcpl-logo.png"
+          alt=""
+          width="500"
+          height="500"
+        >
+        <div class="footer-brand-copy">
+          <strong class="footer-title">DC Pickleball League</strong>
+          <p>
+            Organized pickleball leagues, clinics, tournaments, and events in Washington, DC.
+          </p>
+        </div>
       </div>
 
       <div class="footer-connect">
@@ -492,7 +499,7 @@
         >
           Instagram
         </a>
-        <a href="mailto:wdcpickleball@gmail.com">wdcpickleball@gmail.com</a>
+        <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
       </div>
 
     </div>

@@ -20,7 +20,7 @@
 
   <style>
     .tournaments-intro {
-      --tournament-accent: #c9473d;
+      --tournament-accent: var(--dcpl-red);
       padding: 102px 0 26px;
       background: var(--cream);
     }
@@ -80,7 +80,7 @@
     }
 
     .tournament-dashboard {
-      --tournament-accent: #c9473d;
+      --tournament-accent: var(--dcpl-red);
       --tournament-card-radius: 15px;
       --tournament-card-border: rgba(11, 41, 33, 0.11);
       --tournament-card-background: var(--cream);
@@ -383,8 +383,8 @@
       <div class="tournaments-wide-container tournaments-intro-layout">
 
         <div class="tournaments-intro-copy">
-          <p class="tournaments-intro-label">
-            Tournaments
+          <p class="tournaments-intro-label dc-star-label">
+            Compete With DCPL
           </p>
 
           <h1>
@@ -524,12 +524,20 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-
-      <div class="footer-intro">
-        <strong class="footer-title">DC Pickleball League</strong>
-        <p>
-          Organized pickleball leagues, clinics, tournaments, and events in Washington, DC.
-        </p>
+      <div class="footer-intro footer-brand-lockup">
+        <img
+          class="footer-brand-logo"
+          src="images/dcpl-logo.png"
+          alt=""
+          width="500"
+          height="500"
+        >
+        <div class="footer-brand-copy">
+          <strong class="footer-title">DC Pickleball League</strong>
+          <p>
+            Organized pickleball leagues, clinics, tournaments, and events in Washington, DC.
+          </p>
+        </div>
       </div>
 
       <div class="footer-connect">
@@ -540,7 +548,7 @@
         >
           Instagram
         </a>
-        <a href="mailto:wdcpickleball@gmail.com">wdcpickleball@gmail.com</a>
+        <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
       </div>
 
     </div>
