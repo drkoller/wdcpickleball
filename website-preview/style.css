@@ -2189,3 +2189,238 @@ body {
     margin-bottom: 26px;
   }
 }
+
+/* Stage 2.5: Programs and Ladder */
+
+.explore-section {
+  padding: clamp(72px, 6.5vw, 96px) 0 clamp(80px, 7vw, 104px);
+  background: color-mix(in srgb, var(--color-brand-primary) 4%, var(--dcpl-white));
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.explore-heading {
+  margin-bottom: clamp(26px, 3vw, 38px);
+}
+
+.explore-heading h2 {
+  color: var(--dcpl-text);
+}
+
+.explore-heading h2::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin-top: 16px;
+  background: var(--dcpl-red);
+}
+
+.explore-grid {
+  gap: clamp(14px, 1.4vw, 22px);
+}
+
+.explore-destination {
+  min-height: 224px;
+  padding: clamp(24px, 2.1vw, 31px);
+  background: var(--dcpl-white);
+  border-color: var(--color-border-subtle);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(12, 35, 69, 0.055);
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+.explore-destination:hover,
+.explore-destination:focus-visible {
+  border-color: color-mix(in srgb, var(--color-brand-primary) 42%, var(--dcpl-gray));
+  box-shadow: 0 15px 34px rgba(12, 35, 69, 0.1);
+  transform: translateY(-2px);
+}
+
+.explore-destination:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+.explore-icon {
+  width: 42px;
+  height: 42px;
+  color: var(--dcpl-red);
+  background: color-mix(in srgb, var(--dcpl-red) 8%, var(--dcpl-white));
+  border-radius: 10px;
+}
+
+.explore-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.explore-destination h3 {
+  margin-top: 2px;
+  color: var(--dcpl-text);
+  font-size: 1.2rem;
+}
+
+.explore-destination p {
+  color: var(--dcpl-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.explore-action {
+  color: var(--color-brand-primary);
+  font-size: 0.84rem;
+}
+
+.explore-action > span {
+  color: var(--dcpl-red);
+}
+
+.ladder-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(78px, 7vw, 108px) 0;
+  color: var(--dcpl-white);
+  background:
+    linear-gradient(112deg, var(--color-brand-deep) 0%, var(--color-brand-deep) 54%, var(--color-brand-primary) 145%);
+}
+
+.ladder-layout {
+  position: relative;
+  z-index: 1;
+  gap: clamp(48px, 6vw, 96px);
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--dcpl-white);
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  letter-spacing: 0.15em;
+}
+
+.section-eyebrow::before {
+  content: "";
+  width: 3px;
+  height: 1.15em;
+  flex: 0 0 auto;
+  background: var(--dcpl-red);
+}
+
+.ladder-summary {
+  margin: 19px 0 29px;
+  color: color-mix(in srgb, var(--dcpl-white) 84%, transparent);
+}
+
+.ladder-section .button-light {
+  color: var(--color-brand-deep);
+  background: var(--dcpl-white);
+  border-color: var(--dcpl-white);
+}
+
+.ladder-section .button-light:hover {
+  color: var(--color-action-primary-text);
+  background: var(--color-action-primary);
+  border-color: var(--color-action-primary);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.ladder-section .button-light:focus-visible {
+  outline: 3px solid var(--dcpl-white);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 3px var(--color-brand-primary);
+}
+
+.ladder-statistics {
+  align-items: stretch;
+}
+
+.ladder-stat {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ladder-stat + .ladder-stat {
+  border-color: color-mix(in srgb, var(--dcpl-white) 24%, transparent);
+}
+
+.ladder-stat strong {
+  margin-bottom: 18px;
+  color: var(--color-action-primary);
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.12);
+}
+
+.ladder-stat span {
+  color: color-mix(in srgb, var(--dcpl-white) 86%, transparent);
+  font-weight: 650;
+}
+
+@media (max-width: 1150px) {
+  .ladder-content {
+    max-width: 680px;
+  }
+
+  .ladder-statistics {
+    max-width: 920px;
+  }
+}
+
+@media (max-width: 650px) {
+  .explore-section {
+    padding: 64px 0 72px;
+  }
+
+  .explore-heading {
+    margin-bottom: 25px;
+  }
+
+  .explore-heading h2::after {
+    margin-top: 13px;
+  }
+
+  .explore-grid {
+    gap: 14px;
+  }
+
+  .explore-destination {
+    min-height: 172px;
+    padding: 24px;
+  }
+
+  .ladder-section {
+    padding: 70px 0 74px;
+  }
+
+  .ladder-layout {
+    gap: 38px;
+  }
+
+  .ladder-stat {
+    min-height: 148px;
+    padding-inline: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ladder-stat strong {
+    font-size: clamp(2.3rem, 12vw, 3.25rem);
+  }
+
+  .ladder-stat span {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .explore-destination,
+  .explore-action > span,
+  .ladder-section .button-light {
+    transition: none;
+  }
+}
