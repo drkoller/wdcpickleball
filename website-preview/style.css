@@ -2113,3 +2113,83 @@ body {
     transition: none;
   }
 }
+
+/* Stage 2.2: Homepage story preview */
+
+.story-photo {
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.story-photo img {
+  height: auto;
+  min-height: 0;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-large);
+}
+
+.story-photo-label {
+  position: static;
+  margin: 11px 0 0;
+  padding: 0;
+  color: var(--dcpl-muted);
+  background: transparent;
+  border-radius: 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.story-copy .section-label {
+  margin-bottom: 18px;
+}
+
+.story-copy h2 {
+  margin-bottom: 28px;
+}
+
+.story-copy > p {
+  margin-bottom: 1.2rem;
+}
+
+.story-copy > p:last-of-type {
+  margin-bottom: 30px;
+}
+
+.story-toggle {
+  color: var(--color-brand-primary);
+  min-height: 44px;
+}
+
+.story-toggle:hover,
+.story-toggle:focus-visible {
+  color: var(--dcpl-red);
+}
+
+.story-toggle:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+.story-toggle:hover span,
+.story-toggle:focus-visible span {
+  transform: translateX(3px);
+}
+
+@media (max-width: 650px) {
+  .story-photo-label {
+    margin-top: 9px;
+  }
+
+  .story-copy h2 {
+    margin-bottom: 23px;
+  }
+
+  .story-copy > p:last-of-type {
+    margin-bottom: 26px;
+  }
+}
