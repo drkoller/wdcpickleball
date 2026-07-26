@@ -496,6 +496,10 @@ p {
  padding-bottom: 118px;
 }
 
+.hero h1 span {
+  color: var(--color-action-primary);
+}
+
 .hero-description {
  max-width: 660px;
  margin-bottom: 31px;
@@ -1474,9 +1478,9 @@ p {
   --color-text-on-dark: var(--dcpl-white);
   --color-focus-ring: var(--color-brand-primary);
   --color-nav-hover-surface: rgba(22, 61, 115, 0.07);
-  --color-hero-overlay-start: rgba(12, 35, 69, 0.06);
-  --color-hero-overlay-middle: rgba(12, 35, 69, 0.14);
-  --color-hero-overlay-end: rgba(12, 35, 69, 0.78);
+  --color-hero-overlay-start: rgba(12, 35, 69, 0.03);
+  --color-hero-overlay-middle: rgba(12, 35, 69, 0.09);
+  --color-hero-overlay-end: rgba(12, 35, 69, 0.70);
 
   --green-950: #0f332a;
   --green-900: #174a3c;
@@ -1855,7 +1859,7 @@ body {
 }
 
 .header-inner {
-  gap: clamp(28px, 4vw, 58px);
+  gap: clamp(36px, 5vw, 72px);
 }
 
 .brand,
@@ -1864,8 +1868,8 @@ body {
 }
 
 .brand-logo {
-  width: 58px;
-  height: 58px;
+  width: 65px;
+  height: 65px;
   transition: transform 180ms ease;
 }
 
@@ -1878,7 +1882,7 @@ body {
 }
 
 .brand-title {
-  font-size: clamp(1.15rem, 1.35vw, 1.4rem);
+  font-size: clamp(1.28rem, 1.5vw, 1.56rem);
   font-weight: 800;
   letter-spacing: -0.025em;
 }
@@ -1889,8 +1893,8 @@ body {
 
 .site-nav a {
   color: var(--color-brand-deep);
-  font-size: 0.84rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 550;
   letter-spacing: 0.01em;
   transition: color 160ms ease;
 }
@@ -1944,6 +1948,11 @@ body {
 
 .hero-shade {
   background:
+    radial-gradient(
+      circle at 66% 42%,
+      rgba(22, 61, 115, 0) 0%,
+      rgba(12, 35, 69, 0.08) 100%
+    ),
     linear-gradient(
       180deg,
       var(--color-hero-overlay-start) 0%,
@@ -2014,12 +2023,12 @@ body {
 
 @media (max-width: 1220px) and (min-width: 1081px) {
   .header-inner {
-    gap: 20px;
+    gap: 28px;
   }
 
   .brand-logo {
-    width: 50px;
-    height: 50px;
+    width: 56px;
+    height: 56px;
   }
 
   .brand-text {
@@ -2027,7 +2036,7 @@ body {
   }
 
   .brand-title {
-    font-size: 1.05rem;
+    font-size: 1.16rem;
   }
 
   .site-nav {
@@ -2041,8 +2050,8 @@ body {
 
 @media (max-width: 1080px) {
   .brand-logo {
-    width: 50px;
-    height: 50px;
+    width: 56px;
+    height: 56px;
   }
 
   .brand-text {
@@ -2050,7 +2059,7 @@ body {
   }
 
   .brand-title {
-    font-size: 1.05rem;
+    font-size: 1.16rem;
   }
 
   .site-nav {
@@ -2073,25 +2082,25 @@ body {
 
 @media (max-width: 650px) {
   .brand-logo {
-    width: 46px;
-    height: 46px;
+    width: 51px;
+    height: 51px;
   }
 
   .brand-title {
     max-width: 210px;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 390px) {
   .brand-logo {
-    width: 44px;
-    height: 44px;
+    width: 49px;
+    height: 49px;
   }
 
   .brand-title {
     max-width: 190px;
-    font-size: 0.94rem;
+    font-size: 1.04rem;
   }
 }
 
