@@ -1443,3 +1443,358 @@ p {
   }
 
 }
+
+/*
+ * DCPL Design Refresh v1
+ * Approved shared visual theme.
+ * Retains the existing layout, type scale, content, and responsive structure.
+ */
+
+:root {
+  --dcpl-white: #ffffff;
+  --dcpl-text: #17201c;
+  --dcpl-muted: #5f6b66;
+  --dcpl-border: #d9e1dd;
+  --dcpl-surface: #ffffff;
+
+  --dcpl-green: #174a3c;
+  --dcpl-green-hover: #0f392f;
+  --dcpl-green-light: #a8d5b8;
+
+  --dcpl-red: #af0d38;
+  --dcpl-red-hover: #8e0a2e;
+
+  --dcpl-blue: #0a3060;
+  --dcpl-blue-hover: #07274e;
+
+  --dcpl-shadow: 0 12px 34px rgba(16, 54, 43, 0.1);
+  --dcpl-stars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 22'%3E%3Cg fill='%23AF0D38'%3E%3Cpath d='m11 1.5 2.5 5.1 5.6.8-4 4 1 5.6-5.1-2.7L6 17l1-5.6-4-4 5.6-.8z'/%3E%3Cpath d='m42 1.5 2.5 5.1 5.6.8-4 4 1 5.6-5.1-2.7-5.1 2.7 1-5.6-4-4 5.6-.8z'/%3E%3Cpath d='m73 1.5 2.5 5.1 5.6.8-4 4 1 5.6-5.1-2.7-5.1 2.7 1-5.6-4-4 5.6-.8z'/%3E%3C/g%3E%3C/svg%3E");
+
+  --green-950: #0f332a;
+  --green-900: #174a3c;
+  --green-850: #1b5343;
+  --green-800: #245e4c;
+  --green-700: #2d6c57;
+  --lime: var(--dcpl-green-light);
+  --lime-dark: #8cc3a0;
+  --cream: var(--dcpl-white);
+  --white: var(--dcpl-white);
+  --ink: var(--dcpl-text);
+  --muted: var(--dcpl-muted);
+  --line: var(--dcpl-border);
+  --shadow-small: 0 8px 24px rgba(16, 54, 43, 0.08);
+  --shadow-large: var(--dcpl-shadow);
+}
+
+body {
+  background: var(--dcpl-white);
+}
+
+:focus-visible {
+  outline-color: var(--dcpl-blue);
+}
+
+.brand:focus-visible,
+.site-nav a:focus-visible,
+.menu-button:focus-visible {
+  outline-color: rgba(10, 48, 96, 0.58);
+}
+
+.hero :focus-visible,
+.ladder-section :focus-visible,
+.join-section :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--dcpl-white);
+  box-shadow: 0 0 0 3px var(--dcpl-blue);
+}
+
+.site-header {
+  border-bottom-color: var(--dcpl-border);
+}
+
+.site-nav a::after {
+  background: var(--dcpl-red);
+}
+
+.site-nav a:hover {
+  color: var(--dcpl-red-hover);
+}
+
+.site-nav a:focus-visible {
+  color: var(--dcpl-blue);
+}
+
+.menu-button:hover {
+  background: rgba(175, 13, 56, 0.07);
+}
+
+.button-primary {
+  color: var(--dcpl-white);
+  background: var(--dcpl-green);
+  border-color: var(--dcpl-green);
+}
+
+.button-primary:hover {
+  background: var(--dcpl-green-hover);
+  border-color: var(--dcpl-green-hover);
+  box-shadow: 0 12px 26px rgba(15, 57, 47, 0.23);
+}
+
+.button-outline {
+  color: var(--dcpl-green);
+  border-color: var(--dcpl-green);
+}
+
+.button-outline:hover {
+  color: var(--dcpl-white);
+  background: var(--dcpl-green);
+}
+
+.hero {
+  background: var(--dcpl-green-hover);
+}
+
+.hero-shade {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 20, 16, 0.12) 0%,
+      rgba(5, 20, 16, 0.16) 35%,
+      rgba(8, 36, 29, 0.86) 100%
+    );
+}
+
+.hero .button-primary {
+  color: var(--dcpl-green-hover);
+  background: var(--dcpl-white);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.hero .button-primary:hover {
+  color: var(--dcpl-green-hover);
+  background: #f1f7f3;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.schedule-eyebrow,
+.leagues-intro-label,
+.tournaments-intro-label {
+  color: var(--dcpl-red);
+}
+
+.schedule-intro,
+.schedule-week,
+.schedule-seasons {
+  --schedule-accent: var(--dcpl-red);
+}
+
+.schedule-week .schedule-heading .weekly-drop-in {
+  margin-top: 0 !important;
+}
+
+.leagues-intro,
+.league-dashboard {
+  --league-accent: var(--dcpl-red);
+}
+
+.tournaments-intro,
+.tournament-dashboard {
+  --tournament-accent: var(--dcpl-red);
+}
+
+.section-label,
+.explore-icon,
+.explore-action > span {
+  color: var(--dcpl-red);
+}
+
+.story-toggle,
+.gallery-page-link a {
+  color: var(--dcpl-blue);
+}
+
+.story-toggle:hover,
+.gallery-page-link a:hover {
+  color: var(--dcpl-blue-hover);
+}
+
+.story-photo,
+.gallery-card {
+  background: var(--dcpl-green);
+}
+
+.story-photo-label {
+  background: rgba(15, 51, 42, 0.88);
+}
+
+.full-story-inner,
+.explore-section,
+.explore-destination,
+.gallery-section {
+  background: var(--dcpl-white);
+}
+
+.explore-destination {
+  border-color: var(--dcpl-border);
+  box-shadow: 0 5px 18px rgba(16, 54, 43, 0.045);
+}
+
+.explore-destination:hover,
+.explore-destination:focus-visible {
+  border-color: rgba(175, 13, 56, 0.42);
+  box-shadow: var(--dcpl-shadow);
+}
+
+.explore-icon {
+  background: rgba(175, 13, 56, 0.075);
+}
+
+.explore-action {
+  color: var(--dcpl-green);
+}
+
+.ladder-section,
+.join-section {
+  background: var(--dcpl-green-hover);
+}
+
+.section-eyebrow {
+  color: var(--dcpl-green-light);
+}
+
+.ladder-stat strong {
+  color: #f7fbf9;
+}
+
+.ladder-stat span {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.ladder-stat + .ladder-stat {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.dc-star-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.dc-star-label::after {
+  content: "";
+  width: 84px;
+  height: 22px;
+  flex: 0 0 auto;
+  background: var(--dcpl-stars) center / contain no-repeat;
+}
+
+.gallery-page-intro .page-eyebrow,
+.contact-intro .page-eyebrow {
+  max-width: none;
+  margin: 0 0 12px;
+  color: var(--dcpl-red);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.gallery-card {
+  box-shadow: 0 7px 22px rgba(16, 54, 43, 0.08);
+}
+
+.gallery-card:hover {
+  box-shadow: var(--dcpl-shadow);
+}
+
+.join-section .button-light {
+  color: var(--dcpl-green-hover);
+  background: var(--dcpl-white);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.join-section .button-light:hover {
+  color: var(--dcpl-green-hover);
+  background: #f1f7f3;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.site-footer {
+  position: relative;
+  background: #0b2e25;
+}
+
+.footer-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-brand-logo {
+  width: 60px;
+  height: 60px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.footer-brand-copy {
+  min-width: 0;
+}
+
+.footer-connect a:hover,
+.footer-connect a:focus-visible {
+  color: #e6a5b6;
+}
+
+.footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 1080px) {
+  .site-nav {
+    color: var(--dcpl-green-hover);
+    background: var(--dcpl-white);
+    border-top-color: var(--dcpl-border);
+  }
+
+  .site-nav a {
+    color: var(--dcpl-green-hover);
+    border-bottom-color: var(--dcpl-border);
+  }
+}
+
+@media (max-width: 650px) {
+  .dc-star-label {
+    gap: 10px;
+  }
+
+  .dc-star-label::after {
+    width: 68px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer-brand-lockup {
+    align-items: flex-start;
+  }
+
+  .footer-brand-logo {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .explore-destination,
+  .gallery-card {
+    transition: none;
+  }
+}

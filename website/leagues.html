@@ -20,7 +20,7 @@
 
   <style>
     .leagues-intro {
-      --league-accent: #c9473d;
+      --league-accent: var(--dcpl-red);
       padding: 102px 0 26px;
       background: var(--cream);
     }
@@ -39,7 +39,7 @@
 
     .leagues-intro-label {
       margin: 0 0 8px;
-      color: #c9473d;
+      color: var(--dcpl-red);
       font-size: 0.76rem;
       font-weight: 800;
       letter-spacing: 0.13em;
@@ -76,7 +76,7 @@
     }
 
     .league-dashboard {
-      --league-accent: #c9473d;
+      --league-accent: var(--dcpl-red);
       --league-card-height: 64px;
       --league-card-radius: 15px;
       --league-card-border: rgba(11, 41, 33, 0.11);
@@ -395,7 +395,7 @@
       <div class="container leagues-intro-layout">
 
         <div class="leagues-intro-copy">
-          <p class="leagues-intro-label">
+          <p class="leagues-intro-label dc-star-label">
             Play With DCPL
           </p>
 
@@ -577,12 +577,20 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-
-      <div class="footer-intro">
-        <strong class="footer-title">DC Pickleball League</strong>
-        <p>
-          Organized pickleball leagues, clinics, tournaments, and events in Washington, DC.
-        </p>
+      <div class="footer-intro footer-brand-lockup">
+        <img
+          class="footer-brand-logo"
+          src="images/dcpl-logo.png"
+          alt=""
+          width="500"
+          height="500"
+        >
+        <div class="footer-brand-copy">
+          <strong class="footer-title">DC Pickleball League</strong>
+          <p>
+            Organized pickleball leagues, clinics, tournaments, and events in Washington, DC.
+          </p>
+        </div>
       </div>
 
       <div class="footer-connect">
@@ -593,7 +601,7 @@
         >
           Instagram
         </a>
-        <a href="mailto:wdcpickleball@gmail.com">wdcpickleball@gmail.com</a>
+        <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
       </div>
 
     </div>
