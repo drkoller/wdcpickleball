@@ -827,18 +827,28 @@ p {
  }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 767px) {
  .ladder-statistics {
-   grid-template-columns: 1fr;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   width: 100%;
  }
 
  .ladder-stat {
-   padding: 24px 0;
+   padding: 24px 8px;
+   text-align: center;
+ }
+
+ .ladder-stat strong {
+   font-size: clamp(2.55rem, 12vw, 3.65rem);
+ }
+
+ .ladder-stat span {
+   white-space: nowrap;
  }
 
  .ladder-stat + .ladder-stat {
-   border-top: 1px solid rgba(255, 255, 255, 0.18);
-   border-left: 0;
+   border-top: 0;
+   border-left: 1px solid rgba(255, 255, 255, 0.18);
  }
 }
 
@@ -965,18 +975,11 @@ p {
 
 .footer-title {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 0;
   color: var(--white);
   font-size: 1.05rem;
   font-weight: 800;
   line-height: 1.3;
-}
-
-.footer-intro p {
-  max-width: 560px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.66);
-  line-height: 1.6;
 }
 
 .footer-connect {
