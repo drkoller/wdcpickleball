@@ -827,31 +827,6 @@ p {
  }
 }
 
-@media (max-width: 767px) {
- .ladder-statistics {
-   grid-template-columns: repeat(2, minmax(0, 1fr));
-   width: 100%;
- }
-
- .ladder-stat {
-   padding: 24px 8px;
-   text-align: center;
- }
-
- .ladder-stat strong {
-   font-size: clamp(2.55rem, 12vw, 3.65rem);
- }
-
- .ladder-stat span {
-   white-space: nowrap;
- }
-
- .ladder-stat + .ladder-stat {
-   border-top: 0;
-   border-left: 1px solid rgba(255, 255, 255, 0.18);
- }
-}
-
 /* Gallery */
 
 .gallery-section {
@@ -1786,12 +1761,39 @@ body {
 
 @media (max-width: 760px) {
   .footer-brand-lockup {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .footer-brand-logo {
     width: 56px;
     height: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ladder-statistics {
+    display: flex;
+    width: 100%;
+  }
+
+  .ladder-stat {
+    flex: 1 1 50%;
+    width: 50%;
+    padding: 24px 8px;
+    text-align: center;
+  }
+
+  .ladder-stat strong {
+    font-size: clamp(2.55rem, 12vw, 3.65rem);
+  }
+
+  .ladder-stat span {
+    white-space: nowrap;
+  }
+
+  .ladder-stat + .ladder-stat {
+    border-top: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.22);
   }
 }
 
