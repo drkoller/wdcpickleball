@@ -2132,7 +2132,7 @@ body {
 
 .story-photo-label {
   position: static;
-  margin: 11px 0 0;
+  margin: 7px 0 0;
   padding: 0;
   color: var(--dcpl-muted);
   background: transparent;
@@ -2181,10 +2181,6 @@ body {
 }
 
 @media (max-width: 650px) {
-  .story-photo-label {
-    margin-top: 9px;
-  }
-
   .story-copy h2 {
     margin-bottom: 23px;
   }
