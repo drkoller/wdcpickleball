@@ -2190,6 +2190,48 @@ body {
   }
 }
 
+/* Published homepage: mobile Story editorial hierarchy */
+@media (max-width: 768px) {
+  .story-layout {
+    row-gap: 0;
+  }
+
+  .story-copy {
+    display: contents;
+  }
+
+  .story-copy.reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .story-copy .section-label {
+    order: 1;
+  }
+
+  .story-copy h2 {
+    order: 2;
+  }
+
+  .story-copy > p:nth-of-type(2) {
+    order: 3;
+    margin-bottom: 28px;
+  }
+
+  .story-photo {
+    order: 4;
+  }
+
+  .story-copy > p:nth-of-type(3) {
+    order: 5;
+    margin-top: 28px;
+  }
+
+  .story-toggle {
+    order: 6;
+  }
+}
+
 /* Stage 2.5: Programs and Ladder */
 
 .explore-section {
