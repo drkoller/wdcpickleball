@@ -58,8 +58,17 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: var(--green-700);
+  color: var(--dcpl-official-navy);
   font-weight: 800;
+  transition: color 160ms ease;
+}
+
+.contact-card-link:hover,
+.contact-card-link:focus-visible,
+.contact-answer a:hover,
+.contact-answer a:focus-visible {
+  color: var(--dcpl-official-red);
+  text-decoration: underline;
 }
 
 .contact-card-link svg {
@@ -182,8 +191,10 @@
 }
 
 .contact-answer a {
-  color: var(--green-700);
+  color: var(--dcpl-official-navy);
   font-weight: 750;
+  text-underline-offset: 0.18em;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 
 .contact-photo {

@@ -327,6 +327,64 @@
         margin-top: 7px;
       }
     }
+
+    /* Tournaments page DCPL color refinement */
+    .tournaments-intro h1,
+    .tournament-column-heading h2,
+    .past-tournament-card h3 {
+      color: var(--dcpl-blue-deep);
+    }
+
+    .tournaments-intro-text,
+    .upcoming-card p,
+    .upcoming-card .upcoming-contact,
+    .tournament-card-details {
+      color: #4B5563;
+    }
+
+    .tournaments-hero-photo,
+    .tournament-secondary-photo {
+      background: #F4F8FC;
+    }
+
+    .tournament-dashboard {
+      --tournament-card-border: rgba(22, 61, 115, 0.14);
+    }
+
+    .tournament-icon {
+      color: var(--dcpl-official-navy);
+      background: #F4F8FC;
+    }
+
+    .past-tournament-card .button {
+      color: var(--dcpl-official-navy);
+      background: var(--dcpl-white);
+      border-color: var(--dcpl-official-navy);
+    }
+
+    .past-tournament-card .button:hover,
+    .past-tournament-card .button:focus-visible {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-red);
+      border-color: var(--dcpl-official-red);
+      box-shadow: 0 8px 18px rgba(12, 35, 69, 0.14);
+    }
+
+    .upcoming-card a,
+    .tournament-card-details a {
+      color: var(--dcpl-official-navy);
+      text-decoration: none;
+      text-underline-offset: 0.18em;
+      transition: color 160ms ease, text-decoration-color 160ms ease;
+    }
+
+    .upcoming-card a:hover,
+    .upcoming-card a:focus-visible,
+    .tournament-card-details a:hover,
+    .tournament-card-details a:focus-visible {
+      color: var(--dcpl-official-red);
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -434,7 +492,7 @@
               </p>
               <p class="upcoming-contact">
                 Questions? Contact
-                <a href="mailto:dcpickleballleague@gmail.com">dcpickleballleague@gmail.com</a>.
+                <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>.
               </p>
             </div>
           </div>

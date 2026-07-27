@@ -9,7 +9,8 @@
 .gallery-page-item:hover img, .gallery-page-item:focus-visible img { transform: scale(1.018); filter: brightness(0.96); }
 .gallery-page-empty { color: var(--muted); text-align: center; }
 .gallery-instagram-link { margin: 34px 0 0; text-align: center; }
-.gallery-instagram-link a { color: var(--green-700); font-weight: 800; }
+.gallery-instagram-link a { color: var(--dcpl-official-navy); font-weight: 800; transition: color 160ms ease; }
+.gallery-instagram-link a:hover, .gallery-instagram-link a:focus-visible { color: var(--dcpl-official-red); }
 .gallery-lightbox[hidden] { display: none; }
 .gallery-lightbox { position: fixed; z-index: 5000; inset: 0; display: grid; place-items: center; padding: clamp(54px, 7vw, 86px); background: rgba(4, 15, 12, 0.94); }
 body.lightbox-open { overflow: hidden; }
