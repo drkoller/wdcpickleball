@@ -243,6 +243,115 @@
       .weekly-event .button, .season-action .button { width: 100%; }
       .season-details div { grid-template-columns: 64px 1fr; }
     }
+
+    /* Schedule page DCPL color refinement */
+    .schedule-intro,
+    .schedule-week,
+    .schedule-seasons {
+      --schedule-border: rgba(22, 61, 115, 0.14);
+      --schedule-muted: #4B5563;
+    }
+
+    .schedule-intro h1,
+    .schedule-heading h2,
+    .weekly-event h3,
+    .season-group-header h3,
+    .season-card h4,
+    .season-details dd,
+    .schedule-questions h2 {
+      color: var(--dcpl-blue-deep);
+    }
+
+    .schedule-intro-text,
+    .schedule-heading > p:last-child,
+    .weekly-event p,
+    .weekly-event-meta,
+    .season-details dt,
+    .registration-closed,
+    .drop-in-helper,
+    .schedule-questions p,
+    .upcoming-empty {
+      color: var(--schedule-muted);
+    }
+
+    .weekly-date {
+      color: var(--dcpl-official-red);
+      background: #F4F8FC;
+      border-color: var(--schedule-border);
+    }
+
+    .weekly-date strong {
+      color: var(--dcpl-official-navy);
+    }
+
+    .weekly-event + .weekly-event,
+    .season-group-header,
+    .schedule-questions,
+    .schedule-seasons {
+      border-color: var(--schedule-border);
+    }
+
+    .weekly-drop-in a,
+    .drop-in-helper a,
+    .schedule-questions a {
+      color: var(--dcpl-official-navy);
+      text-decoration: none;
+      text-underline-offset: 0.18em;
+      transition: color 160ms ease, text-decoration-color 160ms ease;
+    }
+
+    .weekly-drop-in a:hover,
+    .weekly-drop-in a:focus-visible,
+    .drop-in-helper a:hover,
+    .drop-in-helper a:focus-visible,
+    .schedule-questions a:hover,
+    .schedule-questions a:focus-visible {
+      color: var(--dcpl-official-red);
+      text-decoration: underline;
+    }
+
+    .schedule-week .button-outline,
+    .schedule-seasons .button-outline {
+      color: var(--dcpl-official-navy);
+      border-color: var(--dcpl-official-navy);
+    }
+
+    .schedule-week .button-outline:hover,
+    .schedule-week .button-outline:focus-visible,
+    .schedule-seasons .button-outline:hover,
+    .schedule-seasons .button-outline:focus-visible {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-red);
+      border-color: var(--dcpl-official-red);
+    }
+
+    .season-status {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-red);
+    }
+
+    .season-card .season-status {
+      padding: 0;
+      color: var(--schedule-muted);
+      background: transparent;
+      border-radius: 0;
+      font-size: 0.72rem;
+      font-weight: 650;
+      letter-spacing: 0.035em;
+      text-transform: none;
+    }
+
+    .season-icon {
+      color: var(--dcpl-official-navy);
+      background: #F4F8FC;
+    }
+
+    @media (max-width: 580px) {
+      .weekly-date {
+        border-right: 0;
+        border-bottom-color: var(--schedule-border);
+      }
+    }
   </style>
 </head>
 
@@ -308,7 +417,7 @@
     <section class="schedule-week">
       <div class="schedule-wide-container">
         <div class="schedule-heading">
-          <p class="weekly-drop-in">For league drop-ins, email <a href="mailto:wdcpickleball@gmail.com">wdcpickleball@gmail.com</a>.</p>
+          <p class="weekly-drop-in">For league drop-ins, email <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>.</p>
         </div>
 
         <div class="weekly-list">
@@ -382,7 +491,7 @@
 
           <div class="season-grid">
             <article class="season-card">
-              <span class="season-status">Ongoing through July 27</span>
+              <span class="season-status">Current Season · Ends July 27</span>
               <div class="season-title-row">
                 <span class="season-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg></span>
                 <h4>Monday Outdoor League</h4>
@@ -393,12 +502,12 @@
               </dl>
               <div class="season-action">
                 <span class="registration-closed">Registration Closed</span>
-                <p class="drop-in-helper">For drop-in availability, <a href="mailto:wdcpickleball@gmail.com">email us</a>.</p>
+                <p class="drop-in-helper">For drop-in availability, <a href="mailto:play@wdcpickleball.com">email us</a>.</p>
               </div>
             </article>
 
             <article class="season-card">
-              <span class="season-status">Ongoing through July 29</span>
+              <span class="season-status">Current Season · Ends July 29</span>
               <div class="season-title-row">
                 <span class="season-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg></span>
                 <h4>Wednesday Outdoor League</h4>
@@ -409,11 +518,11 @@
               </dl>
               <div class="season-action">
                 <span class="registration-closed">Registration Closed</span>
-                <p class="drop-in-helper">For drop-in availability, <a href="mailto:wdcpickleball@gmail.com">email us</a>.</p>
+                <p class="drop-in-helper">For drop-in availability, <a href="mailto:play@wdcpickleball.com">email us</a>.</p>
               </div>
             </article>
             <article class="season-card">
-              <span class="season-status">July 16–August 20</span>
+              <span class="season-status">Current Season · Through August 20</span>
               <div class="season-title-row">
                 <span class="season-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg></span>
                 <h4>Thursday Outdoor League</h4>
@@ -431,11 +540,11 @@
                 >
                   Register for the Full League
                 </a>
-                <p class="drop-in-helper">For drop-in availability, <a href="mailto:wdcpickleball@gmail.com">email us</a>.</p>
+                <p class="drop-in-helper">For drop-in availability, <a href="mailto:play@wdcpickleball.com">email us</a>.</p>
               </div>
             </article>
             <article class="season-card">
-              <span class="season-status">July 10–August 21</span>
+              <span class="season-status">Current Season · Through August 21</span>
               <div class="season-title-row">
                 <span class="season-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg></span>
                 <h4>Friday Outdoor League</h4>
@@ -453,7 +562,7 @@
                 >
                   Register for the Full League
                 </a>
-                <p class="drop-in-helper">For drop-in availability, <a href="mailto:wdcpickleball@gmail.com">email us</a>.</p>
+                <p class="drop-in-helper">For drop-in availability, <a href="mailto:play@wdcpickleball.com">email us</a>.</p>
               </div>
             </article>
           </div>
@@ -469,7 +578,7 @@
         <div class="schedule-questions">
           <h2>Questions?</h2>
           <p>Need help choosing the right clinic, league, or event?</p>
-          <a href="mailto:wdcpickleball@gmail.com">wdcpickleball@gmail.com</a>
+          <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
         </div>
       </div>
     </section>

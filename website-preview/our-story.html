@@ -61,8 +61,11 @@
       object-fit: cover;
     }
 
-    .story-mobile-eyebrow {
-      display: none;
+    .story-page-eyebrow {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      margin: 0 0 18px;
     }
 
     .story-photo-caption {
@@ -94,6 +97,10 @@
       font-size: clamp(2.4rem, 5vw, 4.5rem);
     }
 
+    .story-page-story .story-columns p {
+      color: #4B5563;
+    }
+
     @media (max-width: 650px) {
       .story-page-story {
         padding-top: 112px;
@@ -117,12 +124,8 @@
         padding-top: calc(var(--header-height) + 28px);
       }
 
-      .story-mobile-eyebrow {
-        display: flex;
-        gap: 6px;
-        width: fit-content;
-        margin: 0 0 10px;
-        font-size: 0.68rem;
+      .story-page-eyebrow {
+        margin-bottom: 14px;
       }
 
       .story-page-lead-copy {
@@ -204,7 +207,7 @@
 
       <div class="container full-story" id="full-story">
 
-        <p class="section-label dc-star-label story-mobile-eyebrow">
+        <p class="section-label dc-star-label story-page-eyebrow">
           Our Story
         </p>
 
@@ -215,10 +218,6 @@
           >
 
           <div class="story-page-lead-copy">
-            <p class="section-label dc-star-label">
-              Our Story
-            </p>
-
             <h1>
               A community created through resilience and volunteer effort.
             </h1>

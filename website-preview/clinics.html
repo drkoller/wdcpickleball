@@ -161,6 +161,73 @@
         aspect-ratio: 4 / 3;
       }
     }
+
+    /* Clinics primary CTA refinement */
+    .clinics-intro .button-primary {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-navy);
+      border-color: var(--dcpl-official-navy);
+    }
+
+    .clinics-intro .button-primary:hover,
+    .clinics-intro .button-primary:focus-visible {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-red);
+      border-color: var(--dcpl-official-red);
+    }
+
+    /* Clinics page DCPL consistency refinement */
+    .clinics-card-grid {
+      grid-auto-rows: 1fr;
+    }
+
+    .clinics-card {
+      height: 100%;
+      border-color: rgba(22, 61, 115, 0.12);
+    }
+
+    .clinics-intro h1,
+    .clinics-card h2,
+    .clinics-contact h2,
+    .clinics-schedule-text {
+      color: var(--dcpl-blue-deep);
+    }
+
+    .clinics-intro-text,
+    .clinics-card p,
+    .clinics-contact p {
+      color: #4B5563;
+    }
+
+    .clinics-photo {
+      background: #F4F8FC;
+    }
+
+    .clinics-card .button-outline {
+      color: var(--dcpl-official-navy);
+      background: var(--dcpl-white);
+      border-color: var(--dcpl-official-navy);
+    }
+
+    .clinics-card .button-outline:hover,
+    .clinics-card .button-outline:focus-visible {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-red);
+      border-color: var(--dcpl-official-red);
+    }
+
+    .clinics-contact a {
+      color: var(--dcpl-official-navy);
+      text-decoration: none;
+      text-underline-offset: 0.18em;
+      transition: color 160ms ease, text-decoration-color 160ms ease;
+    }
+
+    .clinics-contact a:hover,
+    .clinics-contact a:focus-visible {
+      color: var(--dcpl-official-red);
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -234,7 +301,7 @@
             registration.
           </p>
 
-          <a class="button button-primary" href="https://wdcpickleball.com/">
+          <a class="button button-primary" href="schedule.html">
             View Weekly Schedule
           </a>
         </div>
@@ -262,7 +329,7 @@
             confidence with the fundamentals. Advance registration is required.
           </p>
 
-          <a class="button button-outline" href="https://wdcpickleball.com/">
+          <a class="button button-outline" href="schedule.html">
             View Schedule &amp; Register
           </a>
         </article>
@@ -278,7 +345,7 @@
             throughout the year.
           </p>
 
-          <a class="button button-outline" href="https://wdcpickleball.com/">
+          <a class="button button-outline" href="schedule.html">
             View Schedule &amp; Register
           </a>
         </article>
@@ -299,7 +366,7 @@
           clinic or event?
           Contact us at
           <strong>
-            <a href="mailto:wdcpickleball@gmail.com">wdcpickleball@gmail.com</a>
+            <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
           </strong>
           to discuss availability and scheduling.
         </p>

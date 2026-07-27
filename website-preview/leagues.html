@@ -339,6 +339,91 @@
         min-height: var(--league-card-height);
       }
     }
+
+    /* Ladder Leagues page DCPL color refinement */
+    .leagues-intro h1,
+    .dashboard-heading h2,
+    .league-row h3 {
+      color: var(--dcpl-blue-deep);
+    }
+
+    .leagues-intro-text,
+    .league-row p,
+    .archive-note {
+      color: #4B5563;
+    }
+
+    .leagues-photo {
+      background: #F4F8FC;
+    }
+
+    .league-dashboard {
+      --league-card-border: rgba(22, 61, 115, 0.14);
+    }
+
+    .league-icon,
+    .standings-icon {
+      color: var(--dcpl-official-navy);
+      background: #F4F8FC;
+    }
+
+    .league-row .button {
+      color: var(--dcpl-official-navy);
+      background: var(--dcpl-white);
+      border-color: var(--dcpl-official-navy);
+    }
+
+    .league-row .button:hover,
+    .league-row .button:focus-visible {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-red);
+      border-color: var(--dcpl-official-red);
+      box-shadow: 0 8px 18px rgba(12, 35, 69, 0.14);
+    }
+
+    .standings-links a,
+    .archive-note a {
+      color: var(--dcpl-official-navy);
+    }
+
+    .standings-arrow {
+      color: var(--dcpl-official-red);
+    }
+
+    .standings-links a:hover,
+    .standings-links a:focus-visible {
+      border-color: rgba(204, 29, 40, 0.46);
+      box-shadow: 0 7px 18px rgba(12, 35, 69, 0.09);
+    }
+
+    .archive-note a::after {
+      content: " →";
+      color: var(--dcpl-official-red);
+    }
+
+    .archive-note a {
+      text-decoration: none;
+      text-underline-offset: 0.18em;
+      transition: color 160ms ease, text-decoration-color 160ms ease;
+    }
+
+    .archive-note a:hover,
+    .archive-note a:focus-visible {
+      color: var(--dcpl-official-red);
+      text-decoration: underline;
+    }
+
+    .league-dashboard a[href^="mailto:"] {
+      color: var(--dcpl-official-navy);
+      text-decoration: none;
+      text-underline-offset: 0.18em;
+    }
+
+    .league-dashboard a[href^="mailto:"]:hover,
+    .league-dashboard a[href^="mailto:"]:focus-visible {
+      color: var(--dcpl-official-red);
+      text-decoration: underline;
+    }
   </style>
 </head>
 

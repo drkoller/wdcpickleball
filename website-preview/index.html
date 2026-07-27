@@ -155,7 +155,7 @@
   src="images/gallery/DP0A0843-Enhanced-NR-story-preview.jpg"
   alt="DC Pickleball League community at East Potomac Tennis Center, where it all began"
   loading="lazy"
-  style="aspect-ratio: 16 / 9; object-fit: cover; object-position: center top;"
+  style="aspect-ratio: 2 / 1; object-fit: cover; object-position: center top;"
 >
 
           <div class="story-photo-label">
@@ -214,9 +214,10 @@
 
         <a class="explore-destination reveal" href="schedule.html">
           <span class="explore-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-              <path d="M16 3v4M8 3v4M3 10h18"></path>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4.5" width="18" height="16.5" rx="2.5"></rect>
+              <path d="M8 2.75v3.5M16 2.75v3.5M3 9.5h18"></path>
+              <path d="m8 14 2.25 2.25L16 11.5"></path>
             </svg>
           </span>
           <div>
@@ -228,8 +229,10 @@
 
         <a class="explore-destination reveal" href="clinics.html">
           <span class="explore-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 4h10M7 20h10M9 4v5l3 3-3 3v5M15 4v5l-3 3 3 3v5"></path>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.8 3.2a5.2 5.2 0 0 0-7.4 7.4l3 3 7.4-7.4-3-3Z"></path>
+              <path d="m10.4 13.6-5.7 5.7a1.8 1.8 0 0 0 2.5 2.5l5.7-5.7"></path>
+              <circle cx="18.5" cy="16.5" r="2.25"></circle>
             </svg>
           </span>
           <div>
@@ -239,10 +242,11 @@
           <span class="explore-action">View Clinics <span aria-hidden="true">→</span></span>
         </a>
 
-        <a class="explore-destination reveal" href="leagues.html">
+        <a class="explore-destination play-card--ladder reveal" href="leagues.html">
           <span class="explore-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19v-5h4v5M10 19V9h4v10M16 19V4h4v15"></path>
+              <path d="M2.5 21h19"></path>
             </svg>
           </span>
           <div>
@@ -254,7 +258,7 @@
 
         <a class="explore-destination reveal" href="tournaments.html">
           <span class="explore-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"></path>
               <path d="M7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"></path>
             </svg>
@@ -268,38 +272,40 @@
 
       </div>
 
-    </section>
+      <div class="ladder-section" id="ladder">
+        <div class="home-wide-container ladder-layout">
 
-    <section class="ladder-section" id="ladder">
-      <div class="home-wide-container ladder-layout">
-
-        <div class="ladder-content reveal">
-          <p class="section-eyebrow">The DCPL Ladder</p>
-          <p class="ladder-summary">Skill-based ladder leagues throughout the season.</p>
-          <a class="button button-light" href="leagues.html#standings">
-            View Ladder Leagues &amp; Standings
-          </a>
-        </div>
-
-        <div class="ladder-statistics reveal">
-          <div class="ladder-stat">
-            <strong
-              id="games-count"
-              class="counter"
-              data-target="34816">0</strong>
-            <span>Games recorded</span>
+          <div class="ladder-content reveal">
+            <p class="section-eyebrow">The DCPL Ladder</p>
+            <p class="ladder-summary">Skill-based ladder leagues for every level of play.</p>
           </div>
 
-          <div class="ladder-stat">
-            <strong
-              id="players-count"
-              class="counter"
-              data-target="2039">0</strong>
-            <span>Unique players</span>
-          </div>
-        </div>
+          <div class="ladder-statistics reveal">
+            <div class="ladder-stat">
+              <strong
+                id="games-count"
+                class="counter"
+                data-target="34816">0</strong>
+              <span>Games recorded</span>
+            </div>
 
+            <div class="ladder-stat">
+              <strong
+                id="players-count"
+                class="counter"
+                data-target="2039">0</strong>
+              <span>Unique players</span>
+            </div>
+          </div>
+
+          <div class="ladder-actions reveal">
+            <a class="button ladder-action-primary" href="leagues.html#standings">View Standings</a>
+            <a class="button ladder-action-secondary" href="rating-lookup.html">DCPL Skill Rating</a>
+          </div>
+
+        </div>
       </div>
+
     </section>
 
     <section class="section gallery-section" id="gallery">
@@ -361,10 +367,6 @@
 
   <div class="container join-content">
 
-    <p class="eyebrow">
-      Join the Community
-    </p>
-
     <h2>
       Ready to join us?
     </h2>
@@ -405,28 +407,45 @@
   <footer class="site-footer">
     <div class="container footer-grid">
 
-      <div class="footer-intro footer-brand-lockup">
-        <img
-          class="footer-brand-logo"
-          src="images/dcpl-logo.png"
-          alt=""
-          width="500"
-          height="500"
-        >
-        <div class="footer-brand-copy">
+      <div class="footer-intro">
+        <div class="footer-brand-lockup">
+          <img
+            class="footer-brand-logo"
+            src="images/dcpl-logo.png"
+            alt=""
+            width="500"
+            height="500"
+          >
           <strong class="footer-title">DC Pickleball League</strong>
         </div>
+        <p class="footer-description">
+          Bringing players together through leagues, clinics, tournaments, and community events across the Washington, DC area.
+        </p>
       </div>
 
+      <nav class="footer-links" aria-label="Footer quick links">
+        <strong>Quick links</strong>
+        <a href="schedule.html">Schedule</a>
+        <a href="clinics.html">Clinics</a>
+        <a href="leagues.html#standings">Ladder Standings</a>
+        <a href="rating-lookup.html">Skill Rating</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+
       <div class="footer-connect">
+        <strong>Community</strong>
         <a
           href="https://www.instagram.com/dcpickleballleague/"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-        <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
+        >Instagram</a>
+        <a href="contact.html">Contact</a>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdRiVsVX85DO_yTwheHuQO-e1xFfUirJvOMqaxP5TvdeGVUVA/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Newsletter</a>
       </div>
 
     </div>
