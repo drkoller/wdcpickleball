@@ -2929,11 +2929,12 @@ body {
   --dcpl-official-navy: #022958;
   --dcpl-official-red: #CC1D28;
   --dcpl-official-red-dark: #A91821;
+  --dcpl-hero-cobalt: #2859A8;
 }
 
 .hero .button-primary {
   color: var(--dcpl-white);
-  background: var(--dcpl-blue-deep);
+  background: var(--dcpl-hero-cobalt);
   border-color: transparent;
   box-shadow: 0 5px 16px rgba(3, 18, 38, 0.18);
 }
