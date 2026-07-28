@@ -2193,8 +2193,9 @@ body {
 /* Published homepage: mobile hero composition */
 @media (max-width: 768px) {
   .hero-background {
-    background-position: 25% center;
+    background-position: center;
   }
+
 }
 
 /* Published homepage: mobile Story editorial hierarchy */
@@ -2909,6 +2910,19 @@ body {
       transparent 56%,
       rgba(12, 35, 69, 0.18) 100%
     );
+}
+
+@media (max-width: 768px) {
+  .hero-shade {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 9, 18, 0.92) 0%,
+      rgba(2, 9, 18, 0.88) 44%,
+      rgba(4, 15, 28, 0.76) 58%,
+      rgba(6, 21, 36, 0.42) 72%,
+      rgba(8, 25, 40, 0.14) 100%
+    );
+  }
 }
 
 .explore-destination.play-card--ladder {
