@@ -1959,6 +1959,7 @@ body {
     );
 }
 
+
 .hero-description {
   color: rgba(255, 255, 255, 0.92);
 }
@@ -2193,9 +2194,12 @@ body {
 /* Published homepage: mobile hero composition */
 @media (max-width: 768px) {
   .hero-background {
-    background-position: center;
+    background-color: #010504;
+    background-image: url("images/hero-home-mobile.jpg?v=20260727-natural-crop");
+    background-position: center bottom;
+    background-size: auto 85%;
+    background-repeat: no-repeat;
   }
-
 }
 
 /* Published homepage: mobile Story editorial hierarchy */
@@ -2912,18 +2916,6 @@ body {
     );
 }
 
-@media (max-width: 768px) {
-  .hero-shade {
-    background: linear-gradient(
-      180deg,
-      rgba(2, 9, 18, 0.92) 0%,
-      rgba(2, 9, 18, 0.88) 44%,
-      rgba(4, 15, 28, 0.76) 58%,
-      rgba(6, 21, 36, 0.42) 72%,
-      rgba(8, 25, 40, 0.14) 100%
-    );
-  }
-}
 
 .explore-destination.play-card--ladder {
   --ladder-royal: #4169E1;
