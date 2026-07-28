@@ -2195,9 +2195,9 @@ body {
 @media (max-width: 768px) {
   .hero-background {
     background-color: #010504;
-    background-image: url("images/hero-home-mobile.jpg?v=20260727-natural-crop");
+    background-image: url("images/hero-home-mobile.jpg?v=20260727-natural-crop-v2");
     background-position: center bottom;
-    background-size: auto 85%;
+    background-size: auto 50%;
     background-repeat: no-repeat;
   }
 }
@@ -2916,6 +2916,12 @@ body {
     );
 }
 
+
+@media (max-width: 768px) {
+  .hero-shade {
+    background: none;
+  }
+}
 
 .explore-destination.play-card--ladder {
   --ladder-royal: #4169E1;
