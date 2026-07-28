@@ -2190,6 +2190,13 @@ body {
   }
 }
 
+/* Published homepage: mobile hero composition */
+@media (max-width: 768px) {
+  .hero-background {
+    background-position: 25% center;
+  }
+}
+
 /* Published homepage: mobile Story editorial hierarchy */
 @media (max-width: 768px) {
   .story-layout {
