@@ -517,87 +517,7 @@
             </h2>
           </div>
 
-        <div class="league-list">
-          <article class="league-row">
-            <span class="league-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-                <path d="M16 3v4M8 3v4M3 10h18"></path>
-              </svg>
-            </span>
-            <h3>Monday Outdoor League</h3>
-            <p>June 29–July 27 · Mondays, 5:30–8:30 PM</p>
-            <p>Catholic University</p>
-            <a
-              class="button button-outline"
-              href="https://dcpickleballleague.ticketspice.com/dcpl-summer-monday-outdoor-leagues-at-catholic-university"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Registration Details
-            </a>
-          </article>
-
-          <article class="league-row">
-            <span class="league-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-                <path d="M16 3v4M8 3v4M3 10h18"></path>
-              </svg>
-            </span>
-            <h3>Wednesday Outdoor League</h3>
-            <p>July 8–July 29 · Wednesdays, 5:30–8:30 PM</p>
-            <p>Catholic University</p>
-            <a
-              class="button button-outline"
-              href="https://dcpickleballleague.ticketspice.com/dcpl-summer-wednesday-league-at-catholic-university"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Registration Details
-            </a>
-          </article>
-
-          <article class="league-row">
-            <span class="league-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-                <path d="M16 3v4M8 3v4M3 10h18"></path>
-              </svg>
-            </span>
-            <h3>Thursday Outdoor League</h3>
-            <p>July 16–August 20 · Thursdays, 6:00–9:30 PM</p>
-            <p>Alexandria City High School</p>
-            <a
-              class="button button-outline"
-              href="https://dcpickleballleague.ticketspice.com/dcpl-summer-thursday-league-at-alexandria-city-high-school"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Registration Details
-            </a>
-          </article>
-
-          <article class="league-row">
-            <span class="league-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-                <path d="M16 3v4M8 3v4M3 10h18"></path>
-              </svg>
-            </span>
-            <h3>Friday Outdoor League</h3>
-            <p>July 10–August 21 · Fridays, 5:30–8:15 PM</p>
-            <p>Anacostia Outdoor Tennis Courts</p>
-            <a
-              class="button button-outline"
-              href="https://dcpickleballleague.ticketspice.com/dcpl-summer-friday-outdoor-league-at-anacostia"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Registration Details
-            </a>
-          </article>
-        </div>
+        <div class="league-list" id="current-league-list"></div>
         </div>
 
         <div class="standings-column" id="standings">
@@ -607,47 +527,7 @@
             </h2>
           </div>
 
-            <div class="standings-links">
-              <a href="https://wdcpickleball.com/ladders/moncua2.html">
-                <span class="standings-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path>
-                  </svg>
-                </span>
-                Monday League
-                <span class="standings-arrow" aria-hidden="true">→</span>
-              </a>
-
-              <a href="https://wdcpickleball.com/ladders/wedcua2.html">
-                <span class="standings-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path>
-                  </svg>
-                </span>
-                Wednesday League
-                <span class="standings-arrow" aria-hidden="true">→</span>
-              </a>
-
-              <a href="https://wdcpickleball.com/ladders/thu2.html">
-                <span class="standings-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path>
-                  </svg>
-                </span>
-                Thursday League
-                <span class="standings-arrow" aria-hidden="true">→</span>
-              </a>
-
-              <a href="https://wdcpickleball.com/ladders/anac.html">
-                <span class="standings-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path>
-                  </svg>
-                </span>
-                Friday League
-                <span class="standings-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
+            <div class="standings-links" id="current-standings-list"></div>
 
           <p class="archive-note">
             Looking for previous seasons?

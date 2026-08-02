@@ -1,0 +1,92 @@
+[
+  {
+    "type": "league",
+    "title": "Monday Outdoor League",
+    "status": "ongoing",
+    "statusLabel": "Current Season · Ends July 27",
+    "dateRange": "June 29–July 27",
+    "days": "Mondays",
+    "time": "5:30–8:30 PM",
+    "location": "Catholic University",
+    "registrationLabel": "Registration Details",
+    "seasonRegistrationLabel": "Registration Closed",
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-summer-monday-outdoor-leagues-at-catholic-university",
+    "standingsLabel": "Monday League",
+    "standingsUrl": "https://wdcpickleball.com/ladders/moncua2.html"
+  },
+  {
+    "type": "league",
+    "title": "Wednesday Outdoor League",
+    "status": "ongoing",
+    "statusLabel": "Current Season · Ends July 29",
+    "dateRange": "July 8–July 29",
+    "days": "Wednesdays",
+    "time": "5:30–8:30 PM",
+    "location": "Catholic University",
+    "registrationLabel": "Registration Details",
+    "seasonRegistrationLabel": "Registration Closed",
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-summer-wednesday-league-at-catholic-university",
+    "standingsLabel": "Wednesday League",
+    "standingsUrl": "https://wdcpickleball.com/ladders/wedcua2.html",
+    "weekly": {
+      "day": "Wednesday",
+      "date": "July 29",
+      "description": "Ongoing league season"
+    }
+  },
+  {
+    "type": "league",
+    "title": "Thursday Outdoor League",
+    "status": "ongoing",
+    "statusLabel": "Current Season · Through August 20",
+    "dateRange": "July 16–August 20",
+    "days": "Thursdays",
+    "time": "6:00–9:30 PM",
+    "location": "Alexandria City High School",
+    "registrationLabel": "Registration Details",
+    "seasonRegistrationLabel": "Register for the Full League",
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-summer-thursday-league-at-alexandria-city-high-school",
+    "weeklyRegistrationLabel": "Register for Full League",
+    "standingsLabel": "Thursday League",
+    "standingsUrl": "https://wdcpickleball.com/ladders/thu2.html",
+    "weekly": {
+      "day": "Thursday",
+      "date": "July 30",
+      "description": "Ongoing league season"
+    }
+  },
+  {
+    "type": "league",
+    "title": "Friday Outdoor League",
+    "status": "ongoing",
+    "statusLabel": "Current Season · Through August 21",
+    "dateRange": "July 10–August 21",
+    "days": "Fridays",
+    "time": "5:30–8:15 PM",
+    "location": "Anacostia Outdoor Tennis Courts",
+    "registrationLabel": "Registration Details",
+    "seasonRegistrationLabel": "Register for the Full League",
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-summer-friday-outdoor-league-at-anacostia",
+    "weeklyRegistrationLabel": "Register for Full League",
+    "standingsLabel": "Friday League",
+    "standingsUrl": "https://wdcpickleball.com/ladders/anac.html",
+    "weekly": {
+      "day": "Friday",
+      "date": "July 31",
+      "description": "Ongoing league season"
+    }
+  },
+  {
+    "type": "clinic",
+    "title": "Beginner & Advanced Beginner Clinics",
+    "time": "10:00–11:30 AM",
+    "location": "Bridge District",
+    "registrationUrl": "https://forms.gle/oNSAn7sTSecsq2k79",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "day": "Sunday",
+      "date": "August 2",
+      "description": "Clinic"
+    }
+  }
+]
