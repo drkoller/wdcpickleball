@@ -28,11 +28,6 @@
     "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-summer-wednesday-league-at-catholic-university",
     "standingsLabel": "Wednesday League",
     "standingsUrl": "https://wdcpickleball.com/ladders/wedcua2.html",
-    "weekly": {
-      "day": "Wednesday",
-      "date": "July 29",
-      "description": "Ongoing league season"
-    }
   },
   {
     "type": "league",
@@ -51,7 +46,7 @@
     "standingsUrl": "https://wdcpickleball.com/ladders/thu2.html",
     "weekly": {
       "day": "Thursday",
-      "date": "July 30",
+      "date": "August 6",
       "description": "Ongoing league season"
     }
   },
@@ -72,7 +67,7 @@
     "standingsUrl": "https://wdcpickleball.com/ladders/anac.html",
     "weekly": {
       "day": "Friday",
-      "date": "July 31",
+      "date": "August 7",
       "description": "Ongoing league season"
     }
   },
