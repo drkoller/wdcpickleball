@@ -137,6 +137,10 @@
       color: var(--dcpl-blue-deep);
     }
 
+    .youth-event-cta-line + .youth-event-cta-line {
+      margin-left: 0.25em;
+    }
+
     @media (max-width: 820px) {
       .youth-intro {
         padding: 118px 0 68px;
@@ -177,6 +181,27 @@
 
       .youth-photo img {
         aspect-ratio: 4 / 3;
+      }
+
+      .youth-event .youth-event-cta {
+        display: flex;
+        flex-direction: column;
+        width: min(100%, 19rem);
+        min-height: 0;
+        margin: 4px auto 0;
+        padding: 0.8rem 1.25rem;
+        font-size: 0.86rem;
+        line-height: 1.25;
+        text-align: center;
+      }
+
+      .youth-event-cta-line {
+        display: block;
+        white-space: nowrap;
+      }
+
+      .youth-event-cta-line + .youth-event-cta-line {
+        margin-left: 0;
       }
     }
   </style>
@@ -284,12 +309,13 @@
           </p>
 
           <a
-            class="button button-primary"
+            class="button button-primary youth-event-cta"
             href="https://dcpickleballleague.ticketspice.com/dcpl-rfk-partner-tournament"
             target="_blank"
             rel="noopener noreferrer"
           >
-            RFK TOURNAMENT &amp; DONATION REGISTRATION
+            <span class="youth-event-cta-line">RFK TOURNAMENT &amp;</span>
+            <span class="youth-event-cta-line">DONATION REGISTRATION</span>
           </a>
         </div>
 
