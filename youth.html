@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Discover youth pickleball clinics, leagues, events, and tournaments from DC Pickleball League.">
+  <meta name="theme-color" content="#123b30">
+  <link rel="icon" href="images/dcpl-logo.png">
+  <title>DCPL Youth Pickleball | DC Pickleball League</title>
+  <link rel="canonical" href="https://wdcpickleball.com/youth.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .youth-intro {
+      padding: 150px 0 82px;
+      background: var(--cream);
+    }
+
+    .youth-intro-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      align-items: center;
+      gap: clamp(48px, 7vw, 96px);
+    }
+
+    .youth-intro-copy {
+      max-width: 570px;
+    }
+
+    .youth-intro h1 {
+      max-width: 620px;
+      margin-bottom: 24px;
+      font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+    }
+
+    .youth-program-line {
+      margin-bottom: 24px;
+      color: var(--dcpl-blue-deep);
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .youth-intro-text {
+      margin-bottom: 20px;
+      color: #4B5563;
+      font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+      line-height: 1.75;
+    }
+
+    .youth-intro-text:last-of-type {
+      margin-bottom: 28px;
+    }
+
+    .youth-photo {
+      overflow: hidden;
+      background: #F4F8FC;
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow-large);
+    }
+
+    .youth-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .youth-event {
+      padding: 82px 0 96px;
+      background: var(--white);
+    }
+
+    .youth-event-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+      align-items: center;
+      gap: clamp(48px, 7vw, 96px);
+    }
+
+    .youth-event-copy {
+      max-width: 620px;
+    }
+
+    .youth-event h2 {
+      margin-bottom: 18px;
+      color: var(--dcpl-blue-deep);
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      letter-spacing: -0.035em;
+    }
+
+    .youth-event p {
+      max-width: 520px;
+      margin-bottom: 24px;
+      color: #4B5563;
+      line-height: 1.75;
+    }
+
+    .youth-event .youth-event-title {
+      color: var(--dcpl-blue-deep);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .youth-event-flyer {
+      width: 100%;
+      max-width: 520px;
+      justify-self: end;
+    }
+
+    .youth-event-flyer img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-medium);
+      box-shadow: var(--shadow-large);
+    }
+
+    .youth-intro .button-primary,
+    .youth-event .button-primary {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-navy);
+      border-color: var(--dcpl-official-navy);
+    }
+
+    .youth-intro .button-primary:hover,
+    .youth-intro .button-primary:focus-visible,
+    .youth-event .button-primary:hover,
+    .youth-event .button-primary:focus-visible {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-red);
+      border-color: var(--dcpl-official-red);
+    }
+
+    .youth-intro h1 {
+      color: var(--dcpl-blue-deep);
+    }
+
+    @media (max-width: 820px) {
+      .youth-intro {
+        padding: 118px 0 68px;
+      }
+
+      .youth-intro-layout {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .youth-intro-copy {
+        max-width: 650px;
+      }
+
+      .youth-photo img {
+        aspect-ratio: 16 / 10;
+      }
+
+      .youth-event {
+        padding: 64px 0 72px;
+      }
+
+      .youth-event-layout {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .youth-event-flyer {
+        max-width: 560px;
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .youth-intro h1 {
+        font-size: 2.75rem;
+      }
+
+      .youth-photo img {
+        aspect-ratio: 4 / 3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="DC Pickleball League home">
+        <img class="brand-logo" src="images/dcpl-logo.png" alt="">
+        <div class="brand-text">
+          <span class="brand-title">DC Pickleball League</span>
+        </div>
+      </a>
+
+      <button class="menu-button" id="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="our-story.html">Story</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="clinics.html">Clinics</a>
+        <a href="leagues.html">Ladder Leagues</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="youth.html" aria-current="page">Youth</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="youth-intro">
+      <div class="container youth-intro-layout">
+        <div class="youth-intro-copy">
+          <p class="section-label dc-star-label">
+            DCPL YOUTH
+          </p>
+
+          <h1>
+            DCPL Youth Pickleball
+          </h1>
+
+          <p class="youth-program-line">
+            Clinics • Youth Leagues • Events • Tournaments
+          </p>
+
+          <p class="youth-intro-text">
+            DC Pickleball League is creating more opportunities for young
+            players across the Washington, DC region through clinics, leagues,
+            events, tournaments, and community partnerships.
+          </p>
+
+          <p class="youth-intro-text">
+            For the second year, DCPL is collaborating with the DC Police
+            Athletic League (PAL) to introduce young players to pickleball and
+            create opportunities for them to learn and play.
+          </p>
+
+          <a
+            class="button button-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeX3CXJ7zr9rMpNpN8TyjxjvMK4c3Y5z48FKpIeuPErSlL2RQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            JOIN DCPL YOUTH PICKLEBALL
+          </a>
+        </div>
+
+        <div class="youth-photo">
+          <img
+            src="images/gallery/dcpl-pal-youth-pickleball-2026.jpg"
+            alt="DC Pickleball League and DC Police Athletic League youth pickleball participants and instructors"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="youth-event">
+      <div class="container youth-event-layout">
+        <div class="youth-event-copy">
+          <h2>
+            Coming October 4 at RFK
+          </h2>
+
+          <p class="youth-event-title">
+            DCPL RFK Partner Tournament
+          </p>
+
+          <p>
+            On October 4, DC Pickleball League will bring our second annual RFK
+            community event to the Fields at RFK Campus. In collaboration with
+            Go Play’s Youth Sports For All Day, DCPL will host the RFK Partner
+            Tournament, creating 20+ pickleball courts. We’ll be joined by Go
+            Play, DC Police Athletic League, DC Deaf Pickleball, and others for
+            a day of pickleball, youth activities, food vendors, and community.
+          </p>
+
+          <a
+            class="button button-primary"
+            href="https://dcpickleballleague.ticketspice.com/dcpl-rfk-partner-tournament"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RFK TOURNAMENT &amp; DONATION REGISTRATION
+          </a>
+        </div>
+
+        <div class="youth-event-flyer">
+          <img
+            src="images/events/dcpl-rfk-partner-tournament-2026.jpg"
+            alt="DCPL RFK Partner Tournament flyer for October 4 at the Fields at RFK Campus"
+            width="839"
+            height="1075"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-intro footer-brand-lockup">
+        <img
+          class="footer-brand-logo"
+          src="images/dcpl-logo.png"
+          alt=""
+          width="500"
+          height="500"
+        >
+        <div class="footer-brand-copy">
+          <strong class="footer-title">DC Pickleball League</strong>
+        </div>
+      </div>
+
+      <div class="footer-connect">
+        <a
+          href="https://www.instagram.com/dcpickleballleague/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        <a href="mailto:play@wdcpickleball.com">play@wdcpickleball.com</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="current-year"></span> DC Pickleball League</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
