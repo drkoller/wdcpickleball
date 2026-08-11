@@ -137,10 +137,6 @@
       color: var(--dcpl-blue-deep);
     }
 
-    .youth-event-cta-line + .youth-event-cta-line {
-      margin-left: 0.25em;
-    }
-
     @media (max-width: 820px) {
       .youth-intro {
         padding: 118px 0 68px;
@@ -185,23 +181,15 @@
 
       .youth-event .youth-event-cta {
         display: flex;
-        flex-direction: column;
-        width: min(100%, 19rem);
+        width: fit-content;
+        max-width: 100%;
         min-height: 0;
         margin: 4px auto 0;
-        padding: 0.8rem 1.25rem;
-        font-size: 0.86rem;
+        padding: 0.85rem 1.35rem;
+        font-size: 0.88rem;
         line-height: 1.25;
         text-align: center;
-      }
-
-      .youth-event-cta-line {
-        display: block;
         white-space: nowrap;
-      }
-
-      .youth-event-cta-line + .youth-event-cta-line {
-        margin-left: 0;
       }
     }
   </style>
@@ -250,11 +238,11 @@
           </p>
 
           <h1>
-            DCPL Youth Pickleball
+            Youth Pickleball
           </h1>
 
           <p class="youth-program-line">
-            Clinics • Youth Leagues • Events • Tournaments
+            Clinics • Leagues • Events • Tournaments
           </p>
 
           <p class="youth-intro-text">
@@ -314,8 +302,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="youth-event-cta-line">RFK TOURNAMENT &amp;</span>
-            <span class="youth-event-cta-line">DONATION REGISTRATION</span>
+            RFK TOURNAMENT REGISTRATION
           </a>
         </div>
 
