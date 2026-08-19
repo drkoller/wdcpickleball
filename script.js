@@ -12,7 +12,11 @@
   const ongoingSeasons = document.getElementById("ongoing-seasons");
   const upcomingSeasons = document.getElementById("upcoming-seasons");
   const upcomingSeasonsEmpty = document.getElementById("upcoming-seasons-empty");
+  const currentLeaguesSection = document.getElementById("current-leagues-section");
   const currentLeagueList = document.getElementById("current-league-list");
+  const upcomingLeaguesSection = document.getElementById("upcoming-leagues-section");
+  const upcomingLeagueList = document.getElementById("upcoming-league-list");
+  const currentStandingsSection = document.getElementById("current-standings-section");
   const currentStandingsList = document.getElementById("current-standings-list");
 
   const calendarIconSvg = `
@@ -297,22 +301,39 @@
     return article;
   }
 
-  function renderCurrentLeagues(events) {
-    if (!currentLeagueList) {
+  function renderLeagueSection(events, status, section, list) {
+    if (!section || !list) {
       return;
     }
 
     const leagueEvents =
       events.filter((event) => (
         event.type === "league" &&
-        event.status === "ongoing"
+        event.status === status
       ));
 
-    currentLeagueList.replaceChildren();
+    list.replaceChildren();
 
     leagueEvents.forEach((event) => {
-      currentLeagueList.appendChild(createLeagueRow(event));
+      list.appendChild(createLeagueRow(event));
     });
+
+    section.hidden = leagueEvents.length === 0;
+  }
+
+  function renderLadderLeagues(events) {
+    renderLeagueSection(
+      events,
+      "ongoing",
+      currentLeaguesSection,
+      currentLeagueList
+    );
+    renderLeagueSection(
+      events,
+      "upcoming",
+      upcomingLeaguesSection,
+      upcomingLeagueList
+    );
   }
 
   function createStandingsLink(event) {
@@ -344,6 +365,7 @@
       events.filter((event) => (
         event.type === "league" &&
         event.status === "ongoing" &&
+        event.standingsLabel &&
         event.standingsUrl
       ));
 
@@ -352,6 +374,10 @@
     standingsEvents.forEach((event) => {
       currentStandingsList.appendChild(createStandingsLink(event));
     });
+
+    if (currentStandingsSection) {
+      currentStandingsSection.hidden = standingsEvents.length === 0;
+    }
   }
 
   async function loadScheduleEvents() {
@@ -360,6 +386,7 @@
       !ongoingSeasons &&
       !upcomingSeasons &&
       !currentLeagueList &&
+      !upcomingLeagueList &&
       !currentStandingsList
     ) {
       return;
@@ -376,7 +403,7 @@
 
       renderWeeklySchedule(events);
       renderScheduleSeasons(events);
-      renderCurrentLeagues(events);
+      renderLadderLeagues(events);
       renderCurrentStandings(events);
     } catch (error) {
       console.error("Error loading events.json:", error);

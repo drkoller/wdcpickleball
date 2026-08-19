@@ -112,6 +112,10 @@
       gap: var(--league-card-gap);
     }
 
+    .league-section + .league-section {
+      margin-top: 28px;
+    }
+
     .league-row {
       display: grid;
       grid-template-columns: var(--league-card-icon-size) minmax(120px, 1.1fr) minmax(165px, 1.45fr) minmax(120px, 1.05fr) auto;
@@ -513,23 +517,37 @@
       <div class="container league-dashboard-grid">
 
         <div class="current-leagues-column">
-          <div class="dashboard-heading">
-            <h2>
-              Current Ladder Leagues
-            </h2>
-          </div>
+          <section class="league-section" id="current-leagues-section" hidden>
+            <div class="dashboard-heading">
+              <h2>
+                Current Ladder Leagues
+              </h2>
+            </div>
 
-        <div class="league-list" id="current-league-list"></div>
+            <div class="league-list" id="current-league-list"></div>
+          </section>
+
+          <section class="league-section" id="upcoming-leagues-section" hidden>
+            <div class="dashboard-heading">
+              <h2>
+                Upcoming Ladder Leagues
+              </h2>
+            </div>
+
+            <div class="league-list" id="upcoming-league-list"></div>
+          </section>
         </div>
 
         <div class="standings-column" id="standings">
-          <div class="dashboard-heading">
-            <h2>
-              Current Ladder Standings
-            </h2>
-          </div>
+          <section id="current-standings-section" hidden>
+            <div class="dashboard-heading">
+              <h2>
+                Current Ladder Standings
+              </h2>
+            </div>
 
             <div class="standings-links" id="current-standings-list"></div>
+          </section>
 
           <p class="archive-note">
             Looking for previous seasons?
