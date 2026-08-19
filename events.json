@@ -3,6 +3,9 @@
   "type": "league",
   "title": "Sunday Outdoor League",
   "status": "upcoming",
+  "featured": true,
+  "fullLeagueRegistrationOpen": true,
+  "startDate": "2026-09-27",
   "statusLabel": "Upcoming Season · Starts September 27",
   "dateRange": "September 27–November 8 (No play October 4)",
   "days": "Sundays",
@@ -16,6 +19,9 @@
     "type": "league",
     "title": "Thursday Outdoor League",
     "status": "ongoing",
+    "featured": false,
+    "fullLeagueRegistrationOpen": false,
+    "dropInEmail": "play@wdcpickleball.com",
     "statusLabel": "Current Season · Through August 20",
     "dateRange": "July 16–August 20",
     "days": "Thursdays",
@@ -28,6 +34,7 @@
     "standingsLabel": "Thursday League",
     "standingsUrl": "https://wdcpickleball.com/ladders/thu2.html",
     "weekly": {
+      "isoDate": "2026-08-20",
       "day": "Thursday",
       "date": "August 20",
       "description": "Ongoing league season"
@@ -37,6 +44,9 @@
     "type": "league",
     "title": "Friday Outdoor League",
     "status": "ongoing",
+    "featured": false,
+    "fullLeagueRegistrationOpen": false,
+    "dropInEmail": "play@wdcpickleball.com",
     "statusLabel": "Current Season · Through August 21",
     "dateRange": "July 10–August 21",
     "days": "Fridays",
@@ -49,6 +59,7 @@
     "standingsLabel": "Friday League",
     "standingsUrl": "https://wdcpickleball.com/ladders/anac.html",
     "weekly": {
+      "isoDate": "2026-08-21",
       "day": "Friday",
       "date": "August 21",
       "description": "Ongoing league season"
@@ -57,11 +68,14 @@
   {
     "type": "clinic",
     "title": "Beginner & Advanced Beginner Clinics",
+    "featured": false,
+    "registrationOpen": true,
     "time": "10:00–11:30 AM",
     "location": "Bridge District",
     "registrationUrl": "https://forms.gle/ioJfwUXZE1BxsTKVA",
     "weeklyRegistrationLabel": "Register",
     "weekly": {
+      "isoDate": "2026-08-23",
       "day": "Sunday",
       "date": "August 23",
       "description": "Clinic"
@@ -70,11 +84,15 @@
   {
     "type": "tournament",
     "title": "DCPL RFK Partner Tournament",
+    "featured": true,
+    "registrationOpen": true,
+    "eventDate": "2026-10-04",
     "time": "8:00 AM–2:00 PM",
     "location": "The Fields at RFK",
     "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-rfk-partner-tournament",
     "weeklyRegistrationLabel": "Register",
     "weekly": {
+      "isoDate": "2026-10-04",
       "day": "Sunday",
       "date": "October 4",
       "description": "Registration is now open for the DCPL RFK Partner Tournament. Join us for a full day of pickleball and help shape the future of pickleball at RFK."

@@ -2944,6 +2944,96 @@ body {
 
 /* Combined programs section and final homepage brand refinements */
 
+/* Shared featured events */
+
+.featured-events {
+  color: var(--dcpl-blue-deep);
+  background: #f4f8fc;
+  border-block: 1px solid rgba(22, 61, 115, 0.12);
+}
+.featured-events-home { padding: clamp(38px, 4.5vw, 58px) 0; }
+.featured-events-heading { margin-bottom: 20px; }
+.featured-events-eyebrow {
+  margin: 0 0 8px;
+  color: var(--dcpl-official-red);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.featured-events-heading h2 {
+  margin: 0;
+  color: var(--dcpl-blue-deep);
+  font-size: clamp(1.85rem, 2.6vw, 2.55rem);
+  line-height: 1.12;
+}
+.featured-events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+}
+.featured-event-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(22px, 2.3vw, 28px);
+  background: #fbfdff;
+  border: 1px solid rgba(22, 61, 115, 0.28);
+  border-radius: 16px;
+}
+.featured-event-card h3 {
+  margin: 0 0 16px;
+  color: var(--dcpl-blue-deep);
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.2;
+}
+.featured-event-details {
+  display: grid;
+  gap: 7px;
+  margin: 0 0 16px;
+  color: #4b5563;
+  font-size: 0.92rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+.featured-event-description {
+  margin: 0 0 22px;
+  color: #4b5563;
+  line-height: 1.65;
+}
+.featured-event-card .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1;
+  align-self: flex-start;
+  margin-top: auto;
+  color: var(--dcpl-white);
+  background: var(--dcpl-official-navy);
+  border-color: var(--dcpl-official-navy);
+}
+.featured-event-card .button:hover,
+.featured-event-card .button:focus-visible {
+  color: var(--dcpl-white);
+  background: var(--dcpl-official-red);
+  border-color: var(--dcpl-official-red);
+}
+.featured-event-card .button:focus-visible {
+  outline: 3px solid var(--dcpl-yellow);
+  outline-offset: 3px;
+}
+@media (max-width: 767px) {
+  .featured-events-grid { grid-template-columns: 1fr; }
+  .featured-event-card .button {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+
 :root {
   --dcpl-official-navy: #022958;
   --dcpl-official-red: #CC1D28;

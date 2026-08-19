@@ -18,6 +18,10 @@
   const upcomingLeagueList = document.getElementById("upcoming-league-list");
   const currentStandingsSection = document.getElementById("current-standings-section");
   const currentStandingsList = document.getElementById("current-standings-list");
+  const scheduleFeaturedSection = document.getElementById("schedule-featured-events");
+  const scheduleFeaturedList = document.getElementById("schedule-featured-events-list");
+  const homeFeaturedSection = document.getElementById("home-featured-events");
+  const homeFeaturedList = document.getElementById("home-featured-events-list");
 
   const calendarIconSvg = `
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -60,32 +64,127 @@
     return element;
   }
 
+  function parseLocalIsoDate(isoDate) {
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(isoDate || "");
+
+    if (!match) {
+      return null;
+    }
+
+    return new Date(
+      Number(match[1]),
+      Number(match[2]) - 1,
+      Number(match[3])
+    );
+  }
+
+  function getWeekBounds(date) {
+    const start = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const daysSinceMonday = (start.getDay() + 6) % 7;
+    start.setDate(start.getDate() - daysSinceMonday);
+
+    const end = new Date(start);
+    end.setDate(start.getDate() + 6);
+
+    return { start, end };
+  }
+
+  function getThisWeekDate(event, start, end) {
+    const isoDates = [
+      event.weekly?.isoDate,
+      event.type !== "league" ? event.eventDate : null,
+      event.type === "league" && event.status === "upcoming"
+        ? event.startDate
+        : null
+    ];
+
+    return isoDates
+      .map(parseLocalIsoDate)
+      .find((date) => date && date >= start && date <= end) || null;
+  }
+
+  function getFeaturedDate(event) {
+    return parseLocalIsoDate(
+      event.type === "league" ? event.startDate : event.eventDate
+    );
+  }
+
+  function formatEventDate(date) {
+    return new Intl.DateTimeFormat(undefined, {
+      month: "long",
+      day: "numeric"
+    }).format(date);
+  }
+
+  function createActionLink(className, href, label) {
+    if (href.startsWith("mailto:")) {
+      const link = document.createElement("a");
+      link.className = className;
+      link.href = href;
+      link.textContent = label;
+      return link;
+    }
+
+    return createExternalLink(className, href, label);
+  }
+
+  function getRegistrationAction(event) {
+    if (
+      event.type === "league" &&
+      event.fullLeagueRegistrationOpen &&
+      event.registrationUrl
+    ) {
+      return {
+        href: event.registrationUrl,
+        label: event.seasonRegistrationLabel || event.registrationLabel
+      };
+    }
+
+    if (
+      event.type !== "league" &&
+      event.registrationOpen &&
+      event.registrationUrl
+    ) {
+      return {
+        href: event.registrationUrl,
+        label: event.weeklyRegistrationLabel || event.registrationLabel
+      };
+    }
+
+    return null;
+  }
+
   function createWeeklyEvent(event) {
     const article = document.createElement("article");
     const copy = document.createElement("div");
     const meta = document.createElement("div");
-    const actionLabel =
-      event.weeklyRegistrationLabel;
+    const action = getRegistrationAction(event);
 
     article.className = "weekly-event";
     meta.className = "weekly-event-meta";
 
     appendTextElement(copy, "h3", event.title);
-    appendTextElement(copy, "p", event.weekly.description);
+    if (event.weekly?.description) {
+      appendTextElement(copy, "p", event.weekly.description);
+    }
     appendTextElement(meta, "span", event.time);
     appendTextElement(meta, "span", event.location);
 
     article.appendChild(copy);
     article.appendChild(meta);
 
-    if (event.registrationUrl && actionLabel) {
+    if (action?.href && action.label) {
       article.appendChild(
-        createExternalLink(
+        createActionLink(
           "button button-outline weekly-event-action",
-          event.registrationUrl,
-          actionLabel
+          action.href,
+          action.label
         )
       );
+    } else if (event.dropInEmail) {
+      const dropInHelper = createDropInHelper(event.dropInEmail);
+      dropInHelper.classList.add("weekly-event-action");
+      article.appendChild(dropInHelper);
     } else {
       const emptyAction = document.createElement("span");
       emptyAction.className = "weekly-event-action";
@@ -102,11 +201,24 @@
     }
 
     const dayGroups = [];
+    const { start, end } = getWeekBounds(new Date());
 
     events
-      .filter((event) => event.weekly)
-      .forEach((event) => {
-        const key = `${event.weekly.day}-${event.weekly.date}`;
+      .map((event) => ({
+        event,
+        date: getThisWeekDate(event, start, end)
+      }))
+      .filter(({ date }) => date && date >= start && date <= end)
+      .sort((a, b) => a.date - b.date)
+      .forEach(({ event, date }) => {
+        const day = event.weekly?.day ||
+          new Intl.DateTimeFormat(undefined, { weekday: "long" }).format(date);
+        const displayDate = event.weekly?.date || formatEventDate(date);
+        const key = [
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate()
+        ].join("-");
         const existingGroup =
           dayGroups.find((group) => group.key === key);
 
@@ -115,8 +227,8 @@
         } else {
           dayGroups.push({
             key,
-            day: event.weekly.day,
-            date: event.weekly.date,
+            day,
+            date: displayDate,
             events: [event]
           });
         }
@@ -153,16 +265,10 @@
     });
   }
 
-  function createDropInHelper() {
+  function createDropInHelper(email) {
     const helper = document.createElement("p");
-    const link = document.createElement("a");
-
     helper.className = "drop-in-helper";
-    helper.append("For drop-in availability, ");
-    link.href = "mailto:play@wdcpickleball.com";
-    link.textContent = "email us";
-    helper.appendChild(link);
-    helper.append(".");
+    helper.textContent = `For drop-in options, email: ${email}`;
 
     return helper;
   }
@@ -201,9 +307,9 @@
     });
 
     if (
+      event.fullLeagueRegistrationOpen &&
       event.registrationUrl &&
-      event.seasonRegistrationLabel &&
-      event.seasonRegistrationLabel !== "Registration Closed"
+      event.seasonRegistrationLabel
     ) {
       action.appendChild(
         createExternalLink(
@@ -212,15 +318,10 @@
           event.seasonRegistrationLabel
         )
       );
-    } else if (event.seasonRegistrationLabel) {
-      const closed = document.createElement("span");
-      closed.className = "registration-closed";
-      closed.textContent = event.seasonRegistrationLabel;
-      action.appendChild(closed);
     }
 
-    if (event.type === "league") {
-      action.appendChild(createDropInHelper());
+    if (event.dropInEmail) {
+      action.appendChild(createDropInHelper(event.dropInEmail));
     }
 
     article.appendChild(status);
@@ -267,6 +368,86 @@
     if (upcomingSeasonsEmpty) {
       upcomingSeasonsEmpty.hidden = upcomingEvents.length > 0;
     }
+  }
+
+  function createFeaturedCard(event) {
+    const article = document.createElement("article");
+    const details = document.createElement("div");
+    const featuredDate = getFeaturedDate(event);
+    const dateText = event.type === "league"
+      ? event.dateRange
+      : (event.weekly?.date || formatEventDate(featuredDate));
+
+    article.className = "featured-event-card";
+    details.className = "featured-event-details";
+
+    appendTextElement(article, "h3", event.title);
+    appendTextElement(details, "span", dateText);
+    appendTextElement(details, "span", event.time);
+    appendTextElement(details, "span", event.location);
+    article.appendChild(details);
+
+    if (event.weekly?.description) {
+      const description = appendTextElement(
+        article,
+        "p",
+        event.weekly.description
+      );
+      description.className = "featured-event-description";
+    }
+
+    article.appendChild(
+      createExternalLink(
+        "button",
+        event.registrationUrl,
+        event.type === "league"
+          ? (event.seasonRegistrationLabel || event.registrationLabel)
+          : (event.weeklyRegistrationLabel || event.registrationLabel)
+      )
+    );
+
+    return article;
+  }
+
+  function isFeaturedRegistrationOpen(event) {
+    return (
+      event.featured === true &&
+      event.registrationUrl &&
+      (
+        (event.type === "league" && event.fullLeagueRegistrationOpen) ||
+        (event.type !== "league" && event.registrationOpen)
+      )
+    );
+  }
+
+  function renderFeaturedEvents(events, mode, section, list) {
+    if (!section || !list) {
+      return;
+    }
+
+    const today = new Date();
+    const localToday = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate()
+    );
+    const { end: weekEnd } = getWeekBounds(today);
+    const cutoff = mode === "schedule" ? weekEnd : localToday;
+
+    const featuredEvents = events
+      .map((event) => ({ event, date: getFeaturedDate(event) }))
+      .filter(({ event, date }) => (
+        isFeaturedRegistrationOpen(event) &&
+        date &&
+        (mode === "schedule" ? date > cutoff : date >= cutoff)
+      ))
+      .sort((a, b) => a.date - b.date);
+
+    list.replaceChildren();
+    featuredEvents.forEach(({ event }) => {
+      list.appendChild(createFeaturedCard(event));
+    });
+    section.hidden = featuredEvents.length === 0;
   }
 
   function createLeagueRow(event) {
@@ -387,7 +568,9 @@
       !upcomingSeasons &&
       !currentLeagueList &&
       !upcomingLeagueList &&
-      !currentStandingsList
+      !currentStandingsList &&
+      !scheduleFeaturedList &&
+      !homeFeaturedList
     ) {
       return;
     }
@@ -402,6 +585,18 @@
       const events = await response.json();
 
       renderWeeklySchedule(events);
+      renderFeaturedEvents(
+        events,
+        "schedule",
+        scheduleFeaturedSection,
+        scheduleFeaturedList
+      );
+      renderFeaturedEvents(
+        events,
+        "home",
+        homeFeaturedSection,
+        homeFeaturedList
+      );
       renderScheduleSeasons(events);
       renderLadderLeagues(events);
       renderCurrentStandings(events);
