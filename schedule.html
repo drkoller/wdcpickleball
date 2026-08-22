@@ -133,7 +133,15 @@
     .weekly-event-action { min-width: 0; }
     .weekly-event-meta { display: grid; gap: 4px; color: var(--muted); font-size: 0.86rem; font-weight: 650; line-height: 1.4; }
     .weekly-event-action { width: 100%; }
-    .weekly-event .button { justify-self: stretch; width: 100%; white-space: nowrap; }
+    .weekly-event .button {
+      box-sizing: border-box;
+      justify-self: end;
+      width: max-content;
+      justify-content: center;
+      text-align: center;
+      line-height: 1;
+      white-space: nowrap;
+    }
     .weekly-event .drop-in-helper {
       overflow-wrap: anywhere;
       width: 100%;
@@ -429,7 +437,7 @@
       <div class="schedule-wide-container schedule-intro-layout">
         <div>
           <p class="schedule-eyebrow dc-star-label">Programming</p>
-          <h1>This Week at DCPL</h1>
+          <h1>Upcoming Events</h1>
         </div>
         <p class="schedule-intro-text">Schedule updated weekly. Please check times and locations before attending.</p>
       </div>

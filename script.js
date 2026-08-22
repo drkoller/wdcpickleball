@@ -78,21 +78,10 @@
     );
   }
 
-  function getWeekBounds(date) {
-    const start = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-    const daysSinceMonday = (start.getDay() + 6) % 7;
-    start.setDate(start.getDate() - daysSinceMonday);
-
-    const end = new Date(start);
-    end.setDate(start.getDate() + 6);
-
-    return { start, end };
-  }
-
-  function getThisWeekDate(event, start, end) {
+  function getUpcomingEventDate(event) {
     const isoDates = [
       event.weekly?.isoDate,
-      event.type !== "league" ? event.eventDate : null,
+      event.eventDate,
       event.type === "league" && event.status === "upcoming"
         ? event.startDate
         : null
@@ -100,7 +89,7 @@
 
     return isoDates
       .map(parseLocalIsoDate)
-      .find((date) => date && date >= start && date <= end) || null;
+      .find(Boolean) || null;
   }
 
   function getFeaturedDate(event) {
@@ -131,12 +120,24 @@
   function getRegistrationAction(event) {
     if (
       event.type === "league" &&
-      event.fullLeagueRegistrationOpen &&
+      event.actionType === "registration" &&
       event.registrationUrl
     ) {
       return {
         href: event.registrationUrl,
-        label: event.seasonRegistrationLabel || event.registrationLabel
+        label: event.registrationLabel || event.seasonRegistrationLabel
+      };
+    }
+
+    if (
+      event.type === "league" &&
+      event.actionType === "dropIn" &&
+      event.dropInEmail
+    ) {
+      return {
+        kind: "dropIn",
+        href: `mailto:${event.dropInEmail}`,
+        label: `For drop-in options, email: ${event.dropInEmail}`
       };
     }
 
@@ -173,7 +174,11 @@
     article.appendChild(copy);
     article.appendChild(meta);
 
-    if (action?.href && action.label) {
+    if (action?.kind === "dropIn") {
+      const dropInHelper = createDropInHelper(event.dropInEmail);
+      dropInHelper.classList.add("weekly-event-action");
+      article.appendChild(dropInHelper);
+    } else if (action?.href && action.label) {
       article.appendChild(
         createActionLink(
           "button button-outline weekly-event-action",
@@ -181,10 +186,6 @@
           action.label
         )
       );
-    } else if (event.dropInEmail) {
-      const dropInHelper = createDropInHelper(event.dropInEmail);
-      dropInHelper.classList.add("weekly-event-action");
-      article.appendChild(dropInHelper);
     } else {
       const emptyAction = document.createElement("span");
       emptyAction.className = "weekly-event-action";
@@ -201,14 +202,34 @@
     }
 
     const dayGroups = [];
-    const { start, end } = getWeekBounds(new Date());
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const seenEvents = new Set();
 
     events
       .map((event) => ({
         event,
-        date: getThisWeekDate(event, start, end)
+        date: getUpcomingEventDate(event)
       }))
-      .filter(({ date }) => date && date >= start && date <= end)
+      .filter(({ event, date }) => {
+        if (!date || date < today) {
+          return false;
+        }
+
+        const key = [
+          date.getTime(),
+          event.title,
+          event.time,
+          event.location
+        ].join("|");
+
+        if (seenEvents.has(key)) {
+          return false;
+        }
+
+        seenEvents.add(key);
+        return true;
+      })
       .sort((a, b) => a.date - b.date)
       .forEach(({ event, date }) => {
         const day = event.weekly?.day ||
@@ -267,8 +288,12 @@
 
   function createDropInHelper(email) {
     const helper = document.createElement("p");
+    const link = document.createElement("a");
     helper.className = "drop-in-helper";
-    helper.textContent = `For drop-in options, email: ${email}`;
+    link.href = `mailto:${email}`;
+    link.textContent = email;
+    helper.append("For drop-in options, email: ");
+    helper.appendChild(link);
 
     return helper;
   }
@@ -280,6 +305,7 @@
     const icon = document.createElement("span");
     const details = document.createElement("dl");
     const action = document.createElement("div");
+    const registrationAction = getRegistrationAction(event);
     const when = `${event.days}, ${event.time}`;
 
     article.className = "season-card";
@@ -306,22 +332,16 @@
       details.appendChild(row);
     });
 
-    if (
-      event.fullLeagueRegistrationOpen &&
-      event.registrationUrl &&
-      event.seasonRegistrationLabel
-    ) {
+    if (registrationAction?.kind === "dropIn") {
+      action.appendChild(createDropInHelper(event.dropInEmail));
+    } else if (registrationAction) {
       action.appendChild(
-        createExternalLink(
+        createActionLink(
           "button button-outline",
-          event.registrationUrl,
-          event.seasonRegistrationLabel
+          registrationAction.href,
+          registrationAction.label
         )
       );
-    }
-
-    if (event.dropInEmail) {
-      action.appendChild(createDropInHelper(event.dropInEmail));
     }
 
     article.appendChild(status);
@@ -347,6 +367,8 @@
       events.filter((event) => (
         event.type === "league" &&
         event.status === "upcoming"
+      )).sort((a, b) => (
+        getFeaturedDate(a) - getFeaturedDate(b)
       ));
 
     if (ongoingSeasons) {
@@ -377,6 +399,7 @@
     const dateText = event.type === "league"
       ? event.dateRange
       : (event.weekly?.date || formatEventDate(featuredDate));
+    const action = getRegistrationAction(event);
 
     article.className = "featured-event-card";
     details.className = "featured-event-details";
@@ -396,31 +419,18 @@
       description.className = "featured-event-description";
     }
 
-    article.appendChild(
-      createExternalLink(
-        "button",
-        event.registrationUrl,
-        event.type === "league"
-          ? (event.seasonRegistrationLabel || event.registrationLabel)
-          : (event.weeklyRegistrationLabel || event.registrationLabel)
-      )
-    );
+    if (action?.kind === "dropIn") {
+      article.appendChild(createDropInHelper(event.dropInEmail));
+    } else if (action) {
+      article.appendChild(
+        createActionLink("button", action.href, action.label)
+      );
+    }
 
     return article;
   }
 
-  function isFeaturedRegistrationOpen(event) {
-    return (
-      event.featured === true &&
-      event.registrationUrl &&
-      (
-        (event.type === "league" && event.fullLeagueRegistrationOpen) ||
-        (event.type !== "league" && event.registrationOpen)
-      )
-    );
-  }
-
-  function renderFeaturedEvents(events, mode, section, list) {
+  function renderFeaturedEvents(events, section, list) {
     if (!section || !list) {
       return;
     }
@@ -431,15 +441,12 @@
       today.getMonth(),
       today.getDate()
     );
-    const { end: weekEnd } = getWeekBounds(today);
-    const cutoff = mode === "schedule" ? weekEnd : localToday;
-
     const featuredEvents = events
       .map((event) => ({ event, date: getFeaturedDate(event) }))
       .filter(({ event, date }) => (
-        isFeaturedRegistrationOpen(event) &&
+        event.featured === true &&
         date &&
-        (mode === "schedule" ? date > cutoff : date >= cutoff)
+        date >= localToday
       ))
       .sort((a, b) => a.date - b.date);
 
@@ -455,6 +462,7 @@
     const icon = document.createElement("span");
     const scheduleText =
       `${event.dateRange} · ${event.days}, ${event.time}`;
+    const action = getRegistrationAction(event);
 
     article.className = "league-row";
     icon.className = "league-icon";
@@ -469,12 +477,14 @@
     appendTextElement(article, "p", scheduleText);
     appendTextElement(article, "p", event.location);
 
-    if (event.registrationUrl && event.registrationLabel) {
+    if (action?.kind === "dropIn") {
+      article.appendChild(createDropInHelper(event.dropInEmail));
+    } else if (action) {
       article.appendChild(
-        createExternalLink(
+        createActionLink(
           "button button-outline",
-          event.registrationUrl,
-          event.registrationLabel
+          action.href,
+          action.label
         )
       );
     }
@@ -491,6 +501,10 @@
       events.filter((event) => (
         event.type === "league" &&
         event.status === status
+      )).sort((a, b) => (
+        status === "upcoming"
+          ? getFeaturedDate(a) - getFeaturedDate(b)
+          : 0
       ));
 
     list.replaceChildren();
@@ -587,13 +601,11 @@
       renderWeeklySchedule(events);
       renderFeaturedEvents(
         events,
-        "schedule",
         scheduleFeaturedSection,
         scheduleFeaturedList
       );
       renderFeaturedEvents(
         events,
-        "home",
         homeFeaturedSection,
         homeFeaturedList
       );

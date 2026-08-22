@@ -1,9 +1,28 @@
 [
   {
+    "type": "league",
+    "title": "Tuesday Outdoor League",
+    "status": "upcoming",
+    "featured": true,
+    "actionType": "registration",
+    "fullLeagueRegistrationOpen": true,
+    "startDate": "2026-09-08",
+    "statusLabel": "Upcoming Season · Starts September 8",
+    "dateRange": "September 8–October 13",
+    "days": "Tuesdays",
+    "time": "6:00–9:30 PM",
+    "location": "Alexandria City High School",
+    "description": "Social & Competitive Ladders",
+    "registrationLabel": "Register for the Full League",
+    "seasonRegistrationLabel": "Register for the Full League",
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-fall-tuesday-league-at-alexandria-city-high-school"
+  },
+  {
   "type": "league",
   "title": "Sunday Outdoor League",
   "status": "upcoming",
   "featured": true,
+  "actionType": "registration",
   "fullLeagueRegistrationOpen": true,
   "startDate": "2026-09-27",
   "statusLabel": "Upcoming Season · Starts September 27",
@@ -11,7 +30,7 @@
   "days": "Sundays",
   "time": "9:30 AM–12:00 PM",
   "location": "Catholic University",
-  "registrationLabel": "Registration Details",
+  "registrationLabel": "Register for the Full League",
   "seasonRegistrationLabel": "Register for the Full League",
   "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-fall-sunday-outdoor-leagues-at-catholic-university"
   },
@@ -20,10 +39,11 @@
     "title": "Thursday Outdoor League",
     "status": "ongoing",
     "featured": false,
+    "actionType": "dropIn",
     "fullLeagueRegistrationOpen": false,
     "dropInEmail": "play@wdcpickleball.com",
-    "statusLabel": "Current Season · Through August 20",
-    "dateRange": "July 16–August 20",
+    "statusLabel": "Current Season · Through August 27",
+    "dateRange": "July 16–August 27",
     "days": "Thursdays",
     "time": "6:00–9:30 PM",
     "location": "Alexandria City High School",
@@ -34,17 +54,18 @@
     "standingsLabel": "Thursday League",
     "standingsUrl": "https://wdcpickleball.com/ladders/thu2.html",
     "weekly": {
-      "isoDate": "2026-08-20",
+      "isoDate": "2026-08-27",
       "day": "Thursday",
-      "date": "August 20",
+      "date": "August 27",
       "description": "Ongoing league season"
     }
   },
   {
     "type": "league",
     "title": "Friday Outdoor League",
-    "status": "ongoing",
+    "status": "completed",
     "featured": false,
+    "actionType": "none",
     "fullLeagueRegistrationOpen": false,
     "dropInEmail": "play@wdcpickleball.com",
     "statusLabel": "Current Season · Through August 21",
@@ -57,13 +78,7 @@
     "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-summer-friday-outdoor-league-at-anacostia",
     "weeklyRegistrationLabel": "Register for Full League",
     "standingsLabel": "Friday League",
-    "standingsUrl": "https://wdcpickleball.com/ladders/anac.html",
-    "weekly": {
-      "isoDate": "2026-08-21",
-      "day": "Friday",
-      "date": "August 21",
-      "description": "Ongoing league season"
-    }
+    "standingsUrl": "https://wdcpickleball.com/ladders/anac.html"
   },
   {
     "type": "clinic",
