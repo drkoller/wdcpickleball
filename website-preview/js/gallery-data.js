@@ -59,6 +59,7 @@
     { src: "images/gallery/IMG_7669.jpeg", alt: "DCPL players learning together during a clinic.", width: 1919, height: 1281 },
     { src: "images/gallery/IMG_7688.jpeg", alt: "DCPL clinic participants practicing on court.", width: 1427, height: 1427 },
     { src: "images/gallery/IMG_7698.jpeg", alt: "DCPL players receiving instruction during a clinic.", width: 1418, height: 1814 },
+    { src: "images/gallery/IMG_8189.jpg", alt: "Members of the DC Pickleball League community after an open play session.", width: 3595, height: 2464 },
     { src: "images/gallery/IMG_8296_homepage.jpeg", alt: "DCPL members gathering at a community movie night.", width: 1161, height: 774 },
     { src: "images/gallery/nationalmall.jpg", alt: "DCPL players on the National Mall pickleball courts.", width: 4119, height: 2746 }
   ].map(Object.freeze));

@@ -69,6 +69,7 @@
     { src: "images/gallery/IMG_7688.jpeg", alt: "DCPL clinic participants practicing on court.", width: 1427, height: 1427 },
     { src: "images/gallery/IMG_7698.jpeg", alt: "DCPL players receiving instruction during a clinic.", width: 1418, height: 1814 },
     { src: "images/gallery/IMG_7713.jpg", alt: "Three DCPL players posing with paddles at an outdoor event.", width: 2880, height: 3841 },
+    { src: "images/gallery/IMG_8189.jpg", alt: "Members of the DC Pickleball League community after an open play session.", width: 3595, height: 2464 },
     { src: "images/gallery/IMG_8296_homepage.jpeg", alt: "DCPL members gathering at a community movie night.", width: 1161, height: 774 },
     { src: "images/gallery/IMG_8685.jpg", alt: "A woman returning a shot during an outdoor doubles match.", width: 4407, height: 3714 },
     { src: "images/gallery/IMG_8725.jpg", alt: "A woman ready at the net during an outdoor pickleball match.", width: 5760, height: 3840 },
