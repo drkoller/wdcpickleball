@@ -112,5 +112,39 @@
       "date": "October 4",
       "description": "Registration is now open for the DCPL RFK Partner Tournament. Join us for a full day of pickleball and help shape the future of pickleball at RFK."
     }
+  },
+  {
+    "type": "clinic",
+    "title": "Free Youth Pickleball Clinic",
+    "featured": false,
+    "registrationOpen": true,
+    "eventDate": "2026-10-04",
+    "time": "11:00 AM–12:00 PM",
+    "location": "The Fields at RFK Campus",
+    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeWDyGTWyBFgH-lyDyeLoyAo4C8_OnnzDBBr0FaL9hrl7KyLg/viewform?usp=header",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-10-04",
+      "day": "Sunday",
+      "date": "October 4",
+      "description": "All levels welcome. Equipment provided."
+    }
+  },
+  {
+    "type": "clinic",
+    "title": "Free Youth Pickleball Clinic",
+    "featured": false,
+    "registrationOpen": true,
+    "eventDate": "2026-10-04",
+    "time": "12:00–1:00 PM",
+    "location": "The Fields at RFK Campus",
+    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeWDyGTWyBFgH-lyDyeLoyAo4C8_OnnzDBBr0FaL9hrl7KyLg/viewform?usp=header",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-10-04",
+      "day": "Sunday",
+      "date": "October 4",
+      "description": "All levels welcome. Equipment provided."
+    }
   }
 ]
