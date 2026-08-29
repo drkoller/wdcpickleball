@@ -3,10 +3,12 @@
     "type": "league",
     "title": "Tuesday Outdoor League",
     "status": "upcoming",
+    "season": "fall",
     "featured": true,
     "actionType": "registration",
     "fullLeagueRegistrationOpen": true,
     "startDate": "2026-09-08",
+    "endDate": "2026-10-13",
     "statusLabel": "Upcoming Season · Starts September 8",
     "dateRange": "September 8–October 13",
     "days": "Tuesdays",
@@ -21,10 +23,13 @@
   "type": "league",
   "title": "Sunday Outdoor League",
   "status": "upcoming",
+  "season": "fall",
   "featured": true,
   "actionType": "registration",
   "fullLeagueRegistrationOpen": true,
   "startDate": "2026-09-27",
+  "endDate": "2026-11-08",
+  "noPlayDates": ["2026-10-04"],
   "statusLabel": "Upcoming Season · Starts September 27",
   "dateRange": "September 27–November 8 (No play October 4)",
   "days": "Sundays",
@@ -37,7 +42,7 @@
   {
     "type": "league",
     "title": "Thursday Outdoor League",
-    "status": "ongoing",
+    "status": "completed",
     "featured": false,
     "actionType": "dropIn",
     "fullLeagueRegistrationOpen": false,
@@ -146,5 +151,33 @@
       "date": "October 4",
       "description": "All levels welcome. Equipment provided."
     }
+  },
+  {
+    "type": "standings",
+    "season": "summer-2026-final",
+    "standingsOrder": 1,
+    "standingsLabel": "Monday Catholic University Ladder Standings",
+    "standingsUrl": "https://wdcpickleball.com/ladders/moncua2.html"
+  },
+  {
+    "type": "standings",
+    "season": "summer-2026-final",
+    "standingsOrder": 2,
+    "standingsLabel": "Wednesday Catholic University Ladder Standings",
+    "standingsUrl": "https://wdcpickleball.com/ladders/wedcua2.html"
+  },
+  {
+    "type": "standings",
+    "season": "summer-2026-final",
+    "standingsOrder": 3,
+    "standingsLabel": "Thursday Alexandria Ladder Standings",
+    "standingsUrl": "https://wdcpickleball.com/ladders/thu2.html"
+  },
+  {
+    "type": "standings",
+    "season": "summer-2026-final",
+    "standingsOrder": 4,
+    "standingsLabel": "Friday Anacostia Ladder Standings",
+    "standingsUrl": "https://wdcpickleball.com/ladders/anac.html"
   }
 ]

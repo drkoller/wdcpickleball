@@ -103,6 +103,29 @@
       font-weight: 700;
     }
 
+    .youth-event .youth-volunteer-note {
+      max-width: 520px;
+      margin: 16px 0 10px;
+      color: #4B5563;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .youth-event .youth-volunteer-button {
+      min-height: 47px;
+      padding: 0 22px;
+      color: var(--dcpl-official-navy);
+      background: transparent;
+      border-color: rgba(12, 35, 69, 0.52);
+    }
+
+    .youth-event .youth-volunteer-button:hover,
+    .youth-event .youth-volunteer-button:focus-visible {
+      color: var(--dcpl-white);
+      background: var(--dcpl-official-navy);
+      border-color: var(--dcpl-official-navy);
+    }
+
     .youth-event-flyer {
       width: 100%;
       max-width: 520px;
@@ -186,6 +209,12 @@
         line-height: 1.25;
         text-align: center;
         white-space: normal;
+      }
+
+      .youth-event .youth-volunteer-button {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
       }
     }
   </style>
@@ -296,6 +325,19 @@
             rel="noopener noreferrer"
           >
             REGISTER FOR THE FREE YOUTH CLINIC
+          </a>
+
+          <p class="youth-volunteer-note">
+            Interested in volunteering at the RFK Tournament or youth clinics?
+          </p>
+
+          <a
+            class="button button-outline youth-volunteer-button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfn77HErWWbBppgN77I5pxtBVsUE20wZSK7Sq33g_XDDZeKDA/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Volunteer at RFK
           </a>
         </div>
 

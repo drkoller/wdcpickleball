@@ -9,13 +9,10 @@
   const fullStory = document.getElementById("full-story");
   const currentYear = document.getElementById("current-year");
   const weeklySchedule = document.getElementById("weekly-schedule");
-  const ongoingSeasons = document.getElementById("ongoing-seasons");
-  const upcomingSeasons = document.getElementById("upcoming-seasons");
-  const upcomingSeasonsEmpty = document.getElementById("upcoming-seasons-empty");
-  const currentLeaguesSection = document.getElementById("current-leagues-section");
-  const currentLeagueList = document.getElementById("current-league-list");
-  const upcomingLeaguesSection = document.getElementById("upcoming-leagues-section");
-  const upcomingLeagueList = document.getElementById("upcoming-league-list");
+  const fallSeasons = document.getElementById("fall-seasons");
+  const fallSeasonsEmpty = document.getElementById("fall-seasons-empty");
+  const fallLeaguesSection = document.getElementById("fall-leagues-section");
+  const fallLeagueList = document.getElementById("fall-league-list");
   const currentStandingsSection = document.getElementById("current-standings-section");
   const currentStandingsList = document.getElementById("current-standings-list");
   const scheduleFeaturedSection = document.getElementById("schedule-featured-events");
@@ -78,16 +75,57 @@
     );
   }
 
-  function getUpcomingEventDate(event) {
-    const isoDates = [
-      event.weekly?.isoDate,
-      event.eventDate,
-      event.type === "league" && event.status === "upcoming"
-        ? event.startDate
-        : null
-    ];
+  function getNextLeagueSessionDate(event, today = new Date()) {
+    const startDate = parseLocalIsoDate(event.startDate);
+    const endDate = parseLocalIsoDate(event.endDate);
 
-    return isoDates
+    if (!startDate || !endDate) {
+      return null;
+    }
+
+    const localToday = getNewYorkCalendarDate(today);
+    const noPlayDates = new Set(event.noPlayDates || []);
+    const sessionDate = new Date(startDate);
+
+    while (
+      sessionDate <= endDate &&
+      (sessionDate < localToday || noPlayDates.has(toLocalIsoDate(sessionDate)))
+    ) {
+      sessionDate.setDate(sessionDate.getDate() + 7);
+    }
+
+    return sessionDate <= endDate ? sessionDate : null;
+  }
+
+  function getNewYorkCalendarDate(date = new Date()) {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric"
+    }).formatToParts(date);
+    const values = Object.fromEntries(
+      parts.filter(part => part.type !== "literal")
+        .map(part => [part.type, Number(part.value)])
+    );
+
+    return new Date(values.year, values.month - 1, values.day);
+  }
+
+  function toLocalIsoDate(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  }
+
+  function getUpcomingEventDate(event) {
+    if (event.type === "league") {
+      return getNextLeagueSessionDate(event);
+    }
+
+    return [event.weekly?.isoDate, event.eventDate]
       .map(parseLocalIsoDate)
       .find(Boolean) || null;
   }
@@ -165,8 +203,12 @@
     meta.className = "weekly-event-meta";
 
     appendTextElement(copy, "h3", event.title);
-    if (event.weekly?.description) {
-      appendTextElement(copy, "p", event.weekly.description);
+    const description = event.type === "league"
+      ? event.dateRange
+      : event.weekly?.description;
+
+    if (description) {
+      appendTextElement(copy, "p", description);
     }
     appendTextElement(meta, "span", event.time);
     appendTextElement(meta, "span", event.location);
@@ -315,7 +357,7 @@
     details.className = "season-details";
     action.className = "season-action";
 
-    status.textContent = event.statusLabel;
+    status.textContent = event.dateRange;
     icon.setAttribute("aria-hidden", "true");
     icon.innerHTML = calendarIconSvg;
 
@@ -352,43 +394,26 @@
     return article;
   }
 
+  function getFallLeagues(events) {
+    return events.filter((event) => (
+      event.type === "league" && event.season === "fall"
+    )).sort((a, b) => getFeaturedDate(a) - getFeaturedDate(b));
+  }
+
   function renderScheduleSeasons(events) {
-    if (!ongoingSeasons && !upcomingSeasons) {
+    if (!fallSeasons) {
       return;
     }
 
-    const ongoingEvents =
-      events.filter((event) => (
-        event.type === "league" &&
-        event.status === "ongoing"
-      ));
+    const fallEvents = getFallLeagues(events);
+    fallSeasons.replaceChildren();
 
-    const upcomingEvents =
-      events.filter((event) => (
-        event.type === "league" &&
-        event.status === "upcoming"
-      )).sort((a, b) => (
-        getFeaturedDate(a) - getFeaturedDate(b)
-      ));
+    fallEvents.forEach((event) => {
+      fallSeasons.appendChild(createSeasonCard(event));
+    });
 
-    if (ongoingSeasons) {
-      ongoingSeasons.replaceChildren();
-
-      ongoingEvents.forEach((event) => {
-        ongoingSeasons.appendChild(createSeasonCard(event));
-      });
-    }
-
-    if (upcomingSeasons) {
-      upcomingSeasons.replaceChildren();
-
-      upcomingEvents.forEach((event) => {
-        upcomingSeasons.appendChild(createSeasonCard(event));
-      });
-    }
-
-    if (upcomingSeasonsEmpty) {
-      upcomingSeasonsEmpty.hidden = upcomingEvents.length > 0;
+    if (fallSeasonsEmpty) {
+      fallSeasonsEmpty.hidden = fallEvents.length > 0;
     }
   }
 
@@ -492,43 +517,19 @@
     return article;
   }
 
-  function renderLeagueSection(events, status, section, list) {
-    if (!section || !list) {
+  function renderLadderLeagues(events) {
+    if (!fallLeaguesSection || !fallLeagueList) {
       return;
     }
 
-    const leagueEvents =
-      events.filter((event) => (
-        event.type === "league" &&
-        event.status === status
-      )).sort((a, b) => (
-        status === "upcoming"
-          ? getFeaturedDate(a) - getFeaturedDate(b)
-          : 0
-      ));
+    const fallEvents = getFallLeagues(events);
+    fallLeagueList.replaceChildren();
 
-    list.replaceChildren();
-
-    leagueEvents.forEach((event) => {
-      list.appendChild(createLeagueRow(event));
+    fallEvents.forEach((event) => {
+      fallLeagueList.appendChild(createLeagueRow(event));
     });
 
-    section.hidden = leagueEvents.length === 0;
-  }
-
-  function renderLadderLeagues(events) {
-    renderLeagueSection(
-      events,
-      "ongoing",
-      currentLeaguesSection,
-      currentLeagueList
-    );
-    renderLeagueSection(
-      events,
-      "upcoming",
-      upcomingLeaguesSection,
-      upcomingLeagueList
-    );
+    fallLeaguesSection.hidden = fallEvents.length === 0;
   }
 
   function createStandingsLink(event) {
@@ -556,13 +557,14 @@
       return;
     }
 
-    const standingsEvents =
-      events.filter((event) => (
-        event.type === "league" &&
-        event.status === "ongoing" &&
+    const standingsEvents = events
+      .filter((event) => (
+        event.type === "standings" &&
+        event.season === "summer-2026-final" &&
         event.standingsLabel &&
         event.standingsUrl
-      ));
+      ))
+      .sort((a, b) => a.standingsOrder - b.standingsOrder);
 
     currentStandingsList.replaceChildren();
 
@@ -578,10 +580,8 @@
   async function loadScheduleEvents() {
     if (
       !weeklySchedule &&
-      !ongoingSeasons &&
-      !upcomingSeasons &&
-      !currentLeagueList &&
-      !upcomingLeagueList &&
+      !fallSeasons &&
+      !fallLeagueList &&
       !currentStandingsList &&
       !scheduleFeaturedList &&
       !homeFeaturedList
