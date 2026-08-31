@@ -76,6 +76,16 @@
   }
 
   function getNextLeagueSessionDate(event, today = new Date()) {
+    const localToday = getNewYorkCalendarDate(today);
+    const explicitSessionDates = (event.sessionDates || [])
+      .map(parseLocalIsoDate)
+      .filter(Boolean)
+      .sort((a, b) => a - b);
+
+    if (explicitSessionDates.length > 0) {
+      return explicitSessionDates.find((date) => date >= localToday) || null;
+    }
+
     const startDate = parseLocalIsoDate(event.startDate);
     const endDate = parseLocalIsoDate(event.endDate);
 
@@ -83,7 +93,6 @@
       return null;
     }
 
-    const localToday = getNewYorkCalendarDate(today);
     const noPlayDates = new Set(event.noPlayDates || []);
     const sessionDate = new Date(startDate);
 
@@ -244,8 +253,7 @@
     }
 
     const dayGroups = [];
-    const now = new Date();
-    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const today = getNewYorkCalendarDate();
     const seenEvents = new Set();
 
     events
@@ -366,8 +374,10 @@
 
     [
       ["When", when],
-      ["Location", event.location]
-    ].forEach(([term, description]) => {
+      ["Location", event.location],
+      ["Divisions", event.divisions]
+    ].filter(([, description]) => description)
+      .forEach(([term, description]) => {
       const row = document.createElement("div");
       appendTextElement(row, "dt", term);
       appendTextElement(row, "dd", description);
@@ -490,6 +500,11 @@
     const action = getRegistrationAction(event);
 
     article.className = "league-row";
+    if (event.divisions) {
+      article.style.height = "auto";
+      article.style.minHeight = "var(--league-card-height)";
+      article.style.paddingBlock = "12px";
+    }
     icon.className = "league-icon";
     icon.setAttribute("aria-hidden", "true");
     icon.innerHTML = calendarIconSvg.replace(
@@ -500,7 +515,12 @@
     article.appendChild(icon);
     appendTextElement(article, "h3", event.title);
     appendTextElement(article, "p", scheduleText);
-    appendTextElement(article, "p", event.location);
+    const location = appendTextElement(article, "p", event.location);
+
+    if (event.divisions) {
+      location.appendChild(document.createElement("br"));
+      location.append(event.divisions);
+    }
 
     if (action?.kind === "dropIn") {
       article.appendChild(createDropInHelper(event.dropInEmail));

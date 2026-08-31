@@ -20,6 +20,33 @@
     "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-fall-tuesday-league-at-alexandria-city-high-school"
   },
   {
+    "type": "league",
+    "title": "Friday Indoor League",
+    "status": "upcoming",
+    "season": "fall",
+    "featured": true,
+    "actionType": "registration",
+    "fullLeagueRegistrationOpen": true,
+    "startDate": "2026-09-18",
+    "endDate": "2026-10-16",
+    "sessionDates": [
+      "2026-09-18",
+      "2026-09-25",
+      "2026-10-02",
+      "2026-10-09",
+      "2026-10-16"
+    ],
+    "statusLabel": "Upcoming Season · Starts September 18",
+    "dateRange": "September 18–October 16",
+    "days": "Fridays",
+    "time": "7:00–10:00 PM",
+    "location": "Washington Tennis & Education Foundation (WTEF)",
+    "divisions": "Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
+    "registrationLabel": "Register for the Full League",
+    "seasonRegistrationLabel": "Register for the Full League",
+    "registrationUrl": "https://app.courtreserve.com/Online/Events/Details/8373/BI6OQFW8373889?resId=59731383"
+  },
+  {
   "type": "league",
   "title": "Sunday Outdoor League",
   "status": "upcoming",
