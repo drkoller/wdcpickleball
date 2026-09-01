@@ -221,6 +221,9 @@
     }
     appendTextElement(meta, "span", event.time);
     appendTextElement(meta, "span", event.location);
+    if (event.cost) {
+      appendTextElement(meta, "span", event.cost === "Free Event" ? "Free" : event.cost);
+    }
 
     article.appendChild(copy);
     article.appendChild(meta);
@@ -443,6 +446,9 @@
     appendTextElement(details, "span", dateText);
     appendTextElement(details, "span", event.time);
     appendTextElement(details, "span", event.location);
+    if (event.cost) {
+      appendTextElement(details, "span", event.cost);
+    }
     article.appendChild(details);
 
     if (event.weekly?.description) {

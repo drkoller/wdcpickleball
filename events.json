@@ -1,5 +1,24 @@
 [
   {
+    "type": "special-event",
+    "title": "Labor Day Free Event: Pickleball & Potluck Picnic",
+    "featured": true,
+    "registrationOpen": true,
+    "eventDate": "2026-09-07",
+    "time": "9:00 AM–1:00 PM",
+    "location": "Anacostia Outdoor Courts",
+    "cost": "Free Event",
+    "registrationLabel": "Register for Free",
+    "weeklyRegistrationLabel": "Register for Free",
+    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdIIjQt1WbxRoU8txRfmlub7yI4xZt1Xm5q227Viw52V1k-bg/viewform?usp=publish-editor",
+    "weekly": {
+      "isoDate": "2026-09-07",
+      "day": "Monday",
+      "date": "September 7, 2026",
+      "description": "Celebrate Labor Day with DCPL! Join us for free pickleball, a community potluck picnic, and a fun morning with players, friends, and families at the Anacostia Outdoor Courts."
+    }
+  },
+  {
     "type": "league",
     "title": "Tuesday Outdoor League",
     "status": "upcoming",
