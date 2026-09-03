@@ -83,7 +83,10 @@
       .sort((a, b) => a - b);
 
     if (explicitSessionDates.length > 0) {
-      return explicitSessionDates.find((date) => date >= localToday) || null;
+      return explicitSessionDates.find((date) => date >= localToday) ||
+        (event.retainFinalSessionUntilManualRemoval
+          ? explicitSessionDates[explicitSessionDates.length - 1]
+          : null);
     }
 
     const startDate = parseLocalIsoDate(event.startDate);
@@ -103,7 +106,24 @@
       sessionDate.setDate(sessionDate.getDate() + 7);
     }
 
-    return sessionDate <= endDate ? sessionDate : null;
+    if (sessionDate <= endDate) {
+      return sessionDate;
+    }
+
+    if (event.retainFinalSessionUntilManualRemoval) {
+      const finalSessionDate = new Date(endDate);
+
+      while (
+        finalSessionDate >= startDate &&
+        noPlayDates.has(toLocalIsoDate(finalSessionDate))
+      ) {
+        finalSessionDate.setDate(finalSessionDate.getDate() - 7);
+      }
+
+      return finalSessionDate >= startDate ? finalSessionDate : null;
+    }
+
+    return null;
   }
 
   function getNewYorkCalendarDate(date = new Date()) {
@@ -265,7 +285,10 @@
         date: getUpcomingEventDate(event)
       }))
       .filter(({ event, date }) => {
-        if (!date || date < today) {
+        if (
+          !date ||
+          (date < today && !event.retainFinalSessionUntilManualRemoval)
+        ) {
           return false;
         }
 
@@ -487,7 +510,10 @@
       .filter(({ event, date }) => (
         event.featured === true &&
         date &&
-        date >= localToday
+        (
+          date >= localToday ||
+          event.retainFinalSessionUntilManualRemoval
+        )
       ))
       .sort((a, b) => a.date - b.date);
 
