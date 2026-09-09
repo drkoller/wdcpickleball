@@ -193,12 +193,14 @@
     "standingsLabel": "Monday Catholic University Ladder Standings",
     "standingsUrl": "https://wdcpickleball.com/ladders/moncua2.html"
   },
-  {    "type": "standings",
+  {
+    "type": "standings",
     "season": "summer-2026-final",
     "standingsOrder": 2,
     "standingsLabel": "Tuesday Alexandria Ladder Standings",
     "standingsUrl": "https://wdcpickleball.com/ladders/alex3.html"
   },
+  {
     "type": "standings",
     "season": "summer-2026-final",
     "standingsOrder": 3,
