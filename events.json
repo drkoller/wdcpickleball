@@ -197,27 +197,20 @@
     "type": "standings",
     "season": "summer-2026-final",
     "standingsOrder": 2,
-    "standingsLabel": "Tuesday Alexandria Ladder Standings",
-    "standingsUrl": "https://wdcpickleball.com/ladders/alex3.html"
-  },
-  {
-    "type": "standings",
-    "season": "summer-2026-final",
-    "standingsOrder": 3,
     "standingsLabel": "Wednesday Catholic University Ladder Standings",
     "standingsUrl": "https://wdcpickleball.com/ladders/wedcua2.html"
   },
   {
     "type": "standings",
     "season": "summer-2026-final",
-    "standingsOrder": 4,
+    "standingsOrder": 3,
     "standingsLabel": "Thursday Alexandria Ladder Standings",
     "standingsUrl": "https://wdcpickleball.com/ladders/thu2.html"
   },
   {
     "type": "standings",
     "season": "summer-2026-final",
-    "standingsOrder": 5,
+    "standingsOrder": 4,
     "standingsLabel": "Friday Anacostia Ladder Standings",
     "standingsUrl": "https://wdcpickleball.com/ladders/anac.html"
   }
