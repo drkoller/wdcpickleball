@@ -122,7 +122,7 @@
     "retainFinalSessionUntilManualRemoval": true,
     "registrationOpen": true,
     "time": "10:00–11:30 AM",
-    "location": "Bridge District",
+    "location": "",
     "registrationUrl": "https://forms.gle/ioJfwUXZE1BxsTKVA",
     "weeklyRegistrationLabel": "Register",
     "weekly": {
