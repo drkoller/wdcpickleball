@@ -483,7 +483,28 @@
       description.className = "featured-event-description";
     }
 
-    if (action?.kind === "dropIn") {
+    if (event.homeActions) {
+      const actions = document.createElement("div");
+      actions.className = "featured-event-actions";
+      event.homeActions.forEach((homeAction, index) => {
+        actions.appendChild(
+          createActionLink(
+            homeAction.className,
+            homeAction.href,
+            homeAction.label
+          )
+        );
+        if (index === 0 && event.homeVolunteerNote) {
+          const note = appendTextElement(
+            actions,
+            "p",
+            event.homeVolunteerNote
+          );
+          note.className = "featured-event-volunteer-note";
+        }
+      });
+      article.appendChild(actions);
+    } else if (action?.kind === "dropIn") {
       article.appendChild(createDropInHelper(event.dropInEmail));
     } else if (action) {
       article.appendChild(
@@ -522,6 +543,49 @@
       list.appendChild(createFeaturedCard(event));
     });
     section.hidden = featuredEvents.length === 0;
+  }
+
+  function renderHomeFeaturedEvents(events) {
+    if (!homeFeaturedSection || !homeFeaturedList) {
+      return;
+    }
+
+    const findByTitle = (title) => (
+      events.find((event) => event.title === title)
+    );
+    const youthClinic = findByTitle("Free Youth Pickleball Clinic");
+    const homeEvents = [
+      findByTitle("Friday Indoor League"),
+      findByTitle("DCPL RFK Partner Tournament"),
+      youthClinic && {
+        ...youthClinic,
+        title: "Free Youth Clinic at RFK",
+        time: "11:00 AM–1:00 PM",
+        weekly: {
+          ...youthClinic.weekly,
+          description: "On October 4, DC Pickleball League will bring our second annual RFK community event to The Fields at RFK Campus. In collaboration with Go Play’s YSFA (Youth Sports For All) Day, DCPL will host free youth pickleball clinics and the RFK Partner Tournament, creating more than 25 pickleball courts. We’ll be joined by the DC Police Athletic League, DC Deaf Pickleball, and many other organizations for a day of pickleball, youth activities, food vendors, and community."
+        },
+        homeVolunteerNote: "Interested in volunteering at the RFK Tournament or youth clinics?",
+        homeActions: [
+          {
+            href: youthClinic.registrationUrl,
+            label: "Register for Free Clinic",
+            className: "button button-primary featured-event-primary"
+          },
+          {
+            href: "https://docs.google.com/forms/d/e/1FAIpQLSfn77HErWWbBppgN77I5pxtBVsUE20wZSK7Sq33g_XDDZeKDA/viewform?usp=header",
+            label: "Volunteer at RFK",
+            className: "button button-outline featured-event-secondary"
+          }
+        ]
+      }
+    ].filter(Boolean);
+
+    homeFeaturedList.replaceChildren();
+    homeEvents.forEach((event) => {
+      homeFeaturedList.appendChild(createFeaturedCard(event));
+    });
+    homeFeaturedSection.hidden = homeEvents.length === 0;
   }
 
   function createLeagueRow(event) {
@@ -656,11 +720,7 @@
         scheduleFeaturedSection,
         scheduleFeaturedList
       );
-      renderFeaturedEvents(
-        events,
-        homeFeaturedSection,
-        homeFeaturedList
-      );
+      renderHomeFeaturedEvents(events);
       renderScheduleSeasons(events);
       renderLadderLeagues(events);
       renderCurrentStandings(events);
