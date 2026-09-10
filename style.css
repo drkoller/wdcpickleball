@@ -2180,6 +2180,7 @@ body {
 @media (max-width: 650px) {
   .header-inner {
     gap: 8px;
+    padding-inline: 8px;
   }
 
   .brand {
@@ -2188,17 +2189,20 @@ body {
 
   .brand-logo {
     width: auto;
-    height: clamp(36px, 10vw, 44px);
+    height: clamp(38px, 10vw, 44px);
   }
 
   .brand-text {
-    margin-left: clamp(6px, 2vw, 10px);
+    margin-left: clamp(6px, 1.8vw, 8px);
   }
 
   .brand-title {
     max-width: none;
     overflow: visible;
-    font-size: clamp(0.78rem, 3.6vw, 1.05rem);
+    color: #012d60;
+    font-size: clamp(1.125rem, 4.8vw, 1.36rem);
+    line-height: 1;
+    letter-spacing: -0.025em;
     text-overflow: clip;
     white-space: nowrap;
   }
