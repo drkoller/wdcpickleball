@@ -2176,6 +2176,34 @@ body {
   }
 }
 
+/* Mobile navigation brand: keep the full name beside the menu control. */
+@media (max-width: 650px) {
+  .header-inner {
+    gap: 8px;
+  }
+
+  .brand {
+    max-width: calc(100% - 56px);
+  }
+
+  .brand-logo {
+    width: auto;
+    height: clamp(36px, 10vw, 44px);
+  }
+
+  .brand-text {
+    margin-left: clamp(6px, 2vw, 10px);
+  }
+
+  .brand-title {
+    max-width: none;
+    overflow: visible;
+    font-size: clamp(0.78rem, 3.6vw, 1.05rem);
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+}
+
 /* Stage 2.2: Homepage story preview */
 
 .story-photo {
