@@ -2115,6 +2115,67 @@ body {
   }
 }
 
+/* Transparent DCPL logo lockup */
+.brand-logo {
+  width: auto;
+  height: 61px;
+}
+
+.brand-text {
+  margin-left: 12px;
+}
+
+.brand-title {
+  font-size: clamp(1.2rem, 1.65vw, 1.65rem);
+}
+
+.footer-brand-logo {
+  width: auto;
+  height: 60px;
+}
+
+@media (max-width: 1220px) and (min-width: 1081px) {
+  .brand-logo {
+    width: auto;
+    height: 56px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .brand-logo {
+    width: auto;
+    height: 54px;
+  }
+}
+
+@media (max-width: 650px) {
+  .brand-logo {
+    width: auto;
+    height: 49px;
+  }
+
+  .brand-title {
+    max-width: 190px;
+    font-size: 1.05rem;
+  }
+
+  .footer-brand-logo {
+    width: auto;
+    height: 56px;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand-logo {
+    width: auto;
+    height: 47px;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+  }
+}
+
 /* Stage 2.2: Homepage story preview */
 
 .story-photo {
