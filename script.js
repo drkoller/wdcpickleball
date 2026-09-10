@@ -653,7 +653,7 @@
     const icon = document.createElement("span");
     const arrow = document.createElement("span");
 
-    link.href = event.standingsUrl;
+    link.href = event.url;
     icon.className = "standings-icon";
     icon.setAttribute("aria-hidden", "true");
     icon.innerHTML = standingsIconSvg;
@@ -662,7 +662,7 @@
     arrow.textContent = "→";
 
     link.appendChild(icon);
-    link.append(event.standingsLabel);
+    link.append(event.label);
     link.appendChild(arrow);
 
     return link;
@@ -673,23 +673,22 @@
       return;
     }
 
-    const standingsEvents = events
-      .filter((event) => (
+    const standingsEvent = events.find((event) => (
         event.type === "standings" &&
-        event.season === "summer-2026-final" &&
-        event.standingsLabel &&
-        event.standingsUrl
-      ))
-      .sort((a, b) => a.standingsOrder - b.standingsOrder);
+        Array.isArray(event.standings)
+      ));
+    const standings = standingsEvent
+      ? standingsEvent.standings.filter((standing) => standing.label && standing.url)
+      : [];
 
     currentStandingsList.replaceChildren();
 
-    standingsEvents.forEach((event) => {
-      currentStandingsList.appendChild(createStandingsLink(event));
+    standings.forEach((standing) => {
+      currentStandingsList.appendChild(createStandingsLink(standing));
     });
 
     if (currentStandingsSection) {
-      currentStandingsSection.hidden = standingsEvents.length === 0;
+      currentStandingsSection.hidden = standings.length === 0;
     }
   }
 

@@ -188,30 +188,27 @@
   },
   {
     "type": "standings",
-    "season": "summer-2026-final",
-    "standingsOrder": 1,
-    "standingsLabel": "Monday Catholic University Ladder Standings",
-    "standingsUrl": "https://wdcpickleball.com/ladders/moncua2.html"
-  },
-  {
-    "type": "standings",
-    "season": "summer-2026-final",
-    "standingsOrder": 2,
-    "standingsLabel": "Wednesday Catholic University Ladder Standings",
-    "standingsUrl": "https://wdcpickleball.com/ladders/wedcua2.html"
-  },
-  {
-    "type": "standings",
-    "season": "summer-2026-final",
-    "standingsOrder": 3,
-    "standingsLabel": "Thursday Alexandria Ladder Standings",
-    "standingsUrl": "https://wdcpickleball.com/ladders/thu2.html"
-  },
-  {
-    "type": "standings",
-    "season": "summer-2026-final",
-    "standingsOrder": 4,
-    "standingsLabel": "Friday Anacostia Ladder Standings",
-    "standingsUrl": "https://wdcpickleball.com/ladders/anac.html"
+    "standings": [
+      {
+        "label": "Monday Catholic University Ladder Standings",
+        "url": "https://wdcpickleball.com/ladders/moncua2.html"
+      },
+      {
+        "label": "Tuesday Alexandria Ladder Standings",
+        "url": "https://wdcpickleball.com/ladders/alex3.html"
+      },
+      {
+        "label": "Wednesday Catholic University Ladder Standings",
+        "url": "https://wdcpickleball.com/ladders/wedcua2.html"
+      },
+      {
+        "label": "Thursday Alexandria Ladder Standings",
+        "url": "https://wdcpickleball.com/ladders/thu2.html"
+      },
+      {
+        "label": "Friday Anacostia Ladder Standings",
+        "url": "https://wdcpickleball.com/ladders/anac.html"
+      }
+    ]
   }
 ]
