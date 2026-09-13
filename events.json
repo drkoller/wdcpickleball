@@ -118,7 +118,7 @@
   {
     "type": "clinic",
     "title": "Intermediate Clinic & Drill Session (Up to 3.5)",
-    "featured": true,
+    "featured": false,
     "retainFinalSessionUntilManualRemoval": true,
     "registrationOpen": true,
     "eventDate": "2026-09-19",
