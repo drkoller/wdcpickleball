@@ -3074,6 +3074,11 @@ body {
   border: 1px solid rgba(22, 61, 115, 0.28);
   border-radius: 16px;
 }
+.featured-events-home .featured-event-card--content-height::after {
+  content: "";
+  flex: 0 0 var(--home-action-alignment-spacer, 0px);
+}
+
 .featured-event-card h3 {
   margin: 0 0 16px;
   color: var(--dcpl-blue-deep);
@@ -3161,6 +3166,7 @@ body {
 }
 @media (max-width: 767px) {
   .featured-events-grid { grid-template-columns: 1fr; }
+  .featured-events-home .featured-event-card--content-height::after { content: none; }
   .featured-event-card .button {
     box-sizing: border-box;
     width: 100%;

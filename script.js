@@ -463,6 +463,12 @@
     const action = getRegistrationAction(event);
 
     article.className = "featured-event-card";
+    if (event.homeContentHeight) {
+      article.classList.add("featured-event-card--content-height");
+    }
+    if (event.homePrimaryActionTarget) {
+      article.classList.add("featured-event-card--primary-target");
+    }
     details.className = "featured-event-details";
 
     appendTextElement(article, "h3", event.title);
@@ -545,6 +551,35 @@
     section.hidden = featuredEvents.length === 0;
   }
 
+  function alignHomeFeaturedPrimaryActions() {
+    const sourceCard = homeFeaturedList?.querySelector(
+      ".featured-event-card--content-height"
+    );
+    const targetCard = homeFeaturedList?.querySelector(
+      ".featured-event-card--primary-target"
+    );
+
+    if (!sourceCard || !targetCard || window.innerWidth <= 767) {
+      sourceCard?.style.removeProperty("--home-action-alignment-spacer");
+      return;
+    }
+
+    const sourceButton = sourceCard.querySelector(".button");
+    const targetButton = targetCard.querySelector(".button");
+
+    if (!sourceButton || !targetButton) {
+      return;
+    }
+
+    sourceCard.style.setProperty("--home-action-alignment-spacer", "0px");
+    const spacer = sourceButton.getBoundingClientRect().top -
+      targetButton.getBoundingClientRect().top;
+    sourceCard.style.setProperty(
+      "--home-action-alignment-spacer",
+      Math.max(0, spacer + 10) + "px"
+    );
+  }
+
   function renderHomeFeaturedEvents(events) {
     if (!homeFeaturedSection || !homeFeaturedList) {
       return;
@@ -556,10 +591,15 @@
     const youthClinic = findByTitle("Free Youth Pickleball Clinic");
     const homeEvents = [
       findByTitle("Friday Indoor League"),
-      findByTitle("DCPL RFK Partner Tournament"),
+      findByTitle("Intermediate Clinic & Drill Session (Up to 3.4)"),
+      {
+        ...findByTitle("DCPL RFK Partner Tournament"),
+        homeContentHeight: true
+      },
       youthClinic && {
         ...youthClinic,
         title: "Free Youth Clinic at RFK",
+        homePrimaryActionTarget: true,
         time: "11:00 AM–1:00 PM",
         weekly: {
           ...youthClinic.weekly,
@@ -586,6 +626,8 @@
       homeFeaturedList.appendChild(createFeaturedCard(event));
     });
     homeFeaturedSection.hidden = homeEvents.length === 0;
+    requestAnimationFrame(alignHomeFeaturedPrimaryActions);
+    document.fonts?.ready.then(alignHomeFeaturedPrimaryActions);
   }
 
   function createLeagueRow(event) {
@@ -842,6 +884,8 @@
      if (window.innerWidth > 1080) {
         closeMenu();
       }
+
+      alignHomeFeaturedPrimaryActions();
 
     }
   );
