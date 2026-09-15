@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#176b5b">
+    <title>Pickleball Round Robin</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <h1>DCPL Round-Robins</h1>
+        <label class="courts-control">
+          <span>Courts</span>
+          <select id="courtCount" aria-label="Number of courts">
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+          </select>
+        </label>
+        <div class="count-pill" aria-live="polite">
+          <strong id="checkedCount">0</strong>
+          <span>checked in</span>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="App controls">
+        <fieldset class="view-switch">
+          <legend class="sr-only">Screen</legend>
+          <label>
+            <input type="radio" name="view" value="checkin" checked>
+            <span>Check-in</span>
+          </label>
+          <label>
+            <input type="radio" name="view" value="round1">
+            <span>1st round</span>
+          </label>
+          <label>
+            <input type="radio" name="view" value="round2">
+            <span>2nd round</span>
+          </label>
+        </fieldset>
+
+      </section>
+
+      <section id="checkinView" class="screen" aria-labelledby="checkinTitle">
+        <div class="screen-heading">
+          <h2 id="checkinTitle">Roster</h2>
+          <div class="heading-actions">
+            <fieldset class="order-switch">
+              <legend class="sr-only">Roster order</legend>
+              <label>
+                <input type="radio" name="checkinOrder" value="round1" checked>
+                <span>Ladder</span>
+              </label>
+              <label>
+                <input type="radio" name="checkinOrder" value="alpha">
+                <span>A-Z</span>
+              </label>
+            </fieldset>
+          </div>
+        </div>
+        <form id="addPlayerForm" class="add-player-form" autocomplete="off">
+          <label class="sr-only" for="newPlayerName">New player name</label>
+          <input id="newPlayerName" name="newPlayerName" type="text" placeholder="New player name">
+          <button type="submit" name="position" value="top">Add Top</button>
+          <button type="submit" name="position" value="bottom">Add Bot</button>
+        </form>
+        <div id="rosterList" class="roster-list" aria-live="polite"></div>
+      </section>
+
+      <section id="round1View" class="screen hidden" aria-labelledby="round1Title">
+        <div class="screen-heading">
+          <h2 id="round1Title">1st Round Groups</h2>
+        </div>
+        <p id="round1Note" class="status-note"></p>
+        <div id="round1Groups" class="groups-board"></div>
+      </section>
+
+      <section id="round2View" class="screen hidden" aria-labelledby="round2Title">
+        <div class="screen-heading">
+          <h2 id="round2Title">2nd Round Groups</h2>
+        </div>
+        <p id="round2Note" class="status-note"></p>
+        <div id="round2Groups" class="groups-board"></div>
+      </section>
+    </main>
+    <script src="grouping.js" defer></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

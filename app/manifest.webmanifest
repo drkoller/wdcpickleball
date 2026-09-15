@@ -1,0 +1,18 @@
+{
+  "name": "Pickleball Round Robin",
+  "short_name": "Round Robin",
+  "description": "Offline check-in and grouping for a pickleball round-robin league.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#eef4f0",
+  "theme_color": "#176b5b",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
