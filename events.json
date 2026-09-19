@@ -117,24 +117,6 @@
   },
   {
     "type": "clinic",
-    "title": "Intermediate Clinic & Drill Session (Up to 3.5)",
-    "featured": false,
-    "retainFinalSessionUntilManualRemoval": true,
-    "registrationOpen": true,
-    "eventDate": "2026-09-19",
-    "time": "10:00–11:30 AM",
-    "location": "",
-    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLScoE7tfC-xaHBwu0KksTQjnVxjJgQumNKHxhVjb6yUzdcvL2Q/viewform?usp=publish-editor",
-    "weeklyRegistrationLabel": "Register",
-    "weekly": {
-      "isoDate": "2026-09-19",
-      "day": "Saturday",
-      "date": "September 19",
-      "description": "Clinic"
-    }
-  },
-  {
-    "type": "clinic",
     "title": "Beginner & Advanced Beginner Clinics",
     "featured": false,
     "retainFinalSessionUntilManualRemoval": true,
