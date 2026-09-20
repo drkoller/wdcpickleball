@@ -121,14 +121,31 @@
     "featured": false,
     "retainFinalSessionUntilManualRemoval": true,
     "registrationOpen": true,
-    "time": "10:00–11:30 AM",
+    "time": "9:30–11:00 AM",
     "location": "",
     "registrationUrl": "https://forms.gle/ioJfwUXZE1BxsTKVA",
     "weeklyRegistrationLabel": "Register",
     "weekly": {
-      "isoDate": "2026-09-20",
-      "day": "Sunday",
-      "date": "September 20",
+      "isoDate": "2026-09-26",
+      "day": "Saturday",
+      "date": "September 26",
+      "description": "Clinic"
+    }
+  },
+  {
+    "type": "clinic",
+    "title": "Intermediate Clinic & Drill Session",
+    "featured": false,
+    "retainFinalSessionUntilManualRemoval": true,
+    "registrationOpen": true,
+    "time": "11:00 AM –12:30 PM",
+    "location": "",
+    "registrationUrl": "https://forms.gle/rZhkm85LAdiit35A7",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-09-26",
+      "day": "Saturday",
+      "date": "September 26",
       "description": "Clinic"
     }
   },
