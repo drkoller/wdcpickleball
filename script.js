@@ -591,10 +591,10 @@
     const youthClinic = findByTitle("Free Youth Pickleball Clinic");
     const homeEvents = [
       findByTitle("Intermediate Clinic & Drill Session"),
-      {
-        ...findByTitle("DCPL RFK Partner Tournament"),
-        homeContentHeight: true
-      },
+      findByTitle("Monday Social Outdoor League"),
+      findByTitle("Monday Competitive Outdoor League"),
+      findByTitle("Wednesday Social Outdoor League"),
+      findByTitle("Wednesday Competitive Outdoor League"),
       youthClinic && {
         ...youthClinic,
         title: "Free Youth Clinic at RFK",
