@@ -236,6 +236,44 @@
     }
   },
   {
+    "type": "clinic",
+    "title": "Intermediate Bootcamp (3.0–3.3)",
+    "featured": true,
+    "retainFinalSessionUntilManualRemoval": true,
+    "registrationOpen": true,
+    "eventDate": "2026-10-10",
+    "dateRange": "October 10–November 7",
+    "time": "10:15 AM–12:00 PM",
+    "location": "Rock Creek Tennis Center",
+    "registrationUrl": "https://forms.gle/WMd4TFzm5WhFDCyQ6",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-10-10",
+      "day": "Saturday",
+      "date": "October 10–November 7",
+      "description": "Five-week skill-focused bootcamp series"
+    }
+  },
+  {
+    "type": "clinic",
+    "title": "High Intermediate Bootcamp (3.4–3.7)",
+    "featured": true,
+    "retainFinalSessionUntilManualRemoval": true,
+    "registrationOpen": true,
+    "eventDate": "2026-10-10",
+    "dateRange": "October 10–November 7",
+    "time": "12:00–1:45 PM",
+    "location": "Rock Creek Tennis Center",
+    "registrationUrl": "https://forms.gle/y4zKPksH6x7rf42e9",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-10-10",
+      "day": "Saturday",
+      "date": "October 10–November 7",
+      "description": "Five-week skill-focused bootcamp series"
+    }
+  },
+  {
     "type": "tournament",
     "title": "DCPL RFK Partner Tournament",
     "featured": false,

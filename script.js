@@ -591,6 +591,8 @@
     const youthClinic = findByTitle("Free Youth Pickleball Clinic");
     const homeEvents = [
       findByTitle("Intermediate Clinic & Drill Session"),
+      findByTitle("Intermediate Bootcamp (3.0–3.3)"),
+      findByTitle("High Intermediate Bootcamp (3.4–3.7)"),
       findByTitle("Monday Social Outdoor League"),
       findByTitle("Monday Competitive Outdoor League"),
       findByTitle("Wednesday Social Outdoor League"),
