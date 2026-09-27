@@ -331,6 +331,10 @@
     "type": "standings",
     "standings": [
       {
+        "label": "Sunday CUA Ladder Standings",
+        "url": "https://wdcpickleball.com/ladders/sunday.html"
+      },
+      {
         "label": "Monday Catholic University Ladder Standings",
         "url": "https://wdcpickleball.com/ladders/moncua2.html"
       },
