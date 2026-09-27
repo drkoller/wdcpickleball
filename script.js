@@ -241,6 +241,9 @@
     }
     appendTextElement(meta, "span", event.time);
     appendTextElement(meta, "span", event.location);
+    if (event.rainDate) {
+      appendTextElement(meta, "span", event.rainDate);
+    }
     if (event.cost) {
       appendTextElement(meta, "span", event.cost === "Free Event" ? "Free" : event.cost);
     }
@@ -482,6 +485,9 @@
     appendTextElement(details, "span", dateText);
     appendTextElement(details, "span", event.time);
     appendTextElement(details, "span", event.location);
+    if (event.rainDate) {
+      appendTextElement(details, "span", event.rainDate);
+    }
     if (event.cost) {
       appendTextElement(details, "span", event.cost);
     }
@@ -494,6 +500,11 @@
         event.weekly.description
       );
       description.className = "featured-event-description";
+    }
+
+    if (event.homeSupportNote) {
+      const note = appendTextElement(article, "p", event.homeSupportNote);
+      note.className = "featured-event-volunteer-note";
     }
 
     if (event.homeActions) {
@@ -596,16 +607,29 @@
       events.find((event) => event.title === title)
     );
     const youthClinic = findByTitle("Free Youth Pickleball Clinic");
+    const rfkTournament = findByTitle("DCPL RFK Partner Tournament");
     const homeEvents = [
-      findByTitle("Intermediate Bootcamp (3.0–3.3)"),
-      findByTitle("High Intermediate Bootcamp (3.4–3.7)"),
-      findByTitle("Monday Social Outdoor League"),
-      findByTitle("Monday Competitive Outdoor League"),
-      findByTitle("Wednesday Social Outdoor League"),
-      findByTitle("Wednesday Competitive Outdoor League"),
+      rfkTournament && {
+        ...rfkTournament,
+        time: "8:00 AM–2:00 PM",
+        location: "The Fields at RFK",
+        weekly: {
+          ...rfkTournament.weekly,
+          date: "Sunday, October 4, 2026",
+          description: "The tournament is full! Last year, more than 200 players joined us on 21 pickleball courts. The tournament is part of a full day of pickleball featuring YSFA (Youth Sports for All) Day by Go Play, Police Athletic League (PAL) youth clinics, DC Deaf Pickleball clinics, food vendors, community booths, and more. Join us this year and help shape the future of pickleball at RFK."
+        },
+        homeSupportNote: "Support the RFK Tournament and youth clinics.",
+        homeActions: [
+          {
+            href: "https://docs.google.com/forms/d/e/1FAIpQLSfn77HErWWbBppgN77I5pxtBVsUE20wZSK7Sq33g_XDDZeKDA/viewform?usp=header",
+            label: "Volunteer at RFK",
+            className: "button button-outline featured-event-secondary"
+          }
+        ]
+      },
       youthClinic && {
         ...youthClinic,
-        title: "Free Youth Clinic at RFK",
+        title: "Free Youth Pickleball Clinics",
         homePrimaryActionTarget: true,
         time: "11:00 AM–1:00 PM",
         weekly: {
@@ -625,7 +649,13 @@
             className: "button button-outline featured-event-secondary"
           }
         ]
-      }
+      },
+      findByTitle("Intermediate Bootcamp (3.0–3.3)"),
+      findByTitle("High Intermediate Bootcamp (3.4–3.7)"),
+      findByTitle("Monday Social Outdoor League"),
+      findByTitle("Monday Competitive Outdoor League"),
+      findByTitle("Wednesday Social Outdoor League"),
+      findByTitle("Wednesday Competitive Outdoor League")
     ].filter(Boolean);
 
     homeFeaturedList.replaceChildren();
