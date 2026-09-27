@@ -287,6 +287,13 @@
       .filter(({ event, date }) => {
         if (
           !date ||
+          (
+            event.weekly?.isoDate === "2026-09-26" &&
+            [
+              "Beginner & Advanced Beginner Clinics",
+              "Intermediate Clinic & Drill Session"
+            ].includes(event.title)
+          ) ||
           (date < today && !event.retainFinalSessionUntilManualRemoval)
         ) {
           return false;
@@ -590,7 +597,6 @@
     );
     const youthClinic = findByTitle("Free Youth Pickleball Clinic");
     const homeEvents = [
-      findByTitle("Intermediate Clinic & Drill Session"),
       findByTitle("Intermediate Bootcamp (3.0–3.3)"),
       findByTitle("High Intermediate Bootcamp (3.4–3.7)"),
       findByTitle("Monday Social Outdoor League"),
