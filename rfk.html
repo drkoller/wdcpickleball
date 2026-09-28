@@ -1,9 +1,191 @@
 
-<html><head>
+<!doctype html>
+<html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
   
-<title>DCPL RFK Parter Tournament</title>
+<title>DCPL RFK Partner Tournament</title>
 <style>
+    :root {
+      --ink: #172126;
+      --muted: #5d6970;
+      --green: #237a57;
+      --green-dark: #15573d;
+      --green-soft: #e7f3ec;
+      --gold: #f0b84b;
+      --line: #dce4df;
+      --panel: #ffffff;
+      --page: #f4f7f5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      line-height: 1.58;
+      background:
+        linear-gradient(135deg, rgba(35, 122, 87, 0.12), transparent 34em),
+        linear-gradient(315deg, rgba(240, 184, 75, 0.16), transparent 32em),
+        var(--page);
+    }
+
+    a {
+      color: var(--green-dark);
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .page {
+      max-width: 66em;
+      margin: 0 auto;
+      padding: 34px 22px 48px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 26px;
+      margin-bottom: 26px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: 6px solid var(--green);
+      border-radius: 8px;
+      box-shadow: 0 14px 32px rgba(23, 33, 38, 0.10);
+    }
+
+    .hero img {
+      width: clamp(92px, 18vw, 160px);
+      height: auto;
+      flex: 0 0 auto;
+      margin: 0;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--green-dark);
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 34px 0 14px;
+      padding: 14px 18px;
+      color: #fff;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      background: linear-gradient(90deg, var(--green-dark), var(--green));
+      border-radius: 8px 8px 0 0;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    b {
+      color: var(--green-dark);
+    }
+
+    hr {
+      height: 1px;
+      margin: 30px 0;
+      clear: both;
+      border: 0;
+      background: linear-gradient(90deg, transparent, var(--line), transparent);
+    }
+
+    .intro,
+    .details,
+    .division-list,
+    ol {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 8px 22px rgba(23, 33, 38, 0.06);
+    }
+
+    .intro,
+    .details {
+      padding: 20px 22px;
+    }
+
+    .details {
+      margin-top: 18px;
+    }
+
+    .division-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+      padding: 14px;
+      margin: 12px 0 20px;
+      list-style: none;
+    }
+
+    .division-list li {
+      padding: 11px 13px;
+      background: var(--green-soft);
+      border-left: 4px solid var(--gold);
+      border-radius: 6px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    ol {
+      margin: 0 0 8px;
+      padding: 18px 18px 18px 3.1rem;
+      border-top-left-radius: 0;
+    }
+
+    ol li {
+      position: relative;
+      break-inside: avoid;
+      margin-bottom: 7px;
+      padding: 8px 10px 8px 4px;
+      border-bottom: 1px solid rgba(220, 228, 223, 0.9);
+      line-height: 1.35;
+    }
+
+    ol li::marker {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    ol li:nth-child(odd) {
+      background: rgba(231, 243, 236, 0.45);
+      border-radius: 5px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 16px;
+      }
+
+      .page {
+        padding: 18px 12px 34px;
+      }
+
+      .hero {
+        align-items: flex-start;
+        gap: 16px;
+        padding: 18px;
+      }
+
+      .hero img {
+        width: 82px;
+      }
+
+      ol {
+        padding-right: 12px;
+      }
+    }
+
     .standings-container {
       font-family: Arial, sans-serif;
       max-width: 450px;
@@ -95,24 +277,24 @@
 </head>
   
 <body>
-<div style="max-width: 60em; margin: auto; font-family: sans-serif">
+<div class="page">
 
-<div style="display:flex; align-items:center;">
-<img src="dcpl-logo.png" alt="DC Pickleball League logo" align="left" border="0" style="width:20%; margin: 0px 40px 0px 0px;">
-<h1 style="margin:0">DCPL RFK Partner Tournament</h1>
+<div class="hero">
+<img src="dcpl-logo.png" alt="DC Pickleball League logo">
+<h1>DCPL RFK Partner Tournament</h1>
 </div>
 
-<hr style="clear:both">
-
+<div class="intro">
 Join us on Sunday, October 4 at the The Fields at RFK Campus
 for the DC Pickleball League’s (DCPL) RFK Partner Tournament.
 This is a team-entry doubles event — players must register with a partner.
 Mixed or same-gender teams are welcome. All players are guaranteed a minimum of 4 
 games in our round-robin pool plus playoff format.
-<p>
+</div>
 
-<b>Format:</b>
-</p><p>
+<div class="details">
+<p><b>Format:</b></p>
+<p>
 Teams in divisions with more than 9 teams will be seeded and separated into multiple pools for
 round-robin play. The top
 teams in each round-robin pool will advance to a playoff round to 
@@ -120,38 +302,42 @@ determine the overall winners in each division.
 Teams in round-robin pools will be ranked according to standard USAP 
 round-robin criteria: number of overall wins, head-to-head wins, overall
  point differential, then head-to-head point differential.
-</p><p>
+</p>
+</div>
   
-<b>Tournament location:</b><br>
+<div class="details">
+<p><b>Tournament location:</b><br>
 <br>
   The Fields at RFK Campus<br>
   401 Oklahoma Ave NE, Washington, DC 20002<br>
   (Enter “CareFirst Field A” in your GPS for directions)<br>
-  <a href="https://maps.app.goo.gl/BdmrkvF8fCe4JUah7">See map here</a><br>
-</p><p>
+  <a href="https://maps.app.goo.gl/BdmrkvF8fCe4JUah7">See map here</a></p>
+</div>
 
-<b>Rain date:</b> Sunday, October 11
-</p><p>
+<div class="details">
+<p><b>Rain date:</b> Sunday, October 11</p>
+</div>
 
-<b>Divisions:</b>
+<div class="details">
+<p><b>Divisions:</b></p>
 <p>
 Teams in the tournament are divided by skill level into four divisions:
+</p>
 
-<ul>
-<li>Below 3.0 Division (11:30am start time)
+<ul class="division-list">
+<li>2.0 - 3.0 Division (11:30am start time)
 <li>3.0 - 3.5 Division (8:00am start time)
 <li>3.5 - 3.9 Division (8:00am start time)
 <li>4.0+ Division (11:00am start time)
 </ul>
 
+<p>
 The competing teams and start times for each division are given below. At this time, the teams in each division have not been seeded, and are listed in no particular order. Contact us as soon as possible if you have questions about the assignments of teams to each division.
-
-<p>
-<hr>
-<p>
+</p>
+</div>
 
 
-<h2>Below 3.0 Division (start at 11:30am)</h2>
+<h2>2.0 - 3.0 Division (start at 11:30am)</h2>
 
 <ol>
 <li>Brent I / Radley E
@@ -176,9 +362,7 @@ The competing teams and start times for each division are given below. At this t
 <li>Eli B/ Emily Ha
 </ol>
 
-<p>
 <hr>
-<p>
 
 <h2>3.0 - 3.5 Division (start at 8:00 AM)</h2>
 
@@ -214,9 +398,7 @@ The competing teams and start times for each division are given below. At this t
 </ol>
 
 
-<p>
 <hr>
-<p>
 
 <h2>3.5 - 3.9 Division (start at 8:00 AM)</h2>
 
@@ -253,9 +435,7 @@ The competing teams and start times for each division are given below. At this t
 </ol>
 
 
-<p>
 <hr>
-<p>
 
 <h2>4.0+ Division (start at 11:00 AM)</h2>
 
@@ -272,9 +452,7 @@ The competing teams and start times for each division are given below. At this t
 <li>Ted K / Patrick Bk
 </ol>
 
-<p>
 <hr>
 </div>
 </body>
 </html>
-
