@@ -612,10 +612,10 @@
       rfkTournament && {
         ...rfkTournament,
         time: "8:00 AM–2:00 PM",
-        location: "The Fields at RFK",
+        location: "The Fields at RFK Campus",
         weekly: {
           ...rfkTournament.weekly,
-          date: "Sunday, October 4, 2026",
+          date: `${rfkTournament.weekly.day}, ${rfkTournament.weekly.date}, ${rfkTournament.eventDate.slice(0, 4)}`,
           description: "The tournament is full! Last year, more than 200 players joined us on 21 pickleball courts. The tournament is part of a full day of pickleball featuring YSFA (Youth Sports for All) Day by Go Play, Police Athletic League (PAL) youth clinics, DC Deaf Pickleball clinics, food vendors, community booths, and more. Join us this year and help shape the future of pickleball at RFK."
         },
         homeSupportNote: "Support the RFK Tournament and youth clinics.",
@@ -634,7 +634,8 @@
         time: "11:00 AM–1:00 PM",
         weekly: {
           ...youthClinic.weekly,
-          description: "On October 4, DC Pickleball League will bring our second annual RFK community event to The Fields at RFK Campus. In collaboration with Go Play’s YSFA (Youth Sports For All) Day, DCPL will host free youth pickleball clinics and the RFK Partner Tournament, creating more than 25 pickleball courts. We’ll be joined by the DC Police Athletic League, DC Deaf Pickleball, and many other organizations for a day of pickleball, youth activities, food vendors, and community."
+          date: `${youthClinic.weekly.day}, ${youthClinic.weekly.date}, ${youthClinic.eventDate.slice(0, 4)}`,
+          description: "On Sunday, October 11, DC Pickleball League will bring our second annual RFK community event to The Fields at RFK Campus. In collaboration with Go Play’s YSFA (Youth Sports For All) Day, DCPL will host free youth pickleball clinics and the RFK Partner Tournament, creating more than 25 pickleball courts. We’ll be joined by the DC Police Athletic League, DC Deaf Pickleball, and many other organizations for a day of pickleball, youth activities, food vendors, and community."
         },
         homeVolunteerNote: "Interested in volunteering at the RFK Tournament or youth clinics?",
         homeActions: [
