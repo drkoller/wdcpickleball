@@ -482,9 +482,10 @@
     details.className = "featured-event-details";
 
     appendTextElement(article, "h3", event.title);
-    appendTextElement(details, "span", dateText);
-    appendTextElement(details, "span", event.time);
-    appendTextElement(details, "span", event.location);
+    const detailLines = event.featuredVenueFirst
+      ? [event.location, dateText, event.time]
+      : [dateText, event.time, event.location];
+    detailLines.forEach((text) => appendTextElement(details, "span", text));
     if (event.rainDate) {
       appendTextElement(details, "span", event.rainDate);
     }
@@ -493,11 +494,12 @@
     }
     article.appendChild(details);
 
-    if (event.weekly?.description) {
+    const featuredDescription = event.featuredDescription || event.weekly?.description;
+    if (featuredDescription) {
       const description = appendTextElement(
         article,
         "p",
-        event.weekly.description
+        featuredDescription
       );
       description.className = "featured-event-description";
     }
@@ -609,6 +611,7 @@
     const youthClinic = findByTitle("Free Youth Pickleball Clinic");
     const rfkTournament = findByTitle("DCPL RFK Partner Tournament");
     const homeEvents = [
+      findByTitle("Friday Indoor Ladder"),
       rfkTournament && {
         ...rfkTournament,
         time: "8:00 AM–2:00 PM",
@@ -652,11 +655,7 @@
         ]
       },
       findByTitle("Intermediate Bootcamp (3.0–3.3)"),
-      findByTitle("High Intermediate Bootcamp (3.4–3.7)"),
-      findByTitle("Monday Social Outdoor League"),
-      findByTitle("Monday Competitive Outdoor League"),
-      findByTitle("Wednesday Social Outdoor League"),
-      findByTitle("Wednesday Competitive Outdoor League")
+      findByTitle("High Intermediate Bootcamp (3.4–3.7)")
     ].filter(Boolean);
 
     homeFeaturedList.replaceChildren();
