@@ -318,42 +318,6 @@
     }
   },
   {
-    "type": "clinic",
-    "title": "Free Youth Pickleball Clinic",
-    "featured": false,
-    "retainFinalSessionUntilManualRemoval": true,
-    "registrationOpen": true,
-    "eventDate": "2026-10-11",
-    "time": "11:00 AM–12:00 PM",
-    "location": "The Fields at RFK Campus",
-    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeWDyGTWyBFgH-lyDyeLoyAo4C8_OnnzDBBr0FaL9hrl7KyLg/viewform?usp=header",
-    "weeklyRegistrationLabel": "Register",
-    "weekly": {
-      "isoDate": "2026-10-11",
-      "day": "Sunday",
-      "date": "October 11",
-      "description": "All levels welcome. Equipment provided."
-    }
-  },
-  {
-    "type": "clinic",
-    "title": "Free Youth Pickleball Clinic",
-    "featured": false,
-    "retainFinalSessionUntilManualRemoval": true,
-    "registrationOpen": true,
-    "eventDate": "2026-10-11",
-    "time": "12:00 PM–1:00 PM",
-    "location": "The Fields at RFK Campus",
-    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeWDyGTWyBFgH-lyDyeLoyAo4C8_OnnzDBBr0FaL9hrl7KyLg/viewform?usp=header",
-    "weeklyRegistrationLabel": "Register",
-    "weekly": {
-      "isoDate": "2026-10-11",
-      "day": "Sunday",
-      "date": "October 11",
-      "description": "All levels welcome. Equipment provided."
-    }
-  },
-  {
     "type": "standings",
     "standings": [
       {
