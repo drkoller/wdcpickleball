@@ -127,6 +127,10 @@
       padding: 16px var(--tournament-card-padding);
     }
 
+    .upcoming-card--undated {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
     .tournament-icon {
       display: grid;
       place-items: center;
@@ -518,23 +522,16 @@
             </h2>
           </div>
 
-          <div class="upcoming-card">
-            <span class="tournament-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-                <path d="M16 3v4M8 3v4M3 10h18"></path>
-              </svg>
-            </span>
-
+          <div class="upcoming-card upcoming-card--undated">
             <div>
               <p>
-                <strong>DCPL RFK Partner Tournament</strong><br>
-                Sunday, October 11, 2026<br>
-                8:00 AM–2:00 PM<br>
-                The Fields at RFK Campus
+                <strong>DCPL RFK Partner Tournament</strong>
               </p>
               <p class="upcoming-contact">
                 <strong>The tournament is full!</strong>
+              </p>
+              <p class="upcoming-contact">
+                Due to weather, a new date and venue will be announced.
               </p>
               <a
                 class="button button-outline rfk-volunteer-button"

@@ -239,6 +239,9 @@
     if (description) {
       appendTextElement(copy, "p", description);
     }
+    if (event.scheduleNotice) {
+      appendTextElement(copy, "p", event.scheduleNotice);
+    }
     appendTextElement(meta, "span", event.time);
     appendTextElement(meta, "span", event.location);
     if (event.rainDate) {
@@ -249,7 +252,11 @@
     }
 
     article.appendChild(copy);
-    article.appendChild(meta);
+    if (event.schedulePending) {
+      article.classList.add("weekly-event--undated");
+    } else {
+      article.appendChild(meta);
+    }
 
     if (action?.kind === "dropIn") {
       const dropInHelper = createDropInHelper(event.dropInEmail);
@@ -263,7 +270,7 @@
           action.label
         )
       );
-    } else {
+    } else if (!event.schedulePending) {
       const emptyAction = document.createElement("span");
       emptyAction.className = "weekly-event-action";
       emptyAction.setAttribute("aria-hidden", "true");
@@ -288,6 +295,7 @@
         date: getUpcomingEventDate(event)
       }))
       .filter(({ event, date }) => {
+        if (event.schedulePending) return true;
         if (
           !date ||
           (
@@ -316,8 +324,12 @@
         seenEvents.add(key);
         return true;
       })
-      .sort((a, b) => a.date - b.date)
+      .sort((a, b) => (a.date?.getTime() ?? Infinity) - (b.date?.getTime() ?? Infinity))
       .forEach(({ event, date }) => {
+        if (event.schedulePending) {
+          dayGroups.push({ key: `undated-${slugify(event.title)}`, undated: true, events: [event] });
+          return;
+        }
         const day = event.weekly?.day ||
           new Intl.DateTimeFormat(undefined, { weekday: "long" }).format(date);
         const displayDate = event.weekly?.date || formatEventDate(date);
@@ -366,7 +378,12 @@
         eventsContainer.appendChild(createWeeklyEvent(event));
       });
 
-      section.appendChild(date);
+      if (group.undated) {
+        section.classList.add("weekly-day--undated");
+        eventsContainer.querySelector("h3").id = headingId;
+      } else {
+        section.appendChild(date);
+      }
       section.appendChild(eventsContainer);
       weeklySchedule.appendChild(section);
     });
@@ -467,7 +484,7 @@
     const article = document.createElement("article");
     const details = document.createElement("div");
     const featuredDate = getFeaturedDate(event);
-    const dateText = event.type === "league"
+    const dateText = event.schedulePending ? "" : event.type === "league"
       ? event.dateRange
       : (event.weekly?.date || formatEventDate(featuredDate));
     const action = getRegistrationAction(event);
@@ -492,7 +509,9 @@
     if (event.cost) {
       appendTextElement(details, "span", event.cost);
     }
-    article.appendChild(details);
+    if (!event.schedulePending) {
+      article.appendChild(details);
+    }
 
     const featuredDescription = event.featuredDescription || event.weekly?.description;
     if (featuredDescription) {
@@ -502,6 +521,11 @@
         featuredDescription
       );
       description.className = "featured-event-description";
+    }
+
+    if (event.scheduleNotice) {
+      const notice = appendTextElement(article, "p", event.scheduleNotice);
+      notice.className = "featured-event-description";
     }
 
     if (event.homeSupportNote) {
@@ -611,16 +635,7 @@
     const rfkTournament = findByTitle("DCPL RFK Partner Tournament");
     const homeEvents = [
       findByTitle("Friday Indoor Ladder"),
-      rfkTournament && {
-        ...rfkTournament,
-        time: "8:00 AM–2:00 PM",
-        location: "The Fields at RFK Campus",
-        weekly: {
-          ...rfkTournament.weekly,
-          date: `${rfkTournament.weekly.day}, ${rfkTournament.weekly.date}, ${rfkTournament.eventDate.slice(0, 4)}`,
-          description: "The tournament is full!"
-        }
-      },
+      rfkTournament,
       findByTitle("Intermediate Bootcamp (3.0–3.3)"),
       findByTitle("High Intermediate Bootcamp (3.4–3.7)")
     ].filter(Boolean);
