@@ -636,8 +636,7 @@
     const homeEvents = [
       findByTitle("Friday Indoor Ladder"),
       rfkTournament,
-      findByTitle("Intermediate Bootcamp (3.0–3.3)"),
-      findByTitle("High Intermediate Bootcamp (3.4–3.7)")
+      findByTitle("Friday Bootcamp Series (3.0–3.3)")
     ].filter(Boolean);
 
     homeFeaturedList.replaceChildren();

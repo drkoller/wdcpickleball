@@ -300,6 +300,32 @@
     }
   },
   {
+    "type": "clinic",
+    "title": "Friday Bootcamp Series (3.0–3.3)",
+    "featured": true,
+    "retainFinalSessionUntilManualRemoval": true,
+    "registrationOpen": true,
+    "eventDate": "2026-10-23",
+    "dateRange": "October 23–November 13",
+    "sessionDates": [
+      "2026-10-23",
+      "2026-10-30",
+      "2026-11-06",
+      "2026-11-13"
+    ],
+    "level": "Intermediate (3.0–3.3)",
+    "time": "12:00–2:00 PM",
+    "location": "Krughoff Pickleball Center Outdoor Courts",
+    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdIpS1F5RsS_-SfQcTwsoQM_OxyeIE3k3ZjtWyaaCdqHYLmEg/viewform?usp=header",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-10-23",
+      "day": "Friday",
+      "date": "October 23–November 13",
+      "description": "Four-week skill-focused bootcamp series for Intermediate skill level players (3.0-3.3)"
+    }
+  },
+  {
     "type": "tournament",
     "title": "DCPL RFK Partner Tournament",
     "featured": false,
