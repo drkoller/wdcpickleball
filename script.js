@@ -775,7 +775,13 @@
 
       renderWeeklySchedule(events);
       renderFeaturedEvents(
-        events,
+        events.filter((event) => !(
+          event.location === "Rock Creek Tennis Center" &&
+          [
+            "Intermediate Bootcamp (3.0–3.3)",
+            "High Intermediate Bootcamp (3.4–3.7)"
+          ].includes(event.title)
+        )),
         scheduleFeaturedSection,
         scheduleFeaturedList
       );
