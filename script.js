@@ -150,7 +150,7 @@
   }
 
   function getUpcomingEventDate(event) {
-    if (event.type === "league") {
+    if (event.type === "league" || event.sessionDates?.length) {
       return getNextLeagueSessionDate(event);
     }
 
@@ -232,8 +232,11 @@
     meta.className = "weekly-event-meta";
 
     appendTextElement(copy, "h3", event.title);
+    if (event.dateRange) {
+      appendTextElement(copy, "p", event.dateRange);
+    }
     const description = event.type === "league"
-      ? event.dateRange
+      ? null
       : event.weekly?.description;
 
     if (description) {
@@ -332,7 +335,7 @@
         }
         const day = event.weekly?.day ||
           new Intl.DateTimeFormat(undefined, { weekday: "long" }).format(date);
-        const displayDate = event.weekly?.date || formatEventDate(date);
+        const displayDate = formatEventDate(date);
         const key = [
           date.getFullYear(),
           date.getMonth(),
@@ -634,7 +637,9 @@
     );
     const rfkTournament = findByTitle("DCPL RFK Partner Tournament");
     const homeEvents = [
-      findByTitle("Friday Indoor Ladder"),
+      events.find((event) => (
+        event.title === "Friday Indoor League" && event.featured === true
+      )),
       rfkTournament,
       findByTitle("Friday Bootcamp Series (3.0–3.3)"),
       events.find((event) => (

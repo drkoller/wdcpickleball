@@ -78,7 +78,7 @@
   },
   {
     "type": "league",
-    "title": "Friday Indoor Ladder",
+    "title": "Friday Indoor League",
     "status": "upcoming",
     "season": "fall",
     "featured": true,
@@ -97,8 +97,7 @@
       "2026-11-13",
       "2026-11-20"
     ],
-    "featuredVenueFirst": true,
-    "time": "7:00 PM–10:00 PM",
+    "time": "7:00–10:00 PM",
     "location": "Washington Tennis and Education Foundation (WTEF)",
     "featuredDescription": "Social (2.5–3.3) and Competitive (3.4–5.0+) ladders"
   },
@@ -296,6 +295,13 @@
     "registrationOpen": true,
     "eventDate": "2026-10-10",
     "dateRange": "October 10–November 7",
+    "sessionDates": [
+      "2026-10-10",
+      "2026-10-17",
+      "2026-10-24",
+      "2026-10-31",
+      "2026-11-07"
+    ],
     "time": "10:15 AM–12:00 PM",
     "location": "Rock Creek Tennis Center",
     "registrationUrl": "https://forms.gle/WMd4TFzm5WhFDCyQ6",
@@ -315,6 +321,13 @@
     "registrationOpen": true,
     "eventDate": "2026-10-10",
     "dateRange": "October 10–November 7",
+    "sessionDates": [
+      "2026-10-10",
+      "2026-10-17",
+      "2026-10-24",
+      "2026-10-31",
+      "2026-11-07"
+    ],
     "time": "12:00–1:45 PM",
     "location": "Rock Creek Tennis Center",
     "registrationUrl": "https://forms.gle/y4zKPksH6x7rf42e9",
