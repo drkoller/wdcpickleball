@@ -636,7 +636,12 @@
     const homeEvents = [
       findByTitle("Friday Indoor Ladder"),
       rfkTournament,
-      findByTitle("Friday Bootcamp Series (3.0–3.3)")
+      findByTitle("Friday Bootcamp Series (3.0–3.3)"),
+      events.find((event) => (
+        event.title === "Tuesday Outdoor League" &&
+        event.location === "Alexandria City High School" &&
+        event.startDate === "2026-10-27"
+      ))
     ].filter(Boolean);
 
     homeFeaturedList.replaceChildren();
