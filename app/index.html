@@ -38,10 +38,13 @@
 
       <section id="attendanceSummary" class="attendance-summary" aria-label="Current attendance" aria-live="polite" aria-atomic="true">
         <div class="attendance-primary">
-          <div class="attendance-checked"><span>Checked in</span><strong id="checkedCount">0</strong></div>
+          <div class="attendance-checked"><span>Checked in</span><strong id="checkedCount">0</strong><small id="provisionalBadge" class="provisional-label hidden">PROVISIONAL</small></div>
           <div class="attendance-standby"><span>Standby</span><strong id="standbyCount">0</strong></div>
         </div>
-        <p class="attendance-secondary">1st only <span id="firstOnlyCount">0</span></p>
+        <div class="attendance-actions">
+          <p class="attendance-secondary">1st only <span id="firstOnlyCount">0</span></p>
+          <button id="bulkAttendance" type="button" class="secondary-button">Check in all expected</button>
+        </div>
         <p class="attendance-reference"><span>Reg <span id="registeredCount">0</span></span> · <span>Absent <span id="knownAbsentCount">0</span></span> · <span>Expected <span id="expectedCount">0</span></span></p>
       </section>
 
@@ -95,6 +98,17 @@
           <h2 id="round1Title">1st Round Groups</h2>
         </div>
         <p id="round1Summary" class="grouping-summary" aria-live="polite"></p>
+        <p id="round1Provisional" class="provisional-label hidden">Attendance provisional</p>
+        <section id="unassignedArea" class="unassigned-area hidden" aria-labelledby="unassignedTitle">
+          <h3 id="unassignedTitle">Unassigned</h3>
+          <form id="placePlayerForm" class="place-player-form">
+            <label class="place-player-name">Player<select id="unassignedPlayer"></select></label>
+            <label>Court<select id="placementCourt"></select></label>
+            <button type="submit" class="secondary-button">Place</button>
+          </form>
+          <p id="placementHelp"></p>
+        </section>
+        <p id="placementResult" class="placement-result" role="status"></p>
         <p id="round1Note" class="status-note"></p>
         <div id="round1Groups" class="groups-board"></div>
       </section>

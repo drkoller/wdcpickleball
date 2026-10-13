@@ -625,3 +625,23 @@ h2 {
     padding-inline: 4px;
   }
 }
+
+/* Courtside reconciliation and assignment controls. */
+.attendance-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 3px; }
+.attendance-actions .attendance-secondary { margin-bottom: 0; }
+.attendance-actions .secondary-button { min-height: 44px; padding-inline: 8px; font-size: 0.85rem; }
+.provisional-label { color: var(--warn); font-size: 0.8rem; font-weight: 800; }
+.attendance-checked .provisional-label { margin-top: 3px; }
+#round1Provisional { margin: -6px 0 12px; }
+.unassigned-area { margin-bottom: 12px; padding: 10px 0; border-block: 1px solid var(--line); }
+.unassigned-area h3 { margin: 0 0 8px; font-size: 1rem; }
+.place-player-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: end; }
+.place-player-form label { display: grid; gap: 4px; min-width: 0; font-size: 0.85rem; font-weight: 700; }
+.place-player-name { grid-column: 1 / -1; }
+.place-player-form select { width: 100%; min-width: 0; min-height: 44px; padding: 6px; border: 1px solid #b8c5bf; border-radius: 6px; background: #fff; color: var(--ink); }
+.place-player-form button { min-height: 44px; }
+.place-player-form button:disabled { opacity: 0.5; }
+#placementHelp { margin: 8px 0 0; color: var(--muted); font-size: 0.85rem; }
+.placement-result { color: var(--accent-strong); font-size: 0.9rem; font-weight: 700; }
+.placement-result:empty { display: none; }
+.group-title .court-size-warning { color: var(--warn); background: #fff0d4; padding: 3px 6px; border: 1px solid #d29a41; border-radius: 5px; }

@@ -12,6 +12,7 @@ const state = {
   extraPlayers: [],
   checked: new Set(),
   firstOnly: new Set(),
+  attendanceProvisional: false,
   courtCount: 4,
   view: "checkin",
   checkinOrder: "round1",
@@ -20,6 +21,16 @@ const state = {
 };
 
 const els = {
+  bulkAttendance: document.querySelector("#bulkAttendance"),
+  provisionalBadge: document.querySelector("#provisionalBadge"),
+  round1Provisional: document.querySelector("#round1Provisional"),
+  unassignedArea: document.querySelector("#unassignedArea"),
+  unassignedTitle: document.querySelector("#unassignedTitle"),
+  placePlayerForm: document.querySelector("#placePlayerForm"),
+  unassignedPlayer: document.querySelector("#unassignedPlayer"),
+  placementCourt: document.querySelector("#placementCourt"),
+  placementHelp: document.querySelector("#placementHelp"),
+  placementResult: document.querySelector("#placementResult"),
   attendanceSummary: document.querySelector("#attendanceSummary"),
   knownAbsentCount: document.querySelector("#knownAbsentCount"),
   expectedCount: document.querySelector("#expectedCount"),
@@ -152,6 +163,23 @@ function uniqueNames(names) {
 }
 
 function bindEvents() {
+  els.bulkAttendance.addEventListener("click", () => {
+    if (state.attendanceProvisional) confirmAttendance();
+    else checkInAllExpected();
+    persist();
+    render();
+  });
+
+  els.placePlayerForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = els.unassignedPlayer.value;
+    const courtIndex = Number(els.placementCourt.value);
+    if (!placeUnassignedPlayer(name, courtIndex)) return;
+    els.placementResult.textContent = `${name} placed on Court ${courtIndex + 1}.`;
+    persist();
+    render();
+  });
+
   els.addPlayerForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const name = normalizePlayerName(els.newPlayerName.value);
@@ -224,8 +252,7 @@ function addPlayer(name, position = "bottom") {
     state.knownAbsent.delete(playerName);
     state.checked.add(playerName);
   }
-  state.round1Groups = null;
-  state.round2Groups = null;
+  reconcileRound1Attendance();
 }
 
 function insertPlayerInOrder(players, name, position = "bottom") {
@@ -241,8 +268,7 @@ function toggleChecked(name) {
     state.knownAbsent.delete(name);
     state.checked.add(name);
   }
-  state.round1Groups = null;
-  state.round2Groups = null;
+  reconcileRound1Attendance();
 }
 
 function setFirstOnly(name, enabled) {
@@ -256,13 +282,12 @@ function setFirstOnly(name, enabled) {
 
 function setPlayerStatus(name, status) {
   if (status === "standby" || status === "absent") {
-    const wasChecked = state.checked.delete(name);
+    state.checked.delete(name);
     state.firstOnly.delete(name);
     state.standby.delete(name);
     state.knownAbsent.delete(name);
     (status === "standby" ? state.standby : state.knownAbsent).add(name);
-    if (wasChecked) state.round1Groups = null;
-    state.round2Groups = null;
+    reconcileRound1Attendance();
   } else if (status === "firstOnly") {
     setFirstOnly(name, true);
   } else {
@@ -272,11 +297,47 @@ function setPlayerStatus(name, status) {
   }
 }
 
+function checkInAllExpected() {
+  if (state.attendanceProvisional) return;
+  for (const name of state.registeredPlayers) {
+    if (!state.knownAbsent.has(name) && !state.standby.has(name)) state.checked.add(name);
+  }
+  state.attendanceProvisional = true;
+  reconcileRound1Attendance();
+}
+
+function confirmAttendance() {
+  state.attendanceProvisional = false;
+}
+
+function reconcileRound1Attendance() {
+  if (state.round1Groups !== null) {
+    state.round1Groups = state.round1Groups.map(group => group.filter(name => state.checked.has(name)));
+  }
+  state.round2Groups = null;
+  els.placementResult.textContent = "";
+}
+
+function getUnassignedPlayers() {
+  const assigned = new Set((state.round1Groups || []).flat());
+  return state.players.filter(name => state.checked.has(name) && !assigned.has(name));
+}
+
+function placeUnassignedPlayer(name, courtIndex) {
+  if (!Number.isInteger(courtIndex) || !state.round1Groups?.[courtIndex] || !getUnassignedPlayers().includes(name)) return false;
+  state.round1Groups[courtIndex].push(name);
+  state.round2Groups = null;
+  return true;
+}
+
 function normalizePlayerName(name) {
   return name.trim().replace(/\s+/g, " ");
 }
 
 function render() {
+  els.bulkAttendance.textContent = state.attendanceProvisional ? "Confirm attendance" : "Check in all expected";
+  els.provisionalBadge.classList.toggle("hidden", !state.attendanceProvisional);
+  els.round1Provisional.classList.toggle("hidden", !state.attendanceProvisional);
   const registeredAbsent = [...state.knownAbsent].filter(name => state.registeredPlayers.has(name)).length;
   els.knownAbsentCount.textContent = registeredAbsent;
   els.expectedCount.textContent = state.registeredCount - registeredAbsent;
@@ -299,8 +360,8 @@ function render() {
   });
 
   renderRoster();
-  renderRound1();
-  renderRound2();
+  if (state.view === "round1") renderRound1();
+  if (state.view === "round2") renderRound2();
 }
 
 function renderRoster() {
@@ -375,27 +436,52 @@ function renderRound1() {
   }
   updateNote(els.round1Note, result.note, result.warning);
   els.round1Note.classList.toggle("hidden", result.activeCount > 0);
+  renderUnassigned();
   renderGroups(els.round1Groups, result.groups, { draggable: true });
+}
+
+function renderUnassigned() {
+  const players = getUnassignedPlayers();
+  const selectedName = els.unassignedPlayer.value;
+  const selectedCourt = els.placementCourt.value;
+  const groups = state.round1Groups || [];
+  els.unassignedArea.classList.toggle("hidden", !players.length);
+  els.unassignedTitle.textContent = `Unassigned (${players.length})`;
+  els.unassignedPlayer.replaceChildren(...players.map(name => new Option(name, name)));
+  if (players.includes(selectedName)) els.unassignedPlayer.value = selectedName;
+  els.placementCourt.replaceChildren(...groups.map((group, index) => new Option(`Court ${index + 1}`, String(index))));
+  if (selectedCourt !== "" && Number(selectedCourt) < groups.length) els.placementCourt.value = selectedCourt;
+  els.placePlayerForm.querySelector("button").disabled = !players.length || !groups.length;
+  els.placementCourt.disabled = !groups.length;
+  els.placementHelp.textContent = groups.length ? "Choose a court and place the player here—no scrolling needed." : "No courts yet. Automatic grouping needs at least 4 active players.";
 }
 
 function renderRound2() {
   if (!state.round2Groups) {
     state.round2Groups = makeRound2Groups(getRound1Groups());
   }
+  if (state.round2Groups === null) {
+    updateNote(els.round2Note, "Round 2 cannot be generated safely with the current player count and court setup. Adjust the assignments or attendance, then try again.", true);
+    renderGroups(els.round2Groups, [], { draggable: false });
+    return;
+  }
   const count = state.round2Groups.reduce((sum, group) => sum + group.length, 0);
   const firstOnlyCount = getFirstOnlyCheckedCount();
   const note = count
     ? `Generated from the current 1st round order.${firstOnlyCount ? ` ${firstOnlyCount} first-only player${firstOnlyCount === 1 ? "" : "s"} excluded.` : ""} ${count} total player${count === 1 ? "" : "s"}.`
     : "Check in players before creating the 2nd round.";
-  updateNote(els.round2Note, note, !count);
+  const unassignedCount = getUnassignedPlayers().filter(name => !state.firstOnly.has(name)).length;
+  const unassignedNote = unassignedCount ? ` ${unassignedCount} Round-2-eligible player${unassignedCount === 1 ? " is" : "s are"} unassigned in Round 1 and not included here. Place them in Round 1 first.` : "";
+  updateNote(els.round2Note, note + unassignedNote, !count || unassignedCount > 0);
   renderGroups(els.round2Groups, state.round2Groups, { draggable: false });
 }
 
 function getRound1Result() {
-  if (!state.round1Groups) {
-    state.round1Groups = makeDefaultRound1Groups();
+  if (state.round1Groups === null) {
+    const generated = makeDefaultRound1Groups();
+    if (generated.length) state.round1Groups = generated;
   }
-  const groups = state.round1Groups;
+  const groups = state.round1Groups || [];
   const checkedPlayers = state.players.filter((name) => state.checked.has(name));
   const groupedCount = groups.reduce((sum, group) => sum + group.length, 0);
   const ungrouped = checkedPlayers.length - groupedCount;
@@ -406,7 +492,7 @@ function getRound1Result() {
     note = "Check in players to build round-one groups.";
     warning = true;
   } else if (ungrouped > 0) {
-    note = `${groupedCount} grouped. ${ungrouped} player${ungrouped === 1 ? "" : "s"} left over because groups must be 4 or 5.`;
+    note = `${groupedCount} grouped. ${ungrouped} player${ungrouped === 1 ? "" : "s"} unassigned. Use Place to assign them to an existing court.`;
     warning = true;
   }
 
@@ -432,10 +518,16 @@ function makeDefaultRound1Groups() {
 
 function makeRound2Groups(round1Groups) {
   const swappedGroups = Grouping.makeRound2Groups(round1Groups);
-  const eligiblePlayers = swappedGroups
-    .flat()
-    .filter((name) => state.checked.has(name) && !state.firstOnly.has(name));
-  return makeGroupsFromPlayers(eligiblePlayers);
+  const expectedPlayers = new Set([...state.checked].filter(name => !state.firstOnly.has(name)));
+  const eligiblePlayers = swappedGroups.flat().filter(name => expectedPlayers.has(name));
+  const groups = makeGroupsFromPlayers(eligiblePlayers);
+  const finalPlayers = groups.flat();
+  const finalNames = new Set(finalPlayers);
+  // Validate the complete result against attendance, including unassigned players.
+  if (finalPlayers.length !== expectedPlayers.size || finalNames.size !== finalPlayers.length ||
+      [...expectedPlayers].some(name => !finalNames.has(name)) ||
+      finalPlayers.some(name => !expectedPlayers.has(name))) return null;
+  return groups;
 }
 
 function makeGroupsFromPlayers(players) {
@@ -466,7 +558,7 @@ function renderGroups(container, groups, options) {
     card.innerHTML = `
       <div class="group-title">
         <span>Court ${groupIndex + 1}</span>
-        <span>${group.length} players</span>
+        <span class="${options.draggable && group.length !== 4 && group.length !== 5 ? "court-size-warning" : ""}">${group.length} players${options.draggable && group.length !== 4 && group.length !== 5 ? " · CHECK" : ""}</span>
       </div>
       <div class="group-list"></div>
     `;
@@ -622,10 +714,22 @@ function findDropTarget(x, y, movingName) {
 }
 
 function movePlayerInRound1(movingName, target) {
-  const nextGroups = Grouping.movePlayerMaintainingGroupSizes(getRound1Groups(), movingName, target);
-  if (!nextGroups) return false;
-  if (JSON.stringify(nextGroups) === JSON.stringify(state.round1Groups)) return false;
-  state.round1Groups = nextGroups;
+  const groups = getRound1Groups().map(group => [...group]);
+  const source = findPlayerInGroups(groups, movingName);
+  const destination = groups[target.groupIndex];
+  if (!source || !destination) return false;
+  let insertAt = destination.length;
+  if (target.playerName) {
+    insertAt = destination.indexOf(target.playerName);
+    if (insertAt < 0 || target.playerName === movingName) return false;
+    if (!target.before) insertAt += 1;
+  }
+  source.group.splice(source.playerIndex, 1);
+  if (source.groupIndex === target.groupIndex && source.playerIndex < insertAt) insertAt -= 1;
+  destination.splice(insertAt, 0, movingName);
+  if (JSON.stringify(groups) === JSON.stringify(state.round1Groups)) return false;
+  state.round1Groups = groups;
+  state.round2Groups = null;
   return true;
 }
 
