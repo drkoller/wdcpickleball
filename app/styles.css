@@ -645,3 +645,9 @@ h2 {
 .placement-result { color: var(--accent-strong); font-size: 0.9rem; font-weight: 700; }
 .placement-result:empty { display: none; }
 .group-title .court-size-warning { color: var(--warn); background: #fff0d4; padding: 3px 6px; border: 1px solid #d29a41; border-radius: 5px; }
+
+/* Independent Round 2 capacity; attendance and Round 1 controls stay unchanged. */
+.round2-controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.round2-courts-control { display: grid; gap: 5px; font-size: 0.9rem; font-weight: 700; }
+.round2-courts-control select { min-height: 44px; width: 100%; padding: 6px 10px; border: 1px solid #b8c5bf; border-radius: 6px; background: #fff; color: var(--ink); font: inherit; font-size: 1.15rem; }
+#round2Provisional { margin: -4px 0 12px; }

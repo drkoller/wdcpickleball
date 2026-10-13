@@ -1,4 +1,4 @@
-const CACHE_NAME = "pickleball-round-robin-v43";
+const CACHE_NAME = "pickleball-round-robin-v44";
 const LADDER_URL = "https://wdcpickleball.com/app/ladder";
 const LADDER_CACHE_NAME = "pickleball-round-robin-ladder-v1";
 const APP_SHELL = [

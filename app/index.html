@@ -118,9 +118,15 @@
           <h2 id="round2Title">2nd Round Groups</h2>
         </div>
         <div class="round2-summary" aria-live="polite">
-          <p class="round2-primary">Current R2 <strong id="currentRound2Count">0</strong></p>
+          <div class="round2-controls">
+            <p class="round2-primary">Current R2 <strong id="currentRound2Count">0</strong></p>
+            <label class="round2-courts-control">Round 2 Courts
+              <select id="round2CourtCount" aria-label="Maximum available Round 2 courts"></select>
+            </label>
+          </div>
           <p>1st only <span id="round2FirstOnlyCount">0</span></p>
         </div>
+        <p id="round2Provisional" class="provisional-label hidden">Attendance provisional</p>
         <p id="round2Note" class="status-note"></p>
         <div id="round2Groups" class="groups-board"></div>
       </section>
