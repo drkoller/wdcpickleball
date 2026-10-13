@@ -34,11 +34,16 @@
             <option>20</option>
           </select>
         </label>
-        <div class="count-pill" aria-live="polite">
-          <strong id="checkedCount">0</strong>
-          <span>checked in</span>
-        </div>
       </header>
+
+      <section id="attendanceSummary" class="attendance-summary" aria-label="Current attendance" aria-live="polite" aria-atomic="true">
+        <div class="attendance-primary">
+          <div class="attendance-checked"><span>Checked in</span><strong id="checkedCount">0</strong></div>
+          <div class="attendance-standby"><span>Standby</span><strong id="standbyCount">0</strong></div>
+        </div>
+        <p class="attendance-secondary">1st only <span id="firstOnlyCount">0</span></p>
+        <p class="attendance-reference"><span>Reg <span id="registeredCount">0</span></span> · <span>Absent <span id="knownAbsentCount">0</span></span> · <span>Expected <span id="expectedCount">0</span></span></p>
+      </section>
 
       <section class="controls" aria-label="App controls">
         <fieldset class="view-switch">
@@ -79,8 +84,8 @@
         <form id="addPlayerForm" class="add-player-form" autocomplete="off">
           <label class="sr-only" for="newPlayerName">New player name</label>
           <input id="newPlayerName" name="newPlayerName" type="text" placeholder="New player name">
-          <button type="submit" name="position" value="top">Add Top</button>
-          <button type="submit" name="position" value="bottom">Add Bot</button>
+          <button type="submit" name="position" value="bottom">Add</button>
+          <button type="submit" name="position" value="standby">Add Standby</button>
         </form>
         <div id="rosterList" class="roster-list" aria-live="polite"></div>
       </section>
@@ -89,6 +94,7 @@
         <div class="screen-heading">
           <h2 id="round1Title">1st Round Groups</h2>
         </div>
+        <p id="round1Summary" class="grouping-summary" aria-live="polite"></p>
         <p id="round1Note" class="status-note"></p>
         <div id="round1Groups" class="groups-board"></div>
       </section>
@@ -96,6 +102,10 @@
       <section id="round2View" class="screen hidden" aria-labelledby="round2Title">
         <div class="screen-heading">
           <h2 id="round2Title">2nd Round Groups</h2>
+        </div>
+        <div class="round2-summary" aria-live="polite">
+          <p class="round2-primary">Current R2 <strong id="currentRound2Count">0</strong></p>
+          <p>1st only <span id="round2FirstOnlyCount">0</span></p>
         </div>
         <p id="round2Note" class="status-note"></p>
         <div id="round2Groups" class="groups-board"></div>

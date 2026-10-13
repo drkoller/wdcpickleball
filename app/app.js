@@ -5,6 +5,10 @@ let activeDropTarget = null;
 
 const state = {
   players: [],
+  registeredCount: 0,
+  registeredPlayers: new Set(),
+  knownAbsent: new Set(),
+  standby: new Set(),
   extraPlayers: [],
   checked: new Set(),
   firstOnly: new Set(),
@@ -16,6 +20,15 @@ const state = {
 };
 
 const els = {
+  attendanceSummary: document.querySelector("#attendanceSummary"),
+  knownAbsentCount: document.querySelector("#knownAbsentCount"),
+  expectedCount: document.querySelector("#expectedCount"),
+  currentRound2Count: document.querySelector("#currentRound2Count"),
+  round2FirstOnlyCount: document.querySelector("#round2FirstOnlyCount"),
+  registeredCount: document.querySelector("#registeredCount"),
+  standbyCount: document.querySelector("#standbyCount"),
+  firstOnlyCount: document.querySelector("#firstOnlyCount"),
+  round1Summary: document.querySelector("#round1Summary"),
   checkedCount: document.querySelector("#checkedCount"),
   rosterList: document.querySelector("#rosterList"),
   addPlayerForm: document.querySelector("#addPlayerForm"),
@@ -47,18 +60,24 @@ async function loadPlayers() {
   const livePlayers = await fetchAndCacheLadderPlayers();
   if (livePlayers.length) {
     state.players = livePlayers;
+    state.registeredCount = livePlayers.length;
+    state.registeredPlayers = new Set(livePlayers);
     return;
   }
 
   const cachedPlayers = await fetchCachedLadderPlayers();
   if (cachedPlayers.length) {
     state.players = cachedPlayers;
+    state.registeredCount = cachedPlayers.length;
+    state.registeredPlayers = new Set(cachedPlayers);
     return;
   }
 
   const localPlayers = await fetchPlayerList("players.txt", parsePlainPlayerList);
   if (localPlayers.length) {
     state.players = localPlayers;
+    state.registeredCount = localPlayers.length;
+    state.registeredPlayers = new Set(localPlayers);
     return;
   }
 
@@ -137,7 +156,7 @@ function bindEvents() {
     event.preventDefault();
     const name = normalizePlayerName(els.newPlayerName.value);
     if (!name) return;
-    const position = event.submitter?.value === "top" ? "top" : "bottom";
+    const position = event.submitter?.value || "bottom";
     addPlayer(name, position);
     els.newPlayerName.value = "";
     els.newPlayerName.blur();
@@ -146,29 +165,17 @@ function bindEvents() {
   });
 
   els.rosterList.addEventListener("click", (event) => {
-    const button = event.target.closest(".player-row");
+    const button = event.target.closest(".player-main");
     if (!button) return;
-    if (event.target.closest(".first-only-select")) return;
-    if (!isLeftHalfOfScreen(event)) return;
     toggleChecked(button.dataset.name);
     persist();
     render();
   });
 
   els.rosterList.addEventListener("change", (event) => {
-    const select = event.target.closest(".first-only-select");
+    const select = event.target.closest(".player-status");
     if (!select) return;
-    setFirstOnly(select.dataset.name, select.value === "firstOnly");
-    persist();
-    render();
-  });
-
-  els.rosterList.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter" && event.key !== " ") return;
-    const row = event.target.closest(".player-row");
-    if (!row || event.target.closest(".first-only-select")) return;
-    event.preventDefault();
-    toggleChecked(row.dataset.name);
+    setPlayerStatus(select.dataset.name, select.value);
     persist();
     render();
   });
@@ -210,7 +217,13 @@ function addPlayer(name, position = "bottom") {
     state.extraPlayers.push(playerName);
     state.extraPlayers = uniqueNames(state.extraPlayers);
   }
-  state.checked.add(playerName);
+  if (position === "standby") {
+    setPlayerStatus(playerName, "standby");
+  } else {
+    state.standby.delete(playerName);
+    state.knownAbsent.delete(playerName);
+    state.checked.add(playerName);
+  }
   state.round1Groups = null;
   state.round2Groups = null;
 }
@@ -224,6 +237,8 @@ function toggleChecked(name) {
     state.checked.delete(name);
     state.firstOnly.delete(name);
   } else {
+    state.standby.delete(name);
+    state.knownAbsent.delete(name);
     state.checked.add(name);
   }
   state.round1Groups = null;
@@ -231,13 +246,30 @@ function toggleChecked(name) {
 }
 
 function setFirstOnly(name, enabled) {
-  if (enabled) {
+  if (enabled && state.checked.has(name)) {
     state.firstOnly.add(name);
-    state.checked.add(name);
   } else {
     state.firstOnly.delete(name);
   }
   state.round2Groups = null;
+}
+
+function setPlayerStatus(name, status) {
+  if (status === "standby" || status === "absent") {
+    const wasChecked = state.checked.delete(name);
+    state.firstOnly.delete(name);
+    state.standby.delete(name);
+    state.knownAbsent.delete(name);
+    (status === "standby" ? state.standby : state.knownAbsent).add(name);
+    if (wasChecked) state.round1Groups = null;
+    state.round2Groups = null;
+  } else if (status === "firstOnly") {
+    setFirstOnly(name, true);
+  } else {
+    state.standby.delete(name);
+    state.knownAbsent.delete(name);
+    setFirstOnly(name, false);
+  }
 }
 
 function normalizePlayerName(name) {
@@ -245,6 +277,15 @@ function normalizePlayerName(name) {
 }
 
 function render() {
+  const registeredAbsent = [...state.knownAbsent].filter(name => state.registeredPlayers.has(name)).length;
+  els.knownAbsentCount.textContent = registeredAbsent;
+  els.expectedCount.textContent = state.registeredCount - registeredAbsent;
+  els.attendanceSummary.classList.toggle("hidden", state.view !== "checkin");
+  els.currentRound2Count.textContent = state.checked.size - getFirstOnlyCheckedCount();
+  els.round2FirstOnlyCount.textContent = getFirstOnlyCheckedCount();
+  els.registeredCount.textContent = state.registeredCount;
+  els.standbyCount.textContent = state.standby.size;
+  els.firstOnlyCount.textContent = getFirstOnlyCheckedCount();
   els.checkedCount.textContent = state.checked.size;
   els.courtCount.value = String(state.courtCount);
   els.viewInputs.forEach((input) => {
@@ -263,6 +304,9 @@ function render() {
 }
 
 function renderRoster() {
+  const focused = els.rosterList.contains(document.activeElement)
+    ? { name: document.activeElement.dataset.name, status: document.activeElement.matches(".player-status") }
+    : null;
   els.rosterList.innerHTML = "";
   if (!state.players.length) {
     els.rosterList.append(emptyState("No players found in players.txt"));
@@ -272,32 +316,37 @@ function renderRoster() {
   getRosterDisplayPlayers().forEach((name) => {
     const checked = state.checked.has(name);
     const firstOnly = state.firstOnly.has(name);
+    const standby = state.standby.has(name);
+    const absent = state.knownAbsent.has(name);
     const row = document.createElement("div");
-    row.className = `player-row${checked ? " checked" : ""}${firstOnly ? " first-only" : ""}`;
+    row.className = `player-row${checked ? " checked" : ""}${firstOnly ? " first-only" : ""}${standby ? " standby" : ""}${absent ? " absent" : ""}`;
     row.dataset.name = name;
-    row.tabIndex = 0;
-    row.role = "button";
-    row.setAttribute("aria-pressed", checked ? "true" : "false");
     row.innerHTML = `
-      <span class="checkmark" aria-hidden="true">✓</span>
-      <span class="name"></span>
-      <span class="row-action"></span>
-    `;
-    row.querySelector(".name").textContent = name;
-    const action = row.querySelector(".row-action");
-    if (checked) {
-      const firstOnlySelect = document.createElement("select");
-      firstOnlySelect.className = "first-only-select";
-      firstOnlySelect.dataset.name = name;
-      firstOnlySelect.innerHTML = `
-        <option value="">...</option>
+      <button type="button" class="player-main">
+        <span class="checkmark" aria-hidden="true">✓</span>
+        <span class="name"></span>
+      </button>
+      <select class="player-status">
+        <option value="normal">Normal</option>
+        <option value="standby">Standby</option>
         <option value="firstOnly">1st only</option>
-      `;
-      firstOnlySelect.value = firstOnly ? "firstOnly" : "";
-      firstOnlySelect.setAttribute("aria-label", `${name} round options`);
-      action.append(firstOnlySelect);
-    }
+        <option value="absent">Absent</option>
+      </select>
+    `;
+    const main = row.querySelector(".player-main");
+    main.dataset.name = name;
+    main.setAttribute("aria-pressed", String(checked));
+    main.setAttribute("aria-label", `${name}: ${checked ? "checked in" : standby ? "standby; tap to check in" : absent ? "known absent; tap to check in" : "not checked in"}${firstOnly ? ", 1st only" : ""}`);
+    row.querySelector(".name").textContent = name;
+    const select = row.querySelector(".player-status");
+    select.dataset.name = name;
+    select.value = absent ? "absent" : standby ? "standby" : firstOnly ? "firstOnly" : "normal";
+    select.querySelector('[value="firstOnly"]').disabled = !checked;
+    select.setAttribute("aria-label", `${name} status`);
     els.rosterList.append(row);
+    if (focused?.name === name) {
+      (focused.status ? select : main).focus({ preventScroll: true });
+    }
   });
 }
 
@@ -310,7 +359,22 @@ function getRosterDisplayPlayers() {
 
 function renderRound1() {
   const result = getRound1Result();
+  els.round1Summary.replaceChildren();
+  const activeLine = document.createElement("span");
+  activeLine.className = "grouping-active";
+  activeLine.textContent = `${result.activeCount} active · ${state.courtCount} courts`;
+  const groupedLine = document.createElement("span");
+  groupedLine.className = "grouping-result";
+  groupedLine.textContent = `${result.groupedCount} grouped`;
+  els.round1Summary.append(activeLine, groupedLine);
+  if (result.ungrouped > 0) {
+    const warning = document.createElement("strong");
+    warning.className = "ungrouped-count";
+    warning.textContent = `${result.ungrouped} ungrouped`;
+    groupedLine.append(" · ", warning);
+  }
   updateNote(els.round1Note, result.note, result.warning);
+  els.round1Note.classList.toggle("hidden", result.activeCount > 0);
   renderGroups(els.round1Groups, result.groups, { draggable: true });
 }
 
@@ -346,7 +410,7 @@ function getRound1Result() {
     warning = true;
   }
 
-  return { groups, note, warning };
+  return { groups, note, warning, activeCount: checkedPlayers.length, groupedCount, ungrouped };
 }
 
 function getRound1Groups() {
