@@ -12,12 +12,16 @@ const state = {
   extraPlayers: [],
   checked: new Set(),
   firstOnly: new Set(),
+  secondOnly: new Set(),
+  bulkCheckIn: null,
+  histories: { round1: [], round2: [] },
+  manual: { round1: false, round2: false },
   attendanceProvisional: false,
   courtCount: 4,
   view: "checkin",
   checkinOrder: "round1",
   round1Groups: null,
-  round2CourtCount: null,
+  round2CourtCount: 4,
   round2Groups: null
 };
 
@@ -32,13 +36,10 @@ const els = {
   placePlayerForm: document.querySelector("#placePlayerForm"),
   unassignedPlayer: document.querySelector("#unassignedPlayer"),
   placementCourt: document.querySelector("#placementCourt"),
-  placementHelp: document.querySelector("#placementHelp"),
   placementResult: document.querySelector("#placementResult"),
   attendanceSummary: document.querySelector("#attendanceSummary"),
   knownAbsentCount: document.querySelector("#knownAbsentCount"),
   expectedCount: document.querySelector("#expectedCount"),
-  currentRound2Count: document.querySelector("#currentRound2Count"),
-  round2FirstOnlyCount: document.querySelector("#round2FirstOnlyCount"),
   registeredCount: document.querySelector("#registeredCount"),
   standbyCount: document.querySelector("#standbyCount"),
   firstOnlyCount: document.querySelector("#firstOnlyCount"),
@@ -166,104 +167,97 @@ function uniqueNames(names) {
 }
 
 function bindEvents() {
-  els.round2CourtCount.replaceChildren(...Array.from({ length: 20 }, (_, i) => new Option(String(i + 1), String(i + 1))));
-  els.round2CourtCount.addEventListener("change", () => {
-    state.round2CourtCount = Math.min(20, Math.max(1, Number(els.round2CourtCount.value)));
-    state.round2Groups = null;
-    persist();
-    render();
-  });
-
+  for (const round of ["round1", "round2"]) {
+    const selects = round === "round1"
+      ? [els.courtCount, document.getElementById("checkinCourtCount")]
+      : [els.round2CourtCount];
+    for (const select of selects) {
+      select.replaceChildren(...Array.from({ length: 20 }, (_, i) => new Option(String(i + 1), String(i + 1))));
+      select.addEventListener("change", () => {
+        regroupRound(round, Number(select.value));
+        render();
+      });
+    }
+    document.getElementById(`${round}Regroup`).addEventListener("click", () => { regroupRound(round); render(); });
+    document.getElementById(`${round}Undo`).addEventListener("click", () => { undoGrouping(round); render(); });
+    const form = document.getElementById(round === "round1" ? "placePlayerForm" : "round2PlacePlayerForm");
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      const name = form.querySelector("[data-placement-player]").value;
+      const court = Number(form.querySelector("[data-placement-court]").value);
+      if (placeUnassignedPlayer(name, court, round)) {
+        document.getElementById(round === "round1" ? "placementResult" : "round2PlacementResult").textContent = `${name} placed on Court ${court + 1}.`;
+        render();
+      }
+    });
+    form.querySelector("[data-placement-filter]").addEventListener("input", () => renderUnassigned(round));
+  }
   els.bulkAttendance.addEventListener("click", () => {
-    if (state.attendanceProvisional) confirmAttendance();
-    else checkInAllExpected();
-    persist();
+    if (state.attendanceProvisional) confirmAttendance(); else checkInAllExpected();
     render();
   });
-
-  els.placePlayerForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const name = els.unassignedPlayer.value;
-    const courtIndex = Number(els.placementCourt.value);
-    if (!placeUnassignedPlayer(name, courtIndex)) return;
-    els.placementResult.textContent = `${name} placed on Court ${courtIndex + 1}.`;
-    persist();
-    render();
-  });
-
-  els.addPlayerForm.addEventListener("submit", (event) => {
+  document.getElementById("undoBulkAttendance").addEventListener("click", () => { undoBulkCheckIn(); render(); });
+  els.addPlayerForm.addEventListener("submit", event => {
     event.preventDefault();
     const name = normalizePlayerName(els.newPlayerName.value);
     if (!name) return;
-    const position = event.submitter?.value || "bottom";
-    addPlayer(name, position);
+    addPlayer(name, event.submitter?.value || "bottom");
     els.newPlayerName.value = "";
-    els.newPlayerName.blur();
-    persist();
     render();
   });
-
-  els.rosterList.addEventListener("click", (event) => {
+  els.rosterList.addEventListener("click", event => {
     const button = event.target.closest(".player-main");
-    if (!button) return;
-    toggleChecked(button.dataset.name);
-    persist();
-    render();
+    if (button) { toggleChecked(button.dataset.name); render(); }
   });
-
-  els.rosterList.addEventListener("change", (event) => {
+  els.rosterList.addEventListener("change", event => {
     const select = event.target.closest(".player-status");
-    if (!select) return;
-    setPlayerStatus(select.dataset.name, select.value);
-    persist();
+    if (select) { setPlayerStatus(select.dataset.name, select.value); render(); }
+  });
+  els.viewInputs.forEach(input => input.addEventListener("change", () => { state.view = input.value; render(); }));
+  els.checkinOrderInputs.forEach(input => input.addEventListener("change", () => { state.checkinOrder = input.value; render(); }));
+  document.getElementById("findPlayer").addEventListener("input", renderPlayerSearch);
+  document.getElementById("round2AddForm").addEventListener("submit", event => {
+    event.preventDefault();
+    const input = document.getElementById("round2AddName");
+    const name = normalizePlayerName(input.value);
+    if (!name) return;
+    const existing = state.players.find(p => p.toLocaleLowerCase() === name.toLocaleLowerCase());
+    if (!existing && state.players.some(p => p.toLocaleLowerCase().includes(name.toLocaleLowerCase()))) {
+      document.getElementById("round2AddResult").textContent = "Choose the matching player's full name from the suggestions.";
+      return;
+    }
+    const player = addToRound2(existing || name);
+    document.getElementById("round2AddResult").textContent = `${player}: ${playerStatusText(player)}. Round 2: ${assignmentText(player, "round2")}.`;
+    input.value = "";
     render();
   });
-
-  els.courtCount.addEventListener("change", () => {
-    state.courtCount = clampCourtCount(els.courtCount.value);
-    state.round1Groups = null;
-    state.round2Groups = null;
-    persist();
+  document.getElementById("moveCancel").addEventListener("click", () => document.getElementById("moveDialog").close());
+  document.getElementById("moveForm").addEventListener("submit", event => {
+    event.preventDefault();
+    const dialog = document.getElementById("moveDialog");
+    const target = Number(document.getElementById("moveCourt").value);
+    movePlayerInRound(dialog.dataset.round, dialog.dataset.name, { groupIndex: target });
+    dialog.close();
     render();
   });
-
-  els.viewInputs.forEach((input) => {
-    input.addEventListener("change", () => {
-      state.view = input.value;
-      if (state.view === "round2") {
-        state.round2Groups = null;
-      }
-      persist();
-      render();
-    });
-  });
-
-  els.checkinOrderInputs.forEach((input) => {
-    input.addEventListener("change", () => {
-      state.checkinOrder = input.value;
-      persist();
-      render();
-    });
-  });
-
 }
 
 function addPlayer(name, position = "bottom") {
-  const existing = state.players.find((player) => player.toLocaleLowerCase() === name.toLocaleLowerCase());
+  const existing = state.players.find(player => player.toLocaleLowerCase() === name.toLocaleLowerCase());
   const playerName = existing || name;
   if (!existing) {
-    state.players = insertPlayerInOrder(state.players, playerName, position);
+    state.players.push(playerName);
     state.extraPlayers.push(playerName);
-    state.extraPlayers = uniqueNames(state.extraPlayers);
   }
-  if (position === "standby") {
-    setPlayerStatus(playerName, "standby");
-  } else {
+  markIndividualEdit(playerName);
+  if (position === "standby") setPlayerStatus(playerName, "standby");
+  else {
     state.standby.delete(playerName);
     state.knownAbsent.delete(playerName);
     state.checked.add(playerName);
   }
   reconcileRound1Attendance();
+  return playerName;
 }
 
 function insertPlayerInOrder(players, name, position = "bottom") {
@@ -271,10 +265,9 @@ function insertPlayerInOrder(players, name, position = "bottom") {
 }
 
 function toggleChecked(name) {
-  if (state.checked.has(name)) {
-    state.checked.delete(name);
-    state.firstOnly.delete(name);
-  } else {
+  markIndividualEdit(name);
+  if (state.checked.has(name)) state.checked.delete(name);
+  else {
     state.standby.delete(name);
     state.knownAbsent.delete(name);
     state.checked.add(name);
@@ -283,67 +276,258 @@ function toggleChecked(name) {
 }
 
 function setFirstOnly(name, enabled) {
-  if (enabled && state.checked.has(name)) {
-    state.firstOnly.add(name);
-  } else {
-    state.firstOnly.delete(name);
-  }
-  state.round2Groups = null;
+  markIndividualEdit(name);
+  if (enabled) { state.firstOnly.add(name); state.secondOnly.delete(name); }
+  else state.firstOnly.delete(name);
+  reconcileRound1Attendance();
 }
 
 function setPlayerStatus(name, status) {
+  markIndividualEdit(name);
   if (status === "standby" || status === "absent") {
     state.checked.delete(name);
-    state.firstOnly.delete(name);
     state.standby.delete(name);
     state.knownAbsent.delete(name);
     (status === "standby" ? state.standby : state.knownAbsent).add(name);
-    reconcileRound1Attendance();
-  } else if (status === "firstOnly") {
-    setFirstOnly(name, true);
   } else {
     state.standby.delete(name);
     state.knownAbsent.delete(name);
-    setFirstOnly(name, false);
+    state.firstOnly.delete(name);
+    state.secondOnly.delete(name);
+    if (status === "firstOnly") state.firstOnly.add(name);
+    if (status === "secondOnly") state.secondOnly.add(name);
   }
+  reconcileRound1Attendance();
 }
 
 function checkInAllExpected() {
   if (state.attendanceProvisional) return;
+  const added = new Set();
   for (const name of state.registeredPlayers) {
-    if (!state.knownAbsent.has(name) && !state.standby.has(name)) state.checked.add(name);
+    if (!state.knownAbsent.has(name) && !state.standby.has(name) && !state.checked.has(name)) {
+      state.checked.add(name);
+      added.add(name);
+    }
   }
+  state.bulkCheckIn = { added, edited: new Set() };
   state.attendanceProvisional = true;
   reconcileRound1Attendance();
 }
 
 function confirmAttendance() {
   state.attendanceProvisional = false;
-  state.round2Groups = null;
 }
 
 function reconcileRound1Attendance() {
-  if (state.round1Groups !== null) {
-    state.round1Groups = state.round1Groups.map(group => group.filter(name => state.checked.has(name)));
+  // Attendance changes only remove now-ineligible memberships; arrivals stay Unassigned.
+  for (const round of ["round1", "round2"]) {
+    if (state[`${round}Groups`] !== null) state[`${round}Groups`] = sanitizeGroups(round, state[`${round}Groups`]);
+    clearPlacementFeedback(round);
   }
-  state.round2Groups = null;
-  els.placementResult.textContent = "";
+  // A prior placement search must not hide newly activated Round 2 players.
+  document.querySelector("#round2PlacePlayerForm [data-placement-filter]").value = "";
 }
 
-function getUnassignedPlayers() {
-  const assigned = new Set((state.round1Groups || []).flat());
-  return state.players.filter(name => state.checked.has(name) && !assigned.has(name));
+function getUnassignedPlayers(round = "round1") {
+  const assigned = new Set((state[`${round}Groups`] || []).flat());
+  return getEligiblePlayers(round).filter(name => !assigned.has(name));
 }
 
-function placeUnassignedPlayer(name, courtIndex) {
-  if (!Number.isInteger(courtIndex) || !state.round1Groups?.[courtIndex] || !getUnassignedPlayers().includes(name)) return false;
-  state.round1Groups[courtIndex].push(name);
-  state.round2Groups = null;
-  return true;
+function placeUnassignedPlayer(name, courtIndex, round = "round1") {
+  if (!getUnassignedPlayers(round).includes(name)) return false;
+  return movePlayerInRound(round, name, { groupIndex: courtIndex });
 }
 
 function normalizePlayerName(name) {
   return name.trim().replace(/\s+/g, " ");
+}
+
+function markIndividualEdit(name) { state.bulkCheckIn?.edited.add(name); }
+
+function undoBulkCheckIn() {
+  const bulk = state.bulkCheckIn;
+  if (!bulk) return;
+  for (const name of bulk.added) if (!bulk.edited.has(name)) state.checked.delete(name);
+  state.bulkCheckIn = null;
+  state.attendanceProvisional = false;
+  reconcileRound1Attendance();
+}
+
+function addToRound2(name) {
+  const existing = state.players.find(p => p.toLocaleLowerCase() === name.toLocaleLowerCase());
+  if (existing && getEligiblePlayers("round2").includes(existing)) {
+    markIndividualEdit(existing);
+    return existing;
+  }
+  const player = existing || name;
+  const playedRound1 = state.firstOnly.has(player) || (state.round1Groups || []).flat().includes(player);
+  addPlayer(player);
+  state.firstOnly.delete(player);
+  if (!playedRound1) state.secondOnly.add(player);
+  else state.secondOnly.delete(player);
+  reconcileRound1Attendance();
+  return player;
+}
+
+function getEligiblePlayers(round) {
+  return state.players.filter(n => state.checked.has(n) && !state.standby.has(n) && !state.knownAbsent.has(n) &&
+    !(round === "round1" ? state.secondOnly : state.firstOnly).has(n));
+}
+
+function courtCountKey(round) { return round === "round1" ? "courtCount" : "round2CourtCount"; }
+
+function sanitizeGroups(round, groups) {
+  const eligible = new Set(getEligiblePlayers(round)), seen = new Set();
+  return Array.from({ length: state[courtCountKey(round)] }, (_, i) => (groups[i] || []).filter(n => {
+    if (!eligible.has(n) || seen.has(n)) return false;
+    seen.add(n);
+    return true;
+  }));
+}
+
+function validateRoundAccounting(round) {
+  const eligible = getEligiblePlayers(round);
+  const assigned = (state[`${round}Groups`] || []).flat();
+  const all = [...assigned, ...getUnassignedPlayers(round)];
+  return all.length === eligible.length && new Set(all).size === all.length && all.every(n => eligible.includes(n));
+}
+
+function splitAutomatic(players, courts) {
+  let offset = 0;
+  return Grouping.chooseGroupSizes(players.length, courts).map(size => {
+    const group = players.slice(offset, offset + size);
+    offset += size;
+    return group;
+  });
+}
+
+function ensureRound(round) {
+  if (state[`${round}Groups`] === null) {
+    state[`${round}Groups`] = round === "round1" ? makeDefaultRound1Groups() : makeRound2Groups(state.round1Groups ?? makeDefaultRound1Groups());
+  }
+}
+
+function clearPlacementFeedback(round) {
+  document.getElementById(round === "round1" ? "placementResult" : "round2PlacementResult").textContent = "";
+}
+
+function saveGrouping(round) {
+  clearPlacementFeedback(round);
+  const history = state.histories[round];
+  history.push({ groups: (state[`${round}Groups`] || []).map(g => [...g]), courts: state[courtCountKey(round)], manual: state.manual[round] });
+  if (history.length > 30) history.shift();
+}
+
+function regroupRound(round, courts = state[courtCountKey(round)]) {
+  if (state.manual[round] && !window.confirm("Regroup will replace this round's manual placements. Continue?")) return false;
+  ensureRound(round);
+  saveGrouping(round);
+  state[courtCountKey(round)] = Math.min(20, Math.max(1, courts));
+  state[`${round}Groups`] = round === "round1" ? makeDefaultRound1Groups() : makeRound2Groups(state.round1Groups ?? makeDefaultRound1Groups());
+  state.manual[round] = false;
+  return true;
+}
+
+function undoGrouping(round) {
+  clearPlacementFeedback(round);
+  const previous = state.histories[round].pop();
+  if (!previous) return false;
+  state[courtCountKey(round)] = previous.courts;
+  state[`${round}Groups`] = sanitizeGroups(round, previous.groups);
+  state.manual[round] = previous.manual;
+  return true;
+}
+
+function movePlayerInRound(round, name, target) {
+  if (!getEligiblePlayers(round).includes(name)) return false;
+  ensureRound(round);
+  const groups = state[`${round}Groups`].map(g => [...g]);
+  const index = target.groupIndex;
+  if (!Number.isInteger(index) || index < -1 || index >= groups.length) return false;
+  if (target.playerName === name) return false;
+  if (target.playerName && !groups[index]?.includes(target.playerName)) return false;
+  for (const group of groups) { const i = group.indexOf(name); if (i >= 0) group.splice(i, 1); }
+  if (index >= 0) {
+    const destination = groups[index];
+    let at = destination.length;
+    if (target.playerName) at = destination.indexOf(target.playerName) + (target.before ? 0 : 1);
+    destination.splice(at, 0, name);
+  }
+  if (JSON.stringify(groups) === JSON.stringify(state[`${round}Groups`])) return false;
+  saveGrouping(round);
+  state[`${round}Groups`] = groups;
+  state.manual[round] = true;
+  return true;
+}
+
+function renderRound(round) {
+  ensureRound(round);
+  // Recover only invalid memberships; never hide otherwise valid courts.
+  if (!validateRoundAccounting(round)) {
+    state[`${round}Groups`] = sanitizeGroups(round, state[`${round}Groups`]);
+    document.getElementById(`${round}Note`).textContent = "Invalid memberships removed. Review Unassigned for players needing placement.";
+  }
+  const summary = document.getElementById(`${round}Summary`);
+  summary.replaceChildren();
+  for (const [className, text] of [["grouping-active", `${getEligiblePlayers(round).length} attendees · ${state[courtCountKey(round)]} courts`],
+    ["grouping-result", `${state[`${round}Groups`].flat().length} assigned · ${getUnassignedPlayers(round).length} unassigned`]]) {
+    const span = document.createElement("span"); span.className = className; span.textContent = text; summary.append(span);
+  }
+  document.getElementById(`${round}Undo`).disabled = !state.histories[round].length;
+  renderUnassigned(round);
+  renderGroups(els[`${round}Groups`], state[`${round}Groups`], { draggable: true });
+  if (round === "round2") document.getElementById("round2PlayerNames").replaceChildren(...state.players.map(n => new Option(n, n)));
+}
+
+function playerStatusText(name) {
+  const attendance = state.knownAbsent.has(name) ? "Known Absent" : state.standby.has(name) ? "Standby" : state.checked.has(name) ? "Checked in" : "Not checked in";
+  return attendance + (state.firstOnly.has(name) ? " · 1st only" : state.secondOnly.has(name) ? " · 2nd only" : "");
+}
+
+function assignmentText(name, round) {
+  if (!getEligiblePlayers(round).includes(name)) return "Not participating";
+  const index = (state[`${round}Groups`] || []).findIndex(g => g.includes(name));
+  return index < 0 ? "Unassigned" : `Court ${index + 1}`;
+}
+
+function renderPlayerSearch() {
+  const query = document.getElementById("findPlayer").value.trim().toLocaleLowerCase();
+  const results = document.getElementById("findResults");
+  results.replaceChildren();
+  if (!query) return;
+  const names = state.players.filter(n => n.toLocaleLowerCase().includes(query));
+  for (const name of names) {
+    const row = document.createElement("div"); row.className = "find-result";
+    const title = document.createElement("strong"); title.textContent = name;
+    const status = document.createElement("p"); status.textContent = playerStatusText(name);
+    const assignments = document.createElement("p"); assignments.textContent = `Round 1: ${assignmentText(name, "round1")} · Round 2: ${assignmentText(name, "round2")}`;
+    const actions = document.createElement("div"); actions.className = "find-actions";
+    const edit = document.createElement("button"); edit.className = "secondary-button"; edit.textContent = "Edit status";
+    edit.onclick = () => {
+      state.view = "checkin"; render();
+      const rosterRow = [...els.rosterList.children].find(e => e.dataset.name === name);
+      rosterRow?.scrollIntoView({ block: "center" }); rosterRow?.querySelector(".player-status").focus({ preventScroll: true });
+    };
+    actions.append(edit);
+    for (const round of ["round1", "round2"]) if (getEligiblePlayers(round).includes(name)) {
+      const button = document.createElement("button"); button.className = "secondary-button";
+      button.textContent = round === "round1" ? "Place R1" : "Place R2";
+      button.onclick = () => { state.view = round; render(); openMoveDialog(round, name); };
+      actions.append(button);
+    }
+    row.append(title, status, assignments, actions); results.append(row);
+  }
+  if (!names.length) results.textContent = "No matching players.";
+}
+
+function openMoveDialog(round, name) {
+  const dialog = document.getElementById("moveDialog");
+  dialog.dataset.round = round; dialog.dataset.name = name;
+  document.getElementById("moveTitle").textContent = name;
+  const select = document.getElementById("moveCourt");
+  select.replaceChildren(new Option("Unassigned", "-1"), ...(state[`${round}Groups`] || []).map((g, i) => new Option(`Court ${i + 1}${g.length ? "" : " · empty"}`, String(i))));
+  select.value = String((state[`${round}Groups`] || []).findIndex(g => g.includes(name)));
+  dialog.showModal();
 }
 
 function render() {
@@ -354,14 +538,13 @@ function render() {
   els.knownAbsentCount.textContent = registeredAbsent;
   els.expectedCount.textContent = state.registeredCount - registeredAbsent;
   els.attendanceSummary.classList.toggle("hidden", state.view !== "checkin");
-  els.currentRound2Count.textContent = getRound2EligiblePlayers().length;
-  els.courtCount.closest(".courts-control").classList.toggle("hidden", state.view === "round2");
-  els.round2FirstOnlyCount.textContent = getFirstOnlyCheckedCount();
   els.registeredCount.textContent = state.registeredCount;
   els.standbyCount.textContent = state.standby.size;
   els.firstOnlyCount.textContent = getFirstOnlyCheckedCount();
   els.checkedCount.textContent = state.checked.size;
   els.courtCount.value = String(state.courtCount);
+  document.getElementById("checkinCourtCount").value = String(state.courtCount);
+  document.getElementById("checkinCourtsControl").classList.toggle("hidden", state.view !== "checkin");
   els.viewInputs.forEach((input) => {
     input.checked = input.value === state.view;
   });
@@ -372,9 +555,12 @@ function render() {
     screen.classList.toggle("hidden", view !== state.view);
   });
 
+  document.getElementById("undoBulkAttendance").disabled = !state.bulkCheckIn;
+  document.getElementById("secondOnlyCount").textContent = [...state.secondOnly].filter(n => state.checked.has(n)).length;
   renderRoster();
   if (state.view === "round1") renderRound1();
   if (state.view === "round2") renderRound2();
+  renderPlayerSearch();
 }
 
 function renderRoster() {
@@ -404,6 +590,7 @@ function renderRoster() {
         <option value="normal">Normal</option>
         <option value="standby">Standby</option>
         <option value="firstOnly">1st only</option>
+        <option value="secondOnly">2nd only</option>
         <option value="absent">Absent</option>
       </select>
     `;
@@ -414,8 +601,8 @@ function renderRoster() {
     row.querySelector(".name").textContent = name;
     const select = row.querySelector(".player-status");
     select.dataset.name = name;
-    select.value = absent ? "absent" : standby ? "standby" : firstOnly ? "firstOnly" : "normal";
-    select.querySelector('[value="firstOnly"]').disabled = !checked;
+    select.value = absent ? "absent" : standby ? "standby" : firstOnly ? "firstOnly" : state.secondOnly.has(name) ? "secondOnly" : "normal";
+
     select.setAttribute("aria-label", `${name} status`);
     els.rosterList.append(row);
     if (focused?.name === name) {
@@ -431,86 +618,39 @@ function getRosterDisplayPlayers() {
   return state.players;
 }
 
-function renderRound1() {
-  const result = getRound1Result();
-  els.round1Summary.replaceChildren();
-  const activeLine = document.createElement("span");
-  activeLine.className = "grouping-active";
-  activeLine.textContent = `${result.activeCount} active · ${state.courtCount} courts`;
-  const groupedLine = document.createElement("span");
-  groupedLine.className = "grouping-result";
-  groupedLine.textContent = `${result.groupedCount} grouped`;
-  els.round1Summary.append(activeLine, groupedLine);
-  if (result.ungrouped > 0) {
-    const warning = document.createElement("strong");
-    warning.className = "ungrouped-count";
-    warning.textContent = `${result.ungrouped} ungrouped`;
-    groupedLine.append(" · ", warning);
-  }
-  updateNote(els.round1Note, result.note, result.warning);
-  els.round1Note.classList.toggle("hidden", result.activeCount > 0);
-  renderUnassigned();
-  renderGroups(els.round1Groups, result.groups, { draggable: true });
-}
+function renderRound1() { renderRound("round1"); }
 
-function renderUnassigned() {
-  const players = getUnassignedPlayers();
-  const selectedName = els.unassignedPlayer.value;
-  const selectedCourt = els.placementCourt.value;
-  const groups = state.round1Groups || [];
-  els.unassignedArea.classList.toggle("hidden", !players.length);
-  els.unassignedTitle.textContent = `Unassigned (${players.length})`;
-  els.unassignedPlayer.replaceChildren(...players.map(name => new Option(name, name)));
-  if (players.includes(selectedName)) els.unassignedPlayer.value = selectedName;
-  els.placementCourt.replaceChildren(...groups.map((group, index) => new Option(`Court ${index + 1}`, String(index))));
-  if (selectedCourt !== "" && Number(selectedCourt) < groups.length) els.placementCourt.value = selectedCourt;
-  els.placePlayerForm.querySelector("button").disabled = !players.length || !groups.length;
-  els.placementCourt.disabled = !groups.length;
-  els.placementHelp.textContent = groups.length ? "Choose a court and place the player here—no scrolling needed." : "No courts yet. Automatic grouping needs at least 4 active players.";
+function renderUnassigned(round = "round1") {
+  const prefix = round === "round1" ? "" : "round2";
+  const byId = id => document.getElementById(prefix ? prefix + id[0].toUpperCase() + id.slice(1) : id);
+  const players = getUnassignedPlayers(round);
+  const form = byId("placePlayerForm");
+  const select = form.querySelector("[data-placement-player]");
+  const court = form.querySelector("[data-placement-court]");
+  const filter = form.querySelector("[data-placement-filter]");
+  const selectedName = select.value, selectedCourt = court.value;
+  const groups = state[`${round}Groups`] || [];
+  byId("unassignedArea").classList.toggle("hidden", !players.length && !byId("placementResult").textContent);
+  byId("unassignedTitle").textContent = `Unassigned (${players.length}) · Place player`;
+  const matches = players.filter(n => n.toLocaleLowerCase().includes(filter.value.toLocaleLowerCase()));
+  select.replaceChildren(...(matches.length ? matches.map(name => new Option(name, name)) : [new Option(players.length ? "No matching players" : "No unassigned players", "")]));
+  if (matches.includes(selectedName)) select.value = selectedName;
+  court.replaceChildren(...groups.map((g, i) => new Option(`Court ${i + 1}${g.length ? "" : " · empty"}`, String(i))));
+  if (selectedCourt !== "" && Number(selectedCourt) < groups.length) court.value = selectedCourt;
+  form.querySelector("button").disabled = !matches.length || !groups.length;
 }
 
 function renderRound2() {
-  if (state.round2CourtCount === null) state.round2CourtCount = state.courtCount;
   els.round2CourtCount.value = String(state.round2CourtCount);
   els.round2Provisional.classList.toggle("hidden", !state.attendanceProvisional);
-  if (!state.round2Groups) {
-    // Use a temporary initial order if Round 1 has not been opened; do not assign its courts.
-    state.round2Groups = makeRound2Groups(state.round1Groups ?? makeDefaultRound1Groups());
-  }
-  if (state.round2Groups === null) {
-    updateNote(els.round2Note, "Round 2 cannot be generated safely from the current Round 1 setup. Adjust the assignments or attendance, then try again.", true);
-    renderGroups(els.round2Groups, [], { draggable: false });
-    return;
-  }
-  const count = state.round2Groups.reduce((sum, group) => sum + group.length, 0);
-  const note = count
-    ? `${count} players · ${state.round2Groups.length} courts used of ${state.round2CourtCount} available.`
-    : "No players currently eligible for Round 2.";
-  updateNote(els.round2Note, note, false);
-  renderGroups(els.round2Groups, state.round2Groups, { draggable: false });
+  renderRound("round2");
 }
 
 function getRound1Result() {
-  if (state.round1Groups === null) {
-    const generated = makeDefaultRound1Groups();
-    if (generated.length) state.round1Groups = generated;
-  }
-  const groups = state.round1Groups || [];
-  const checkedPlayers = state.players.filter((name) => state.checked.has(name));
-  const groupedCount = groups.reduce((sum, group) => sum + group.length, 0);
-  const ungrouped = checkedPlayers.length - groupedCount;
-  let note = `${groupedCount} checked in across ${groups.length} court${groups.length === 1 ? "" : "s"}.`;
-  let warning = false;
-
-  if (!checkedPlayers.length) {
-    note = "Check in players to build round-one groups.";
-    warning = true;
-  } else if (ungrouped > 0) {
-    note = `${groupedCount} grouped. ${ungrouped} player${ungrouped === 1 ? "" : "s"} unassigned. Use Place to assign them to an existing court.`;
-    warning = true;
-  }
-
-  return { groups, note, warning, activeCount: checkedPlayers.length, groupedCount, ungrouped };
+  ensureRound("round1");
+  const groups = state.round1Groups;
+  return { groups, activeCount: getEligiblePlayers("round1").length, groupedCount: groups.flat().length,
+    ungrouped: getUnassignedPlayers().length, note: "", warning: false };
 }
 
 function getRound1Groups() {
@@ -518,72 +658,27 @@ function getRound1Groups() {
 }
 
 function makeDefaultRound1Groups() {
-  const checkedPlayers = state.players.filter((name) => state.checked.has(name));
-  const sizes = Grouping.chooseGroupSizes(checkedPlayers.length, state.courtCount);
-  const groups = [];
-  let offset = 0;
-
-  sizes.forEach((size) => {
-    groups.push(checkedPlayers.slice(offset, offset + size));
-    offset += size;
-  });
-  return groups;
+  return splitAutomatic(getEligiblePlayers("round1"), state.courtCount);
 }
 
-function getRound2EligiblePlayers() {
-  return [...state.checked].filter(name => !state.firstOnly.has(name) && !state.standby.has(name) && !state.knownAbsent.has(name));
-}
+function getRound2EligiblePlayers() { return getEligiblePlayers("round2"); }
 
 function makeRound2Groups(round1Groups) {
-  const swappedGroups = Grouping.makeRound2Groups(round1Groups);
-  const expectedPlayers = new Set(getRound2EligiblePlayers());
-  const eligiblePlayers = swappedGroups.flat().filter(name => expectedPlayers.has(name));
-  // Append late arrivals and Round 1 leftovers, but do not conceal shuffle identity failures.
-  const assigned = new Set(round1Groups.flat());
-  eligiblePlayers.push(...[...expectedPlayers].filter(name => !assigned.has(name)));
-  const groups = makeGroupsFromPlayers(eligiblePlayers);
-  const finalPlayers = groups.flat();
-  const finalNames = new Set(finalPlayers);
-  // Validate the complete result against attendance, including unassigned players.
-  if (finalPlayers.length !== expectedPlayers.size || finalNames.size !== finalPlayers.length ||
-      [...expectedPlayers].some(name => !finalNames.has(name)) ||
-      finalPlayers.some(name => !expectedPlayers.has(name))) return null;
-  return groups;
+  const eligible = new Set(getEligiblePlayers("round2"));
+  const ordered = Grouping.makeRound2Groups(round1Groups).flat().filter(n => eligible.has(n));
+  // Keep the results/boundary movement order. Insert a known late arrival next
+  // to their ladder neighbors instead of appending them at the lowest level.
+  for (const name of state.players) {
+    if (!eligible.has(name) || ordered.includes(name)) continue;
+    const rank = state.players.indexOf(name);
+    const index = ordered.findIndex(n => state.registeredPlayers.has(n) && state.players.indexOf(n) > rank);
+    ordered.splice(index < 0 ? ordered.length : index, 0, name);
+  }
+  return makeGroupsFromPlayers(uniqueNames(ordered));
 }
 
 function makeGroupsFromPlayers(players) {
-  if (!players.length) return [];
-  const maxCourts = state.round2CourtCount ?? state.courtCount;
-  const balancedSizes = (courts) => {
-    const baseSize = Math.floor(players.length / courts);
-    const largerCourts = players.length % courts;
-    return Array.from({ length: courts }, (_, i) => baseSize + (i < largerCourts ? 1 : 0));
-  };
-  let sizes;
-  if (players.length <= 3) {
-    sizes = [players.length];
-  } else if (players.length > maxCourts * 5) {
-    sizes = balancedSizes(maxCourts);
-  } else {
-    // Prefer 4/5 throughout; use as few 3s as necessary, then balance.
-    // Fewer courts is only a tie-breaker between equally suitable choices.
-    const candidates = [];
-    for (let courts = 1; courts <= maxCourts; courts += 1) {
-      const candidate = balancedSizes(courts);
-      if (candidate.every(size => size >= 3 && size <= 5)) candidates.push(candidate);
-    }
-    const threes = sizes => sizes.filter(size => size === 3).length;
-    const spread = sizes => sizes[0] - sizes[sizes.length - 1];
-    candidates.sort((a, b) => threes(a) - threes(b) || spread(a) - spread(b) || a.length - b.length);
-    sizes = candidates[0];
-  }
-  const groups = [];
-  let offset = 0;
-  sizes.forEach((size) => {
-    groups.push(players.slice(offset, offset + size));
-    offset += size;
-  });
-  return groups;
+  return splitAutomatic(players, state.round2CourtCount);
 }
 
 function getFirstOnlyCheckedCount() {
@@ -603,7 +698,7 @@ function renderGroups(container, groups, options) {
     card.innerHTML = `
       <div class="group-title">
         <span>Court ${groupIndex + 1}</span>
-        <span class="${group.length !== 4 && group.length !== 5 ? "court-size-warning" : ""}">${group.length} players${group.length !== 4 && group.length !== 5 ? " · CHECK" : ""}</span>
+        <span class="${group.length && group.length !== 4 && group.length !== 5 ? "court-size-warning" : ""}">${group.length ? `${group.length} players${group.length !== 4 && group.length !== 5 ? " · CHECK" : ""}` : "Empty · available"}</span>
       </div>
       <div class="group-list"></div>
     `;
@@ -621,9 +716,14 @@ function playerDragItem(name, draggable) {
   item.innerHTML = `
     <span class="drag-start-zone" aria-hidden="true"><span class="drag-grip"></span></span>
     <span class="name"></span>
-    ${state.firstOnly.has(name) ? '<span class="round-one-badge" aria-label="First round only">1st</span>' : ""}
+    ${state.firstOnly.has(name) ? '<span class="round-one-badge" aria-label="First round only">1st only</span>' : state.secondOnly.has(name) ? '<span class="round-one-badge" aria-label="Second round only">2nd only</span>' : ""}
   `;
   item.querySelector(".name").textContent = name;
+  item.tabIndex = 0;
+  item.setAttribute("role", "button");
+  item.setAttribute("aria-label", `${name}: move or send to Unassigned`);
+  item.addEventListener("click", event => { if (!event.target.closest(".drag-start-zone")) openMoveDialog(state.view, name); });
+  item.addEventListener("keydown", event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openMoveDialog(state.view, name); } });
   if (draggable) attachPointerDrag(item);
   return item;
 }
@@ -638,7 +738,8 @@ function attachPointerDrag(item) {
     if (!isDragStartZone(event)) return;
     event.preventDefault();
     const name = item.dataset.name;
-    const groups = getRound1Groups();
+    const round = state.view;
+    const groups = state[`${round}Groups`];
     const source = findPlayerInGroups(groups, name);
     if (!source) return;
     activeDragName = name;
@@ -666,13 +767,9 @@ function attachPointerDrag(item) {
       ghost.remove();
       activeDropTarget = findDropTarget(upEvent.clientX, upEvent.clientY, name) || activeDropTarget;
       clearDropTarget();
-      if (activeDropTarget && !activeDropTarget.noMove && movePlayerInRound1(name, activeDropTarget)) {
-        state.round2Groups = null;
-        syncRosterOrderFromRound1();
-      }
+      if (upEvent.type !== "pointercancel" && activeDropTarget && !activeDropTarget.noMove) movePlayerInRound(round, name, activeDropTarget);
       activeDragName = null;
       activeDropTarget = null;
-      syncRosterOrderFromRound1();
       persist();
       render();
     };
@@ -696,7 +793,7 @@ function renderDropTarget(target) {
   if (!target || target.noMove) return;
 
   if (target.playerName) {
-    const player = Array.from(document.querySelectorAll("#round1Groups .drag-player"))
+    const player = Array.from(document.querySelectorAll(`#${state.view}Groups .drag-player`))
       .find((element) => element.dataset.name === target.playerName);
     if (player) {
       player.classList.add(target.before ? "drop-before" : "drop-after");
@@ -704,7 +801,7 @@ function renderDropTarget(target) {
     return;
   }
 
-  const list = document.querySelector(`#round1Groups .group-list[data-group-index="${target.groupIndex}"]`);
+  const list = document.querySelector(`#${state.view}Groups .group-list[data-group-index="${target.groupIndex}"]`);
   if (list) {
     list.classList.add("drop-append");
   }
@@ -746,7 +843,7 @@ function findDropTarget(x, y, movingName) {
   const list = elements.find((element) => element.classList?.contains("group-list"));
   if (list) {
     const groupIndex = Number.parseInt(list.dataset.groupIndex, 10);
-    const group = getRound1Groups()[groupIndex];
+    const group = state[`${state.view}Groups`]?.[groupIndex];
     if (!group) return null;
     return {
       groupIndex,
@@ -759,23 +856,7 @@ function findDropTarget(x, y, movingName) {
 }
 
 function movePlayerInRound1(movingName, target) {
-  const groups = getRound1Groups().map(group => [...group]);
-  const source = findPlayerInGroups(groups, movingName);
-  const destination = groups[target.groupIndex];
-  if (!source || !destination) return false;
-  let insertAt = destination.length;
-  if (target.playerName) {
-    insertAt = destination.indexOf(target.playerName);
-    if (insertAt < 0 || target.playerName === movingName) return false;
-    if (!target.before) insertAt += 1;
-  }
-  source.group.splice(source.playerIndex, 1);
-  if (source.groupIndex === target.groupIndex && source.playerIndex < insertAt) insertAt -= 1;
-  destination.splice(insertAt, 0, movingName);
-  if (JSON.stringify(groups) === JSON.stringify(state.round1Groups)) return false;
-  state.round1Groups = groups;
-  state.round2Groups = null;
-  return true;
+  return movePlayerInRound("round1", movingName, target);
 }
 
 function findPlayerInGroups(groups, name) {
@@ -789,9 +870,7 @@ function findPlayerInGroups(groups, name) {
 }
 
 function syncRosterOrderFromRound1() {
-  if (!state.round1Groups) return;
-  const grouped = state.round1Groups.flat();
-  state.players = mergeGroupedPlayersIntoRosterOrder(state.players, grouped);
+  // Results order is stored in round1Groups, independently of the original ladder.
 }
 
 function mergeGroupedPlayersIntoRosterOrder(players, grouped) {
@@ -822,7 +901,7 @@ function emptyState(text) {
 function clampCourtCount(value) {
   const parsed = Number.parseInt(value, 10);
   if (Number.isNaN(parsed)) return 4;
-  return Math.min(20, Math.max(4, parsed));
+  return Math.min(20, Math.max(1, parsed));
 }
 
 function persist() {

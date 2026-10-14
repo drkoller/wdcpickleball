@@ -224,7 +224,7 @@ h2 {
 }
 
 .secondary-button {
-  min-height: 42px;
+  min-height: 44px;
   padding: 0 14px;
   border-radius: 6px;
   font-weight: 850;
@@ -651,3 +651,43 @@ h2 {
 .round2-courts-control { display: grid; gap: 5px; font-size: 0.9rem; font-weight: 700; }
 .round2-courts-control select { min-height: 44px; width: 100%; padding: 6px 10px; border: 1px solid #b8c5bf; border-radius: 6px; background: #fff; color: var(--ink); font: inherit; font-size: 1.15rem; }
 #round2Provisional { margin: -4px 0 12px; }
+
+/* Compact round management and player lookup. */
+.round-actions { display: flex; gap: 8px; margin: 0 0 12px; }
+.round-actions button { flex: 1; }
+button, select, input, summary { min-height: 44px; }
+button:disabled { opacity: .45; cursor: default; }
+.attendance-actions { flex-wrap: wrap; }
+.attendance-actions .attendance-secondary { font-size: .8rem; }
+.bulk-undo { margin: 4px 0; font-size: .8rem; }
+.grouping-summary { text-transform: none; margin-bottom: 8px; }
+.grouping-active { font-size: 1.1rem; }
+.grouping-result { font-size: .95rem; color: var(--muted); }
+.player-finder { margin: 0 0 8px; }
+summary { display: list-item; padding: 12px 8px; font-weight: 750; cursor: pointer; }
+.player-finder input, .round2-add input, .place-player-form input, #moveDialog select {
+  width: 100%; min-width: 0; border: 1px solid #b8c5bf; border-radius: 6px; padding: 8px; background: #fff; color: var(--ink);
+}
+.find-results { max-height: 310px; overflow-y: auto; }
+.find-result { padding: 10px 6px; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.find-result p { margin: 3px 0; font-size: .85rem; }
+.find-actions { display: flex; gap: 4px; flex-wrap: wrap; }
+.find-actions button { padding-inline: 8px; font-size: .8rem; }
+.round2-add { margin-bottom: 10px; }
+.round2-add-form { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+.round2-add .placement-result { margin-top: 8px; }
+#moveDialog { width: min(400px, calc(100% - 24px)); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); }
+#moveDialog::backdrop { background: rgb(0 0 0 / 35%); }
+#moveDialog h2 { margin-bottom: 12px; overflow-wrap: anywhere; }
+#moveDialog label { display: grid; gap: 6px; margin-bottom: 12px; }
+.drag-start-zone { width: 44px; }
+.round-one-badge { position: static; grid-column: 2; justify-self: start; transform: none; }
+.status-note:empty { display: none; }
+#round1Provisional, #round2Provisional { margin: 0 0 12px; }
+@media (max-width: 360px) {
+  .screen { padding: 10px; }
+  .screen-heading { gap: 6px; }
+  .courts-control { gap: 4px; font-size: .8rem; }
+  .courts-control select { width: 58px; }
+  .group-title { padding-inline: 8px; }
+}

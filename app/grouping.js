@@ -1,27 +1,9 @@
 (function exposeGrouping(root) {
-  function chooseGroupSizes(playerCount, maxCourts) {
-    let best = null;
-    for (let courts = 1; courts <= maxCourts; courts += 1) {
-      for (let fives = 0; fives <= courts; fives += 1) {
-        const total = fives * 5 + (courts - fives) * 4;
-        if (total > playerCount) continue;
-        const candidate = {
-          total,
-          courts,
-          fives,
-          sizes: arrangeGroupSizes(courts, fives)
-        };
-        if (
-          !best ||
-          candidate.total > best.total ||
-          (candidate.total === best.total && candidate.fives < best.fives) ||
-          (candidate.total === best.total && candidate.fives === best.fives && candidate.courts > best.courts)
-        ) {
-          best = candidate;
-        }
-      }
-    }
-    return best ? best.sizes : [];
+  function chooseGroupSizes(playerCount, courts) {
+    // Keep every requested slot. Shortages leave empty slots and visible leftovers.
+    const occupied = Math.min(courts, Math.floor(playerCount / 4));
+    const fives = Math.min(occupied, Math.max(0, playerCount - occupied * 4));
+    return [...arrangeGroupSizes(occupied, fives), ...Array(courts - occupied).fill(0)];
   }
 
   function arrangeGroupSizes(courts, fives) {
@@ -99,12 +81,13 @@
 
   function makeRound2Groups(round1Groups) {
     const groups = round1Groups.map((group) => [...group]);
-    for (let index = 0; index < round1Groups.length - 1; index += 1) {
-      const current = round1Groups[index];
-      const next = round1Groups[index + 1];
+    // Swap the current boundary occupants. A singleton may cross two boundaries;
+    // reading the original groups twice would duplicate it and lose another name.
+    for (let index = 0; index < groups.length - 1; index += 1) {
+      const current = groups[index];
+      const next = groups[index + 1];
       if (!current.length || !next.length) continue;
-      groups[index][current.length - 1] = next[0];
-      groups[index + 1][0] = current[current.length - 1];
+      [current[current.length - 1], next[0]] = [next[0], current[current.length - 1]];
     }
     return groups;
   }

@@ -12,27 +12,9 @@
     <main class="app-shell">
       <header class="topbar">
         <h1>DCPL Round-Robins</h1>
-        <label class="courts-control">
+        <label id="checkinCourtsControl" class="courts-control">
           <span>Courts</span>
-          <select id="courtCount" aria-label="Number of courts">
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            <option>15</option>
-            <option>16</option>
-            <option>17</option>
-            <option>18</option>
-            <option>19</option>
-            <option>20</option>
-          </select>
+          <select id="checkinCourtCount" aria-label="Check-in and Round 1 courts"></select>
         </label>
       </header>
 
@@ -42,9 +24,10 @@
           <div class="attendance-standby"><span>Standby</span><strong id="standbyCount">0</strong></div>
         </div>
         <div class="attendance-actions">
-          <p class="attendance-secondary">1st only <span id="firstOnlyCount">0</span></p>
+          <p class="attendance-secondary">1st only <span id="firstOnlyCount">0</span> · 2nd only <span id="secondOnlyCount">0</span></p>
           <button id="bulkAttendance" type="button" class="secondary-button">Check in all expected</button>
         </div>
+        <button id="undoBulkAttendance" type="button" class="secondary-button bulk-undo" disabled>Undo bulk check-in</button>
         <p class="attendance-reference"><span>Reg <span id="registeredCount">0</span></span> · <span>Absent <span id="knownAbsentCount">0</span></span> · <span>Expected <span id="expectedCount">0</span></span></p>
       </section>
 
@@ -66,6 +49,13 @@
         </fieldset>
 
       </section>
+
+      <details class="player-finder">
+        <summary>Find a player</summary>
+        <label class="sr-only" for="findPlayer">Find a player</label>
+        <input id="findPlayer" type="search" placeholder="Partial name" autocomplete="off">
+        <div id="findResults" class="find-results" aria-live="polite"></div>
+      </details>
 
       <section id="checkinView" class="screen" aria-labelledby="checkinTitle">
         <div class="screen-heading">
@@ -95,42 +85,86 @@
 
       <section id="round1View" class="screen hidden" aria-labelledby="round1Title">
         <div class="screen-heading">
-          <h2 id="round1Title">1st Round Groups</h2>
+          <h2 id="round1Title">1st Round</h2>
+          <label class="courts-control">
+            <span>Courts</span>
+            <select id="courtCount" aria-label="Round 1 courts">
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+            </select>
+          </label>
         </div>
         <p id="round1Summary" class="grouping-summary" aria-live="polite"></p>
+        <div class="round-actions"><button id="round1Undo" class="secondary-button" disabled>Undo</button><button id="round1Regroup" class="secondary-button">Regroup</button></div>
         <p id="round1Provisional" class="provisional-label hidden">Attendance provisional</p>
         <section id="unassignedArea" class="unassigned-area hidden" aria-labelledby="unassignedTitle">
           <h3 id="unassignedTitle">Unassigned</h3>
           <form id="placePlayerForm" class="place-player-form">
-            <label class="place-player-name">Player<select id="unassignedPlayer"></select></label>
-            <label>Court<select id="placementCourt"></select></label>
+            <label class="place-player-name">Find unassigned<input type="search" data-placement-filter placeholder="Filter names"></label>
+            <label class="place-player-name">Player<select id="unassignedPlayer" data-placement-player></select></label>
+            <label>Court<select id="placementCourt" data-placement-court></select></label>
             <button type="submit" class="secondary-button">Place</button>
           </form>
-          <p id="placementHelp"></p>
         </section>
         <p id="placementResult" class="placement-result" role="status"></p>
-        <p id="round1Note" class="status-note"></p>
+        <p id="round1Note" class="status-note">Tap a name to move. Drag its handle to order players.</p>
         <div id="round1Groups" class="groups-board"></div>
       </section>
 
       <section id="round2View" class="screen hidden" aria-labelledby="round2Title">
         <div class="screen-heading">
-          <h2 id="round2Title">2nd Round Groups</h2>
+          <h2 id="round2Title">2nd Round</h2>
+          <label class="courts-control">Courts<select id="round2CourtCount" aria-label="Round 2 courts"></select></label>
         </div>
-        <div class="round2-summary" aria-live="polite">
-          <div class="round2-controls">
-            <p class="round2-primary">Current R2 <strong id="currentRound2Count">0</strong></p>
-            <label class="round2-courts-control">Round 2 Courts
-              <select id="round2CourtCount" aria-label="Maximum available Round 2 courts"></select>
-            </label>
-          </div>
-          <p>1st only <span id="round2FirstOnlyCount">0</span></p>
-        </div>
+        <p id="round2Summary" class="grouping-summary" aria-live="polite"></p>
+        <div class="round-actions"><button id="round2Undo" class="secondary-button" disabled>Undo</button><button id="round2Regroup" class="secondary-button">Regroup</button></div>
+        <details class="round2-add">
+          <summary>Add to Round 2</summary>
+          <form id="round2AddForm" class="round2-add-form" autocomplete="off">
+            <label class="sr-only" for="round2AddName">Existing or new player name</label>
+            <input id="round2AddName" list="round2PlayerNames" placeholder="Existing or new player name" required>
+            <datalist id="round2PlayerNames"></datalist>
+            <button class="secondary-button">Add to Round 2</button>
+          </form>
+          <p id="round2AddResult" class="placement-result" role="status"></p>
+        </details>
+        <section id="round2UnassignedArea" class="unassigned-area hidden" aria-labelledby="round2UnassignedTitle">
+          <h3 id="round2UnassignedTitle">Unassigned</h3>
+          <form id="round2PlacePlayerForm" class="place-player-form">
+            <label class="place-player-name">Find unassigned<input type="search" data-placement-filter placeholder="Filter names"></label>
+            <label class="place-player-name">Player<select data-placement-player></select></label>
+            <label>Court<select data-placement-court></select></label>
+            <button class="secondary-button">Place</button>
+          </form>
+        </section>
+        <p id="round2PlacementResult" class="placement-result" role="status"></p>
         <p id="round2Provisional" class="provisional-label hidden">Attendance provisional</p>
-        <p id="round2Note" class="status-note"></p>
+        <p id="round2Note" class="status-note">Tap a name to move. Drag its handle to order players.</p>
         <div id="round2Groups" class="groups-board"></div>
       </section>
     </main>
+    <dialog id="moveDialog" aria-labelledby="moveTitle">
+      <form id="moveForm">
+        <h2 id="moveTitle"></h2>
+        <label>Move to<select id="moveCourt"></select></label>
+        <div class="round-actions"><button class="secondary-button">Move</button><button id="moveCancel" type="button" class="secondary-button">Cancel</button></div>
+      </form>
+    </dialog>
     <script src="grouping.js" defer></script>
     <script src="app.js" defer></script>
   </body>
