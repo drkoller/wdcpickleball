@@ -371,13 +371,17 @@
     "featured": false,
     "retainFinalSessionUntilManualRemoval": true,
     "registrationOpen": false,
+    "eventDate": "2026-10-31",
+    "time": "8:30 AM–2:00 PM",
+    "location": "The Fields at RFK",
     "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-rfk-partner-tournament",
     "weeklyRegistrationLabel": "Register",
     "weekly": {
+      "isoDate": "2026-10-31",
+      "day": "Saturday",
+      "date": "October 31",
       "description": "The tournament is full!"
-    },
-    "schedulePending": true,
-    "scheduleNotice": "Due to weather, a new date and venue will be announced."
+    }
   },
   {
     "type": "standings",
