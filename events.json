@@ -227,23 +227,6 @@
   },
   {
     "type": "clinic",
-    "title": "Beginner & Advanced Beginner Clinics",
-    "featured": false,
-    "retainFinalSessionUntilManualRemoval": true,
-    "registrationOpen": true,
-    "time": "9:30–11:00 AM",
-    "location": "",
-    "registrationUrl": "https://forms.gle/ioJfwUXZE1BxsTKVA",
-    "weeklyRegistrationLabel": "Register",
-    "weekly": {
-      "isoDate": "2026-09-26",
-      "day": "Saturday",
-      "date": "September 26",
-      "description": "Clinic"
-    }
-  },
-  {
-    "type": "clinic",
     "title": "Intermediate Clinic & Drill Session",
     "featured": false,
     "retainFinalSessionUntilManualRemoval": true,
@@ -335,6 +318,24 @@
       "day": "Friday",
       "date": "October 23–November 13",
       "description": "Four-week skill-focused bootcamp series for Intermediate skill level players (3.0-3.3)"
+    }
+  },
+    {
+    "type": "clinic",
+    "title": "Beginner & Advanced Beginner Clinics",
+    "featured": false,
+    "retainFinalSessionUntilManualRemoval": true,
+    "registrationOpen": true,
+    "eventDate": "2026-10-24",
+    "time": "2:00–3:30 PM",
+    "location": "Rock Creek Tennis Center Outdoor Courts",
+    "registrationUrl": "https://forms.gle/kbMurPUT3DfDQLs28",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-10-24",
+      "day": "Saturday",
+      "date": "October 24",
+      "description": "Clinic"
     }
   },
   {
