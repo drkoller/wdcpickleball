@@ -1,110 +1,79 @@
-Zack F,300,4,7,0
-Sanjay D,999,0,0,0
-Drew L,999,0,0,0
-Ben T,-0,5,7,0
-Caleb H,999,0,0,0
-Ben Bo,999,0,0,0
-Albert T,-5.3,3,7,0
-Donald R,999,0,0,0
-Adam K,-4.4,7,15,0
-Alex K,-1.4,13,15,0
-David Si,-0.1,14.5,34,1
-Robert D,999,0,0,0
-Melissa J,-2.4,35.5,60,1
-Cade,-2.7,17,24,0
-Steve F,-0,9.5,26,1
-Clement,999,0,0,0
-Taylor J,-1.8,8,8,1
-Valentina,999,0,0,0
-Brooke C,-10.7,13,22,-4
-Nate L,999,0,0,0
-Perrin,999,0,0,0
-Varun,999,22.5,29,0
-Christina P,999,6,8,0
-Erica W,-8,24,36,2
-Kim H,-1,9,14,0
-Collier H,999,1.5,7,-2
-Gunnar G,-4,2.5,6,0
-Alec L,-0.5,0,0,0
-Jonathan Wag,-1.3,7,7,0
-Michael O,999,4,7,0
-Pascaline,-11.2,0,3,0
-Angie O,999,24,45,0
-Sean He,-9.8,20,40,0
-Ryan We,-2.5,39.5,64,0
-Gavin McI,-10.1,8.5,23,0
-Jessica J,-0.9,11,21,0
-Kathleen O,999,0,0,0
-Rebeca R,-3.6,13.5,24,0
-Hamed,-7,3,7,1
-Ian J,-0.3,3,7,-1
-Daphne,999,0,0,0
-Barbara D,-1.9,7,15,0
-Rebecca D,-6.5,12,15,0
-Malcolm M,-0,1,6,0
-Dianne F,999,0,0,0
-Laura McC,999,0,0,0
-Joanna P,999,4.5,6,0
-Jill C,-0.8,2.5,6,0
-Radley E,999,0,0,0
-Rich C,-0,28,51,0
-Nathan W,999,1,6,0
-Andrew P,-5.2,23,46,0
-Sonya S,-0.9,0,0,0
-Mark Sh,-2.1,13.5,24,0
-Tyra W,-5.7,0,0,0
-Lana,-5.7,0,0,0
-Ilter,-3.8,4,4,0
-Maggie D,-2.3,2,7,0
-Rachel Ce,-1.4,1,4,0
-Jerry S,-5.5,0,6,0
-Joe F,999,0,0,0
-Evan C,999,0,0,0
-Amelia S,-0,0,0,0
-Chris Ma,-2.3,0,0,0
-Bruce Bo,-0.9,10,17,0
-Emily T,-0.2,6,8,0
-Jim P,999,0,3,0
-Jo B,-9.9,9.5,28,0
-Tereza H,-5,4,6,0
-Todd D,999,1,8,0
-Danielle G,999,0,0,0
-Karen K,999,0,0,0
-Gina A,-8,1.5,6,0
-Frances,-6.9,3,6,0
-Maria F,-5,5,6,0
-Leigh Catherine,-3,4.5,19,0
-Steve R,-3,9.5,18,0
-Cathy D,-4,13,21,0
-Caitlyn S,999,5,20,0
-Brittney M,999,0,0,0
-Katherine L,999,0,0,0
-Amanda A,-6,8,14,0
-Rhonda S,-4.7,1,4,0
-Anita H,999,16.5,30,0
-Tri,-0.8,2.5,6,0
-Lynn McI,999,12.5,20,0
-Jackie Z,-1.8,6,10,0
-Lisa B,-5,6,7,0
-Suzanne W,-5.3,2,6,0
-Yuhuan S,-2,14,25,0
-Mary Hal,-0,15,27,0
-Barbra B,-3.7,5,14,0
-Becca W,-4.4,5,7,0
-Sam St,-7.4,2,7,0
-Rebecca A,-2,3,14,0
-Paul Da,-4.2,1.5,3,0
-Ana S,-5.2,0,8,0
-Naila,-4,0,3,0
-Kathryn G,
-Kellyn B,
-Meredith S,
-Anna G,
-Hannah A,
-Caitlin Bi,
-Valerie G,
-Brian F,
-Scott Mi,
-Dan C,
-Siobhan,
-Patrick Mc,
+Simone M,300,11.5,15,2
+Buzz,-2.7,7,8,3
+Brooke C,999,17,29,-2
+Clark F,-12,2,8,-2
+Brent I,999,7,7,6
+Francis B,-8,9,21,-2
+Will Cy,-0,3,4,-1
+Paul Do,-1.3,3,4,1
+Eric D,-3.4,3,8,-2
+John Ke,-1.2,5,7,4
+Ava G,999,1,4,-3
+Niall H,-4.1,5,7,4
+Noel B,-2.7,7,8,5
+Samantha G,-2.7,3,8,-4
+Colleen O,999,3.5,6,0
+Jason W,-5.9,2,7,2
+Gabby M,-0.2,2,8,-4
+MJ B,-3.3,0,8,-4
+Dave M,-0,6.5,12,1
+Leslie S,999,0,8,-4
+Ilter,999,11,11,7
+Rich C,-12,28,51,1
+Megan G,-7.3,3,8,-2
+Tatiana M,-2.7,5.5,16,-2
+Stefan C,999,4,4,0
+Ben C,-3.3,8,15,2
+James G,-0.4,7,11,-2
+Lauren B,-3.1,0,4,-2
+Antony M,-1.6,10.5,16,4
+Deb H,-1.6,5,8,-3
+Tina M,-5.1,4,10,0
+Carlos R,-0.6,7,8,3
+Audrey K,-3.4,3,8,-2
+Emilee S,-3.7,1,8,-2
+Sarita,-2.7,19,35,4
+Garrett P,-3.3,6,8,0
+Brooke G,999,0,4,0
+Maggie D,-5.3,2,7,-4
+Lacy B,-0.8,7,8,2
+Rachel Ce,-1.4,1,4,-1
+Derek H,-6.7,2,8,-3
+Louisa T,-0,3,3,4
+Rob J,999,7,8,6
+Kevin Fo,-0,5,8,3
+Emily T,-2,11,15,5
+Allyn F,-0.3,4.5,6,-4
+Chris R,-0,4.5,6,-4
+Evelyn R,-4,16.5,36,-3
+Andrew T,-3,2,7,-1
+Julia E,-2,0,4,0
+Bruce Bo,-0.7,11.5,23,11
+John Pu,-0.7,0,7,-7
+Akosua,-2,6,7,-1
+Seth L,-3,1,3,0
+Meaghan M,-5,2,8,-2
+Kaavya,999,4,4,1
+Jonathan G,-0.3,2.5,8,-2
+Mollie D,999,0,0,-2
+Audrey H,-9.3,0,7,-1
+Rob M,-6.6,8,8,4
+Monica P,-2,5,8,-1
+Steve R,-1.3,15.5,25,1
+Cathy D,-5.5,17,28,2
+Jonathan E,-3.2,1,4,0
+Keiko,-0.7,3,8,-5
+Todd D,-4.7,1,8,-4
+Ledia,-4,6,21,2
+Laura S,-1.3,4,8,-1
+Sandra B,999,4,4,0
+Michele G,-12,2,8,-1
+Stephanie C,-5.3,11,16,0
+Liza C,-5,2.5,8,0
+Amanda A,-0,13,21,0
+Katherine B,-6.3,5,14,0
+Howard P,-3.5,2,7,0
+Ethan M,999,0,4,0
+Jackie Z,-0.7,6,10,1
+Rebecca A,-0.4,5,20,-1
+Sandra D,-2.5,3,7,0
