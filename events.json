@@ -231,23 +231,6 @@
   },
   {
     "type": "clinic",
-    "title": "Intermediate Clinic & Drill Session",
-    "featured": false,
-    "retainFinalSessionUntilManualRemoval": true,
-    "registrationOpen": true,
-    "time": "11:00 AM –12:30 PM",
-    "location": "",
-    "registrationUrl": "https://forms.gle/rZhkm85LAdiit35A7",
-    "weeklyRegistrationLabel": "Register",
-    "weekly": {
-      "isoDate": "2026-09-26",
-      "day": "Saturday",
-      "date": "September 26",
-      "description": "Clinic"
-    }
-  },
-  {
-    "type": "clinic",
     "title": "Intermediate Bootcamp (3.0–3.3)",
     "featured": true,
     "retainFinalSessionUntilManualRemoval": true,
