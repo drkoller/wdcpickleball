@@ -214,13 +214,13 @@
     "retainFinalSessionUntilManualRemoval": true,
     "registrationOpen": true,
     "eventDate": "2026-10-10",
-    "dateRange": "October 10–November 7",
+    "dateRange": "October 10–November 14",
     "sessionDates": [
       "2026-10-10",
       "2026-10-17",
       "2026-10-24",
-      "2026-10-31",
-      "2026-11-07"
+      "2026-11-07",
+      "2026-11-14"
     ],
     "time": "10:15 AM–12:00 PM",
     "location": "Rock Creek Tennis Center",
@@ -245,8 +245,8 @@
       "2026-10-10",
       "2026-10-17",
       "2026-10-24",
-      "2026-10-31",
-      "2026-11-07"
+      "2026-11-07",
+      "2026-11-14"
     ],
     "time": "12:00–1:45 PM",
     "location": "Rock Creek Tennis Center",
