@@ -2,6 +2,8 @@
   {
     "type": "league",
     "title": "Tuesday Outdoor League",
+    "showOnHome": true,
+    "homeOrder": 1,
     "status": "upcoming",
     "season": "fall",
     "featured": true,
@@ -29,6 +31,8 @@
   {
     "type": "league",
     "title": "Friday Indoor League",
+    "showOnHome": true,
+    "homeOrder": 1,
     "status": "upcoming",
     "season": "fall",
     "featured": true,
@@ -312,6 +316,8 @@
   {
     "type": "tournament",
     "title": "DCPL RFK Partner Tournament",
+    "showOnHome": true,
+    "homeOrder": 1,
     "featured": false,
     "retainFinalSessionUntilManualRemoval": true,
     "registrationOpen": false,
