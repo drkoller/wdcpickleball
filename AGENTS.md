@@ -219,3 +219,16 @@ successful push of the approved changes.
 Do not perform a separate deployment without authorization. Report any known
 automatic deployment triggered by the authorized push without claiming it
 succeeded unless verified.
+
+## Home page featured cards
+
+The home page cards are controlled only by events.json:
+
+- To show an event on the home page, add "showOnHome": true to it.
+- "homeOrder" (1, 2, 3, ...) sets the card order.
+- To remove an event from the home page, delete its "showOnHome" line
+  or set it to false.
+- Do not add event names, titles, or dates to the home page code in
+  script.js.
+- "featured" controls only the featured section on the schedule page.
+  It does not control the home page.
