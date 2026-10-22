@@ -631,22 +631,9 @@
       return;
     }
 
-    const findByTitle = (title) => (
-      events.find((event) => event.title === title)
-    );
-    const rfkTournament = findByTitle("DCPL RFK Partner Tournament");
-    const homeEvents = [
-      events.find((event) => (
-        event.title === "Friday Indoor League" && event.featured === true
-      )),
-      rfkTournament,
-      findByTitle("Friday Bootcamp Series (3.0–3.3)"),
-      events.find((event) => (
-        event.title === "Tuesday Outdoor League" &&
-        event.location === "Alexandria City High School" &&
-        event.startDate === "2026-10-27"
-      ))
-    ].filter(Boolean);
+  const homeEvents = events
+  .filter((event) => event.showOnHome === true)
+  .sort((a, b) => (a.homeOrder ?? 999) - (b.homeOrder ?? 999));
 
     homeFeaturedList.replaceChildren();
     homeEvents.forEach((event) => {
