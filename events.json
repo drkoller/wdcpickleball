@@ -213,6 +213,8 @@
     "featured": true,
     "retainFinalSessionUntilManualRemoval": true,
     "registrationOpen": false,
+    "actionType": "dropIn",
+    "dropInEmail": "play@wdcpickleball.com",
     "eventDate": "2026-10-10",
     "dateRange": "October 10–November 14",
     "sessionDates": [
@@ -230,7 +232,7 @@
       "isoDate": "2026-10-10",
       "day": "Saturday",
       "date": "October 10–November 7",
-      "description": "Five-week skill-focused bootcamp series. The bootcamp is full. For drop-in spots, email play@wdcpickleball.com."
+      "description": "Five-week skill-focused bootcamp series"
     }
   },
   {
@@ -239,6 +241,8 @@
     "featured": true,
     "retainFinalSessionUntilManualRemoval": true,
     "registrationOpen": false,
+    "actionType": "dropIn",
+    "dropInEmail": "play@wdcpickleball.com",
     "eventDate": "2026-10-10",
     "dateRange": "October 10–November 14",
     "sessionDates": [
@@ -256,15 +260,17 @@
       "isoDate": "2026-10-10",
       "day": "Saturday",
       "date": "October 10–November 14",
-      "description": "Five-week skill-focused bootcamp series. The bootcamp is full. For drop-in spots, email play@wdcpickleball.com."
+      "description": "Five-week skill-focused bootcamp series"
     }
   },
   {
     "type": "clinic",
     "title": "Friday Bootcamp Series (3.0–3.3)",
-    "featured": true,
+    "featured": false,
     "retainFinalSessionUntilManualRemoval": true,
     "registrationOpen": false,
+    "actionType": "dropIn",
+    "dropInEmail": "play@wdcpickleball.com",
     "eventDate": "2026-10-23",
     "dateRange": "October 23–November 13",
     "sessionDates": [
@@ -282,7 +288,7 @@
       "isoDate": "2026-10-23",
       "day": "Friday",
       "date": "October 23–November 13",
-      "description": "Four-week skill-focused bootcamp series for Intermediate skill level players (3.0-3.3). The bootcamp is full. For drop-in spots, email play@wdcpickleball.com."
+      "description": "Four-week skill-focused bootcamp series for Intermediate skill level players (3.0-3.3)"
     }
   },
     {
