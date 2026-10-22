@@ -212,7 +212,7 @@
     "title": "Intermediate Bootcamp (3.0–3.3)",
     "featured": true,
     "retainFinalSessionUntilManualRemoval": true,
-    "registrationOpen": true,
+    "registrationOpen": false,
     "eventDate": "2026-10-10",
     "dateRange": "October 10–November 14",
     "sessionDates": [
@@ -238,7 +238,7 @@
     "title": "High Intermediate Bootcamp (3.4–3.7)",
     "featured": true,
     "retainFinalSessionUntilManualRemoval": true,
-    "registrationOpen": true,
+    "registrationOpen": false,
     "eventDate": "2026-10-10",
     "dateRange": "October 10–November 14",
     "sessionDates": [
@@ -264,7 +264,7 @@
     "title": "Friday Bootcamp Series (3.0–3.3)",
     "featured": true,
     "retainFinalSessionUntilManualRemoval": true,
-    "registrationOpen": true,
+    "registrationOpen": false,
     "eventDate": "2026-10-23",
     "dateRange": "October 23–November 13",
     "sessionDates": [
