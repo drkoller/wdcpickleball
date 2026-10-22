@@ -197,7 +197,6 @@
     }
 
     if (
-      event.type === "league" &&
       event.actionType === "dropIn" &&
       event.dropInEmail
     ) {
