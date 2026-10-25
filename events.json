@@ -31,7 +31,7 @@
   {
     "type": "league",
     "title": "Friday Indoor League",
-    "showOnHome": true,
+    "showOnHome": false,
     "homeOrder": 1,
     "status": "upcoming",
     "season": "fall",
@@ -299,7 +299,7 @@
     "type": "clinic",
     "title": "Beginner & Advanced Beginner Clinics",
     "featured": false,
-    "retainFinalSessionUntilManualRemoval": true,
+    "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": true,
     "eventDate": "2026-10-24",
     "time": "2:00–3:30 PM",
