@@ -316,10 +316,10 @@
   {
     "type": "tournament",
     "title": "DCPL RFK Partner Tournament",
-    "showOnHome": true,
+    "showOnHome": false,
     "homeOrder": 3,
     "featured": false,
-    "retainFinalSessionUntilManualRemoval": true,
+    "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": false,
     "eventDate": "2026-10-31",
     "time": "8:30 AM–2:00 PM",
