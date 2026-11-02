@@ -17,6 +17,7 @@
   const currentStandingsList = document.getElementById("current-standings-list");
   const scheduleFeaturedSection = document.getElementById("schedule-featured-events");
   const scheduleFeaturedList = document.getElementById("schedule-featured-events-list");
+  const pastTournamentEvents = document.getElementById("past-tournament-events");
   const homeFeaturedSection = document.getElementById("home-featured-events");
   const homeFeaturedList = document.getElementById("home-featured-events-list");
 
@@ -482,6 +483,40 @@
     }
   }
 
+  function createTournamentArchiveCard(event, showPhoto = false) {
+    const article = document.createElement("article");
+    article.className = showPhoto
+      ? "featured-event-card tournament-archive-card"
+      : "past-tournament-card tournament-archive-card";
+    if (showPhoto && event.image) {
+      const image = document.createElement("img");
+      image.src = event.image;
+      image.alt = event.imageAlt;
+      image.className = "tournament-archive-photo";
+      image.loading = "lazy";
+      article.appendChild(image);
+    }
+    appendTextElement(article, "h3", event.title);
+    const details = appendTextElement(article, "p", `${event.displayDate} · ${event.location}`);
+    details.className = showPhoto ? "featured-event-details" : "tournament-card-details";
+    appendTextElement(article, "p", event.summary).className = "tournament-archive-summary";
+    appendTextElement(article, "p", event.description).className = "tournament-archive-description";
+    const actions = document.createElement("div");
+    actions.className = "tournament-archive-actions";
+    event.actions.forEach((action) => {
+      actions.appendChild(createActionLink("button button-outline", action.href, action.label));
+    });
+    article.appendChild(actions);
+    return article;
+  }
+
+  function renderPastTournamentEvents(events) {
+    if (!pastTournamentEvents) return;
+    pastTournamentEvents.replaceChildren(...events
+      .filter((event) => event.pastTournament === true)
+      .map((event) => createTournamentArchiveCard(event)));
+  }
+
   function createFeaturedCard(event) {
     const article = document.createElement("article");
     const details = document.createElement("div");
@@ -632,14 +667,25 @@
     }
 
   const homeEvents = events
-  .filter((event) => event.showOnHome === true)
+  .filter((event) => event.showOnHome === true &&
+    (!event.homeDisplayUntil || Date.now() < Date.parse(event.homeDisplayUntil)))
   .sort((a, b) => (a.homeOrder ?? 999) - (b.homeOrder ?? 999));
 
     homeFeaturedList.replaceChildren();
     homeEvents.forEach((event) => {
-      homeFeaturedList.appendChild(createFeaturedCard(event));
+      homeFeaturedList.appendChild(event.pastTournament
+        ? createTournamentArchiveCard(event, true)
+        : createFeaturedCard(event));
     });
     homeFeaturedSection.hidden = homeEvents.length === 0;
+    const nextCutoff = Math.min(...homeEvents
+      .filter((event) => event.homeDisplayUntil)
+      .map((event) => Date.parse(event.homeDisplayUntil)));
+    if (Number.isFinite(nextCutoff)) {
+      // Cap long waits at one day; recheck when a sleeping tab resumes.
+      window.setTimeout(() => renderHomeFeaturedEvents(events),
+        Math.min(nextCutoff - Date.now(), 86400000));
+    }
     requestAnimationFrame(alignHomeFeaturedPrimaryActions);
     document.fonts?.ready.then(alignHomeFeaturedPrimaryActions);
   }
@@ -755,7 +801,8 @@
       !fallLeagueList &&
       !currentStandingsList &&
       !scheduleFeaturedList &&
-      !homeFeaturedList
+      !homeFeaturedList &&
+      !pastTournamentEvents
     ) {
       return;
     }
@@ -769,6 +816,7 @@
 
       const events = await response.json();
 
+      renderPastTournamentEvents(events);
       renderWeeklySchedule(events);
       renderFeaturedEvents(
         events.filter((event) => !(

@@ -3847,3 +3847,36 @@ body {
   letter-spacing: 0.16em;
   white-space: nowrap;
 }
+
+/* Shared tournament archive content; each placement chooses its image. */
+.past-tournament-card.tournament-archive-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  padding: var(--tournament-card-padding);
+}
+.tournament-archive-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+.tournament-archive-summary,
+.tournament-archive-description {
+  margin: 0 0 12px;
+  color: #4b5563;
+  line-height: 1.65;
+}
+.tournament-archive-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+.tournament-archive-card .tournament-archive-actions .button {
+  margin: 0;
+  width: auto;
+  min-height: 44px;
+}

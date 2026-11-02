@@ -315,8 +315,8 @@
   },
   {
     "type": "tournament",
-    "title": "DCPL RFK Partner Tournament",
-    "showOnHome": false,
+    "title": "RFK Partner Tournament",
+    "showOnHome": true,
     "homeOrder": 3,
     "featured": false,
     "retainFinalSessionUntilManualRemoval": false,
@@ -331,7 +331,24 @@
       "day": "Saturday",
       "date": "October 31",
       "description": "The tournament is full!"
-    }
+    },
+    "homeDisplayUntil": "2026-11-22T00:00:00-05:00",
+    "pastTournament": true,
+    "displayDate": "October 31, 2026",
+    "summary": "150+ players · 28 courts",
+    "description": "DCPL returned to RFK for our second annual community event. Thank you to everyone who made it a great day of pickleball and community!",
+    "image": "images/gallery/rfk-2026-group.jpg",
+    "imageAlt": "RFK Partner Tournament players gathered behind the DCPL banner at The Fields at RFK",
+    "actions": [
+      {
+        "label": "View Results",
+        "href": "/rfk.html"
+      },
+      {
+        "label": "View Photos",
+        "href": "https://photos.app.goo.gl/pamc5Nb8kf9zTEAh9"
+      }
+    ]
   },
   {
     "type": "standings",
