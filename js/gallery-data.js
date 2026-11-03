@@ -81,7 +81,7 @@
     { src: "images/gallery/IMG_8927.jpg", alt: "A member of the DCPL community at a pickleball event.", width: 3024, height: 4032 },
     { src: "images/gallery/IMG_9024.jpg", alt: "DCPL players and friends gathered during a community event.", width: 2216, height: 1575 },
     { src: "images/gallery/IMG_9083.jpg", alt: "DCPL community members enjoying a pickleball gathering.", width: 1520, height: 1263 },
-    { src: "images/gallery/nationalmall.jpg", alt: "DCPL players on the National Mall pickleball courts.", width: 4119, height: 2746 }
+    { src: "images/gallery/nationalmall.jpg", alt: "DCPL players on the National Mall pickleball courts.", width: 4119, height: 2746 },
     { src: "images/gallery/rfk-2026-group.jpg", alt: "DCPL RFK Partner Tournament participants at The Fields at RFK.", width: 4032, height: 3024 },
   ].map(Object.freeze));
 })();
