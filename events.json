@@ -313,6 +313,40 @@
       "description": "Clinic"
     }
   },
+    {
+    "type": "social",
+    "title": "Veterans Day Open Play & Potluck",
+    "showOnHome": true,
+    "homeOrder": 1,
+    "featured": true,
+    "retainFinalSessionUntilManualRemoval": false,
+    "registrationOpen": true,
+    "eventDate": "2026-11-11",
+    "time": "10:00 AM–1:00 PM",
+    "location": "Rock Creek Tennis Center Outdoor Courts",
+    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdgTZEg5OhS7FHA3eR0fz2sV7f70gaHOZ8xG1vbnCbuhWQJOA/viewform?usp=header",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-11-11",
+      "day": "Wednesday",
+      "date": "November 11",
+      "description": "Open play and potluck fundraiser benefiting Wounded Warrior Project"
+    },
+    "featuredDescription": "Join DC Pickleball League for an open play and potluck fundraiser benefiting Wounded Warrior Project! Come play pickleball, bring a dish to share, and help support wounded veterans and their families.",
+    "homeVolunteerNote": "Donations go directly to Wounded Warrior Project.",
+    "homeActions": [
+      {
+        "label": "Register",
+        "href": "https://docs.google.com/forms/d/e/1FAIpQLSdgTZEg5OhS7FHA3eR0fz2sV7f70gaHOZ8xG1vbnCbuhWQJOA/viewform?usp=header",
+        "className": "button featured-event-primary"
+      },
+      {
+        "label": "Donate to WWP",
+        "href": "https://communityfundraising.woundedwarriorproject.org/campaigns/DCPL-Veterans-Day-Open-Play-Fundraiser",
+        "className": "button featured-event-secondary"
+      }
+    ]
+  },
   {
     "type": "tournament",
     "title": "RFK Partner Tournament",
