@@ -3128,6 +3128,7 @@ body {
   align-items: flex-start;
   margin-top: auto;
 }
+.featured-events-home .featured-event-actions { margin-top: 16px; }
 .featured-event-card .featured-event-actions .button {
   width: auto;
   margin-top: 0;
