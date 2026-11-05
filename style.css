@@ -3881,3 +3881,26 @@ body {
   width: auto;
   min-height: 44px;
 }
+
+/* Home featured: three cards side by side on wide screens */
+@media (min-width: 1100px) {
+  .featured-events-home .featured-events-grid:has(> :nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+/* Recap video — portrait clip shown in a fixed frame */
+.tournament-archive-video {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: #0b1f3a;
+}
+/* Recap card buttons keep their natural width on every screen */
+.featured-event-card.tournament-archive-card .tournament-archive-actions .button {
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+}
+/* Home recap cards: buttons sit right under the text */
+.featured-events-home .tournament-archive-card .tournament-archive-actions {
+  margin-top: 4px;
+}

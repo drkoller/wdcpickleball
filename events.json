@@ -348,6 +348,29 @@
     ]
   },
   {
+    "type": "community",
+    "title": "Game On Gala",
+    "showOnHome": true,
+    "homeOrder": 2,
+    "featured": false,
+    "homeRecap": true,
+    "displayDate": "November 4, 2026",
+    "summary": "Hosted by Fight For Children",
+    "description": "We brought pickleball to Fight For Children’s Game On Gala, giving guests a chance to play, laugh, and connect with the DCPL community.",
+    "video": "images/gallery/game-on-gala-2026.mp4#t=0.1",
+    "imageAlt": "Guests playing pickleball on an indoor court at Fight For Children’s Game On Gala",
+    "actions": [
+      {
+        "label": "Event Recap",
+        "href": "https://www.instagram.com/p/DfWN_I3ju_E/?img_index=7"
+      },
+      {
+        "label": "View Photos",
+        "href": "https://photos.app.goo.gl/R3LeMhe2rdWDZcvZ8"
+      }
+    ]
+  },
+  {
     "type": "tournament",
     "title": "RFK Partner Tournament",
     "showOnHome": true,
@@ -366,7 +389,6 @@
       "date": "October 31",
       "description": "The tournament is full!"
     },
-    "homeDisplayUntil": "2026-11-22T00:00:00-05:00",
     "pastTournament": true,
     "displayDate": "October 31, 2026",
     "summary": "150+ players · 28 courts",

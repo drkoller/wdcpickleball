@@ -488,7 +488,21 @@
     article.className = showPhoto
       ? "featured-event-card tournament-archive-card"
       : "past-tournament-card tournament-archive-card";
-    if (showPhoto && event.image) {
+    if (showPhoto && event.video) {
+      const video = document.createElement("video");
+      video.className = "tournament-archive-photo tournament-archive-video";
+      video.muted = true;
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("loop", "");
+      video.setAttribute("autoplay", "");
+      video.setAttribute("controls", "");
+      video.setAttribute("preload", "auto");
+      video.setAttribute("aria-label", event.imageAlt || event.title);
+      video.src = event.video;
+      article.appendChild(video);
+      video.play().catch(() => {});
+    } else if (showPhoto && event.image) {
       const image = document.createElement("img");
       image.src = event.image;
       image.alt = event.imageAlt;
@@ -497,7 +511,8 @@
       article.appendChild(image);
     }
     appendTextElement(article, "h3", event.title);
-    const details = appendTextElement(article, "p", `${event.displayDate} · ${event.location}`);
+    const details = appendTextElement(article, "p",
+      [event.displayDate, event.location].filter(Boolean).join(" · "));
     details.className = showPhoto ? "featured-event-details" : "tournament-card-details";
     appendTextElement(article, "p", event.summary).className = "tournament-archive-summary";
     appendTextElement(article, "p", event.description).className = "tournament-archive-description";
@@ -673,7 +688,7 @@
 
     homeFeaturedList.replaceChildren();
     homeEvents.forEach((event) => {
-      homeFeaturedList.appendChild(event.pastTournament
+      homeFeaturedList.appendChild((event.pastTournament || event.homeRecap)
         ? createTournamentArchiveCard(event, true)
         : createFeaturedCard(event));
     });
