@@ -37,19 +37,19 @@
     "season": "fall",
     "featured": true,
     "actionType": "registration",
-    "dateRange": "October 23–November 20",
+    "dateRange": "October 23–December 4",
     "days": "Fridays",
     "registrationLabel": "Register for Drop-In",
     "seasonRegistrationLabel": "Register for Drop-In",
     "registrationUrl": "https://app.courtreserve.com/Online/Events/Details/8373/7GF5PCR8373197?resId=59734159",
     "startDate": "2026-10-23",
-    "endDate": "2026-11-20",
+    "endDate": "2026-12-04",
     "sessionDates": [
       "2026-10-23",
       "2026-10-30",
       "2026-11-06",
       "2026-11-13",
-      "2026-11-20"
+      "2026-12-04"
     ],
     "time": "7:00–10:00 PM",
     "location": "Washington Tennis and Education Foundation (WTEF)",
@@ -220,13 +220,14 @@
     "actionType": "dropIn",
     "dropInEmail": "play@wdcpickleball.com",
     "eventDate": "2026-10-10",
-    "dateRange": "October 10–November 14",
+    "dateRange": "October 10–November 21",
     "sessionDates": [
       "2026-10-10",
       "2026-10-17",
       "2026-10-24",
       "2026-11-07",
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-21"
     ],
     "time": "10:15 AM–12:00 PM",
     "location": "Rock Creek Tennis Center",
@@ -235,7 +236,7 @@
     "weekly": {
       "isoDate": "2026-10-10",
       "day": "Saturday",
-      "date": "October 10–November 14",
+      "date": "October 10–November 21",
       "description": "Five-week skill-focused bootcamp series"
     }
   },
@@ -248,13 +249,14 @@
     "actionType": "dropIn",
     "dropInEmail": "play@wdcpickleball.com",
     "eventDate": "2026-10-10",
-    "dateRange": "October 10–November 14",
+    "dateRange": "October 10–November 21",
     "sessionDates": [
       "2026-10-10",
       "2026-10-17",
       "2026-10-24",
       "2026-11-07",
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-21"
     ],
     "time": "12:00–1:45 PM",
     "location": "Rock Creek Tennis Center",
@@ -263,7 +265,7 @@
     "weekly": {
       "isoDate": "2026-10-10",
       "day": "Saturday",
-      "date": "October 10–November 14",
+      "date": "October 10–November 21",
       "description": "Five-week skill-focused bootcamp series"
     }
   },
@@ -276,12 +278,13 @@
     "actionType": "dropIn",
     "dropInEmail": "play@wdcpickleball.com",
     "eventDate": "2026-10-23",
-    "dateRange": "October 23–November 13",
+    "dateRange": "October 23–November 20",
     "sessionDates": [
       "2026-10-23",
       "2026-10-30",
       "2026-11-06",
-      "2026-11-13"
+      "2026-11-13",
+      "2026-11-20"
     ],
     "level": "Intermediate (3.0–3.3)",
     "time": "12:00–2:00 PM",
@@ -291,7 +294,7 @@
     "weekly": {
       "isoDate": "2026-10-23",
       "day": "Friday",
-      "date": "October 23–November 13",
+      "date": "October 23–November 20",
       "description": "Four-week skill-focused bootcamp series for Intermediate skill level players (3.0-3.3)"
     }
   },
@@ -301,21 +304,21 @@
     "featured": false,
     "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": true,
-    "eventDate": "2026-11-07",
+    "eventDate": "2026-11-14",
     "time": "2:00–3:30 PM",
     "location": "Rock Creek Tennis Center Outdoor Courts",
     "registrationUrl": "https://forms.gle/kbMurPUT3DfDQLs28",
     "weeklyRegistrationLabel": "Register",
     "weekly": {
-      "isoDate": "2026-11-07",
+      "isoDate": "2026-11-14",
       "day": "Saturday",
-      "date": "November 7",
+      "date": "November 14",
       "description": "Clinic"
     }
   },
     {
     "type": "social",
-    "title": "Veterans Day Open Play & Potluck",
+    "title": "Veterans Day Open Play & Potluck Fundraiser",
     "showOnHome": true,
     "homeOrder": 1,
     "featured": true,
