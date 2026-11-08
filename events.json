@@ -7,8 +7,9 @@
     "status": "upcoming",
     "season": "fall",
     "featured": true,
-    "actionType": "registration",
-    "fullLeagueRegistrationOpen": true,
+    "actionType": "dropIn",
+    "fullLeagueRegistrationOpen": false,
+    "dropInEmail": "play@wdcpickleball.com",
     "startDate": "2026-10-27",
     "endDate": "2026-11-17",
     "sessionDates": [
