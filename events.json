@@ -352,10 +352,44 @@
     ]
   },
   {
+    "type": "social",
+    "title": "FREE Rally & Gather: Friendsgiving Tennis & Pickleball Social",
+    "showOnHome": true,
+    "homeOrder": 2,
+    "featured": true,
+    "retainFinalSessionUntilManualRemoval": false,
+    "registrationOpen": true,
+    "eventDate": "2026-11-20",
+    "time": "7:00–10:00 PM",
+    "location": "Washington Tennis and Education Foundation (WTEF)",
+    "registrationUrl": "https://app.courtreserve.com/Online/Events/Details/8373/GVHAAPU8373246?resId=63794489",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-11-20",
+      "day": "Friday",
+      "date": "November 20",
+      "description": "Free tennis and pickleball social with friendly play, food, music, raffles, and prizes"
+    },
+    "featuredDescription": "For the first time, we’re bringing WTEF’s tennis and pickleball communities together for a shared celebration! Join us for an evening of friendly play, food, music, raffles, and prizes.",
+    "homeVolunteerNote": "If you also play tennis, there’s a separate signup for the tennis side.",
+    "homeActions": [
+      {
+        "label": "Register Here",
+        "href": "https://app.courtreserve.com/Online/Events/Details/8373/GVHAAPU8373246?resId=63794489",
+        "className": "button featured-event-primary"
+      },
+      {
+        "label": "Register Here",
+        "href": "https://app.courtreserve.com/Online/Events/Public/8373/2357420",
+        "className": "button featured-event-secondary"
+      }
+    ]
+  },
+  {
     "type": "community",
     "title": "Game On Gala",
     "showOnHome": true,
-    "homeOrder": 2,
+    "homeOrder": 3,
     "featured": false,
     "homeRecap": true,
     "displayDate": "November 4, 2026",
@@ -378,7 +412,7 @@
     "type": "tournament",
     "title": "RFK Partner Tournament",
     "showOnHome": true,
-    "homeOrder": 3,
+    "homeOrder": 4,
     "featured": false,
     "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": false,
