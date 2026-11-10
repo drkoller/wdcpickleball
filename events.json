@@ -1,6 +1,93 @@
 [
   {
     "type": "league",
+    "title": "Evening Outdoor Leagues at Rock Creek",
+    "showOnHome": true,
+    "homeOrder": 0,
+    "featured": false,
+    "actionType": "registration",
+    "dateRange": "Mondays Nov 16 – Dec 7 · Wednesdays Nov 18 – Dec 9",
+    "featuredDetails": [
+      "Mondays Nov 16 – Dec 7",
+      "Wednesdays Nov 18 – Dec 9"
+    ],
+    "featuredDescription": "4 week-long Double Round Robin, Social (2.5-3.3) and Competitive (3.4-5.0+) Ladders.",
+    "registrationLabel": "Register",
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
+    "homeActions": [
+      {
+        "label": "Register",
+        "href": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
+        "className": "button featured-event-primary"
+      }
+    ]
+  },
+  {
+    "type": "league",
+    "title": "Monday Evening Outdoor League",
+    "status": "upcoming",
+    "season": "fall",
+    "featured": true,
+    "actionType": "registration",
+    "startDate": "2026-11-16",
+    "endDate": "2026-12-07",
+    "sessionDates": [
+      "2026-11-16",
+      "2026-11-23",
+      "2026-11-30",
+      "2026-12-07"
+    ],
+    "dateRange": "November 16–December 7",
+    "days": "Mondays",
+    "time": "5:30–8:30 PM",
+    "location": "Rock Creek Tennis Center, 5220 16th St NW, Washington, DC 20011",
+    "divisions": "Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
+    "featuredDescription": "4 week-long Double Round Robin · Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
+    "registrationLabel": "Register for the Full League",
+    "seasonRegistrationLabel": "Register for the Full League",
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
+    "homeActions": [
+      {
+        "label": "Register for the Full League",
+        "href": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
+        "className": "button featured-event-primary"
+      }
+    ]
+  },
+  {
+    "type": "league",
+    "title": "Wednesday Evening Outdoor League",
+    "status": "upcoming",
+    "season": "fall",
+    "featured": true,
+    "actionType": "registration",
+    "startDate": "2026-11-18",
+    "endDate": "2026-12-09",
+    "sessionDates": [
+      "2026-11-18",
+      "2026-11-25",
+      "2026-12-02",
+      "2026-12-09"
+    ],
+    "dateRange": "November 18–December 9",
+    "days": "Wednesdays",
+    "time": "5:30–8:30 PM",
+    "location": "Rock Creek Tennis Center, 5220 16th St NW, Washington, DC 20011",
+    "divisions": "Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
+    "featuredDescription": "4 week-long Double Round Robin · Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
+    "registrationLabel": "Register for the Full League",
+    "seasonRegistrationLabel": "Register for the Full League",
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
+    "homeActions": [
+      {
+        "label": "Register for the Full League",
+        "href": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
+        "className": "button featured-event-primary"
+      }
+    ]
+  },
+  {
+    "type": "league",
     "title": "Tuesday Outdoor League",
     "showOnHome": false,
     "homeOrder": 2,

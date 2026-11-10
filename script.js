@@ -551,9 +551,9 @@
     details.className = "featured-event-details";
 
     appendTextElement(article, "h3", event.title);
-    const detailLines = event.featuredVenueFirst
+    const detailLines = event.featuredDetails || (event.featuredVenueFirst
       ? [event.location, dateText, event.time]
-      : [dateText, event.time, event.location];
+      : [dateText, event.time, event.location]);
     detailLines.forEach((text) => appendTextElement(details, "span", text));
     if (event.rainDate) {
       appendTextElement(details, "span", event.rainDate);
