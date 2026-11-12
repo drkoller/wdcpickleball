@@ -105,5 +105,6 @@
     { src: "images/gallery/IMG_9083.jpg", alt: "DCPL community members enjoying a pickleball gathering.", width: 1520, height: 1263 },
     { src: "images/gallery/nationalmall.jpg", alt: "DCPL players on the National Mall pickleball courts.", width: 4119, height: 2746 },
     { src: "images/gallery/rfk-2026-group.jpg", alt: "DCPL RFK Partner Tournament participants at The Fields at RFK.", width: 4032, height: 3024 },
+    { src: "images/gallery/veterans-day-2026.jpg", alt: "DCPL players at the Veterans Day open play fundraiser for Wounded Warrior Project at Rock Creek Tennis Center.", width: 1600, height: 1468 },
   ].map(Object.freeze));
 })();

@@ -232,3 +232,6 @@ The home page cards are controlled only by events.json:
   script.js.
 - "featured" controls only the featured section on the schedule page.
   It does not control the home page.
+
+- Events with "homeRecap": true or "pastTournament": true appear under
+  "Community Highlights"; all other showOnHome events appear under "Featured Events".

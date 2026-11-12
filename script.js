@@ -20,6 +20,8 @@
   const pastTournamentEvents = document.getElementById("past-tournament-events");
   const homeFeaturedSection = document.getElementById("home-featured-events");
   const homeFeaturedList = document.getElementById("home-featured-events-list");
+  const homeHighlightsSection = document.getElementById("home-community-highlights");
+  const homeHighlightsList = document.getElementById("home-community-highlights-list");
 
   const calendarIconSvg = `
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -686,13 +688,14 @@
     (!event.homeDisplayUntil || Date.now() < Date.parse(event.homeDisplayUntil)))
   .sort((a, b) => (a.homeOrder ?? 999) - (b.homeOrder ?? 999));
 
-    homeFeaturedList.replaceChildren();
-    homeEvents.forEach((event) => {
-      homeFeaturedList.appendChild((event.pastTournament || event.homeRecap)
-        ? createTournamentArchiveCard(event, true)
-        : createFeaturedCard(event));
-    });
-    homeFeaturedSection.hidden = homeEvents.length === 0;
+    const featuredEvents = homeEvents.filter((event) => !event.homeRecap && !event.pastTournament);
+    const highlights = homeEvents.filter((event) => event.homeRecap || event.pastTournament);
+    homeFeaturedList.replaceChildren(...featuredEvents.map(createFeaturedCard));
+    homeFeaturedSection.hidden = featuredEvents.length === 0;
+    if (homeHighlightsSection && homeHighlightsList) {
+      homeHighlightsList.replaceChildren(...highlights.map((event) => createTournamentArchiveCard(event, true)));
+      homeHighlightsSection.hidden = highlights.length === 0;
+    }
     const nextCutoff = Math.min(...homeEvents
       .filter((event) => event.homeDisplayUntil)
       .map((event) => Date.parse(event.homeDisplayUntil)));
