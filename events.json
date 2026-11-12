@@ -62,14 +62,15 @@
     "featured": true,
     "actionType": "registration",
     "startDate": "2026-11-18",
-    "endDate": "2026-12-09",
+    "endDate": "2026-12-16",
+    "noPlayDates": ["2026-11-25"],
     "sessionDates": [
       "2026-11-18",
-      "2026-11-25",
       "2026-12-02",
-      "2026-12-09"
+      "2026-12-09",
+      "2026-12-16"
     ],
-    "dateRange": "November 18–December 9",
+    "dateRange": "November 18–December 16 (No play November 25)",
     "days": "Wednesdays",
     "time": "5:30–8:30 PM",
     "location": "Rock Creek Tennis Center, 5220 16th St NW, Washington, DC 20011",
