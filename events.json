@@ -342,6 +342,24 @@
     ]
   },
   {
+    "type": "community",
+    "title": "Supporting the Turkey Thicket Pickleball Community",
+    "showOnHome": true,
+    "homeOrder": 3.5,
+    "featured": false,
+    "homeRecap": true,
+    "displayDate": "November 12, 2026",
+    "description": "DCPL was delighted to join the Turkey Thicket pickleball community for a meeting with DC Councilmember Elissa Silverman. We appreciated the community's invitation and the opportunity to show our support, hear the conversation, and connect with fellow players working together for better playing conditions.",
+    "image": "images/gallery/turkey-thicket-silverman-2026-11.jpg",
+    "imageAlt": "DCPL members with Turkey Thicket pickleball players and DC Councilmember Elissa Silverman at the courts",
+    "actions": [
+      {
+        "label": "View on Instagram",
+        "href": "https://www.instagram.com/p/Dfqb5oDoCa2/"
+      }
+    ]
+  },
+  {
     "type": "social",
     "title": "FREE Rally & Gather: Friendsgiving Tennis & Pickleball Social",
     "showOnHome": true,
