@@ -305,15 +305,15 @@
     "featured": false,
     "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": true,
-    "eventDate": "2026-11-14",
+    "eventDate": "2026-11-21",
     "time": "2:00–3:30 PM",
     "location": "Rock Creek Tennis Center Outdoor Courts",
     "registrationUrl": "https://forms.gle/kbMurPUT3DfDQLs28",
     "weeklyRegistrationLabel": "Register",
     "weekly": {
-      "isoDate": "2026-11-14",
+      "isoDate": "2026-11-21",
       "day": "Saturday",
-      "date": "November 14",
+      "date": "November 21",
       "description": "Clinic"
     }
   },
