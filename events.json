@@ -2,7 +2,7 @@
   {
     "type": "league",
     "title": "Evening Outdoor Leagues at Rock Creek",
-    "showOnHome": true,
+    "showOnHome": false,
     "homeOrder": 0,
     "featured": false,
     "actionType": "registration",
@@ -40,7 +40,7 @@
     "dateRange": "November 16–December 7",
     "days": "Mondays",
     "time": "5:30–8:30 PM",
-    "location": "Rock Creek Tennis Center, 5220 16th St NW, Washington, DC 20011",
+    "location": "Rock Creek Tennis Center Outdoor Courts",
     "divisions": "Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
     "featuredDescription": "4 week-long Double Round Robin · Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
     "registrationLabel": "Register for the Full League",
@@ -73,7 +73,7 @@
     "dateRange": "November 18–December 16 (No play November 25)",
     "days": "Wednesdays",
     "time": "5:30–8:30 PM",
-    "location": "Rock Creek Tennis Center, 5220 16th St NW, Washington, DC 20011",
+    "location": "Rock Creek Tennis Center Outdoor Courts",
     "divisions": "Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
     "featuredDescription": "4 week-long Double Round Robin · Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
     "registrationLabel": "Register for the Full League",
@@ -93,7 +93,6 @@
     "showOnHome": false,
     "homeOrder": 2,
     "status": "upcoming",
-    "season": "fall",
     "featured": true,
     "actionType": "dropIn",
     "fullLeagueRegistrationOpen": false,
@@ -148,17 +147,16 @@
   "type": "league",
   "title": "Sunday Outdoor League",
   "status": "upcoming",
-  "season": "fall",
   "featured": false,
-  "retainFinalSessionUntilManualRemoval": true,
+  "retainFinalSessionUntilManualRemoval": false,
   "actionType": "dropIn",
   "fullLeagueRegistrationOpen": false,
   "dropInEmail": "play@wdcpickleball.com",
   "startDate": "2026-09-27",
-  "endDate": "2026-11-15",
+  "endDate": "2026-11-08",
   "noPlayDates": ["2026-10-04"],
   "statusLabel": "Upcoming Season · Starts September 27",
-  "dateRange": "September 27–November 15 (No play October 4)",
+  "dateRange": "September 27–November 8 (No play October 4)",
   "days": "Sundays",
   "time": "9:30 AM–12:00 PM",
   "location": "Catholic University",
@@ -216,19 +214,18 @@
     "type": "clinic",
     "title": "Intermediate Bootcamp (3.0–3.3)",
     "featured": true,
-    "retainFinalSessionUntilManualRemoval": true,
+    "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": false,
     "actionType": "dropIn",
     "dropInEmail": "play@wdcpickleball.com",
     "eventDate": "2026-10-10",
-    "dateRange": "October 10–November 21",
+    "dateRange": "October 10–November 14",
     "sessionDates": [
       "2026-10-10",
       "2026-10-17",
       "2026-10-24",
       "2026-11-07",
-      "2026-11-14",
-      "2026-11-21"
+      "2026-11-14"
     ],
     "time": "10:15 AM–12:00 PM",
     "location": "Rock Creek Tennis Center",
@@ -237,7 +234,7 @@
     "weekly": {
       "isoDate": "2026-10-10",
       "day": "Saturday",
-      "date": "October 10–November 21",
+      "date": "October 10–November 14",
       "description": "Five-week skill-focused bootcamp series"
     }
   },
@@ -245,19 +242,18 @@
     "type": "clinic",
     "title": "High Intermediate Bootcamp (3.4–3.7)",
     "featured": true,
-    "retainFinalSessionUntilManualRemoval": true,
+    "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": false,
     "actionType": "dropIn",
     "dropInEmail": "play@wdcpickleball.com",
     "eventDate": "2026-10-10",
-    "dateRange": "October 10–November 21",
+    "dateRange": "October 10–November 14",
     "sessionDates": [
       "2026-10-10",
       "2026-10-17",
       "2026-10-24",
       "2026-11-07",
-      "2026-11-14",
-      "2026-11-21"
+      "2026-11-14"
     ],
     "time": "12:00–1:45 PM",
     "location": "Rock Creek Tennis Center",
@@ -266,7 +262,7 @@
     "weekly": {
       "isoDate": "2026-10-10",
       "day": "Saturday",
-      "date": "October 10–November 21",
+      "date": "October 10–November 14",
       "description": "Five-week skill-focused bootcamp series"
     }
   },
@@ -274,18 +270,17 @@
     "type": "clinic",
     "title": "Friday Bootcamp Series (3.0–3.3)",
     "featured": false,
-    "retainFinalSessionUntilManualRemoval": true,
+    "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": false,
     "actionType": "dropIn",
     "dropInEmail": "play@wdcpickleball.com",
     "eventDate": "2026-10-23",
-    "dateRange": "October 23–November 20",
+    "dateRange": "October 23–November 13",
     "sessionDates": [
       "2026-10-23",
       "2026-10-30",
       "2026-11-06",
-      "2026-11-13",
-      "2026-11-20"
+      "2026-11-13"
     ],
     "level": "Intermediate (3.0–3.3)",
     "time": "12:00–2:00 PM",
@@ -295,8 +290,28 @@
     "weekly": {
       "isoDate": "2026-10-23",
       "day": "Friday",
-      "date": "October 23–November 20",
+      "date": "October 23–November 13",
       "description": "Four-week skill-focused bootcamp series for Intermediate skill level players (3.0-3.3)"
+    }
+  },
+  {
+    "type": "clinic",
+    "title": "Saturday Intermediate Clinic & Drill Session",
+    "homeTitle": "Saturday Intermediate Clinic & Drill Session at Rock Creek",
+    "showOnHome": true,
+    "homeOrder": 6,
+    "featured": false,
+    "registrationOpen": true,
+    "eventDate": "2026-11-28",
+    "time": "10:00–11:45 AM",
+    "location": "Rock Creek Tennis Center Outdoor Courts",
+    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLScoE7tfC-xaHBwu0KksTQjnVxjJgQumNKHxhVjb6yUzdcvL2Q/viewform",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-11-28",
+      "day": "Saturday",
+      "date": "November 28",
+      "description": "Low Intermediate to High Intermediate"
     }
   },
     {
@@ -305,15 +320,15 @@
     "featured": false,
     "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": true,
-    "eventDate": "2026-11-21",
-    "time": "2:00–3:30 PM",
+    "eventDate": "2026-11-28",
+    "time": "12:00–1:30 PM",
     "location": "Rock Creek Tennis Center Outdoor Courts",
     "registrationUrl": "https://forms.gle/kbMurPUT3DfDQLs28",
     "weeklyRegistrationLabel": "Register",
     "weekly": {
-      "isoDate": "2026-11-21",
+      "isoDate": "2026-11-28",
       "day": "Saturday",
-      "date": "November 21",
+      "date": "November 28",
       "description": "Clinic"
     }
   },
@@ -345,7 +360,7 @@
     "type": "community",
     "title": "Supporting the Turkey Thicket Pickleball Community",
     "showOnHome": true,
-    "homeOrder": 6,
+    "homeOrder": 5,
     "featured": false,
     "homeRecap": true,
     "displayDate": "November 12, 2026",
@@ -364,6 +379,17 @@
     "title": "FREE Rally & Gather: Friendsgiving Tennis & Pickleball Social",
     "showOnHome": true,
     "homeOrder": 2,
+    "homeRecap": true,
+    "displayDate": "November 20, 2026",
+    "description": "Our first joint Rally & Gather Friendsgiving at Washington Tennis and Education Foundation brought 120+ tennis and pickleball players together for a wonderful evening of fun and connection.",
+    "image": "images/gallery/dcpl-friendsgiving-group.jpg",
+    "imageAlt": "Tennis and pickleball players at the Rally & Gather Friendsgiving at Washington Tennis and Education Foundation",
+    "actions": [
+      {
+        "label": "Event Recap",
+        "href": "https://www.instagram.com/p/DgBGQMSoAVs/"
+      }
+    ],
     "featured": true,
     "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": true,
@@ -397,7 +423,7 @@
     "type": "community",
     "title": "Game On Gala",
     "showOnHome": true,
-    "homeOrder": 5,
+    "homeOrder": 4,
     "featured": false,
     "homeRecap": true,
     "displayDate": "November 4, 2026",
@@ -420,7 +446,7 @@
     "type": "tournament",
     "title": "RFK Partner Tournament",
     "showOnHome": true,
-    "homeOrder": 4,
+    "homeOrder": 1,
     "featured": false,
     "retainFinalSessionUntilManualRemoval": false,
     "registrationOpen": false,
@@ -451,6 +477,25 @@
         "href": "https://photos.app.goo.gl/pamc5Nb8kf9zTEAh9"
       }
     ]
+  },
+  {
+    "type": "social",
+    "title": "Thanksgiving Weekend Open Play at Anacostia",
+    "showOnHome": true,
+    "homeOrder": 7,
+    "homeDescription": "Come play pickleball and celebrate Thanksgiving weekend with the DCPL community. Registration is free.",
+    "featured": false,
+    "registrationOpen": true,
+    "eventDate": "2026-11-29",
+    "time": "9:15 AM–12:30 PM",
+    "location": "Anacostia Outdoor Tennis Courts",
+    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLScsNivmQlHmLscZ22OOlil07o6dZHnzXi6qVwCGy0iHTj1Tbg/viewform",
+    "weeklyRegistrationLabel": "Register",
+    "weekly": {
+      "isoDate": "2026-11-29",
+      "day": "Sunday",
+      "date": "November 29"
+    }
   },
   {
     "type": "standings",

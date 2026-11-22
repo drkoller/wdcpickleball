@@ -534,7 +534,7 @@
       .map((event) => createTournamentArchiveCard(event)));
   }
 
-  function createFeaturedCard(event) {
+  function createFeaturedCard(event, home = false) {
     const article = document.createElement("article");
     const details = document.createElement("div");
     const featuredDate = getFeaturedDate(event);
@@ -552,7 +552,27 @@
     }
     details.className = "featured-event-details";
 
-    appendTextElement(article, "h3", event.title);
+    appendTextElement(article, "h3", (home && event.homeTitle) || event.title);
+    if (home) {
+      const homeDate = parseLocalIsoDate(event.eventDate);
+      [homeDate ? formatEventDate(homeDate) : dateText, event.time, event.location]
+        .filter(Boolean)
+        .forEach((text) => appendTextElement(details, "span", text));
+      article.appendChild(details);
+      if (event.homeDescription) {
+        appendTextElement(article, "p", event.homeDescription).className = "featured-event-description";
+      }
+      if (action) {
+        const actions = document.createElement("div");
+        actions.className = "featured-event-actions";
+        actions.appendChild(
+          createActionLink("button featured-event-primary", action.href, action.label)
+        );
+        article.appendChild(actions);
+      }
+      return article;
+    }
+
     const detailLines = event.featuredDetails || (event.featuredVenueFirst
       ? [event.location, dateText, event.time]
       : [dateText, event.time, event.location]);
@@ -690,7 +710,7 @@
 
     const featuredEvents = homeEvents.filter((event) => !event.homeRecap && !event.pastTournament);
     const highlights = homeEvents.filter((event) => event.homeRecap || event.pastTournament);
-    homeFeaturedList.replaceChildren(...featuredEvents.map(createFeaturedCard));
+    homeFeaturedList.replaceChildren(...featuredEvents.map((event) => createFeaturedCard(event, true)));
     homeFeaturedSection.hidden = featuredEvents.length === 0;
     if (homeHighlightsSection && homeHighlightsList) {
       homeHighlightsList.replaceChildren(...highlights.map((event) => createTournamentArchiveCard(event, true)));
@@ -826,7 +846,8 @@
     }
 
     try {
-      const response = await fetch("events.json");
+      const options = weeklySchedule || fallLeagueList ? { cache: "no-cache" } : undefined;
+      const response = await fetch("events.json", options);
 
       if (!response.ok) {
         throw new Error("Could not load events.json");
