@@ -107,5 +107,14 @@
     { src: "images/gallery/rfk-2026-group.jpg", alt: "DCPL RFK Partner Tournament participants at The Fields at RFK.", width: 4032, height: 3024 },
     { src: "images/gallery/veterans-day-2026.jpg", alt: "DCPL players at the Veterans Day open play fundraiser for Wounded Warrior Project at Rock Creek Tennis Center.", width: 1600, height: 1468 },
     { src: "images/gallery/turkey-thicket-silverman-2026-11.jpg", alt: "DCPL members with Turkey Thicket pickleball players and DC Councilmember Elissa Silverman at the courts", width: 5289, height: 3967 },
+    { src: "images/gallery/dcpl-birthday-cake.jpg", alt: "Four people pose with a birthday cake on an indoor pickleball court.", width: 2000, height: 1398 },
+    { src: "images/gallery/dcpl-outdoor-player-at-net.jpg", alt: "A DCPL player reaches with his paddle at the net.", width: 2000, height: 1844 },
+    { src: "images/gallery/dcpl-indoor-court-group.jpg", alt: "DCPL players pose together on an indoor pickleball court.", width: 2000, height: 1472 },
+    { src: "images/gallery/dcpl-wtef-indoor-swing.jpg", alt: "A player swings his paddle on an indoor court at WTEF.", width: 2000, height: 1333 },
+    { src: "images/gallery/dcpl-friendsgiving-group.jpg", alt: "Friendsgiving participants pose in front of a colorful sports mural.", width: 2000, height: 1405 },
+    { src: "images/gallery/dcpl-rock-creek-potluck.jpg", alt: "Players pose by the food table at the Rock Creek potluck.", width: 2000, height: 1238 },
+    { src: "images/gallery/dcpl-friday-social-hour.jpg", alt: "DCPL members gather around tables at Friday social hour.", width: 2000, height: 1098 },
+    { src: "images/gallery/dcpl-eptc-outdoor-doubles.jpg", alt: "Two players hold their paddles ready on an outdoor court at EPTC.", width: 2000, height: 1333 },
+    { src: "images/gallery/dcpl-wtef-jumping-volley.jpg", alt: "A player jumps with his paddle overhead on an indoor court at WTEF.", width: 2000, height: 1333 },
   ].map(Object.freeze));
 })();
