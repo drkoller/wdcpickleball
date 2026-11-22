@@ -555,7 +555,7 @@
     appendTextElement(article, "h3", (home && event.homeTitle) || event.title);
     if (home) {
       const homeDate = parseLocalIsoDate(event.eventDate);
-      [homeDate ? formatEventDate(homeDate) : dateText, event.time, event.location]
+    [homeDate ? new Intl.DateTimeFormat(undefined, { weekday: "long", month: "long", day: "numeric" }).format(homeDate) : dateText, event.time, event.location]
         .filter(Boolean)
         .forEach((text) => appendTextElement(details, "span", text));
       article.appendChild(details);
