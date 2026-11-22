@@ -147,8 +147,11 @@
       white-space: nowrap;
     }
     .weekly-event .drop-in-helper {
+      justify-self: end;
+      width: auto;
+      max-width: 180px;
+      text-align: right;
       overflow-wrap: anywhere;
-      width: 100%;
     }
 
     .schedule-week .button-outline,
@@ -256,6 +259,7 @@
       .weekly-event { grid-template-columns: 1fr; gap: 9px; }
       .weekly-event-action:empty { display: none; }
       .weekly-event .button { grid-column: auto; justify-self: start; width: auto; }
+      .weekly-event .drop-in-helper { justify-self: start; max-width: none; text-align: left; }
     }
     @media (max-width: 580px) {
       .schedule-wide-container { width: min(calc(100% - 32px), var(--container-width)); }

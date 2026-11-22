@@ -28,7 +28,9 @@
     "status": "upcoming",
     "season": "fall",
     "featured": true,
-    "actionType": "registration",
+    "actionType": "dropIn",
+    "fullLeagueRegistrationOpen": false,
+    "dropInEmail": "play@wdcpickleball.com",
     "startDate": "2026-11-16",
     "endDate": "2026-12-07",
     "sessionDates": [
@@ -45,14 +47,7 @@
     "featuredDescription": "4 week-long Double Round Robin · Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
     "registrationLabel": "Register for the Full League",
     "seasonRegistrationLabel": "Register for the Full League",
-    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
-    "homeActions": [
-      {
-        "label": "Register for the Full League",
-        "href": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
-        "className": "button featured-event-primary"
-      }
-    ]
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec"
   },
   {
     "type": "league",
@@ -60,7 +55,9 @@
     "status": "upcoming",
     "season": "fall",
     "featured": true,
-    "actionType": "registration",
+    "actionType": "dropIn",
+    "fullLeagueRegistrationOpen": false,
+    "dropInEmail": "play@wdcpickleball.com",
     "startDate": "2026-11-18",
     "endDate": "2026-12-16",
     "noPlayDates": ["2026-11-25"],
@@ -78,14 +75,7 @@
     "featuredDescription": "4 week-long Double Round Robin · Social (2.5–3.3) and Competitive (3.4–5.0+) ladders",
     "registrationLabel": "Register for the Full League",
     "seasonRegistrationLabel": "Register for the Full League",
-    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
-    "homeActions": [
-      {
-        "label": "Register for the Full League",
-        "href": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec",
-        "className": "button featured-event-primary"
-      }
-    ]
+    "registrationUrl": "https://dcpickleballleague.ticketspice.com/dcpl-evening-outdoor-leagues-at-rock-creek-tennis-center-nov-dec"
   },
   {
     "type": "league",
